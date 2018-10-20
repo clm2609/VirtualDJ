@@ -29,3 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Documentation
 
 To access the compodoc generated documentation go to https://clm2609.gitlab.io/tfg
+
+## WebApp
+
+To see the latest stage state of the app go to http://virtualdj-stage.surge.sh/
+To see the latest production state of the app go to http://virtualdj.surge.sh/
