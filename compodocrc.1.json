@@ -1,0 +1,14 @@
+{
+  "name": "Virtual DJ",
+  "tsconfig": "./tsconfig.json",
+  "disableLifeCycleHooks": true,
+  "disablePrivate": true,
+  "disableProtected": true,
+  "disableInternal": true,
+  "disableCoverage": true,
+  "disableSourceCode": true,
+  "disableTemplateTab": true,
+  "disableDomTree": true,
+  "hideGenerator": true,
+  "output": "./docs"
+}

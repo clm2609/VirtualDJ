@@ -1,0 +1,12 @@
+{
+  "name": "Virtual DJ",
+  "tsconfig": "./tsconfig.json",
+  "disableLifeCycleHooks": true,
+  "disablePrivate": true,
+  "disableProtected": true,
+  "disableInternal": true,
+  "disableCoverage": true,
+  "hideGenerator": true,
+  "disableDomTree": true,
+  "output": "./public"
+}

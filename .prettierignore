@@ -1,0 +1,5 @@
+package.json
+.vscode/
+tslint.json
+**/node_modules
+docs/*
