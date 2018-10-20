@@ -73,7 +73,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s format:fix lint compodoc",
+      "pre-commit": "npm run compodoc && git add public/ && run-s format:fix lint ",
       "pre-push": "npm test"
     }
   }
