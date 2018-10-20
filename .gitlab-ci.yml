@@ -3,49 +3,49 @@ image: node:latest
 cache:
   paths:
     - node_modules/
-# test_letslearn:
-#   before_script:
-#     - apt-get update -yqqq
-#     - apt-get install -y xvfb
-#     - apt-get install iceweasel -yqq
-#     - Xvfb :99 -ac &
-#     - export DISPLAY=:99
-#     - npm install --silent
-#     - ./node_modules/.bin/webdriver-manager update --versions.gecko=v0.17.0
-#   script:
-#     - npm run test:ci
-#     - npm run e2e
+test_letslearn:
+  before_script:
+    - apt-get update -yqqq
+    - apt-get install -y xvfb
+    - apt-get install iceweasel -yqq
+    - Xvfb :99 -ac &
+    - export DISPLAY=:99
+    - npm install --silent
+    - ./node_modules/.bin/webdriver-manager update --versions.gecko=v0.17.0
+  script:
+    - npm run test:ci
+    - npm run e2e
 
-# deploy_stage:
-#   stage: deploy
-#   environment: Stage
-#   only:
-#     - develop
-#   before_script:
-#     - npm install --silent
-#   script:
-#     - rm ./package-lock.json
-#     - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://learningthings-stage.surge.sh
-#     - ./node_modules/.bin/surge -p dist/TFG --domain virtualdj-stage.surge.sh
+deploy_stage:
+  stage: deploy
+  environment: Stage
+  only:
+    - develop
+  before_script:
+    - npm install --silent
+  script:
+    - rm ./package-lock.json
+    - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://learningthings-stage.surge.sh
+    - ./node_modules/.bin/surge -p dist/TFG --domain virtualdj-stage.surge.sh
 
-# deploy_prod:
-#   stage: deploy
-#   environment: Production
-#   only:
-#     - master
-#   before_script:
-#     - npm install --silent
-#   script:
-#     - rm ./package-lock.json
-#     - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://learningthings.surge.sh
-#     - ./node_modules/.bin/surge -p dist/TFG --domain virtualdj.surge.sh
+deploy_prod:
+  stage: deploy
+  environment: Production
+  only:
+    - master
+  before_script:
+    - npm install --silent
+  script:
+    - rm ./package-lock.json
+    - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://learningthings.surge.sh
+    - ./node_modules/.bin/surge -p dist/TFG --domain virtualdj.surge.sh
 
 pages:
   stage: deploy
   script:
-  - echo 'Nothing to do...'
+    - echo 'Nothing to do...'
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
