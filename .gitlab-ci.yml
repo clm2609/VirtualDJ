@@ -25,7 +25,7 @@ deploy_stage:
     - npm install --silent
   script:
     - rm ./package-lock.json
-    - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://learningthings-stage.surge.sh
+    - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://virtualdj-stage.surge.sh
     - ./node_modules/.bin/surge -p dist/TFG --domain virtualdj-stage.surge.sh
 
 deploy_prod:
@@ -37,7 +37,7 @@ deploy_prod:
     - npm install --silent
   script:
     - rm ./package-lock.json
-    - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://learningthings.surge.sh
+    - ./node_modules/@angular/cli/bin/ng build --progress false --prod --base-href http://virtualdj.surge.sh
     - ./node_modules/.bin/surge -p dist/TFG --domain virtualdj.surge.sh
 
 pages:
