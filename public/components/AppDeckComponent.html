@@ -200,7 +200,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/app-deck/app-deck.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/app-deck/app-deck.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -277,22 +277,20 @@ import { RouterState } from &#x27;@angular/router&#x27;;
   styleUrls: [&#x27;./app-deck.component.css&#x27;]
 })
 export class AppDeckComponent implements OnInit {
-  rotation&#x3D;0
+  rotation &#x3D; 0;
   private active &#x3D; true;
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     // setInterval(() &#x3D;&gt; {
-    //   this.rotate(); 
+    //   this.rotate();
     // }, 50);
-
   }
-  rotate(){
-    if(active){
-      this.rotation&#x3D; (this.rotation+15)%360
+  rotate() {
+    if (active) {
+      this.rotation &#x3D; (this.rotation + 15) % 360;
     }
   }
-
 }
 </code></pre>
     </div>
