@@ -38,7 +38,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AppComponent</li>
+  <li>AppLayoutComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,11 +58,17 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app.component.ts</code>
+    <code>src/app/app-layout/app-layout.component.ts</code>
 </p>
 
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
 
 
 <section>
@@ -82,19 +88,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-root</code></td>
+                <td class="col-md-9"><code>app-layout</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>app.component.css</code></td>
+                <td class="col-md-9"><code>app-layout.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app.component.html</code></td>
+                <td class="col-md-9"><code>./app-layout.component.html</code></td>
             </tr>
 
 
@@ -103,6 +109,24 @@
 </section>
 
 
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app-layout/app-layout.component.ts:8</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -114,21 +138,40 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-root&#x27;,
-  templateUrl: &#x27;./app.component.html&#x27;,
-  styleUrls: [&#x27;./app.component.css&#x27;]
+  selector: &#x27;app-layout&#x27;,
+  templateUrl: &#x27;./app-layout.component.html&#x27;,
+  styleUrls: [&#x27;./app-layout.component.css&#x27;]
 })
-export class AppComponent {
+export class AppLayoutComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-layout&gt;&lt;/app-layout&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;layout&quot;&gt;
+  &lt;div class&#x3D;&quot;top-layout&quot;&gt;
+    &lt;div class&#x3D;&quot;deck&quot;&gt;
+      &lt;app-deck&gt;&lt;/app-deck&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;volume-control&quot;&gt;volumen&lt;/div&gt;
+    &lt;div class&#x3D;&quot;deck&quot;&gt;
+      &lt;app-deck&gt;&lt;/app-deck&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;bottom-layout&quot;&gt;
+    &lt;div class&#x3D;&quot;search&quot;&gt;search&lt;/div&gt;
+    &lt;div class&#x3D;&quot;song-list&quot;&gt;list&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -139,10 +182,10 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-layout></app-layout></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="layout">  <div class="top-layout">    <div class="deck">      <app-deck></app-deck>    </div>    <div class="volume-control">volumen</div>    <div class="deck">      <app-deck></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="search">search</div>    <div class="song-list">list</div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+    var ACTUAL_COMPONENT = {'name': 'AppLayoutComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -176,7 +219,7 @@ export class AppComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppLayoutComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

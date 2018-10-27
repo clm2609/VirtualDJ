@@ -1,0 +1,258 @@
+/* Common */
+.button {
+  color: greenyellow;
+  background-color: #111111;
+  border: 1px solid #666666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.button:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.button:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* General Layout*/
+.deck-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #111111; /* Old browsers */
+  color: lime;
+}
+
+/* Sound wave */
+.sound-wave {
+  width: 100%;
+  height: 20%;
+  background-color: aqua;
+}
+
+/* Deck */
+.dj-deck-container {
+  width: 100%;
+  height: 80%;
+  padding: 5px;
+}
+.dj-deck {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background: #444444; /* Old browsers */
+  background: -moz-linear-gradient(top, #444444 0%, #222222 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #444444 0%, #222222 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #444444 0%,
+    #222222 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+  border-radius: 2px;
+  border: 1px solid #666666;
+}
+
+/* Vynil and loops */
+.plate-loops {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vynil */
+.plate {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vynil {
+  width: 90%;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  pointer-events: none;
+}
+
+/* Loops */
+.button-container--loops {
+  width: 100%;
+  height: 20%;
+  padding: 10px 5px 10px 5px;
+}
+.button--loops {
+  width: 20%;
+  height: 2em;
+}
+
+/* Buttons and pitch */
+
+.layout-buttons {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Play Pause*/
+.button-container--cue-play {
+  width: 100%;
+  height: 25%;
+  padding: 10px 30px 10px 60px;
+}
+.button--play {
+  width: 50%;
+  height: 100%;
+  background-color: #009973;
+}
+.button--cue {
+  width: 50%;
+  height: 100%;
+  background-color: #dd0000;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+}
+.play-pause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid white;
+}
+.pause-stick {
+  width: 5px;
+  height: 24px;
+  background-color: white;
+}
+.pause-space {
+  width: 4px;
+}
+/* CUEs, Effects and Pitch */
+.layout-cue-effects-pitch {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+}
+.layout-cue-effects {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.button-container--cues {
+  width: 100%;
+  height: 35%;
+  padding: 10px 5px 10px 5px;
+}
+.button--cues {
+  width: 25%;
+  height: 2.5em;
+}
+.button-container--effects {
+  width: 100%;
+  height: 65%;
+  padding: 10px 5px 10px 5px;
+}
+.button-container--effects--upper-row {
+  width: 100%;
+  height: 2.5em;
+}
+.button--upper-row:first-child {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 5px;
+}
+
+.button--upper-row:last-child {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 5px;
+}
+.button-container--effects--lower-row {
+  width: 100%;
+  height: 2.5em;
+}
+.button--effects {
+  width: 33%;
+  height: 2.5em;
+}
+.button--lower-row:first-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 5px;
+}
+
+.button--lower-row:last-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 5px;
+}
+/* Pitch */
+.layout-pitch {
+  width: 25%;
+  height: 100%;
+  padding: 5px;
+}
+.pitch-slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 100%; /* Specified height */
+  background-image: url('../../assets/images/pitch.png'); /* Green background */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  margin: 0px;
+  writing-mode: bt-lr; /* IE */
+  -webkit-appearance: slider-vertical; /* WebKit */
+}
+.pitch-slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.pitch-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 50%; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/pitch-controller.png'); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.pitch-slider::-moz-range-thumb {
+  border-radius: 0px;
+  width: 50%; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/images/pitch-controller.png'); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

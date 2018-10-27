@@ -15,7 +15,8 @@
     "format:fix": "pretty-quick --staged",
     "format:check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "compodoc": "rm -rf ./public && mkdir -p ./public/assets && (cp -a ./publicAssets/* ./public/assets || :) && ./node_modules/.bin/compodoc ./src/app -c compodocrc.json",
-    "compodoc:dev": "rm -rf ./public && mkdir -p ./public/assets && (cp -a ./publicAssets/* ./public/assets || :) && ./node_modules/.bin/compodoc ./src/app -c compodocrc.json -w -s"
+    "compodoc:dev": "rm -rf ./public && mkdir -p ./public/assets && (cp -a ./publicAssets/* ./public/assets || :) && ./node_modules/.bin/compodoc ./src/app -c compodocrc.json -w -s",
+    "playground": "angular-playground"
   },
   "jest": {
     "preset": "jest-preset-angular",
@@ -69,12 +70,13 @@
     "surge": "^0.20.1",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "angular-playground": "^5.1.5"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run compodoc && git add public/ && run-s format:fix lint ",
-      "pre-push": "npm test"
+      "pre-push": ""
     }
   }
 }
