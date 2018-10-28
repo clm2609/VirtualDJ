@@ -3,22 +3,25 @@ image: node:latest
 cache:
   paths:
     - node_modules/
-test_unit:
-  before_script:
-    - npm install --silent
-  script:
-    - npm run test:ci
-test_e2e:
-  before_script:
-    - apt-get update -yqqq
-    - apt-get install -y xvfb
-    - apt-get install iceweasel -yqq
-    - Xvfb :99 -ac &
-    - export DISPLAY=:99
-    - npm install --silent
-    - ./node_modules/.bin/webdriver-manager update --versions.gecko=v0.17.0
-  script:
-    - npm run e2e
+
+# TODO: activate tests when we have tests
+
+# test_unit:
+#   before_script:
+#     - npm install --silent
+#   script:
+#     - npm run test:ci
+# test_e2e:
+#   before_script:
+#     - apt-get update -yqqq
+#     - apt-get install -y xvfb
+#     - apt-get install iceweasel -yqq
+#     - Xvfb :99 -ac &
+#     - export DISPLAY=:99
+#     - npm install --silent
+#     - ./node_modules/.bin/webdriver-manager update --versions.gecko=v0.17.0
+#   script:
+#     - npm run e2e
 
 deploy_stage:
   stage: deploy

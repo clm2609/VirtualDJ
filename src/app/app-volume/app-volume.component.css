@@ -1,0 +1,45 @@
+.volume-container {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.volume {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #444444; /* Old browsers */
+  background: -moz-linear-gradient(top, #444444 0%, #222222 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #444444 0%, #222222 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #444444 0%,
+    #222222 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+  border-radius: 2px;
+  border: 1px solid #666666;
+}
+.volume-eq {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.volume-master {
+  width: 100%;
+  height: 20%;
+  padding: 5px 30px 5px 30px;
+}
+.volume-decks {
+  width: 30%;
+  height: 100%;
+  padding: 30px 10px 10px 10px;
+}
+.volume-equalizers {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

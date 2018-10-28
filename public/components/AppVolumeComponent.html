@@ -38,7 +38,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AppLayoutComponent</li>
+  <li>AppVolumeComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,7 +58,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app-layout/app-layout.component.ts</code>
+    <code>src/app/app-volume/app-volume.component.ts</code>
 </p>
 
 
@@ -88,19 +88,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-layout</code></td>
+                <td class="col-md-9"><code>app-volume</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>app-layout.component.css</code></td>
+                <td class="col-md-9"><code>app-volume.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app-layout.component.html</code></td>
+                <td class="col-md-9"><code>./app-volume.component.html</code></td>
             </tr>
 
 
@@ -120,7 +120,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app-layout/app-layout.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app-volume/app-volume.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -141,11 +141,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-layout&#x27;,
-  templateUrl: &#x27;./app-layout.component.html&#x27;,
-  styleUrls: [&#x27;./app-layout.component.css&#x27;]
+  selector: &#x27;app-volume&#x27;,
+  templateUrl: &#x27;./app-volume.component.html&#x27;,
+  styleUrls: [&#x27;./app-volume.component.css&#x27;]
 })
-export class AppLayoutComponent implements OnInit {
+export class AppVolumeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
@@ -154,21 +154,21 @@ export class AppLayoutComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;layout&quot;&gt;
-  &lt;div class&#x3D;&quot;top-layout&quot;&gt;
-    &lt;div class&#x3D;&quot;deck&quot;&gt;
-      &lt;app-deck&gt;&lt;/app-deck&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;volume-container&quot;&gt;
+  &lt;div class&#x3D;&quot;volume&quot;&gt;
+    &lt;div class&#x3D;&quot;volume-eq&quot;&gt;
+      &lt;div class&#x3D;&quot;volume-decks&quot;&gt;
+                      &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-1&#x27;, min:0, max:100, default:100,vertical:true}&quot;&gt;&lt;/slider-controller&gt;
+&lt;/div&gt;
+      &lt;div class&#x3D;&quot;volume-equalizers&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;volume-decks&quot;&gt;
+                      &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-2&#x27;, min:0, max:100, default:100,vertical:true}&quot;&gt;&lt;/slider-controller&gt;
+&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;volume-control&quot;&gt;
-      &lt;app-volume&gt;&lt;/app-volume&gt;
+    &lt;div class&#x3D;&quot;volume-master&quot;&gt;
+                &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-master&#x27;, min:-100, max:100, default:0}&quot;&gt;&lt;/slider-controller&gt;
+
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;deck&quot;&gt;
-      &lt;app-deck&gt;&lt;/app-deck&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;bottom-layout&quot;&gt;
-    &lt;div class&#x3D;&quot;search&quot;&gt;search&lt;/div&gt;
-    &lt;div class&#x3D;&quot;song-list&quot;&gt;list&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
@@ -181,10 +181,10 @@ export class AppLayoutComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="layout">  <div class="top-layout">    <div class="deck">      <app-deck></app-deck>    </div>    <div class="volume-control">      <app-volume></app-volume>    </div>    <div class="deck">      <app-deck></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="search">search</div>    <div class="song-list">list</div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="volume-container">  <div class="volume">    <div class="volume-eq">      <div class="volume-decks">                      <slider-controller [config]="{id:\'volume-deck-1\', min:0, max:100, default:100,vertical:true}"></slider-controller></div>      <div class="volume-equalizers"></div>      <div class="volume-decks">                      <slider-controller [config]="{id:\'volume-deck-2\', min:0, max:100, default:100,vertical:true}"></slider-controller></div>    </div>    <div class="volume-master">                <slider-controller [config]="{id:\'volume-master\', min:-100, max:100, default:0}"></slider-controller>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppLayoutComponent'};
+    var ACTUAL_COMPONENT = {'name': 'AppVolumeComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -218,7 +218,7 @@ export class AppLayoutComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppLayoutComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppVolumeComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

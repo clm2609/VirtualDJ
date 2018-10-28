@@ -1,0 +1,17 @@
+<div class="volume-container">
+  <div class="volume">
+    <div class="volume-eq">
+      <div class="volume-decks">
+                      <slider-controller [config]="{id:'volume-deck-1', min:0, max:100, default:100,vertical:true}"></slider-controller>
+</div>
+      <div class="volume-equalizers"></div>
+      <div class="volume-decks">
+                      <slider-controller [config]="{id:'volume-deck-2', min:0, max:100, default:100,vertical:true}"></slider-controller>
+</div>
+    </div>
+    <div class="volume-master">
+                <slider-controller [config]="{id:'volume-master', min:-100, max:100, default:0}"></slider-controller>
+
+    </div>
+  </div>
+</div>

@@ -17,7 +17,7 @@ export class AppDeckComponent implements OnInit {
     // }, 50);
   }
   rotate() {
-    if (active) {
+    if (this.active) {
       this.rotation = (this.rotation + 15) % 360;
     }
   }

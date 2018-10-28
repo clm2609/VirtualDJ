@@ -33,8 +33,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #111111; /* Old browsers */
-  color: lime;
 }
 
 /* Sound wave */
@@ -214,45 +212,4 @@
   width: 25%;
   height: 100%;
   padding: 5px;
-}
-.pitch-slider {
-  -webkit-appearance: none; /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 100%; /* Specified height */
-  background-image: url('../../assets/images/pitch.png'); /* Green background */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
-  transition: opacity 0.2s;
-  margin: 0px;
-  writing-mode: bt-lr; /* IE */
-  -webkit-appearance: slider-vertical; /* WebKit */
-}
-.pitch-slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
-
-.pitch-slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 50%; /* Set a specific slider handle width */
-  height: 10px; /* Slider handle height */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url('../../assets/images/pitch-controller.png'); /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-.pitch-slider::-moz-range-thumb {
-  border-radius: 0px;
-  width: 50%; /* Set a specific slider handle width */
-  height: 10px; /* Slider handle height */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url('../../assets/images/pitch-controller.png'); /* Green background */
-  cursor: pointer; /* Cursor on hover */
 }
