@@ -1,9 +1,9 @@
 <div class="deck-layout">
   <div class="sound-wave">
-  sound-wave
+    sound-wave
   </div>
   <div class="dj-deck-container">
-    <div class="dj-deck">
+    <div class="dj-deck components-container">
       <div class="plate-loops">
         <div class="plate">
           <img class="vynil" [ngStyle]="{'transform': 'rotate(' + rotation+ 'deg)'}" src="assets/images/vynil.svg">
@@ -39,10 +39,16 @@
                 <div class="button button--effects button--lower-row">8x</div>
               </div>
             </div>
-          </div>   
+          </div>
           <div class="layout-pitch">
-            <slider-controller [config]="{id:'pitch-deck-1', min:-25, max:25, default:0, vertical:true}"></slider-controller>
-          </div>      
+            <slider-controller [config]="{id:'pitch-deck-1',
+             min:-25,
+              max:25,
+               default:0,
+             vertical:true,
+                        thumb:'sliderthumb-pitch-vertical',
+                        track:'slidertrack-pitch-vertical'}"></slider-controller>
+          </div>
         </div>
         <div class="button-container button-container--cue-play">
           <div class="button button--cue">CUE</div>
@@ -52,7 +58,7 @@
               <div class="pause-stick"></div>
               <div class="pause-space"></div>
               <div class="pause-stick"></div>
-            </div>  
+            </div>
           </div>
         </div>
       </div>

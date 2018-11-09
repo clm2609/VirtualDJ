@@ -1,0 +1,29 @@
+.volume-slider {
+  position: absolute;
+  background-color: #ffffff;
+  width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow-y: auto;
+  height: 160px;
+  top: -9999px;
+  left: -9999px;
+  border-radius: 4px;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.unfolded {
+  top: 20px;
+  left: -20px;
+}
+.roulette-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.roulette {
+  background-image: url('../../assets/images/volume-wheel.svg'); /* Green background */
+  background-size: 100% 100%;
+  height: 20px;
+  width: 20px;
+}

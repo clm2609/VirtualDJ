@@ -155,18 +155,45 @@ export class AppVolumeComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;volume-container&quot;&gt;
-  &lt;div class&#x3D;&quot;volume&quot;&gt;
+  &lt;div class&#x3D;&quot;volume components-container&quot;&gt;
     &lt;div class&#x3D;&quot;volume-eq&quot;&gt;
       &lt;div class&#x3D;&quot;volume-decks&quot;&gt;
-                      &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-1&#x27;, min:0, max:100, default:100,vertical:true}&quot;&gt;&lt;/slider-controller&gt;
-&lt;/div&gt;
-      &lt;div class&#x3D;&quot;volume-equalizers&quot;&gt;&lt;/div&gt;
+        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-1&#x27;,
+                       min:0, max:100,
+                        default:100,
+                        vertical:true,
+                        thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
+                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;&gt;&lt;/slider-controller&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;volume-equalizers&quot;&gt;
+        &lt;div class&#x3D;&quot;roulette-container&quot;&gt;
+          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_1&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_1&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_1&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;roulette-container&quot;&gt;
+          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_2&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_2&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_2&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
       &lt;div class&#x3D;&quot;volume-decks&quot;&gt;
-                      &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-2&#x27;, min:0, max:100, default:100,vertical:true}&quot;&gt;&lt;/slider-controller&gt;
-&lt;/div&gt;
+        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-2&#x27;,
+                       min:0,
+                        max:100,
+                         default:100,
+                         vertical:true,
+                        thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
+                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;&gt;&lt;/slider-controller&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;volume-master&quot;&gt;
-                &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-master&#x27;, min:-100, max:100, default:0}&quot;&gt;&lt;/slider-controller&gt;
+      &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-master&#x27;,
+                 min:-100,
+                  max:100,
+                   default:0,
+                thumb:&#x27;sliderthumb-pitch&#x27;,
+                track:&#x27;slidertrack-vol&#x27;}&quot;&gt;&lt;/slider-controller&gt;
 
     &lt;/div&gt;
   &lt;/div&gt;
@@ -181,8 +208,8 @@ export class AppVolumeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="volume-container">  <div class="volume">    <div class="volume-eq">      <div class="volume-decks">                      <slider-controller [config]="{id:\'volume-deck-1\', min:0, max:100, default:100,vertical:true}"></slider-controller></div>      <div class="volume-equalizers"></div>      <div class="volume-decks">                      <slider-controller [config]="{id:\'volume-deck-2\', min:0, max:100, default:100,vertical:true}"></slider-controller></div>    </div>    <div class="volume-master">                <slider-controller [config]="{id:\'volume-master\', min:-100, max:100, default:0}"></slider-controller>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+        var COMPONENT_TEMPLATE = '<div><div class="volume-container">  <div class="volume components-container">    <div class="volume-eq">      <div class="volume-decks">        <slider-controller [config]="{id:\'volume-deck-1\',                       min:0, max:100,                        default:100,                        vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"></slider-controller>      </div>      <div class="volume-equalizers">        <div class="roulette-container">          <roulette-controller [config]="{ id: \'trebble_1\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'middle_1\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'bass_1\' }"></roulette-controller>        </div>        <div class="roulette-container">          <roulette-controller [config]="{ id: \'trebble_2\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'middle_2\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'bass_2\' }"></roulette-controller>        </div>      </div>      <div class="volume-decks">        <slider-controller [config]="{id:\'volume-deck-2\',                       min:0,                        max:100,                         default:100,                         vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"></slider-controller>      </div>    </div>    <div class="volume-master">      <slider-controller [config]="{id:\'volume-master\',                 min:-100,                  max:100,                   default:0,                thumb:\'sliderthumb-pitch\',                track:\'slidertrack-vol\'}"></slider-controller>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppVolumeComponent'};
 </script>

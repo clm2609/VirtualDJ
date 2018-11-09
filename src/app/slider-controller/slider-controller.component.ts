@@ -22,49 +22,157 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
   config: any;
   @NativeElement('sliderShell')
   shell: HTMLElement;
-  @NativeElement('sliderThumb')
-  thumb: HTMLElement;
   slider: any;
+  fillsize = 16;
 
-  private onTouchedCallback: () => void = noop;
-  private onChangeCallback: (_: any) => void = noop;
-
-  ngOnInit() {
-    this.setValue(this.config.default);
+  get thumbWidth(): any {
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
+    if (vertical) {
+      return smallval;
+    } else {
+      return smallval / 2.5;
+    }
   }
-  showValue() {
+  get thumbHeight(): any {
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
+    if (!vertical) {
+      return smallval;
+    } else {
+      return smallval / 2.5;
+    }
+  }
+  get thumbTop(): any {
     const val = this.slider;
     const vertical = !!this.config.vertical;
     const shell = this.shell;
-    const thumb = this.thumb;
+    const pc = (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
+
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
+
+    const tracksize = bigval - thumbsize;
+    const loc = vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? loc : 0;
+  }
+  get thumbLeft(): any {
+    const val = this.slider;
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+
+    const pc = (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
+
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
+
+    const tracksize = bigval - thumbsize;
+    const loc = vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? 0 : loc;
+  }
+
+  get fillWidth(): any {
+    const val = this.slider;
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const pc = (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
+    const tracksize = bigval - thumbsize;
+    const loc = vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? this.fillsize : loc + thumbsize / 2;
+  }
+  get fillHeight(): any {
+    const val = this.slider;
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const pc = (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
+    const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
+
+    const tracksize = bigval - thumbsize;
+    const loc = vertical ? (1 - pc) * tracksize : pc * tracksize;
+    const fillsize = 16;
+    const filloffset = smallval / 2 - fillsize / 2;
+    return Math.max(0, vertical ? bigval - filloffset - fillsize - loc : fillsize);
+  }
+  get fillTop(): any {
+    const val = this.slider;
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
 
     const pc = (val - this.config.min) / (this.config.max - this.config.min);
     const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
     const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
-    if (vertical) {
-      thumb.style.width = smallval + 'px';
-      thumb.style.height = smallval / 2.5 + 'px';
-    } else {
-      thumb.style.height = smallval + 'px';
-      thumb.style.width = smallval / 2.5 + 'px';
-    }
-    const thumbsize = vertical ? thumb.offsetHeight : thumb.offsetWidth;
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
 
     const tracksize = bigval - thumbsize;
     const loc = vertical ? (1 - pc) * tracksize : pc * tracksize;
-    thumb.style.top = (vertical ? loc : 0) + 'px';
-    thumb.style.left = (vertical ? 0 : loc) + 'px';
+
+    /* Fill */
+
+    const fillsize = 16;
+    const filloffset = smallval / 2 - fillsize / 2;
+    return vertical ? loc + thumbsize : filloffset;
   }
-  setValue(val) {
-    this.slider = val;
-    this.onChangeCallback(val);
+  get fillLeft(): any {
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
+    const filloffset = smallval / 2 - this.fillsize / 2;
+    return vertical ? filloffset : 0;
+  }
+
+  get trackWidth(): any {
+    const val = this.slider;
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const pc = (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
+    const tracksize = bigval - thumbsize;
+    const loc = vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? this.fillsize : loc + thumbsize / 2;
+  }
+  get trackHeight(): any {
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
+
+    return bigval - thumbsize * 1.25;
+  }
+  get trackTop(): any {
+    const vertical = !!this.config.vertical;
+
+    const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
+
+    return thumbsize / 2;
+  }
+  get trackLeft(): any {
+    const vertical = !!this.config.vertical;
+    const shell = this.shell;
+    const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
+    const filloffset = smallval / 2 - this.fillsize / 2;
+    return vertical ? filloffset : 0;
+  }
+
+  private onTouchedCallback: () => void = noop;
+  private onChangeCallback: (_: any) => void = noop;
+
+  ngOnInit() {}
+
+  setValue() {
+    this.onChangeCallback(this.slider);
     this.onTouchedCallback();
-    this.showValue();
   }
 
   writeValue(value: any) {
-    if (value !== this.slider) {
-      this.setValue(value);
+    if (value) {
+      this.slider = value;
     }
   }
   registerOnChange(fn: any) {

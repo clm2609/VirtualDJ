@@ -22,32 +22,44 @@ to provide a positioning context for the range input and other elements.*/
   overflow: visible;
   width: 100%;
   height: 100%;
+  background-size: 100% 100%;
 }
-/* .slidertrack is the visible track on which the user drags the thumb button. */
-
-.slidertrack {
-  border: 2px outset #666;
+.sliderfill {
   border-radius: 4px;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('../../assets/images/pitch.png'); /* Green background */
-  background-size: 100% 100%;
+  pointer-events: none;
+  background: #00767f;
+  background: linear-gradient(90deg, #005555, #006699);
+  z-index: 100;
+}
+.sliderfill-vertical {
+  border-radius: 4px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  position: absolute;
+  pointer-events: none;
+  background: #00767f;
+  background: linear-gradient(90deg, #005555, #006699);
+  z-index: 100;
+}
+.slidertrack {
+  border-radius: 4px;
+  position: absolute;
+  pointer-events: none;
+  background: #888888;
+  z-index: 50;
 }
 .slidertrack-vertical {
-  border: 2px outset #666;
   border-radius: 4px;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('../../assets/images/pitch-vert.png'); /* Green background */
-  background-size: 100% 100%;
+  pointer-events: none;
+  background: #888888;
+  z-index: 50;
 }
+
 .sliderthumb {
-  background-image: url('../../assets/images/pitch-controller.png');
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  background-color: transparent;
   background-size: 100% 100%;
   position: absolute;
   left: 0px;
@@ -57,21 +69,7 @@ to provide a positioning context for the range input and other elements.*/
   margin: 0px;
   text-align: center;
   pointer-events: none;
-}
-.sliderthumb-vertical {
-  background-image: url('../../assets/images/pitch-controller-vert.png');
-  background-position: 0px 0px;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-size: 100% 100%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  border: 0 none;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-  pointer-events: none;
+  z-index: 150;
 }
 
 input[type='range']::-ms-track {
@@ -108,6 +106,7 @@ input[type='range'] {
   background: transparent;
   color: transparent;
   overflow: visible;
+  z-index: 200;
 }
 /* we need a separate rule for when the range input is to be vertical */
 
@@ -174,4 +173,7 @@ input[type='range']::-ms-tooltip {
 
 body {
   font-family: sans-serif;
+}
+.hidden {
+  display: none;
 }

@@ -279,7 +279,7 @@ import { RouterState } from &#x27;@angular/router&#x27;;
 export class AppDeckComponent implements OnInit {
   rotation &#x3D; 0;
   private active &#x3D; true;
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     // setInterval(() &#x3D;&gt; {
@@ -298,10 +298,10 @@ export class AppDeckComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;deck-layout&quot;&gt;
   &lt;div class&#x3D;&quot;sound-wave&quot;&gt;
-  sound-wave
+    sound-wave
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;dj-deck-container&quot;&gt;
-    &lt;div class&#x3D;&quot;dj-deck&quot;&gt;
+    &lt;div class&#x3D;&quot;dj-deck components-container&quot;&gt;
       &lt;div class&#x3D;&quot;plate-loops&quot;&gt;
         &lt;div class&#x3D;&quot;plate&quot;&gt;
           &lt;img class&#x3D;&quot;vynil&quot; [ngStyle]&#x3D;&quot;{&#x27;transform&#x27;: &#x27;rotate(&#x27; + rotation+ &#x27;deg)&#x27;}&quot; src&#x3D;&quot;assets/images/vynil.svg&quot;&gt;
@@ -337,10 +337,16 @@ export class AppDeckComponent implements OnInit {
                 &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;8x&lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
-          &lt;/div&gt;   
+          &lt;/div&gt;
           &lt;div class&#x3D;&quot;layout-pitch&quot;&gt;
-            &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;pitch-deck-1&#x27;, min:-25, max:25, default:0, vertical:true}&quot;&gt;&lt;/slider-controller&gt;
-          &lt;/div&gt;      
+            &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;pitch-deck-1&#x27;,
+             min:-25,
+              max:25,
+               default:0,
+             vertical:true,
+                        thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
+                        track:&#x27;slidertrack-pitch-vertical&#x27;}&quot;&gt;&lt;/slider-controller&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;button-container button-container--cue-play&quot;&gt;
           &lt;div class&#x3D;&quot;button button--cue&quot;&gt;CUE&lt;/div&gt;
@@ -350,14 +356,13 @@ export class AppDeckComponent implements OnInit {
               &lt;div class&#x3D;&quot;pause-stick&quot;&gt;&lt;/div&gt;
               &lt;div class&#x3D;&quot;pause-space&quot;&gt;&lt;/div&gt;
               &lt;div class&#x3D;&quot;pause-stick&quot;&gt;&lt;/div&gt;
-            &lt;/div&gt;  
+            &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -368,8 +373,8 @@ export class AppDeckComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="deck-layout">  <div class="sound-wave">  sound-wave  </div>  <div class="dj-deck-container">    <div class="dj-deck">      <div class="plate-loops">        <div class="plate">          <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">        </div>        <div class="button-container button-container--loops">          <div class="button button--loops">2x</div>          <div class="button button--loops">4x</div>          <div class="button button--loops">8x</div>          <div class="button button--loops">16x</div>          <div class="button button--loops">32x</div>        </div>      </div>      <div class="layout-buttons">        <div class="layout-cue-effects-pitch">          <div class="layout-cue-effects">            CUEs            <div class="button-container button-container--cues">              <div class="button button--cues">CUE 1</div>              <div class="button button--cues">CUE 2</div>              <div class="button button--cues">CUE 3</div>              <div class="button button--cues">CUE 4</div>            </div>            Effects            <div class="button-container--effects">              <div class="button-container button-container--effects--upper-row">                <div class="button button--effects button--upper-row">2x</div>                <div class="button button--effects button--upper-row">4x</div>                <div class="button button--effects button--upper-row">8x</div>              </div>              <div class="button-container button-container--effects--lower-row">                <div class="button button--effects button--lower-row">2x</div>                <div class="button button--effects button--lower-row">4x</div>                <div class="button button--effects button--lower-row">8x</div>              </div>            </div>          </div>             <div class="layout-pitch">            <slider-controller [config]="{id:\'pitch-deck-1\', min:-25, max:25, default:0, vertical:true}"></slider-controller>          </div>              </div>        <div class="button-container button-container--cue-play">          <div class="button button--cue">CUE</div>          <div class="button button--play">            <div class="play-pause">              <div class="arrow-right"></div>              <div class="pause-stick"></div>              <div class="pause-space"></div>              <div class="pause-stick"></div>            </div>            </div>        </div>      </div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+        var COMPONENT_TEMPLATE = '<div><div class="deck-layout">  <div class="sound-wave">    sound-wave  </div>  <div class="dj-deck-container">    <div class="dj-deck components-container">      <div class="plate-loops">        <div class="plate">          <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">        </div>        <div class="button-container button-container--loops">          <div class="button button--loops">2x</div>          <div class="button button--loops">4x</div>          <div class="button button--loops">8x</div>          <div class="button button--loops">16x</div>          <div class="button button--loops">32x</div>        </div>      </div>      <div class="layout-buttons">        <div class="layout-cue-effects-pitch">          <div class="layout-cue-effects">            CUEs            <div class="button-container button-container--cues">              <div class="button button--cues">CUE 1</div>              <div class="button button--cues">CUE 2</div>              <div class="button button--cues">CUE 3</div>              <div class="button button--cues">CUE 4</div>            </div>            Effects            <div class="button-container--effects">              <div class="button-container button-container--effects--upper-row">                <div class="button button--effects button--upper-row">2x</div>                <div class="button button--effects button--upper-row">4x</div>                <div class="button button--effects button--upper-row">8x</div>              </div>              <div class="button-container button-container--effects--lower-row">                <div class="button button--effects button--lower-row">2x</div>                <div class="button button--effects button--lower-row">4x</div>                <div class="button button--effects button--lower-row">8x</div>              </div>            </div>          </div>          <div class="layout-pitch">            <slider-controller [config]="{id:\'pitch-deck-1\',             min:-25,              max:25,               default:0,             vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-pitch-vertical\'}"></slider-controller>          </div>        </div>        <div class="button-container button-container--cue-play">          <div class="button button--cue">CUE</div>          <div class="button button--play">            <div class="play-pause">              <div class="arrow-right"></div>              <div class="pause-stick"></div>              <div class="pause-space"></div>              <div class="pause-stick"></div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppDeckComponent'};
 </script>
