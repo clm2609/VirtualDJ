@@ -10,6 +10,10 @@ import { SliderControllerComponent } from './slider-controller/slider-controller
 import { FormsModule } from '@angular/forms';
 import { RouletteControllerComponent } from './roulette-controller/roulette-controller.component';
 import { AppSearchComponent } from './app-search/app-search.component';
+import { AppTabsComponent } from './app-tabs/app-tabs.component';
+import { AppMusicListComponent } from './app-music-list/app-music-list.component';
+import { AppSettingsComponent } from './app-settings/app-settings.component';
+import { AppAboutComponent } from './app-about/app-about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { AppSearchComponent } from './app-search/app-search.component';
     AppVolumeComponent,
     SliderControllerComponent,
     RouletteControllerComponent,
-    AppSearchComponent
+    AppSearchComponent,
+    AppTabsComponent,
+    AppMusicListComponent,
+    AppSettingsComponent,
+    AppAboutComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

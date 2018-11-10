@@ -38,7 +38,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AppLayoutComponent</li>
+  <li>AppMusicListComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,7 +58,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app-layout/app-layout.component.ts</code>
+    <code>src/app/app-music-list/app-music-list.component.ts</code>
 </p>
 
 
@@ -88,19 +88,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-layout</code></td>
+                <td class="col-md-9"><code>app-music-list</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>app-layout.component.css</code></td>
+                <td class="col-md-9"><code>app-music-list.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app-layout.component.html</code></td>
+                <td class="col-md-9"><code>./app-music-list.component.html</code></td>
             </tr>
 
 
@@ -120,7 +120,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app-layout/app-layout.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app-music-list/app-music-list.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -141,40 +141,26 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-layout&#x27;,
-  templateUrl: &#x27;./app-layout.component.html&#x27;,
-  styleUrls: [&#x27;./app-layout.component.css&#x27;]
+  selector: &#x27;app-music-list&#x27;,
+  templateUrl: &#x27;./app-music-list.component.html&#x27;,
+  styleUrls: [&#x27;./app-music-list.component.css&#x27;]
 })
-export class AppLayoutComponent implements OnInit {
-  constructor() {}
+export class AppMusicListComponent implements OnInit {
 
-  ngOnInit() {}
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;layout&quot;&gt;
-  &lt;div class&#x3D;&quot;top-layout&quot;&gt;
-    &lt;div class&#x3D;&quot;deck&quot;&gt;
-      &lt;app-deck&gt;&lt;/app-deck&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;volume-control&quot;&gt;
-      &lt;app-volume&gt;&lt;/app-volume&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;deck&quot;&gt;
-      &lt;app-deck&gt;&lt;/app-deck&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;bottom-layout&quot;&gt;
-    &lt;div class&#x3D;&quot;search&quot;&gt;
-      &lt;app-search&gt;&lt;/app-search&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;tabs&quot;&gt;
-      &lt;app-tabs&gt;&lt;/app-tabs&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
+  app-music-list works!
+&lt;/p&gt;
+</code></pre>
     </div>
 
 
@@ -185,10 +171,10 @@ export class AppLayoutComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="layout">  <div class="top-layout">    <div class="deck">      <app-deck></app-deck>    </div>    <div class="volume-control">      <app-volume></app-volume>    </div>    <div class="deck">      <app-deck></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="search">      <app-search></app-search>    </div>    <div class="tabs">      <app-tabs></app-tabs>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><p>  app-music-list works!</p></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppLayoutComponent'};
+    var ACTUAL_COMPONENT = {'name': 'AppMusicListComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -222,7 +208,7 @@ export class AppLayoutComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppLayoutComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppMusicListComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

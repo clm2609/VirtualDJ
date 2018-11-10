@@ -288,7 +288,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:190</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:178</a></div>
                             </td>
                         </tr>
 
@@ -357,7 +357,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:193</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:181</a></div>
                             </td>
                         </tr>
 
@@ -426,7 +426,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:180</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:168</a></div>
                             </td>
                         </tr>
 
@@ -464,7 +464,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:185</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:173</a></div>
                             </td>
                         </tr>
 
@@ -784,7 +784,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:103</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:102</a></div>
                                 </td>
                             </tr>
 
@@ -806,7 +806,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:125</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:121</a></div>
                                 </td>
                             </tr>
 
@@ -828,7 +828,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:134</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:129</a></div>
                                 </td>
                             </tr>
 
@@ -850,7 +850,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:145</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:140</a></div>
                                 </td>
                             </tr>
 
@@ -872,7 +872,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:155</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:148</a></div>
                                 </td>
                             </tr>
 
@@ -894,7 +894,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:163</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/slider-controller/slider-controller.component.ts:155</a></div>
                                 </td>
                             </tr>
 
@@ -909,7 +909,7 @@
 import { NativeElement } from &#x27;../decorators/native-element.decorator&#x27;;
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from &#x27;@angular/forms&#x27;;
 
-/** @ignore */ const noop &#x3D; () &#x3D;&gt; { };
+/** @ignore */ const noop &#x3D; () &#x3D;&gt; {};
 /** @ignore */
 
 export const CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR: any &#x3D; {
@@ -937,9 +937,9 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
     const shell &#x3D; this.shell;
     const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
     if (vertical) {
-      return smallval
+      return smallval;
     } else {
-      return smallval / 2.5
+      return smallval / 2.5;
     }
   }
   get thumbHeight(): any {
@@ -947,9 +947,9 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
     const shell &#x3D; this.shell;
     const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
     if (!vertical) {
-      return smallval
+      return smallval;
     } else {
-      return smallval / 2.5
+      return smallval / 2.5;
     }
   }
   get thumbTop(): any {
@@ -963,7 +963,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
 
     const tracksize &#x3D; bigval - thumbsize;
     const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
-    return (vertical ? loc : 0);
+    return vertical ? loc : 0;
   }
   get thumbLeft(): any {
     const val &#x3D; this.slider;
@@ -977,7 +977,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
 
     const tracksize &#x3D; bigval - thumbsize;
     const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
-    return (vertical ? 0 : loc);
+    return vertical ? 0 : loc;
   }
 
   get fillWidth(): any {
@@ -989,7 +989,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
     const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
     const tracksize &#x3D; bigval - thumbsize;
     const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
-    return (vertical ? this.fillsize : loc + (thumbsize / 2));
+    return vertical ? this.fillsize : loc + thumbsize / 2;
   }
   get fillHeight(): any {
     const val &#x3D; this.slider;
@@ -1004,8 +1004,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
     const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
     const fillsize &#x3D; 16;
     const filloffset &#x3D; smallval / 2 - fillsize / 2;
-    return Math.max(0, (vertical ? bigval - filloffset - fillsize - loc : fillsize));
-
+    return Math.max(0, vertical ? bigval - filloffset - fillsize - loc : fillsize);
   }
   get fillTop(): any {
     const val &#x3D; this.slider;
@@ -1020,22 +1019,18 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
     const tracksize &#x3D; bigval - thumbsize;
     const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
 
-
-
     /* Fill */
 
     const fillsize &#x3D; 16;
     const filloffset &#x3D; smallval / 2 - fillsize / 2;
-    return (vertical ? loc + thumbsize : filloffset);
-
+    return vertical ? loc + thumbsize : filloffset;
   }
   get fillLeft(): any {
     const vertical &#x3D; !!this.config.vertical;
     const shell &#x3D; this.shell;
     const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
     const filloffset &#x3D; smallval / 2 - this.fillsize / 2;
-    return (vertical ? filloffset : 0);
-
+    return vertical ? filloffset : 0;
   }
 
   get trackWidth(): any {
@@ -1047,7 +1042,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
     const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
     const tracksize &#x3D; bigval - thumbsize;
     const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
-    return (vertical ? this.fillsize : loc + (thumbsize / 2));
+    return vertical ? this.fillsize : loc + thumbsize / 2;
   }
   get trackHeight(): any {
     const vertical &#x3D; !!this.config.vertical;
@@ -1055,35 +1050,28 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
     const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
     const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
 
-
-    return bigval - thumbsize*1.25;
-
+    return bigval - thumbsize * 1.25;
   }
   get trackTop(): any {
     const vertical &#x3D; !!this.config.vertical;
 
     const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
 
-    return thumbsize/2;
-
+    return thumbsize / 2;
   }
   get trackLeft(): any {
     const vertical &#x3D; !!this.config.vertical;
     const shell &#x3D; this.shell;
     const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
     const filloffset &#x3D; smallval / 2 - this.fillsize / 2;
-    return (vertical ? filloffset : 0);
-
+    return vertical ? filloffset : 0;
   }
-
 
   private onTouchedCallback: () &#x3D;&gt; void &#x3D; noop;
   private onChangeCallback: (_: any) &#x3D;&gt; void &#x3D; noop;
 
-  ngOnInit() {
+  ngOnInit() {}
 
-  }
- 
   setValue() {
     this.onChangeCallback(this.slider);
     this.onTouchedCallback();
@@ -1148,7 +1136,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="slidershell {{config.track}}" #sliderShell [id]="config.id+\'_slidershell\'">	<div [class.hidden]="!config.fill"	 [ngClass]="{\'sliderfill\':!config.vertical,	 \'sliderfill-vertical\':config.vertical}"	[id]="config.id+\'sliderfill\'"	[style.width]="fillWidth+\'px\'"		[style.height]="fillHeight+\'px\'"		[style.top]="fillTop+\'px\'"		[style.left]="fillLeft+\'px\'"></div>		<div [class.hidden]="!config.fill"	 [ngClass]="{\'slidertrack\':!config.vertical,	 \'slidertrack-vertical\':config.vertical}"	[id]="config.id+\'slidertrack\'"	[style.width]="trackWidth+\'px\'"		[style.height]="trackHeight+\'px\'"		[style.top]="trackTop+\'px\'"		[style.left]="trackLeft+\'px\'"></div>	<div class="sliderthumb {{config.thumb}}"	  [id]="config.id+\'sliderthumb\'"		[style.width]="thumbWidth+\'px\'"		[style.height]="thumbHeight+\'px\'"		[style.top]="thumbTop+\'px\'"		[style.left]="thumbLeft+\'px\'"></div>	<input [ngClass]="{\'slider\':!config.vertical,	 \'slidervertical\':config.vertical}"	  id="slider" type="range"	   min="{{config.min}}"	    max="{{config.max}}"		  [(ngModel)]="slider"		  (ngModelChange)="setValue()"	[attr.orient]="config.vertical?\'vertical\':null" /></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SliderControllerComponent'};
 </script>
