@@ -14,7 +14,6 @@ import { AppTabsComponent } from './components/app-tabs/app-tabs.component';
 import { AppMusicListComponent } from './components/app-music-list/app-music-list.component';
 import { AppSettingsComponent } from './components/app-settings/app-settings.component';
 import { AppAboutComponent } from './components/app-about/app-about.component';
-import { PruebasComponent } from './components/pruebas/pruebas.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { PruebasComponent } from './components/pruebas/pruebas.component';
     AppTabsComponent,
     AppMusicListComponent,
     AppSettingsComponent,
-    AppAboutComponent,
-    PruebasComponent
+    AppAboutComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
