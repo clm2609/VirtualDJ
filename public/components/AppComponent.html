@@ -126,7 +126,8 @@ export class AppComponent {}
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-layout&gt;&lt;/app-layout&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;app-layout&gt;&lt;/app-layout&gt;
+&lt;!-- &lt;pruebas&gt;&lt;/pruebas&gt;--&gt;</code></pre>
     </div>
 
 
@@ -137,7 +138,7 @@ export class AppComponent {}
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-layout></app-layout></div>'
+        var COMPONENT_TEMPLATE = '<div><app-layout></app-layout><!-- <pruebas></pruebas>--></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};

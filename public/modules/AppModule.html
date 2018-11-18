@@ -345,17 +345,18 @@ import { NgModule } from &#x27;@angular/core&#x27;;
 
 import { AppRoutingModule } from &#x27;./app-routing.module&#x27;;
 import { AppComponent } from &#x27;./app.component&#x27;;
-import { AppDeckComponent } from &#x27;./app-deck/app-deck.component&#x27;;
-import { AppLayoutComponent } from &#x27;./app-layout/app-layout.component&#x27;;
-import { AppVolumeComponent } from &#x27;./app-volume/app-volume.component&#x27;;
-import { SliderControllerComponent } from &#x27;./slider-controller/slider-controller.component&#x27;;
+import { AppDeckComponent } from &#x27;./components/app-deck/app-deck.component&#x27;;
+import { AppLayoutComponent } from &#x27;./components/app-layout/app-layout.component&#x27;;
+import { AppVolumeComponent } from &#x27;./components/app-volume/app-volume.component&#x27;;
+import { SliderControllerComponent } from &#x27;./components/slider-controller/slider-controller.component&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
-import { RouletteControllerComponent } from &#x27;./roulette-controller/roulette-controller.component&#x27;;
-import { AppSearchComponent } from &#x27;./app-search/app-search.component&#x27;;
-import { AppTabsComponent } from &#x27;./app-tabs/app-tabs.component&#x27;;
-import { AppMusicListComponent } from &#x27;./app-music-list/app-music-list.component&#x27;;
-import { AppSettingsComponent } from &#x27;./app-settings/app-settings.component&#x27;;
-import { AppAboutComponent } from &#x27;./app-about/app-about.component&#x27;;
+import { RouletteControllerComponent } from &#x27;./components/roulette-controller/roulette-controller.component&#x27;;
+import { AppSearchComponent } from &#x27;./components/app-search/app-search.component&#x27;;
+import { AppTabsComponent } from &#x27;./components/app-tabs/app-tabs.component&#x27;;
+import { AppMusicListComponent } from &#x27;./components/app-music-list/app-music-list.component&#x27;;
+import { AppSettingsComponent } from &#x27;./components/app-settings/app-settings.component&#x27;;
+import { AppAboutComponent } from &#x27;./components/app-about/app-about.component&#x27;;
+import { PruebasComponent } from &#x27;./components/pruebas/pruebas.component&#x27;;
 
 @NgModule({
   declarations: [
@@ -369,7 +370,8 @@ import { AppAboutComponent } from &#x27;./app-about/app-about.component&#x27;;
     AppTabsComponent,
     AppMusicListComponent,
     AppSettingsComponent,
-    AppAboutComponent
+    AppAboutComponent,
+    PruebasComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

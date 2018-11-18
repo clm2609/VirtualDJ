@@ -58,7 +58,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app-settings/app-settings.component.ts</code>
+    <code>src/app/components/app-settings/app-settings.component.ts</code>
 </p>
 
 
@@ -120,7 +120,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app-settings/app-settings.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -146,21 +146,156 @@
   styleUrls: [&#x27;./app-settings.component.css&#x27;]
 })
 export class AppSettingsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  app-settings works!
-&lt;/p&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;settings-container&quot;&gt;
+  &lt;div class&#x3D;&quot;question-container&quot;&gt;
+    &lt;div class&#x3D;&quot;question&quot;&gt;
+      &lt;div class&#x3D;&quot;question-label&quot;&gt;Language&lt;/div&gt;
+
+      &lt;select&gt;
+        &lt;option value&#x3D;&quot;es&quot;&gt;Spanish&lt;/option&gt;
+        &lt;option value&#x3D;&quot;en&quot;&gt;English&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;question&quot;&gt;
+      &lt;div class&#x3D;&quot;question-label&quot;&gt;Template&lt;/div&gt;
+      &lt;select&gt;
+        &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+        &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;question-container&quot;&gt;
+
+    &lt;div class&#x3D;&quot;effects-container&quot;&gt;
+      &lt;div class&#x3D;&quot;question-label&quot;&gt;Effects deck 1&lt;/div&gt;
+      &lt;table&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 1&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 2&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 3&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 4&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 5&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 6&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;effects-container&quot;&gt;
+      &lt;div class&#x3D;&quot;question-label&quot;&gt;Effects deck 2&lt;/div&gt;
+      &lt;table&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 1&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 2&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 3&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 4&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 5&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Effect 6&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select&gt;
+              &lt;option value&#x3D;&quot;li&quot;&gt;Light&lt;/option&gt;
+              &lt;option value&#x3D;&quot;da&quot;&gt;Dark&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -171,7 +306,7 @@ export class AppSettingsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  app-settings works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="settings-container">  <div class="question-container">    <div class="question">      <div class="question-label">Language</div>      <select>        <option value="es">Spanish</option>        <option value="en">English</option>      </select>    </div>    <div class="question">      <div class="question-label">Template</div>      <select>        <option value="li">Light</option>        <option value="da">Dark</option>      </select>    </div>  </div>  <div class="question-container">    <div class="effects-container">      <div class="question-label">Effects deck 1</div>      <table>        <tr>          <td>Effect 1</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 2</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 3</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 4</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 5</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 6</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>      </table>    </div>    <div class="effects-container">      <div class="question-label">Effects deck 2</div>      <table>        <tr>          <td>Effect 1</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 2</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 3</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 4</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 5</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>        <tr>          <td>Effect 6</td>          <td>            <select>              <option value="li">Light</option>              <option value="da">Dark</option>            </select>          </td>        </tr>      </table>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppSettingsComponent'};

@@ -9,17 +9,15 @@
 }
 
 .searchbutton {
-  /* image replacement */
   text-indent: -99999px;
   width: 35px;
   height: 35px;
   display: block;
-  background: white url('../../assets/images/button.png') 0 0 no-repeat;
+  background: white url('../../../assets/images/button.png') 0 0 no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-  /* placing next to input using float or absolute positioning omitted ... */
 }
 
 .searchbar {

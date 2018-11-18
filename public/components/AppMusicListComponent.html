@@ -58,7 +58,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app-music-list/app-music-list.component.ts</code>
+    <code>src/app/components/app-music-list/app-music-list.component.ts</code>
 </p>
 
 
@@ -120,7 +120,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app-music-list/app-music-list.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -146,21 +146,337 @@
   styleUrls: [&#x27;./app-music-list.component.css&#x27;]
 })
 export class AppMusicListComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  app-music-list works!
-&lt;/p&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;music-container&quot;&gt;
+  &lt;table&gt;
+    &lt;tr class&#x3D;&quot;header&quot;&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td class&#x3D;&quot;header&quot;&gt;Song&lt;/td&gt;
+      &lt;td class&#x3D;&quot;header&quot;&gt;Artist&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div title&#x3D;&quot;Remove all&quot; class&#x3D;&quot;icon-container&quot;&gt;
+          &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
+        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
+      &lt;/td&gt;
+      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
+          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
+          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
+          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
+        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
+        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
+        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
+        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
+        Don’t Like Surprises&lt;/td&gt;
+      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
+          &lt;/div&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -171,7 +487,7 @@ export class AppMusicListComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  app-music-list works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="music-container">  <table>    <tr class="header">      <td></td>      <td class="header">Song</td>      <td class="header">Artist</td>      <td>        <div title="Remove all" class="icon-container">          <img class="icon icon--clickable" src="assets/images/error.svg">        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon icon--clickable" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon icon--clickable" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon icon--clickable" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>  </table></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppMusicListComponent'};
