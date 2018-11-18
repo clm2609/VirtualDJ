@@ -57,21 +57,79 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-dcb9b51bbfb720da10cc294377ad7409"' : 'data-target="#xs-components-links-module-AppModule-dcb9b51bbfb720da10cc294377ad7409"' }>
+                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-c9d80c493e767885783d73f2fa2e14bd"' : 'data-target="#xs-components-links-module-AppModule-c9d80c493e767885783d73f2fa2e14bd"' }>
                                     <span class="icon ion-md-cog"></span>
                                     <span>Components</span>
                                     <span class="icon ion-ios-arrow-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                    ${ isNormalMode ? 'id="components-links-module-AppModule-dcb9b51bbfb720da10cc294377ad7409"' : 'id="xs-components-links-module-AppModule-dcb9b51bbfb720da10cc294377ad7409"' }>
+                                    ${ isNormalMode ? 'id="components-links-module-AppModule-c9d80c493e767885783d73f2fa2e14bd"' : 'id="xs-components-links-module-AppModule-c9d80c493e767885783d73f2fa2e14bd"' }>
+                                        <li class="link">
+                                            <a href="components/AppAboutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppAboutComponent</a>
+                                        </li>
                                         <li class="link">
                                             <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppDeckComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppDeckComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppLayoutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppLayoutComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppMusicListComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppMusicListComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppSearchComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppSearchComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppSettingsComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppSettingsComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppTabsComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppTabsComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppVolumeComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppVolumeComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/RouletteControllerComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">RouletteControllerComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/SliderControllerComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">SliderControllerComponent</a>
                                         </li>
                                 </ul>
                             </li>
                     </li>
                     <li class="link">
                         <a href="modules/AppRoutingModule.html" data-type="entity-link">AppRoutingModule</a>
+                    </li>
+            </ul>
+        </li>
+                <li class="chapter">
+                    <div class="simple menu-toggler" data-toggle="collapse"
+                        ${ isNormalMode ? 'data-target="#injectables-links"' : 'data-target="#xs-injectables-links"' }>
+                        <span class="icon ion-md-arrow-round-down"></span>
+                        <span>Injectables</span>
+                        <span class="icon ion-ios-arrow-down"></span>
+                    </div>
+                    <ul class="links collapse"
+                    ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
+                            <li class="link">
+                                <a href="injectables/MusicLoaderService.html" data-type="entity-link">MusicLoaderService</a>
+                            </li>
+                    </ul>
+                </li>
+        <li class="chapter">
+            <div class="simple menu-toggler" data-toggle="collapse"
+            ${ isNormalMode ? 'data-target="#miscellaneous-links"' : 'data-target="#xs-miscellaneous-links"' }>
+                <span class="icon ion-ios-cube"></span>
+                <span>Miscellaneous</span>
+                <span class="icon ion-ios-arrow-down"></span>
+            </div>
+            <ul class="links collapse"
+            ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                    <li class="link">
+                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
                     </li>
             </ul>
         </li>

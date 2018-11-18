@@ -1,0 +1,80 @@
+.music-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: none;
+  height: 100%;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 2em;
+  align-items: center;
+}
+
+.list-item:hover {
+  background-color: #444444;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  height: 2em;
+}
+
+td {
+  padding: 5px;
+}
+
+.header {
+  background-color: #222222;
+}
+
+.elements:nth-child(even) {
+  background-color: #444444;
+}
+
+.elements:nth-child(odd) {
+  background-color: #555555;
+}
+
+.elements:hover {
+  background-color: #333333;
+}
+
+.icons-container {
+  display: flex;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.icon--clickable {
+  cursor: pointer;
+}
+
+.info {
+  max-width: 0;
+  width: 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header {
+  font-weight: 600;
+}
