@@ -1,0 +1,44 @@
+<div class="volume-container">
+  <div class="volume components-container">
+    <div class="volume-eq">
+      <div class="volume-decks">
+        <slider-controller [config]="{id:'volume-deck-1',
+                       min:0, max:100,
+                        default:100,
+                        vertical:true,
+                        thumb:'sliderthumb-pitch-vertical',
+                        track:'slidertrack-vol-vertical'}"></slider-controller>
+      </div>
+      <div class="volume-equalizers">
+        <div class="roulette-container">
+          <roulette-controller [config]="{ id: 'trebble_1' }"></roulette-controller>
+          <roulette-controller [config]="{ id: 'middle_1' }"></roulette-controller>
+          <roulette-controller [config]="{ id: 'bass_1' }"></roulette-controller>
+        </div>
+        <div class="roulette-container">
+          <roulette-controller [config]="{ id: 'trebble_2' }"></roulette-controller>
+          <roulette-controller [config]="{ id: 'middle_2' }"></roulette-controller>
+          <roulette-controller [config]="{ id: 'bass_2' }"></roulette-controller>
+        </div>
+      </div>
+      <div class="volume-decks">
+        <slider-controller [config]="{id:'volume-deck-2',
+                       min:0,
+                        max:100,
+                         default:100,
+                         vertical:true,
+                        thumb:'sliderthumb-pitch-vertical',
+                        track:'slidertrack-vol-vertical'}"></slider-controller>
+      </div>
+    </div>
+    <div class="volume-master">
+      <slider-controller [config]="{id:'volume-master',
+                 min:-100,
+                  max:100,
+                   default:0,
+                thumb:'sliderthumb-pitch',
+                track:'slidertrack-vol'}"></slider-controller>
+
+    </div>
+  </div>
+</div>

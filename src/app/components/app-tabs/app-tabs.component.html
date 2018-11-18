@@ -1,0 +1,20 @@
+<div class="tabs-container">
+  <div class="tabs">
+    <div class="tablist">
+      <div [ngClass]="{'tab':true, 'tab--active':active=='music'}" (click)="setActive('music')">
+        Music
+      </div>
+      <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')">
+        Settings
+      </div>
+      <div [ngClass]="{'tab':true, 'tab--active':active=='about'}" (click)="setActive('about')">
+        About
+      </div>
+    </div>
+    <div class="contents">
+      <app-music-list *ngIf="active=='music'"></app-music-list>
+      <app-settings *ngIf="active=='settings'"></app-settings>
+      <app-about *ngIf="active=='about'"></app-about>
+    </div>
+  </div>
+</div>

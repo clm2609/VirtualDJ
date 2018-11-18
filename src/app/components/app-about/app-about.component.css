@@ -1,0 +1,11 @@
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+}
+
+.icon-attribution {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}

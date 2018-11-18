@@ -1,0 +1,40 @@
+.layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #111111;
+  color: white;
+}
+
+.top-layout {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.deck {
+  width: 40%;
+  height: 100%;
+}
+
+.volume-control {
+  width: 20%;
+  height: 100%;
+}
+
+.bottom-layout {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.search {
+  width: 20%;
+  height: 100%;
+}
+
+.tabs {
+  width: 80%;
+  height: 100%;
+}

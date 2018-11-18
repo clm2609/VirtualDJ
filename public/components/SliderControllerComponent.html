@@ -1,0 +1,1204 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Virtual DJ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Virtual DJ</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SliderControllerComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/slider-controller/slider-controller.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/forms/ControlValueAccessor" target="_blank" >ControlValueAccessor</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code>CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>slider-controller</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>slider-controller.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./slider-controller.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fillsize">fillsize</a>
+                            </li>
+                            <li>
+                                <a href="#shell">shell</a>
+                            </li>
+                            <li>
+                                <a href="#slider">slider</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#registerOnChange">registerOnChange</a>
+                            </li>
+                            <li>
+                                <a href="#registerOnTouched">registerOnTouched</a>
+                            </li>
+                            <li>
+                                <a href="#setValue">setValue</a>
+                            </li>
+                            <li>
+                                <a href="#writeValue">writeValue</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#config">config</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#thumbWidth">thumbWidth</a>
+                                </li>
+                                <li>
+                                    <a href="#thumbHeight">thumbHeight</a>
+                                </li>
+                                <li>
+                                    <a href="#thumbTop">thumbTop</a>
+                                </li>
+                                <li>
+                                    <a href="#thumbLeft">thumbLeft</a>
+                                </li>
+                                <li>
+                                    <a href="#fillWidth">fillWidth</a>
+                                </li>
+                                <li>
+                                    <a href="#fillHeight">fillHeight</a>
+                                </li>
+                                <li>
+                                    <a href="#fillTop">fillTop</a>
+                                </li>
+                                <li>
+                                    <a href="#fillLeft">fillLeft</a>
+                                </li>
+                                <li>
+                                    <a href="#trackWidth">trackWidth</a>
+                                </li>
+                                <li>
+                                    <a href="#trackHeight">trackHeight</a>
+                                </li>
+                                <li>
+                                    <a href="#trackTop">trackTop</a>
+                                </li>
+                                <li>
+                                    <a href="#trackLeft">trackLeft</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="config"></a>
+                        <code>config</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:22</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="registerOnChange"></a>
+                        <span class="name">
+                            <b>
+                            registerOnChange
+                            </b>
+                            <a href="#registerOnChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>registerOnChange(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:178</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fn</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="registerOnTouched"></a>
+                        <span class="name">
+                            <b>
+                            registerOnTouched
+                            </b>
+                            <a href="#registerOnTouched"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>registerOnTouched(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:181</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fn</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setValue"></a>
+                        <span class="name">
+                            <b>
+                            setValue
+                            </b>
+                            <a href="#setValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setValue()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:168</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="writeValue"></a>
+                        <span class="name">
+                            <b>
+                            writeValue
+                            </b>
+                            <a href="#writeValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>writeValue(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:173</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillsize"></a>
+                        <span class="name">
+                            <b>
+                            fillsize
+                            </b>
+                            <a href="#fillsize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>fillsize:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>16</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shell"></a>
+                        <span class="name">
+                            <b>
+                            shell
+                            </b>
+                            <a href="#shell"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>shell:     <code>HTMLElement</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>HTMLElement</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>NativeElement</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="slider"></a>
+                        <span class="name">
+                            <b>
+                            slider
+                            </b>
+                            <a href="#slider"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>slider:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="thumbWidth"></a>
+                        <span class="name"><b>thumbWidth</b><a href="#thumbWidth"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>thumbWidth()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:28</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="thumbHeight"></a>
+                        <span class="name"><b>thumbHeight</b><a href="#thumbHeight"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>thumbHeight()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:38</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="thumbTop"></a>
+                        <span class="name"><b>thumbTop</b><a href="#thumbTop"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>thumbTop()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:48</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="thumbLeft"></a>
+                        <span class="name"><b>thumbLeft</b><a href="#thumbLeft"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>thumbLeft()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:61</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillWidth"></a>
+                        <span class="name"><b>fillWidth</b><a href="#fillWidth"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fillWidth()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:76</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillHeight"></a>
+                        <span class="name"><b>fillHeight</b><a href="#fillHeight"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fillHeight()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:87</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillTop"></a>
+                        <span class="name"><b>fillTop</b><a href="#fillTop"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fillTop()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:102</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillLeft"></a>
+                        <span class="name"><b>fillLeft</b><a href="#fillLeft"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fillLeft()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:121</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trackWidth"></a>
+                        <span class="name"><b>trackWidth</b><a href="#trackWidth"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>trackWidth()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:129</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trackHeight"></a>
+                        <span class="name"><b>trackHeight</b><a href="#trackHeight"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>trackHeight()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:140</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trackTop"></a>
+                        <span class="name"><b>trackTop</b><a href="#trackTop"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>trackTop()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:148</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trackLeft"></a>
+                        <span class="name"><b>trackLeft</b><a href="#trackLeft"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>trackLeft()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/components/slider-controller/slider-controller.component.ts:155</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, forwardRef } from &#x27;@angular/core&#x27;;
+import { NativeElement } from &#x27;../decorators/native-element.decorator&#x27;;
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from &#x27;@angular/forms&#x27;;
+
+/** @ignore */ const noop &#x3D; () &#x3D;&gt; {};
+/** @ignore */
+
+export const CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR: any &#x3D; {
+  provide: NG_VALUE_ACCESSOR,
+  useExisting: forwardRef(() &#x3D;&gt; SliderControllerComponent),
+  multi: true
+};
+
+@Component({
+  selector: &#x27;slider-controller&#x27;,
+  templateUrl: &#x27;./slider-controller.component.html&#x27;,
+  styleUrls: [&#x27;./slider-controller.component.css&#x27;],
+  providers: [CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR]
+})
+export class SliderControllerComponent implements OnInit, ControlValueAccessor {
+  @Input()
+  config: any;
+  @NativeElement(&#x27;sliderShell&#x27;)
+  shell: HTMLElement;
+  slider: any;
+  fillsize &#x3D; 16;
+
+  get thumbWidth(): any {
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
+    if (vertical) {
+      return smallval;
+    } else {
+      return smallval / 2.5;
+    }
+  }
+  get thumbHeight(): any {
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
+    if (!vertical) {
+      return smallval;
+    } else {
+      return smallval / 2.5;
+    }
+  }
+  get thumbTop(): any {
+    const val &#x3D; this.slider;
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const pc &#x3D; (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
+
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+
+    const tracksize &#x3D; bigval - thumbsize;
+    const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? loc : 0;
+  }
+  get thumbLeft(): any {
+    const val &#x3D; this.slider;
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+
+    const pc &#x3D; (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
+
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+
+    const tracksize &#x3D; bigval - thumbsize;
+    const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? 0 : loc;
+  }
+
+  get fillWidth(): any {
+    const val &#x3D; this.slider;
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const pc &#x3D; (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+    const tracksize &#x3D; bigval - thumbsize;
+    const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? this.fillsize : loc + thumbsize / 2;
+  }
+  get fillHeight(): any {
+    const val &#x3D; this.slider;
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const pc &#x3D; (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
+    const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+
+    const tracksize &#x3D; bigval - thumbsize;
+    const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
+    const fillsize &#x3D; 16;
+    const filloffset &#x3D; smallval / 2 - fillsize / 2;
+    return Math.max(0, vertical ? bigval - filloffset - fillsize - loc : fillsize);
+  }
+  get fillTop(): any {
+    const val &#x3D; this.slider;
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+
+    const pc &#x3D; (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
+    const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+
+    const tracksize &#x3D; bigval - thumbsize;
+    const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
+
+    /* Fill */
+
+    const fillsize &#x3D; 16;
+    const filloffset &#x3D; smallval / 2 - fillsize / 2;
+    return vertical ? loc + thumbsize : filloffset;
+  }
+  get fillLeft(): any {
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
+    const filloffset &#x3D; smallval / 2 - this.fillsize / 2;
+    return vertical ? filloffset : 0;
+  }
+
+  get trackWidth(): any {
+    const val &#x3D; this.slider;
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const pc &#x3D; (val - this.config.min) / (this.config.max - this.config.min);
+    const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+    const tracksize &#x3D; bigval - thumbsize;
+    const loc &#x3D; vertical ? (1 - pc) * tracksize : pc * tracksize;
+    return vertical ? this.fillsize : loc + thumbsize / 2;
+  }
+  get trackHeight(): any {
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const bigval &#x3D; vertical ? shell.offsetHeight : shell.offsetWidth;
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+
+    return bigval - thumbsize * 1.25;
+  }
+  get trackTop(): any {
+    const vertical &#x3D; !!this.config.vertical;
+
+    const thumbsize &#x3D; vertical ? this.thumbHeight : this.thumbWidth;
+
+    return thumbsize / 2;
+  }
+  get trackLeft(): any {
+    const vertical &#x3D; !!this.config.vertical;
+    const shell &#x3D; this.shell;
+    const smallval &#x3D; vertical ? shell.offsetWidth : shell.offsetHeight;
+    const filloffset &#x3D; smallval / 2 - this.fillsize / 2;
+    return vertical ? filloffset : 0;
+  }
+
+  private onTouchedCallback: () &#x3D;&gt; void &#x3D; noop;
+  private onChangeCallback: (_: any) &#x3D;&gt; void &#x3D; noop;
+
+  ngOnInit() {}
+
+  setValue() {
+    this.onChangeCallback(this.slider);
+    this.onTouchedCallback();
+  }
+
+  writeValue(value: any) {
+    if (value) {
+      this.slider &#x3D; value;
+    }
+  }
+  registerOnChange(fn: any) {
+    this.onChangeCallback &#x3D; fn;
+  }
+  registerOnTouched(fn: any) {
+    this.onTouchedCallback &#x3D; fn;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;slidershell {{config.track}}&quot; #sliderShell [id]&#x3D;&quot;config.id+&#x27;_slidershell&#x27;&quot;&gt;
+	&lt;div [class.hidden]&#x3D;&quot;!config.fill&quot;
+	 [ngClass]&#x3D;&quot;{&#x27;sliderfill&#x27;:!config.vertical,
+	 &#x27;sliderfill-vertical&#x27;:config.vertical}&quot;
+	[id]&#x3D;&quot;config.id+&#x27;sliderfill&#x27;&quot;
+	[style.width]&#x3D;&quot;fillWidth+&#x27;px&#x27;&quot;
+		[style.height]&#x3D;&quot;fillHeight+&#x27;px&#x27;&quot;
+		[style.top]&#x3D;&quot;fillTop+&#x27;px&#x27;&quot;
+		[style.left]&#x3D;&quot;fillLeft+&#x27;px&#x27;&quot;&gt;&lt;/div&gt;
+		&lt;div [class.hidden]&#x3D;&quot;!config.fill&quot;
+	 [ngClass]&#x3D;&quot;{&#x27;slidertrack&#x27;:!config.vertical,
+	 &#x27;slidertrack-vertical&#x27;:config.vertical}&quot;
+	[id]&#x3D;&quot;config.id+&#x27;slidertrack&#x27;&quot;
+	[style.width]&#x3D;&quot;trackWidth+&#x27;px&#x27;&quot;
+		[style.height]&#x3D;&quot;trackHeight+&#x27;px&#x27;&quot;
+		[style.top]&#x3D;&quot;trackTop+&#x27;px&#x27;&quot;
+		[style.left]&#x3D;&quot;trackLeft+&#x27;px&#x27;&quot;&gt;&lt;/div&gt;
+	&lt;div class&#x3D;&quot;sliderthumb {{config.thumb}}&quot;
+	  [id]&#x3D;&quot;config.id+&#x27;sliderthumb&#x27;&quot;
+		[style.width]&#x3D;&quot;thumbWidth+&#x27;px&#x27;&quot;
+		[style.height]&#x3D;&quot;thumbHeight+&#x27;px&#x27;&quot;
+		[style.top]&#x3D;&quot;thumbTop+&#x27;px&#x27;&quot;
+		[style.left]&#x3D;&quot;thumbLeft+&#x27;px&#x27;&quot;&gt;&lt;/div&gt;
+	&lt;input [ngClass]&#x3D;&quot;{&#x27;slider&#x27;:!config.vertical,
+	 &#x27;slidervertical&#x27;:config.vertical}&quot;
+	  id&#x3D;&quot;slider&quot; type&#x3D;&quot;range&quot;
+	   min&#x3D;&quot;{{config.min}}&quot;
+	    max&#x3D;&quot;{{config.max}}&quot;
+		  [(ngModel)]&#x3D;&quot;slider&quot;
+		  (ngModelChange)&#x3D;&quot;setValue()&quot;
+	[attr.orient]&#x3D;&quot;config.vertical?&#x27;vertical&#x27;:null&quot; /&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="slidershell {{config.track}}" #sliderShell [id]="config.id+\'_slidershell\'">	<div [class.hidden]="!config.fill"	 [ngClass]="{\'sliderfill\':!config.vertical,	 \'sliderfill-vertical\':config.vertical}"	[id]="config.id+\'sliderfill\'"	[style.width]="fillWidth+\'px\'"		[style.height]="fillHeight+\'px\'"		[style.top]="fillTop+\'px\'"		[style.left]="fillLeft+\'px\'"></div>		<div [class.hidden]="!config.fill"	 [ngClass]="{\'slidertrack\':!config.vertical,	 \'slidertrack-vertical\':config.vertical}"	[id]="config.id+\'slidertrack\'"	[style.width]="trackWidth+\'px\'"		[style.height]="trackHeight+\'px\'"		[style.top]="trackTop+\'px\'"		[style.left]="trackLeft+\'px\'"></div>	<div class="sliderthumb {{config.thumb}}"	  [id]="config.id+\'sliderthumb\'"		[style.width]="thumbWidth+\'px\'"		[style.height]="thumbHeight+\'px\'"		[style.top]="thumbTop+\'px\'"		[style.left]="thumbLeft+\'px\'"></div>	<input [ngClass]="{\'slider\':!config.vertical,	 \'slidervertical\':config.vertical}"	  id="slider" type="range"	   min="{{config.min}}"	    max="{{config.max}}"		  [(ngModel)]="slider"		  (ngModelChange)="setValue()"	[attr.orient]="config.vertical?\'vertical\':null" /></div></div>'
+    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SliderControllerComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SliderControllerComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
