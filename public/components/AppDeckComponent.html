@@ -68,6 +68,8 @@
     </p>
     <p class="comment">
                 <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
     </p>
 
 
@@ -121,7 +123,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#musicService">musicService</a>
+                            </li>
+                            <li>
                                 <a href="#rotation">rotation</a>
+                            </li>
+                            <li>
+                                <a href="#song">song</a>
+                            </li>
+                            <li>
+                                <a href="#wavesurfer">wavesurfer</a>
                             </li>
                         </ul>
                     </td>
@@ -136,12 +147,32 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#finishSong">finishSong</a>
+                            </li>
+                            <li>
+                                <a href="#playPause">playPause</a>
+                            </li>
+                            <li>
                                 <a href="#rotate">rotate</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deckNumber">deckNumber</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -156,20 +187,73 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(musicService: <a href="../injectables/MusicLoaderService.html">MusicLoaderService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:19</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>musicService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/MusicLoaderService.html" target="_self" >MusicLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
 
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="deckNumber"></a>
+                        <code>deckNumber</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:13</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -178,6 +262,82 @@
         <h3 id="methods">
             Methods
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="finishSong"></a>
+                        <span class="name">
+                            <b>
+                            finishSong
+                            </b>
+                            <a href="#finishSong"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>finishSong()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="playPause"></a>
+                        <span class="name">
+                            <b>
+                            playPause
+                            </b>
+                            <a href="#playPause"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>playPause()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:67</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -200,7 +360,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:55</a></div>
                             </td>
                         </tr>
 
@@ -223,6 +383,40 @@
         <h3 id="inputs">
             Properties
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="musicService"></a>
+                        <span class="name">
+                            <b>
+                            musicService
+                            </b>
+                            <a href="#musicService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>musicService:     <code><a href="../injectables/MusicLoaderService.html" target="_self" >MusicLoaderService</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/MusicLoaderService.html" target="_self" >MusicLoaderService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -255,7 +449,75 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="song"></a>
+                        <span class="name">
+                            <b>
+                            song
+                            </b>
+                            <a href="#song"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>song:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="wavesurfer"></a>
+                        <span class="name">
+                            <b>
+                            wavesurfer
+                            </b>
+                            <a href="#wavesurfer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>wavesurfer:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -268,28 +530,75 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { RouterState } from &#x27;@angular/router&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, AfterViewInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { MusicLoaderService } from &#x27;../../services/music-loader.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import * as WaveSurfer from &#x27;wavesurfer.js&#x27;;
 
 @Component({
   selector: &#x27;app-deck&#x27;,
   templateUrl: &#x27;./app-deck.component.html&#x27;,
   styleUrls: [&#x27;./app-deck.component.css&#x27;]
 })
-export class AppDeckComponent implements OnInit {
+export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
+  @Input()
+  deckNumber: number;
+  private musicSubscription: Subscription;
+  musicService: MusicLoaderService;
   rotation &#x3D; 0;
-  private active &#x3D; true;
-  constructor() {}
-
+  private active &#x3D; false;
+  song: any;
+  wavesurfer: any;
+  constructor(musicService: MusicLoaderService) {
+    this.musicService &#x3D; musicService;
+  }
   ngOnInit() {
-    // setInterval(() &#x3D;&gt; {
-    //   this.rotate();
-    // }, 50);
+    setInterval(() &#x3D;&gt; {
+      this.rotate();
+    }, 50);
+  }
+  ngAfterViewInit(): void {
+    const height &#x3D; document.getElementById(&#x27;deck_&#x27; + this.deckNumber + &#x27;_wave&#x27;).offsetHeight;
+    requestAnimationFrame(() &#x3D;&gt; {
+      this.wavesurfer &#x3D; WaveSurfer.create({
+        container: &#x27;#deck_&#x27; + this.deckNumber + &#x27;_wave&#x27;,
+        waveColor: &#x27;red&#x27;,
+        progressColor: &#x27;purple&#x27;,
+        height: height
+      });
+      this.wavesurfer.on(&#x27;finish&#x27;, () &#x3D;&gt; {
+        this.finishSong();
+      });
+    });
+    this.musicSubscription &#x3D; this.musicService.decksongs$[this.deckNumber].subscribe(a &#x3D;&gt; {
+      const song &#x3D; a as File;
+      requestAnimationFrame(() &#x3D;&gt; {
+        const reader &#x3D; new FileReader();
+        reader.readAsDataURL(song);
+        reader.onload &#x3D; () &#x3D;&gt; {
+          this.wavesurfer.load(reader.result);
+        };
+        reader.onerror &#x3D; error &#x3D;&gt; {
+          console.log(&#x27;Error: &#x27;, error);
+        };
+      });
+    });
   }
   rotate() {
     if (this.active) {
-      this.rotation &#x3D; (this.rotation + 15) % 360;
+      this.rotation &#x3D; (this.rotation + 10) % 360;
     }
+  }
+  finishSong() {
+    this.active &#x3D; false;
+    this.rotation &#x3D; 0;
+  }
+  ngOnDestroy(): void {
+    this.musicSubscription.unsubscribe();
+  }
+  playPause() {
+    this.wavesurfer.playPause();
+    this.active &#x3D; this.wavesurfer.isPlaying();
   }
 }
 </code></pre>
@@ -297,8 +606,8 @@ export class AppDeckComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;deck-layout&quot;&gt;
-  &lt;div class&#x3D;&quot;sound-wave&quot;&gt;
-    sound-wave
+  &lt;!-- TODO: Make this more visually appealing --&gt;
+  &lt;div class&#x3D;&quot;sound-wave&quot; [id]&#x3D;&quot;&#x27;deck_&#x27;+deckNumber+&#x27;_wave&#x27;&quot;&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;dj-deck-container&quot;&gt;
     &lt;div class&#x3D;&quot;dj-deck components-container&quot;&gt;
@@ -350,7 +659,7 @@ export class AppDeckComponent implements OnInit {
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;button-container button-container--cue-play&quot;&gt;
           &lt;div class&#x3D;&quot;button button--cue&quot;&gt;CUE&lt;/div&gt;
-          &lt;div class&#x3D;&quot;button button--play&quot;&gt;
+          &lt;div class&#x3D;&quot;button button--play&quot; (click)&#x3D;&quot;playPause()&quot;&gt;
             &lt;div class&#x3D;&quot;play-pause&quot;&gt;
               &lt;div class&#x3D;&quot;arrow-right&quot;&gt;&lt;/div&gt;
               &lt;div class&#x3D;&quot;pause-stick&quot;&gt;&lt;/div&gt;
@@ -373,7 +682,7 @@ export class AppDeckComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="deck-layout">  <div class="sound-wave">    sound-wave  </div>  <div class="dj-deck-container">    <div class="dj-deck components-container">      <div class="plate-loops">        <div class="plate">          <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">        </div>        <div class="button-container button-container--loops">          <div class="button button--loops">2x</div>          <div class="button button--loops">4x</div>          <div class="button button--loops">8x</div>          <div class="button button--loops">16x</div>          <div class="button button--loops">32x</div>        </div>      </div>      <div class="layout-buttons">        <div class="layout-cue-effects-pitch">          <div class="layout-cue-effects">            CUEs            <div class="button-container button-container--cues">              <div class="button button--cues">CUE 1</div>              <div class="button button--cues">CUE 2</div>              <div class="button button--cues">CUE 3</div>              <div class="button button--cues">CUE 4</div>            </div>            Effects            <div class="button-container--effects">              <div class="button-container button-container--effects--upper-row">                <div class="button button--effects button--upper-row">2x</div>                <div class="button button--effects button--upper-row">4x</div>                <div class="button button--effects button--upper-row">8x</div>              </div>              <div class="button-container button-container--effects--lower-row">                <div class="button button--effects button--lower-row">2x</div>                <div class="button button--effects button--lower-row">4x</div>                <div class="button button--effects button--lower-row">8x</div>              </div>            </div>          </div>          <div class="layout-pitch">            <slider-controller [config]="{id:\'pitch-deck-1\',             min:-25,              max:25,               default:0,             vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-pitch-vertical\'}"></slider-controller>          </div>        </div>        <div class="button-container button-container--cue-play">          <div class="button button--cue">CUE</div>          <div class="button button--play">            <div class="play-pause">              <div class="arrow-right"></div>              <div class="pause-stick"></div>              <div class="pause-space"></div>              <div class="pause-stick"></div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="deck-layout">  <!-- TODO: Make this more visually appealing -->  <div class="sound-wave" [id]="\'deck_\'+deckNumber+\'_wave\'">  </div>  <div class="dj-deck-container">    <div class="dj-deck components-container">      <div class="plate-loops">        <div class="plate">          <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">        </div>        <div class="button-container button-container--loops">          <div class="button button--loops">2x</div>          <div class="button button--loops">4x</div>          <div class="button button--loops">8x</div>          <div class="button button--loops">16x</div>          <div class="button button--loops">32x</div>        </div>      </div>      <div class="layout-buttons">        <div class="layout-cue-effects-pitch">          <div class="layout-cue-effects">            CUEs            <div class="button-container button-container--cues">              <div class="button button--cues">CUE 1</div>              <div class="button button--cues">CUE 2</div>              <div class="button button--cues">CUE 3</div>              <div class="button button--cues">CUE 4</div>            </div>            Effects            <div class="button-container--effects">              <div class="button-container button-container--effects--upper-row">                <div class="button button--effects button--upper-row">2x</div>                <div class="button button--effects button--upper-row">4x</div>                <div class="button button--effects button--upper-row">8x</div>              </div>              <div class="button-container button-container--effects--lower-row">                <div class="button button--effects button--lower-row">2x</div>                <div class="button button--effects button--lower-row">4x</div>                <div class="button button--effects button--lower-row">8x</div>              </div>            </div>          </div>          <div class="layout-pitch">            <slider-controller [config]="{id:\'pitch-deck-1\',             min:-25,              max:25,               default:0,             vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-pitch-vertical\'}"></slider-controller>          </div>        </div>        <div class="button-container button-container--cue-play">          <div class="button button--cue">CUE</div>          <div class="button button--play" (click)="playPause()">            <div class="play-pause">              <div class="arrow-right"></div>              <div class="pause-stick"></div>              <div class="pause-space"></div>              <div class="pause-stick"></div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppDeckComponent'};

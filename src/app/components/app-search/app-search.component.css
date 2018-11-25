@@ -80,3 +80,43 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.button {
+  margin-bottom: 0;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  /* height: 35px; */
+  border: none;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 2px;
+  padding: 7px 15px;
+  padding-top: 7px;
+  transition: all 0.12s linear;
+  width: 100%;
+  max-width: 170px;
+  min-width: 95px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  background-position: left 0 top 0;
+  background-size: auto 100%;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button--green {
+  color: #fff;
+  background: linear-gradient(#6dbb80, #059a67);
+  border-color: #059a67;
+}
+
+.hide-input {
+  display: none;
+}

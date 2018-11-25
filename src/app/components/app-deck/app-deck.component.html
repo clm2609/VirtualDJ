@@ -1,6 +1,6 @@
 <div class="deck-layout">
-  <div class="sound-wave">
-    sound-wave
+  <!-- TODO: Make this more visually appealing -->
+  <div class="sound-wave" [id]="'deck_'+deckNumber+'_wave'">
   </div>
   <div class="dj-deck-container">
     <div class="dj-deck components-container">
@@ -52,7 +52,7 @@
         </div>
         <div class="button-container button-container--cue-play">
           <div class="button button--cue">CUE</div>
-          <div class="button button--play">
+          <div class="button button--play" (click)="playPause()">
             <div class="play-pause">
               <div class="arrow-right"></div>
               <div class="pause-stick"></div>
