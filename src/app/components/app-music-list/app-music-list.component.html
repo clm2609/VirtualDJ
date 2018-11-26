@@ -2,7 +2,15 @@
   <table *ngIf="musicList.length>0">
     <tr class="header">
       <td></td>
-      <td class="header">Song</td>
+      <td>
+        <div class="music-search">
+          <div>Song</div>
+          <div class="searchbar">
+            <input type="text" class="searchbox" [(ngModel)]="query" (ngModelChange)="updateMusic()" />
+            <div id="b" class="searchbutton"></div>
+          </div>
+        </div>
+      </td>
       <!-- <td class="header">Artist</td> -->
       <td>
         <div title="Remove all" class="icon-container">
@@ -10,7 +18,7 @@
         </div>
       </td>
     </tr>
-    <tr class="elements" *ngFor="let song of musicList;let i = index">
+    <tr class="elements" *ngFor="let song of shownMusic;let i = index">
       <td class="icon-container">
         <img class="icon" src="assets/images/music-player.svg">
       </td>
@@ -18,21 +26,24 @@
       <!-- <td title="" class="info"></td> -->
       <td>
         <div class="icons-container">
-          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, i)">
+          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, song)">
             <img class="icon icon--clickable" src="assets/images/uno.svg">
           </div>
-          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, i)">
+          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, song)">
             <img class="icon icon--clickable" src="assets/images/dos.svg">
           </div>
-          <div title="Remove" class="icon-container" (click)="removeSong(i)">
+          <div title="Remove" class="icon-container" (click)="removeSong(song)">
             <img class="icon icon--clickable" src="assets/images/error.svg">
           </div>
         </div>
       </td>
     </tr>
+    <tr *ngIf="shownMusic.length === 0">
+      <td COLSPAN="3">No songs match {{query}}</td>
+    </tr>
 
   </table>
-  <div *ngIf="musicList.length === 0">
+  <div *ngIf="musicList.length === 0" class="start-instructions">
     <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->
     To start load music from the search or drag music here from your computer.
   </div>

@@ -126,6 +126,12 @@
                             <li>
                                 <a href="#musicService">musicService</a>
                             </li>
+                            <li>
+                                <a href="#query">query</a>
+                            </li>
+                            <li>
+                                <a href="#shownMusic">shownMusic</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -143,6 +149,9 @@
                             </li>
                             <li>
                                 <a href="#removeSong">removeSong</a>
+                            </li>
+                            <li>
+                                <a href="#updateMusic">updateMusic</a>
                             </li>
                         </ul>
                     </td>
@@ -167,7 +176,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -229,14 +238,14 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>loadOnDeck(deck: , i: )</code>
+<code>loadOnDeck(deck: , song: )</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -264,7 +273,7 @@
 
                                                 </tr>
                                                 <tr>
-                                                        <td>i</td>
+                                                        <td>song</td>
                                                     
                                                     <td>
                                                             No
@@ -303,14 +312,14 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>removeSong(i: )</code>
+<code>removeSong(song: )</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -329,7 +338,7 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>i</td>
+                                                        <td>song</td>
                                                     
                                                     <td>
                                                             No
@@ -349,6 +358,44 @@
                                 <div class="io-description">
                                     
                                 </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateMusic"></a>
+                        <span class="name">
+                            <b>
+                            updateMusic
+                            </b>
+                            <a href="#updateMusic"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>updateMusic()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -375,13 +422,13 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>musicList:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <code>musicList:     <code>File[]</code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                            <i>Type : </i>    <code>File[]</code>
 
                         </td>
                     </tr>
@@ -428,6 +475,74 @@
 
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="query"></a>
+                        <span class="name">
+                            <b>
+                            query
+                            </b>
+                            <a href="#query"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>query:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shownMusic"></a>
+                        <span class="name">
+                            <b>
+                            shownMusic
+                            </b>
+                            <a href="#shownMusic"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>shownMusic:     <code>File[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>File[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
 </section>
 
 </div>
@@ -446,11 +561,16 @@ import { Subscription } from &#x27;rxjs&#x27;;
 export class AppMusicListComponent implements OnDestroy {
   musicService: MusicLoaderService;
   private musicSubscription: Subscription;
-  musicList: any;
+  musicList: File[];
+  shownMusic: File[];
+  query: string;
   constructor(musicService: MusicLoaderService) {
     this.musicService &#x3D; musicService;
+    this.musicList &#x3D; musicService.music;
+    this.updateMusic()
     this.musicSubscription &#x3D; musicService.music$.subscribe(a &#x3D;&gt; {
-      this.musicList &#x3D; a;
+      this.musicList &#x3D; a as File[];
+      this.updateMusic()
     });
   }
 
@@ -458,11 +578,31 @@ export class AppMusicListComponent implements OnDestroy {
     this.musicSubscription.unsubscribe();
   }
 
-  loadOnDeck(deck, i) {
-    this.musicService.load(deck, i);
+  loadOnDeck(deck, song) {
+    this.musicService.load(deck, song);
   }
-  removeSong(i) {
-    this.musicService.deleteSong(i);
+  removeSong(song) {
+    this.musicService.deleteSong(song);
+  }
+  updateMusic() {
+    if (!this.query) {
+      this.shownMusic &#x3D; this.musicList;
+    } else {
+      const searchMusic &#x3D; (searchQuery, music: any[]) &#x3D;&gt; {
+        const lowSearch &#x3D; searchQuery
+          .toLowerCase()
+          .normalize(&#x27;NFD&#x27;)
+          .replace(/[\u0300-\u036f]/g, &#x27;&#x27;);
+        return music.filter(mus &#x3D;&gt; {
+          return String(mus.name)
+            .toLowerCase()
+            .normalize(&#x27;NFD&#x27;)
+            .replace(/[\u0300-\u036f]/g, &#x27;&#x27;)
+            .includes(lowSearch);
+        });
+      };
+      this.shownMusic &#x3D; searchMusic(this.query, this.musicList)
+    }
   }
 }
 </code></pre>
@@ -473,7 +613,15 @@ export class AppMusicListComponent implements OnDestroy {
   &lt;table *ngIf&#x3D;&quot;musicList.length&gt;0&quot;&gt;
     &lt;tr class&#x3D;&quot;header&quot;&gt;
       &lt;td&gt;&lt;/td&gt;
-      &lt;td class&#x3D;&quot;header&quot;&gt;Song&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;music-search&quot;&gt;
+          &lt;div&gt;Song&lt;/div&gt;
+          &lt;div class&#x3D;&quot;searchbar&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;searchbox&quot; [(ngModel)]&#x3D;&quot;query&quot; (ngModelChange)&#x3D;&quot;updateMusic()&quot; /&gt;
+            &lt;div id&#x3D;&quot;b&quot; class&#x3D;&quot;searchbutton&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
       &lt;!-- &lt;td class&#x3D;&quot;header&quot;&gt;Artist&lt;/td&gt; --&gt;
       &lt;td&gt;
         &lt;div title&#x3D;&quot;Remove all&quot; class&#x3D;&quot;icon-container&quot;&gt;
@@ -481,7 +629,7 @@ export class AppMusicListComponent implements OnDestroy {
         &lt;/div&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot; *ngFor&#x3D;&quot;let song of musicList;let i &#x3D; index&quot;&gt;
+    &lt;tr class&#x3D;&quot;elements&quot; *ngFor&#x3D;&quot;let song of shownMusic;let i &#x3D; index&quot;&gt;
       &lt;td class&#x3D;&quot;icon-container&quot;&gt;
         &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
       &lt;/td&gt;
@@ -489,21 +637,24 @@ export class AppMusicListComponent implements OnDestroy {
       &lt;!-- &lt;td title&#x3D;&quot;&quot; class&#x3D;&quot;info&quot;&gt;&lt;/td&gt; --&gt;
       &lt;td&gt;
         &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;loadOnDeck(0, i)&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;loadOnDeck(0, song)&quot;&gt;
             &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
           &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;loadOnDeck(1, i)&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;loadOnDeck(1, song)&quot;&gt;
             &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
           &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;removeSong(i)&quot;&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;removeSong(song)&quot;&gt;
             &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
+    &lt;tr *ngIf&#x3D;&quot;shownMusic.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+      &lt;td COLSPAN&#x3D;&quot;3&quot;&gt;No songs match {{query}}&lt;/td&gt;
+    &lt;/tr&gt;
 
   &lt;/table&gt;
-  &lt;div *ngIf&#x3D;&quot;musicList.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;musicList.length &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;start-instructions&quot;&gt;
     &lt;!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. --&gt;
     To start load music from the search or drag music here from your computer.
   &lt;/div&gt;
@@ -519,7 +670,7 @@ export class AppMusicListComponent implements OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="music-container">  <table *ngIf="musicList.length>0">    <tr class="header">      <td></td>      <td class="header">Song</td>      <!-- <td class="header">Artist</td> -->      <td>        <div title="Remove all" class="icon-container">          <img class="icon icon--clickable" src="assets/images/error.svg">        </div>      </td>    </tr>    <tr class="elements" *ngFor="let song of musicList;let i = index">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="" class="info">{{song.name}}</td>      <!-- <td title="" class="info"></td> -->      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, i)">            <img class="icon icon--clickable" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, i)">            <img class="icon icon--clickable" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container" (click)="removeSong(i)">            <img class="icon icon--clickable" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>  </table>  <div *ngIf="musicList.length === 0">    <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->    To start load music from the search or drag music here from your computer.  </div>  <!-- {{musicService.music}} --></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="music-container">  <table *ngIf="musicList.length>0">    <tr class="header">      <td></td>      <td>        <div class="music-search">          <div>Song</div>          <div class="searchbar">            <input type="text" class="searchbox" [(ngModel)]="query" (ngModelChange)="updateMusic()" />            <div id="b" class="searchbutton"></div>          </div>        </div>      </td>      <!-- <td class="header">Artist</td> -->      <td>        <div title="Remove all" class="icon-container">          <img class="icon icon--clickable" src="assets/images/error.svg">        </div>      </td>    </tr>    <tr class="elements" *ngFor="let song of shownMusic;let i = index">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="" class="info">{{song.name}}</td>      <!-- <td title="" class="info"></td> -->      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, song)">            <img class="icon icon--clickable" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, song)">            <img class="icon icon--clickable" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container" (click)="removeSong(song)">            <img class="icon icon--clickable" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr *ngIf="shownMusic.length === 0">      <td COLSPAN="3">No songs match {{query}}</td>    </tr>  </table>  <div *ngIf="musicList.length === 0" class="start-instructions">    <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->    To start load music from the search or drag music here from your computer.  </div>  <!-- {{musicService.music}} --></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppMusicListComponent'};

@@ -10,11 +10,16 @@ import { Subscription } from 'rxjs';
 export class AppMusicListComponent implements OnDestroy {
   musicService: MusicLoaderService;
   private musicSubscription: Subscription;
-  musicList: any;
+  musicList: File[];
+  shownMusic: File[];
+  query: string;
   constructor(musicService: MusicLoaderService) {
     this.musicService = musicService;
+    this.musicList = musicService.music;
+    this.updateMusic();
     this.musicSubscription = musicService.music$.subscribe(a => {
-      this.musicList = a;
+      this.musicList = a as File[];
+      this.updateMusic();
     });
   }
 
@@ -22,10 +27,30 @@ export class AppMusicListComponent implements OnDestroy {
     this.musicSubscription.unsubscribe();
   }
 
-  loadOnDeck(deck, i) {
-    this.musicService.load(deck, i);
+  loadOnDeck(deck, song) {
+    this.musicService.load(deck, song);
   }
-  removeSong(i) {
-    this.musicService.deleteSong(i);
+  removeSong(song) {
+    this.musicService.deleteSong(song);
+  }
+  updateMusic() {
+    if (!this.query) {
+      this.shownMusic = this.musicList;
+    } else {
+      const searchMusic = (searchQuery, music: any[]) => {
+        const lowSearch = searchQuery
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '');
+        return music.filter(mus => {
+          return String(mus.name)
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .includes(lowSearch);
+        });
+      };
+      this.shownMusic = searchMusic(this.query, this.musicList);
+    }
   }
 }

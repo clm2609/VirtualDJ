@@ -147,10 +147,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#finishSong">finishSong</a>
+                                <a href="#playPause">playPause</a>
                             </li>
                             <li>
-                                <a href="#playPause">playPause</a>
+                                <a href="#resetDisc">resetDisc</a>
                             </li>
                             <li>
                                 <a href="#rotate">rotate</a>
@@ -266,25 +266,25 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="finishSong"></a>
+                        <a name="playPause"></a>
                         <span class="name">
                             <b>
-                            finishSong
+                            playPause
                             </b>
-                            <a href="#finishSong"><span class="icon ion-ios-link"></span></a>
+                            <a href="#playPause"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>finishSong()</code>
+<code>playPause()</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:60</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:68</a></div>
                             </td>
                         </tr>
 
@@ -304,25 +304,25 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="playPause"></a>
+                        <a name="resetDisc"></a>
                         <span class="name">
                             <b>
-                            playPause
+                            resetDisc
                             </b>
-                            <a href="#playPause"><span class="icon ion-ios-link"></span></a>
+                            <a href="#resetDisc"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>playPause()</code>
+<code>resetDisc()</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:67</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:61</a></div>
                             </td>
                         </tr>
 
@@ -360,7 +360,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:55</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:56</a></div>
                             </td>
                         </tr>
 
@@ -567,14 +567,15 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
         height: height
       });
       this.wavesurfer.on(&#x27;finish&#x27;, () &#x3D;&gt; {
-        this.finishSong();
+        this.resetDisc();
       });
     });
     this.musicSubscription &#x3D; this.musicService.decksongs$[this.deckNumber].subscribe(a &#x3D;&gt; {
-      const song &#x3D; a as File;
+      this.resetDisc();
+      this.song &#x3D; a as File;
       requestAnimationFrame(() &#x3D;&gt; {
         const reader &#x3D; new FileReader();
-        reader.readAsDataURL(song);
+        reader.readAsDataURL(this.song);
         reader.onload &#x3D; () &#x3D;&gt; {
           this.wavesurfer.load(reader.result);
         };
@@ -589,7 +590,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       this.rotation &#x3D; (this.rotation + 10) % 360;
     }
   }
-  finishSong() {
+  resetDisc() {
     this.active &#x3D; false;
     this.rotation &#x3D; 0;
   }
@@ -605,66 +606,74 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;deck-layout&quot;&gt;
-  &lt;!-- TODO: Make this more visually appealing --&gt;
-  &lt;div class&#x3D;&quot;sound-wave&quot; [id]&#x3D;&quot;&#x27;deck_&#x27;+deckNumber+&#x27;_wave&#x27;&quot;&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;dj-deck-container&quot;&gt;
-    &lt;div class&#x3D;&quot;dj-deck components-container&quot;&gt;
-      &lt;div class&#x3D;&quot;plate-loops&quot;&gt;
-        &lt;div class&#x3D;&quot;plate&quot;&gt;
-          &lt;img class&#x3D;&quot;vynil&quot; [ngStyle]&#x3D;&quot;{&#x27;transform&#x27;: &#x27;rotate(&#x27; + rotation+ &#x27;deg)&#x27;}&quot; src&#x3D;&quot;assets/images/vynil.svg&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;button-container button-container--loops&quot;&gt;
-          &lt;div class&#x3D;&quot;button button--loops&quot;&gt;2x&lt;/div&gt;
-          &lt;div class&#x3D;&quot;button button--loops&quot;&gt;4x&lt;/div&gt;
-          &lt;div class&#x3D;&quot;button button--loops&quot;&gt;8x&lt;/div&gt;
-          &lt;div class&#x3D;&quot;button button--loops&quot;&gt;16x&lt;/div&gt;
-          &lt;div class&#x3D;&quot;button button--loops&quot;&gt;32x&lt;/div&gt;
-        &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;deck-container&quot;&gt;
+  &lt;div class&#x3D;&quot;deck-layout components-container&quot;&gt;
+    &lt;!-- TODO: Make this more visually appealing --&gt;
+
+    &lt;div class&#x3D;&quot;sound-wave&quot; [id]&#x3D;&quot;&#x27;deck_&#x27;+deckNumber+&#x27;_wave&#x27;&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;dj-deck-container&quot;&gt;
+      &lt;div class&#x3D;&quot;song-name&quot;&gt;
+        &lt;ng-container *ngIf&#x3D;&quot;song&quot;&gt;{{song.name}}&lt;/ng-container&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;layout-buttons&quot;&gt;
-        &lt;div class&#x3D;&quot;layout-cue-effects-pitch&quot;&gt;
-          &lt;div class&#x3D;&quot;layout-cue-effects&quot;&gt;
-            CUEs
-            &lt;div class&#x3D;&quot;button-container button-container--cues&quot;&gt;
-              &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 1&lt;/div&gt;
-              &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 2&lt;/div&gt;
-              &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 3&lt;/div&gt;
-              &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 4&lt;/div&gt;
-            &lt;/div&gt;
-            Effects
-            &lt;div class&#x3D;&quot;button-container--effects&quot;&gt;
-              &lt;div class&#x3D;&quot;button-container button-container--effects--upper-row&quot;&gt;
-                &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;2x&lt;/div&gt;
-                &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;4x&lt;/div&gt;
-                &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;8x&lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div class&#x3D;&quot;button-container button-container--effects--lower-row&quot;&gt;
-                &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;2x&lt;/div&gt;
-                &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;4x&lt;/div&gt;
-                &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;8x&lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;dj-deck &quot;&gt;
+        &lt;div class&#x3D;&quot;plate-loops&quot;&gt;
+          &lt;div class&#x3D;&quot;plate&quot;&gt;
+            &lt;img class&#x3D;&quot;vynil&quot; [ngStyle]&#x3D;&quot;{&#x27;transform&#x27;: &#x27;rotate(&#x27; + rotation+ &#x27;deg)&#x27;}&quot; src&#x3D;&quot;assets/images/vynil.svg&quot;&gt;
           &lt;/div&gt;
-          &lt;div class&#x3D;&quot;layout-pitch&quot;&gt;
-            &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;pitch-deck-1&#x27;,
+          &lt;div class&#x3D;&quot;button-container button-container--loops&quot;&gt;
+            &lt;div class&#x3D;&quot;button button--loops&quot;&gt;2x&lt;/div&gt;
+            &lt;div class&#x3D;&quot;button button--loops&quot;&gt;4x&lt;/div&gt;
+            &lt;div class&#x3D;&quot;button button--loops&quot;&gt;8x&lt;/div&gt;
+            &lt;div class&#x3D;&quot;button button--loops&quot;&gt;16x&lt;/div&gt;
+            &lt;div class&#x3D;&quot;button button--loops&quot;&gt;32x&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;layout-buttons&quot;&gt;
+          &lt;div class&#x3D;&quot;layout-cue-effects-pitch&quot;&gt;
+            &lt;div class&#x3D;&quot;layout-cue-effects&quot;&gt;
+              CUEs
+              &lt;div class&#x3D;&quot;button-container button-container--cues&quot;&gt;
+                &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 1&lt;/div&gt;
+                &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 2&lt;/div&gt;
+                &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 3&lt;/div&gt;
+                &lt;div class&#x3D;&quot;button button--cues&quot;&gt;CUE 4&lt;/div&gt;
+              &lt;/div&gt;
+              Effects
+              &lt;div class&#x3D;&quot;button-container--effects&quot;&gt;
+                &lt;div class&#x3D;&quot;button-container button-container--effects--upper-row&quot;&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;2x&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;4x&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;8x&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;button-container button-container--effects--lower-row&quot;&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;2x&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;4x&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;8x&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;layout-pitch&quot;&gt;
+              &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;pitch-deck-1&#x27;,
              min:-25,
               max:25,
                default:0,
              vertical:true,
                         thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
                         track:&#x27;slidertrack-pitch-vertical&#x27;}&quot;&gt;&lt;/slider-controller&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;button-container button-container--cue-play&quot;&gt;
-          &lt;div class&#x3D;&quot;button button--cue&quot;&gt;CUE&lt;/div&gt;
-          &lt;div class&#x3D;&quot;button button--play&quot; (click)&#x3D;&quot;playPause()&quot;&gt;
-            &lt;div class&#x3D;&quot;play-pause&quot;&gt;
-              &lt;div class&#x3D;&quot;arrow-right&quot;&gt;&lt;/div&gt;
-              &lt;div class&#x3D;&quot;pause-stick&quot;&gt;&lt;/div&gt;
-              &lt;div class&#x3D;&quot;pause-space&quot;&gt;&lt;/div&gt;
-              &lt;div class&#x3D;&quot;pause-stick&quot;&gt;&lt;/div&gt;
+          &lt;div class&#x3D;&quot;button-container button-container--cue-play&quot;&gt;
+            &lt;div class&#x3D;&quot;button button--cue&quot;&gt;CUE&lt;/div&gt;
+            &lt;div class&#x3D;&quot;button button--play&quot; (click)&#x3D;&quot;playPause()&quot;&gt;
+              &lt;div class&#x3D;&quot;play-pause&quot;&gt;
+                &lt;div class&#x3D;&quot;arrow-right&quot;&gt;&lt;/div&gt;
+                &lt;div class&#x3D;&quot;pause-stick&quot;&gt;&lt;/div&gt;
+                &lt;div class&#x3D;&quot;pause-space&quot;&gt;&lt;/div&gt;
+                &lt;div class&#x3D;&quot;pause-stick&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -682,7 +691,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="deck-layout">  <!-- TODO: Make this more visually appealing -->  <div class="sound-wave" [id]="\'deck_\'+deckNumber+\'_wave\'">  </div>  <div class="dj-deck-container">    <div class="dj-deck components-container">      <div class="plate-loops">        <div class="plate">          <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">        </div>        <div class="button-container button-container--loops">          <div class="button button--loops">2x</div>          <div class="button button--loops">4x</div>          <div class="button button--loops">8x</div>          <div class="button button--loops">16x</div>          <div class="button button--loops">32x</div>        </div>      </div>      <div class="layout-buttons">        <div class="layout-cue-effects-pitch">          <div class="layout-cue-effects">            CUEs            <div class="button-container button-container--cues">              <div class="button button--cues">CUE 1</div>              <div class="button button--cues">CUE 2</div>              <div class="button button--cues">CUE 3</div>              <div class="button button--cues">CUE 4</div>            </div>            Effects            <div class="button-container--effects">              <div class="button-container button-container--effects--upper-row">                <div class="button button--effects button--upper-row">2x</div>                <div class="button button--effects button--upper-row">4x</div>                <div class="button button--effects button--upper-row">8x</div>              </div>              <div class="button-container button-container--effects--lower-row">                <div class="button button--effects button--lower-row">2x</div>                <div class="button button--effects button--lower-row">4x</div>                <div class="button button--effects button--lower-row">8x</div>              </div>            </div>          </div>          <div class="layout-pitch">            <slider-controller [config]="{id:\'pitch-deck-1\',             min:-25,              max:25,               default:0,             vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-pitch-vertical\'}"></slider-controller>          </div>        </div>        <div class="button-container button-container--cue-play">          <div class="button button--cue">CUE</div>          <div class="button button--play" (click)="playPause()">            <div class="play-pause">              <div class="arrow-right"></div>              <div class="pause-stick"></div>              <div class="pause-space"></div>              <div class="pause-stick"></div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="deck-container">  <div class="deck-layout components-container">    <!-- TODO: Make this more visually appealing -->    <div class="sound-wave" [id]="\'deck_\'+deckNumber+\'_wave\'">    </div>    <div class="dj-deck-container">      <div class="song-name">        <ng-container *ngIf="song">{{song.name}}</ng-container>      </div>      <div class="dj-deck ">        <div class="plate-loops">          <div class="plate">            <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">          </div>          <div class="button-container button-container--loops">            <div class="button button--loops">2x</div>            <div class="button button--loops">4x</div>            <div class="button button--loops">8x</div>            <div class="button button--loops">16x</div>            <div class="button button--loops">32x</div>          </div>        </div>        <div class="layout-buttons">          <div class="layout-cue-effects-pitch">            <div class="layout-cue-effects">              CUEs              <div class="button-container button-container--cues">                <div class="button button--cues">CUE 1</div>                <div class="button button--cues">CUE 2</div>                <div class="button button--cues">CUE 3</div>                <div class="button button--cues">CUE 4</div>              </div>              Effects              <div class="button-container--effects">                <div class="button-container button-container--effects--upper-row">                  <div class="button button--effects button--upper-row">2x</div>                  <div class="button button--effects button--upper-row">4x</div>                  <div class="button button--effects button--upper-row">8x</div>                </div>                <div class="button-container button-container--effects--lower-row">                  <div class="button button--effects button--lower-row">2x</div>                  <div class="button button--effects button--lower-row">4x</div>                  <div class="button button--effects button--lower-row">8x</div>                </div>              </div>            </div>            <div class="layout-pitch">              <slider-controller [config]="{id:\'pitch-deck-1\',             min:-25,              max:25,               default:0,             vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-pitch-vertical\'}"></slider-controller>            </div>          </div>          <div class="button-container button-container--cue-play">            <div class="button button--cue">CUE</div>            <div class="button button--play" (click)="playPause()">              <div class="play-pause">                <div class="arrow-right"></div>                <div class="pause-stick"></div>                <div class="pause-space"></div>                <div class="pause-stick"></div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppDeckComponent'};

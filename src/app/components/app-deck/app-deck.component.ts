@@ -35,14 +35,15 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
         height: height
       });
       this.wavesurfer.on('finish', () => {
-        this.finishSong();
+        this.resetDisc();
       });
     });
     this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
-      const song = a as File;
+      this.resetDisc();
+      this.song = a as File;
       requestAnimationFrame(() => {
         const reader = new FileReader();
-        reader.readAsDataURL(song);
+        reader.readAsDataURL(this.song);
         reader.onload = () => {
           this.wavesurfer.load(reader.result);
         };
@@ -57,7 +58,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       this.rotation = (this.rotation + 10) % 360;
     }
   }
-  finishSong() {
+  resetDisc() {
     this.active = false;
     this.rotation = 0;
   }

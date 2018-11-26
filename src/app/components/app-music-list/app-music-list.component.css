@@ -78,3 +78,24 @@ td {
 .header {
   font-weight: 600;
 }
+
+.start-instructions {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-search {
+  display: flex;
+  align-items: center;
+}
+
+.music-search > * {
+  width: 50%;
+}
+
+.searchbar {
+  padding: 0px;
+}
