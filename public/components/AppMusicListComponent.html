@@ -567,10 +567,10 @@ export class AppMusicListComponent implements OnDestroy {
   constructor(musicService: MusicLoaderService) {
     this.musicService &#x3D; musicService;
     this.musicList &#x3D; musicService.music;
-    this.updateMusic()
+    this.updateMusic();
     this.musicSubscription &#x3D; musicService.music$.subscribe(a &#x3D;&gt; {
       this.musicList &#x3D; a as File[];
-      this.updateMusic()
+      this.updateMusic();
     });
   }
 
@@ -601,7 +601,7 @@ export class AppMusicListComponent implements OnDestroy {
             .includes(lowSearch);
         });
       };
-      this.shownMusic &#x3D; searchMusic(this.query, this.musicList)
+      this.shownMusic &#x3D; searchMusic(this.query, this.musicList);
     }
   }
 }
