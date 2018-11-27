@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, AfterViewInit, OnDestroy } from '@angular/core';
 import { MusicLoaderService } from '../../services/music-loader.service';
+import { PlayerService } from '../../services/player.service';
 import { Subscription } from 'rxjs';
 import * as WaveSurfer from 'wavesurfer.js';
 
@@ -13,12 +14,13 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   deckNumber: number;
   private musicSubscription: Subscription;
   musicService: MusicLoaderService;
+  playerService: PlayerService;
   rotation = 0;
   private active = false;
   song: any;
-  wavesurfer: any;
-  constructor(musicService: MusicLoaderService) {
+  constructor(musicService: MusicLoaderService, playerService: PlayerService) {
     this.musicService = musicService;
+    this.playerService = playerService;
   }
   ngOnInit() {
     setInterval(() => {
@@ -28,29 +30,22 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     const height = document.getElementById('deck_' + this.deckNumber + '_wave').offsetHeight;
     requestAnimationFrame(() => {
-      this.wavesurfer = WaveSurfer.create({
-        container: '#deck_' + this.deckNumber + '_wave',
-        waveColor: 'red',
-        progressColor: 'purple',
-        height: height
-      });
-      this.wavesurfer.on('finish', () => {
+      this.playerService.save(
+        this.deckNumber,
+        WaveSurfer.create({
+          container: '#deck_' + this.deckNumber + '_wave',
+          waveColor: 'red',
+          progressColor: 'purple',
+          height: height
+        })
+      );
+      this.playerService.on(this.deckNumber, 'finish', () => {
         this.resetDisc();
       });
     });
     this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
       this.resetDisc();
       this.song = a as File;
-      requestAnimationFrame(() => {
-        const reader = new FileReader();
-        reader.readAsDataURL(this.song);
-        reader.onload = () => {
-          this.wavesurfer.load(reader.result);
-        };
-        reader.onerror = error => {
-          console.log('Error: ', error);
-        };
-      });
     });
   }
   rotate() {
@@ -66,7 +61,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.musicSubscription.unsubscribe();
   }
   playPause() {
-    this.wavesurfer.playPause();
-    this.active = this.wavesurfer.isPlaying();
+    this.playerService.playPause(this.deckNumber);
+    this.active = this.playerService.isPlaying(this.deckNumber);
   }
 }

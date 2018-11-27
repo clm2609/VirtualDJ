@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable, of, throwError, forkJoin } from 'rxjs';
-
+import { PlayerService } from './player.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,10 +11,23 @@ export class MusicLoaderService {
   deckLoader = [new Subject(), new Subject()];
   decksongs$ = [this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()];
   decksongs: File[] = [null, null];
-
+  playerService: PlayerService;
+  constructor(playerService: PlayerService) {
+    this.playerService = playerService;
+  }
   load(deck, song) {
     this.decksongs[deck] = song;
     this.deckLoader[deck].next(this.decksongs[deck]);
+    requestAnimationFrame(() => {
+      const reader = new FileReader();
+      reader.readAsDataURL(song);
+      reader.onload = () => {
+        this.playerService.load(deck, reader.result);
+      };
+      reader.onerror = error => {
+        console.log('Error: ', error);
+      };
+    });
   }
   addSong(song: File) {
     this.music.push(song);

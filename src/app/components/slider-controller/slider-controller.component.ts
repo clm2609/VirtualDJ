@@ -171,7 +171,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
   }
 
   writeValue(value: any) {
-    if (value) {
+    if (!(typeof value === 'undefined' || value === null)) {
       this.slider = value;
     }
   }

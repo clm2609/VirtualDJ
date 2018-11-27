@@ -118,7 +118,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="injectables/MusicLoaderService.html" data-type="entity-link">MusicLoaderService</a>
                             </li>
                             <li class="link">
-                                <a href="injectables/PlayerServiceService.html" data-type="entity-link">PlayerServiceService</a>
+                                <a href="injectables/PlayerService.html" data-type="entity-link">PlayerService</a>
                             </li>
                     </ul>
                 </li>
