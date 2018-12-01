@@ -24,6 +24,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
   shell: HTMLElement;
   slider: any;
   fillsize = 16;
+  zindex = 0;
 
   get thumbWidth(): any {
     const vertical = !!this.config.vertical;
@@ -209,6 +210,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
 
   ngOnInit() {
     this.shell = this.shellView.nativeElement;
+    this.zindex = this.config.zindex || 0;
   }
 
   setValue() {
