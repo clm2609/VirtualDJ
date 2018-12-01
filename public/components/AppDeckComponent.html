@@ -147,6 +147,15 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#applyDistortion">applyDistortion</a>
+                            </li>
+                            <li>
+                                <a href="#applyFilter">applyFilter</a>
+                            </li>
+                            <li>
+                                <a href="#clearFilter">clearFilter</a>
+                            </li>
+                            <li>
                                 <a href="#playPause">playPause</a>
                             </li>
                             <li>
@@ -274,6 +283,120 @@
         <h3 id="methods">
             Methods
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="applyDistortion"></a>
+                        <span class="name">
+                            <b>
+                            applyDistortion
+                            </b>
+                            <a href="#applyDistortion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>applyDistortion()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="applyFilter"></a>
+                        <span class="name">
+                            <b>
+                            applyFilter
+                            </b>
+                            <a href="#applyFilter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>applyFilter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:67</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearFilter"></a>
+                        <span class="name">
+                            <b>
+                            clearFilter
+                            </b>
+                            <a href="#clearFilter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>clearFilter()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -608,6 +731,15 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.playerService.playPause(this.deckNumber);
     this.active &#x3D; this.playerService.isPlaying(this.deckNumber);
   }
+  applyFilter() {
+    this.playerService.applyBQFilter(this.deckNumber);
+  }
+  applyDistortion() {
+    this.playerService.applyDistortion(this.deckNumber);
+  }
+  clearFilter() {
+    this.playerService.clearFilter(this.deckNumber);
+  }
 }
 </code></pre>
     </div>
@@ -651,9 +783,9 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
               Effects
               &lt;div class&#x3D;&quot;button-container--effects&quot;&gt;
                 &lt;div class&#x3D;&quot;button-container button-container--effects--upper-row&quot;&gt;
-                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;2x&lt;/div&gt;
-                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;4x&lt;/div&gt;
-                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot;&gt;8x&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot; (click)&#x3D;&quot;applyFilter()&quot;&gt;2x&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot; (click)&#x3D;&quot;applyDistortion()&quot;&gt;4x&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot; (click)&#x3D;&quot;clearFilter()&quot;&gt;8x&lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div class&#x3D;&quot;button-container button-container--effects--lower-row&quot;&gt;
                   &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot;&gt;2x&lt;/div&gt;
@@ -698,7 +830,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="deck-container">  <div class="deck-layout components-container">    <!-- TODO: Make this more visually appealing -->    <div class="sound-wave" [id]="\'deck_\'+deckNumber+\'_wave\'">    </div>    <div class="dj-deck-container">      <div class="song-name">        <ng-container *ngIf="song">{{song.name}}</ng-container>      </div>      <div class="dj-deck ">        <div class="plate-loops">          <div class="plate">            <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">          </div>          <div class="button-container button-container--loops">            <div class="button button--loops">2x</div>            <div class="button button--loops">4x</div>            <div class="button button--loops">8x</div>            <div class="button button--loops">16x</div>            <div class="button button--loops">32x</div>          </div>        </div>        <div class="layout-buttons">          <div class="layout-cue-effects-pitch">            <div class="layout-cue-effects">              CUEs              <div class="button-container button-container--cues">                <div class="button button--cues">CUE 1</div>                <div class="button button--cues">CUE 2</div>                <div class="button button--cues">CUE 3</div>                <div class="button button--cues">CUE 4</div>              </div>              Effects              <div class="button-container--effects">                <div class="button-container button-container--effects--upper-row">                  <div class="button button--effects button--upper-row">2x</div>                  <div class="button button--effects button--upper-row">4x</div>                  <div class="button button--effects button--upper-row">8x</div>                </div>                <div class="button-container button-container--effects--lower-row">                  <div class="button button--effects button--lower-row">2x</div>                  <div class="button button--effects button--lower-row">4x</div>                  <div class="button button--effects button--lower-row">8x</div>                </div>              </div>            </div>            <div class="layout-pitch">              <slider-controller [config]="{id:\'pitch-deck-1\',             min:-25,              max:25,                            vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-pitch-vertical\'}"></slider-controller>            </div>          </div>          <div class="button-container button-container--cue-play">            <div class="button button--cue">CUE</div>            <div class="button button--play" (click)="playPause()">              <div class="play-pause">                <div class="arrow-right"></div>                <div class="pause-stick"></div>                <div class="pause-space"></div>                <div class="pause-stick"></div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="deck-container">  <div class="deck-layout components-container">    <!-- TODO: Make this more visually appealing -->    <div class="sound-wave" [id]="\'deck_\'+deckNumber+\'_wave\'">    </div>    <div class="dj-deck-container">      <div class="song-name">        <ng-container *ngIf="song">{{song.name}}</ng-container>      </div>      <div class="dj-deck ">        <div class="plate-loops">          <div class="plate">            <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">          </div>          <div class="button-container button-container--loops">            <div class="button button--loops">2x</div>            <div class="button button--loops">4x</div>            <div class="button button--loops">8x</div>            <div class="button button--loops">16x</div>            <div class="button button--loops">32x</div>          </div>        </div>        <div class="layout-buttons">          <div class="layout-cue-effects-pitch">            <div class="layout-cue-effects">              CUEs              <div class="button-container button-container--cues">                <div class="button button--cues">CUE 1</div>                <div class="button button--cues">CUE 2</div>                <div class="button button--cues">CUE 3</div>                <div class="button button--cues">CUE 4</div>              </div>              Effects              <div class="button-container--effects">                <div class="button-container button-container--effects--upper-row">                  <div class="button button--effects button--upper-row" (click)="applyFilter()">2x</div>                  <div class="button button--effects button--upper-row" (click)="applyDistortion()">4x</div>                  <div class="button button--effects button--upper-row" (click)="clearFilter()">8x</div>                </div>                <div class="button-container button-container--effects--lower-row">                  <div class="button button--effects button--lower-row">2x</div>                  <div class="button button--effects button--lower-row">4x</div>                  <div class="button button--effects button--lower-row">8x</div>                </div>              </div>            </div>            <div class="layout-pitch">              <slider-controller [config]="{id:\'pitch-deck-1\',             min:-25,              max:25,                            vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-pitch-vertical\'}"></slider-controller>            </div>          </div>          <div class="button-container button-container--cue-play">            <div class="button button--cue">CUE</div>            <div class="button button--play" (click)="playPause()">              <div class="play-pause">                <div class="arrow-right"></div>                <div class="pause-stick"></div>                <div class="pause-space"></div>                <div class="pause-stick"></div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppDeckComponent'};

@@ -36,9 +36,9 @@
               Effects
               <div class="button-container--effects">
                 <div class="button-container button-container--effects--upper-row">
-                  <div class="button button--effects button--upper-row">2x</div>
-                  <div class="button button--effects button--upper-row">4x</div>
-                  <div class="button button--effects button--upper-row">8x</div>
+                  <div class="button button--effects button--upper-row" (click)="applyFilter()">2x</div>
+                  <div class="button button--effects button--upper-row" (click)="applyDistortion()">4x</div>
+                  <div class="button button--effects button--upper-row" (click)="clearFilter()">8x</div>
                 </div>
                 <div class="button-container button-container--effects--lower-row">
                   <div class="button button--effects button--lower-row">2x</div>

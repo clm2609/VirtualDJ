@@ -8,5 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppLayoutComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('layout');
+  }
 }

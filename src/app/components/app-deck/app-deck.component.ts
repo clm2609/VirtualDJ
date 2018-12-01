@@ -64,4 +64,13 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.playerService.playPause(this.deckNumber);
     this.active = this.playerService.isPlaying(this.deckNumber);
   }
+  applyFilter() {
+    this.playerService.applyBQFilter(this.deckNumber);
+  }
+  applyDistortion() {
+    this.playerService.applyDistortion(this.deckNumber);
+  }
+  clearFilter() {
+    this.playerService.clearFilter(this.deckNumber);
+  }
 }

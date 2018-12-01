@@ -12,14 +12,14 @@
       </div>
       <div class="volume-equalizers">
         <div class="roulette-container">
-          <roulette-controller [config]="{ id: 'trebble_1' }"></roulette-controller>
-          <roulette-controller [config]="{ id: 'middle_1' }"></roulette-controller>
-          <roulette-controller [config]="{ id: 'bass_1' }"></roulette-controller>
+          <roulette-controller [config]="{ id: 'trebble_1', min:-40, max:40 }" [(ngModel)]="trebble0" (ngModelChange)="setEQ()"></roulette-controller>
+          <roulette-controller [config]="{ id: 'middle_1', min:-40, max:40  }" [(ngModel)]="mid0" (ngModelChange)="setEQ()"></roulette-controller>
+          <roulette-controller [config]="{ id: 'bass_1', min:-40, max:40  }" [(ngModel)]="bass0" (ngModelChange)="setEQ()"></roulette-controller>
         </div>
         <div class="roulette-container">
-          <roulette-controller [config]="{ id: 'trebble_2' }"></roulette-controller>
-          <roulette-controller [config]="{ id: 'middle_2' }"></roulette-controller>
-          <roulette-controller [config]="{ id: 'bass_2' }"></roulette-controller>
+          <roulette-controller [config]="{ id: 'trebble_2', min:-40, max:40  }" [(ngModel)]="trebble1" (ngModelChange)="setEQ()"></roulette-controller>
+          <roulette-controller [config]="{ id: 'middle_2', min:-40, max:40  }" [(ngModel)]="mid1" (ngModelChange)="setEQ()"></roulette-controller>
+          <roulette-controller [config]="{ id: 'bass_2', min:-40, max:40  }" [(ngModel)]="bass1" (ngModelChange)="setEQ()"></roulette-controller>
         </div>
       </div>
       <div class="volume-decks">
