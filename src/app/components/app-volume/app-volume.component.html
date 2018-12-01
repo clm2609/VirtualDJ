@@ -2,12 +2,13 @@
   <div class="volume components-container">
     <div class="volume-eq">
       <div class="volume-decks">
-        <slider-controller [config]="{id:'volume-deck-1',
+        <slider-controller [config]="{id:'volume-deck-0',
                        min:0, max:100,
-                        default:100,
+                        
                         vertical:true,
                         thumb:'sliderthumb-pitch-vertical',
-                        track:'slidertrack-vol-vertical'}"></slider-controller>
+                        track:'slidertrack-vol-vertical'}"
+          [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)"></slider-controller>
       </div>
       <div class="volume-equalizers">
         <div class="roulette-container">
@@ -22,22 +23,24 @@
         </div>
       </div>
       <div class="volume-decks">
-        <slider-controller [config]="{id:'volume-deck-2',
+        <slider-controller [config]="{id:'volume-deck-1',
                        min:0,
                         max:100,
-                         default:100,
+                         
                          vertical:true,
                         thumb:'sliderthumb-pitch-vertical',
-                        track:'slidertrack-vol-vertical'}"></slider-controller>
+                        track:'slidertrack-vol-vertical'}"
+          [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)"></slider-controller>
       </div>
     </div>
     <div class="volume-master">
       <slider-controller [config]="{id:'volume-master',
                  min:-100,
                   max:100,
-                   default:0,
+                   
                 thumb:'sliderthumb-pitch',
-                track:'slidertrack-vol'}"></slider-controller>
+                track:'slidertrack-vol'}"
+        [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)"></slider-controller>
 
     </div>
   </div>

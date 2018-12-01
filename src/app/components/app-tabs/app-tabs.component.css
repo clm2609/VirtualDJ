@@ -1,7 +1,7 @@
 .tabs-container {
   width: 100%;
   height: 100%;
-  padding: 5px;
+  padding: 2px;
 }
 
 .tabs {
@@ -44,4 +44,14 @@
 .contents {
   width: 100%;
   height: calc(100% - 2em);
+}
+
+.drop {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #666666;
+  border-radius: 2px;
 }

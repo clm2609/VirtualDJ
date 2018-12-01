@@ -1,5 +1,5 @@
-<div class="tabs-container">
-  <div class="tabs">
+<div class="tabs-container" (drop)="droped($event)">
+  <div class="tabs" *ngIf="!dragging">
     <div class="tablist">
       <div [ngClass]="{'tab':true, 'tab--active':active=='music'}" (click)="setActive('music')">
         Music
@@ -16,5 +16,8 @@
       <app-settings *ngIf="active=='settings'"></app-settings>
       <app-about *ngIf="active=='about'"></app-about>
     </div>
+  </div>
+  <div class="drop" *ngIf="dragging">
+    Drop your song here
   </div>
 </div>
