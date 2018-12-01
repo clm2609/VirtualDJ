@@ -19,7 +19,7 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   @Input()
   config: any;
   folded = true;
-  value = 100;
+  value = 0;
   configSlider: any;
   rotation: number;
   private onTouchedCallback: () => void = noop;
@@ -30,9 +30,9 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   ngOnInit() {
     this.configSlider = {
       id: this.config.id + 'slider',
-      min: 0,
-      max: 100,
-      default: 100,
+      min: this.config.min || 0,
+      max: this.config.max || 100,
+      default: this.value,
       thumb: 'roulette-slider-thumb',
       track: 'roulette-slider-track',
       vertical: true,
@@ -44,13 +44,16 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   rotate() {
     const percent = (this.value - this.configSlider.min) / (this.configSlider.max - this.configSlider.min);
     this.rotation = 135 * 2 * (percent - 0.5);
+    console.log(this.value);
+    this.onChangeCallback(this.value);
   }
   unfold() {
     this.folded = !this.folded;
+    this.onTouchedCallback();
   }
 
   writeValue(value: any) {
-    if (value) {
+    if (!(typeof value === 'undefined' || value === null)) {
       this.value = value;
     }
   }

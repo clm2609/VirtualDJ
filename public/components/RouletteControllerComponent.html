@@ -279,7 +279,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:64</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:67</a></div>
                             </td>
                         </tr>
 
@@ -315,7 +315,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:57</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:60</a></div>
                             </td>
                         </tr>
 
@@ -384,7 +384,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:60</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -491,7 +491,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:48</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:50</a></div>
                             </td>
                         </tr>
 
@@ -529,7 +529,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:55</a></div>
                             </td>
                         </tr>
 
@@ -711,7 +711,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>100</code>
+                            <i>Default value : </i><code>0</code>
                         </td>
                     </tr>
                         <tr>
@@ -750,7 +750,7 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   @Input()
   config: any;
   folded &#x3D; true;
-  value &#x3D; 100;
+  value &#x3D; 0;
   configSlider: any;
   rotation: number;
   private onTouchedCallback: () &#x3D;&gt; void &#x3D; noop;
@@ -761,9 +761,9 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   ngOnInit() {
     this.configSlider &#x3D; {
       id: this.config.id + &#x27;slider&#x27;,
-      min: 0,
-      max: 100,
-      default: 100,
+      min: this.config.min || 0,
+      max: this.config.max || 100,
+      default: this.value,
       thumb: &#x27;roulette-slider-thumb&#x27;,
       track: &#x27;roulette-slider-track&#x27;,
       vertical: true,
@@ -775,13 +775,16 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   rotate() {
     const percent &#x3D; (this.value - this.configSlider.min) / (this.configSlider.max - this.configSlider.min);
     this.rotation &#x3D; 135 * 2 * (percent - 0.5);
+    console.log(this.value);
+    this.onChangeCallback(this.value);
   }
   unfold() {
     this.folded &#x3D; !this.folded;
+    this.onTouchedCallback();
   }
 
   writeValue(value: any) {
-    if (value) {
+    if (!(typeof value &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27; || value &#x3D;&#x3D;&#x3D; null)) {
       this.value &#x3D; value;
     }
   }

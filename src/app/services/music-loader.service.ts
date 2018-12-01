@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, Observable, of, throwError, forkJoin } from 'rxjs';
+import { Subject } from 'rxjs';
 import { PlayerService } from './player.service';
 @Injectable({
   providedIn: 'root'
