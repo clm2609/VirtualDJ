@@ -10,7 +10,7 @@
   left: 0px;
   top: 0px;
   overflow: visible;
-  z-index: 100;
+  z-index: 2;
 }
 
 /* slidershell exists only
@@ -33,7 +33,7 @@ to provide a positioning context for the range input and other elements.*/
   pointer-events: none;
   background: #00767f;
   background: linear-gradient(90deg, #005555, #006699);
-  z-index: 100;
+  z-index: 2;
 }
 
 .sliderfill-vertical {
@@ -44,7 +44,7 @@ to provide a positioning context for the range input and other elements.*/
   pointer-events: none;
   background: #00767f;
   background: linear-gradient(90deg, #005555, #006699);
-  z-index: 100;
+  z-index: 2;
 }
 
 .slidertrack {
@@ -52,7 +52,7 @@ to provide a positioning context for the range input and other elements.*/
   position: absolute;
   pointer-events: none;
   background: #888888;
-  z-index: 50;
+  z-index: 1;
 }
 
 .slidertrack-vertical {
@@ -60,7 +60,7 @@ to provide a positioning context for the range input and other elements.*/
   position: absolute;
   pointer-events: none;
   background: #888888;
-  z-index: 50;
+  z-index: 1;
 }
 
 .sliderthumb {
@@ -75,7 +75,7 @@ to provide a positioning context for the range input and other elements.*/
   margin: 0px;
   text-align: center;
   pointer-events: none;
-  z-index: 150;
+  z-index: 3;
 }
 
 input[type='range']::-ms-track {
@@ -112,7 +112,7 @@ input[type='range'] {
   background: transparent;
   color: transparent;
   overflow: visible;
-  z-index: 200;
+  z-index: 4;
 }
 
 /* we need a separate rule for when the range input is to be vertical */
