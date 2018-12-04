@@ -987,7 +987,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, forwardRef, ViewChild, ElementRef } from &#x27;@angular/core&#x27;;
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from &#x27;@angular/forms&#x27;;
 
-/** @ignore */ const noop &#x3D; () &#x3D;&gt; { };
+/** @ignore */ const noop &#x3D; () &#x3D;&gt; {};
 /** @ignore */
 
 export const CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR: any &#x3D; {
@@ -1196,7 +1196,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
 
   ngOnInit() {
     this.shell &#x3D; this.shellView.nativeElement;
-    this.zindex &#x3D; this.config.zindex || 0
+    this.zindex &#x3D; this.config.zindex || 0;
   }
 
   setValue() {

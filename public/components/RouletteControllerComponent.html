@@ -732,7 +732,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, HostListener, forwardRef } from &#x27;@angular/core&#x27;;
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from &#x27;@angular/forms&#x27;;
 
-/** @ignore */ const noop &#x3D; () &#x3D;&gt; { };
+/** @ignore */ const noop &#x3D; () &#x3D;&gt; {};
 /** @ignore */
 
 export const CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR: any &#x3D; {
@@ -756,7 +756,7 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   private onTouchedCallback: () &#x3D;&gt; void &#x3D; noop;
   private onChangeCallback: (_: any) &#x3D;&gt; void &#x3D; noop;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.configSlider &#x3D; {
