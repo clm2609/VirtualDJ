@@ -36,25 +36,30 @@
               Effects
               <div class="button-container--effects">
                 <div class="button-container button-container--effects--upper-row">
-                  <div class="button button--effects button--upper-row" (click)="applyFilter()">2x</div>
-                  <div class="button button--effects button--upper-row" (click)="applyDistortion()">4x</div>
-                  <div class="button button--effects button--upper-row" (click)="clearFilter()">8x</div>
+                  <div class="button button--effects button--upper-row" (click)="applyEffect(0)"
+                    [class.button--effects-active]="effectsActive[0]">1</div>
+                  <div class="button button--effects button--upper-row" (click)="applyEffect(1)"
+                    [class.button--effects-active]="effectsActive[1]">2</div>
+                  <div class="button button--effects button--upper-row" (click)="applyEffect(2)"
+                    [class.button--effects-active]="effectsActive[2]">3</div>
                 </div>
                 <div class="button-container button-container--effects--lower-row">
-                  <div class="button button--effects button--lower-row">2x</div>
-                  <div class="button button--effects button--lower-row">4x</div>
-                  <div class="button button--effects button--lower-row">8x</div>
+                  <div class="button button--effects button--lower-row" (click)="applyEffect(3)"
+                    [class.button--effects-active]="effectsActive[3]">4</div>
+                  <div class="button button--effects button--lower-row" (click)="applyEffect(4)"
+                    [class.button--effects-active]="effectsActive[4]">5</div>
+                  <div class="button button--effects button--lower-row" (click)="applyEffect(5)"
+                    [class.button--effects-active]="effectsActive[5]">6</div>
                 </div>
               </div>
             </div>
             <div class="layout-pitch">
               <slider-controller [config]="{id:'pitch-deck-1',
-             min:-25,
-              max:25,
-               
-             vertical:true,
-                        thumb:'sliderthumb-pitch-vertical',
-                        track:'slidertrack-pitch-vertical'}"></slider-controller>
+                min:-25,
+                max:25,
+                vertical:true,
+                thumb:'sliderthumb-pitch-vertical',
+                track:'slidertrack-pitch-vertical'}"></slider-controller>
             </div>
           </div>
           <div class="button-container button-container--cue-play">

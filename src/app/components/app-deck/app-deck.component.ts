@@ -18,6 +18,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   rotation = 0;
   private active = false;
   song: any;
+  effectsActive = [false, false, false, false, false, false];
   constructor(musicService: MusicLoaderService, playerService: PlayerService) {
     this.musicService = musicService;
     this.playerService = playerService;
@@ -64,13 +65,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.playerService.playPause(this.deckNumber);
     this.active = this.playerService.isPlaying(this.deckNumber);
   }
-  applyFilter() {
-    this.playerService.applyBQFilter(this.deckNumber);
-  }
-  applyDistortion() {
-    this.playerService.applyDistortion(this.deckNumber);
-  }
-  clearFilter() {
-    this.playerService.clearFilter(this.deckNumber);
+  applyEffect(i) {
+    this.effectsActive[i] = this.playerService.activateEffect(this.deckNumber, i);
   }
 }
