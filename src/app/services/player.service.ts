@@ -9,6 +9,8 @@ import { EffectsService } from './effects.service';
 export class PlayerService {
   deckLoader = [new Subject(), new Subject()];
   deck$ = [this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()];
+  effectLoader = [new Subject(), new Subject()];
+  effects$ = [this.effectLoader[0].asObservable(), this.effectLoader[1].asObservable()];
   deck: any[] = [null, null];
   eq = [null, null];
   eqEffect: any;
@@ -78,7 +80,11 @@ export class PlayerService {
     this.applyEffects();
   }
   saveEffects(deck, i, effect) {
+    if (this.effects[deck][i] && this.effects[deck][i].active) {
+      this.activateEffect(deck, i);
+    }
     this.effects[deck][i] = effect;
+    this.effectLoader[deck].next(this.effects[deck]);
   }
   activateEffect(deck, i) {
     this.effects[deck][i].active = !this.effects[deck][i].active;
@@ -89,6 +95,6 @@ export class PlayerService {
       this.activeEffects[deck].push(new tuna[effect.type](effect.config));
     }
     this.applyEffects();
-    return this.effects[deck][i].active;
+    this.effectLoader[deck].next(this.effects[deck]);
   }
 }

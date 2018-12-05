@@ -67,7 +67,7 @@ export class EffectsService {
     }
   ];
   getEffects() {
-    return this.effects;
+    return JSON.parse(JSON.stringify(this.effects));
   }
   addEffect(effect) {
     this.effects.push(effect);

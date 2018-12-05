@@ -17,124 +17,16 @@
     </div>
   </div>
   <div class="question-container">
-
-    <div class="effects-container">
-      <div class="question-label">Effects deck 1</div>
+    <div class="effects-container" *ngFor="let deck of effects;let i=index">
+      <div class="question-label">Effects deck {{i+1}}</div>
       <table>
-        <tr>
-          <td>Effect 1</td>
+        <tr *ngFor="let effect of deck;let j=index">
+          <td>Effect {{j}}</td>
           <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
+            <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">
+              <option *ngFor="let availableEffect of availableEffects" [value]="JSON.stringify(availableEffect)">{{availableEffect.name}}</option>
             </select>
           </td>
-        </tr>
-        <tr>
-          <td>Effect 2</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 3</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 4</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 5</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 6</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-
-        </tr>
-      </table>
-    </div>
-    <div class="effects-container">
-      <div class="question-label">Effects deck 2</div>
-      <table>
-        <tr>
-          <td>Effect 1</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 2</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 3</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 4</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 5</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Effect 6</td>
-          <td>
-            <select>
-              <option value="li">Light</option>
-              <option value="da">Dark</option>
-            </select>
-          </td>
-
         </tr>
       </table>
     </div>
