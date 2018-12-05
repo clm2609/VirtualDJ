@@ -229,7 +229,7 @@
                     <td class="col-md-4">
 
                             <div class="io-description">
-                                <b>Returns : </b>    <code>{}</code>
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
                     </td>
@@ -417,13 +417,13 @@ export class EffectsService {
     }
   ];
   getEffects() {
-    return this.effects;
+    return JSON.parse(JSON.stringify(this.effects));
   }
   addEffect(effect) {
     this.effects.push(effect);
   }
 
-  constructor() { }
+  constructor() {}
 }
 </code></pre>
     </div>

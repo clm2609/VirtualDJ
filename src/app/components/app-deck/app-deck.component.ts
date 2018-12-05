@@ -18,7 +18,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   rotation = 0;
   private active = false;
   song: any;
-  effectsActive = [false, false, false, false, false, false];
+  effects = [{}, {}, {}, {}, {}, {}] as any;
   constructor(musicService: MusicLoaderService, playerService: PlayerService) {
     this.musicService = musicService;
     this.playerService = playerService;
@@ -27,6 +27,10 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     setInterval(() => {
       this.rotate();
     }, 50);
+    this.playerService.effects$[this.deckNumber].subscribe(effects => {
+      const eff = effects as any;
+      this.effects = eff.filter(_ => true);
+    });
   }
   ngAfterViewInit(): void {
     const height = document.getElementById('deck_' + this.deckNumber + '_wave').offsetHeight;
@@ -66,6 +70,6 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.active = this.playerService.isPlaying(this.deckNumber);
   }
   applyEffect(i) {
-    this.effectsActive[i] = this.playerService.activateEffect(this.deckNumber, i);
+    this.playerService.activateEffect(this.deckNumber, i);
   }
 }

@@ -123,7 +123,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#effectsActive">effectsActive</a>
+                                <a href="#effects">effects</a>
                             </li>
                             <li>
                                 <a href="#musicService">musicService</a>
@@ -302,7 +302,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:68</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:72</a></div>
                             </td>
                         </tr>
 
@@ -367,7 +367,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:64</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:68</a></div>
                             </td>
                         </tr>
 
@@ -405,7 +405,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:57</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:61</a></div>
                             </td>
                         </tr>
 
@@ -443,7 +443,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:56</a></div>
                             </td>
                         </tr>
 
@@ -470,30 +470,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="effectsActive"></a>
+                        <a name="effects"></a>
                         <span class="name">
                             <b>
-                            effectsActive
+                            effects
                             </b>
-                            <a href="#effectsActive"><span class="icon ion-ios-link"></span></a>
+                            <a href="#effects"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>effectsActive:     <code>[]</code>
+                        <code>effects:     <code></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[false, false, false, false, false, false]</code>
+                            <i>Default value : </i><code>[{}, {}, {}, {}, {}, {}] as any</code>
                         </td>
                     </tr>
                         <tr>
@@ -672,7 +666,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   rotation &#x3D; 0;
   private active &#x3D; false;
   song: any;
-  effectsActive &#x3D; [false, false, false, false, false, false];
+  effects &#x3D; [{}, {}, {}, {}, {}, {}] as any;
   constructor(musicService: MusicLoaderService, playerService: PlayerService) {
     this.musicService &#x3D; musicService;
     this.playerService &#x3D; playerService;
@@ -681,6 +675,10 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     setInterval(() &#x3D;&gt; {
       this.rotate();
     }, 50);
+    this.playerService.effects$[this.deckNumber].subscribe(effects &#x3D;&gt; {
+      const eff &#x3D; effects as any;
+      this.effects &#x3D; eff.filter(_ &#x3D;&gt; true);
+    });
   }
   ngAfterViewInit(): void {
     const height &#x3D; document.getElementById(&#x27;deck_&#x27; + this.deckNumber + &#x27;_wave&#x27;).offsetHeight;
@@ -720,7 +718,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.active &#x3D; this.playerService.isPlaying(this.deckNumber);
   }
   applyEffect(i) {
-    this.effectsActive[i] &#x3D; this.playerService.activateEffect(this.deckNumber, i);
+    this.playerService.activateEffect(this.deckNumber, i);
   }
 }
 </code></pre>
@@ -766,19 +764,19 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
               &lt;div class&#x3D;&quot;button-container--effects&quot;&gt;
                 &lt;div class&#x3D;&quot;button-container button-container--effects--upper-row&quot;&gt;
                   &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot; (click)&#x3D;&quot;applyEffect(0)&quot;
-                    [class.button--effects-active]&#x3D;&quot;effectsActive[0]&quot;&gt;1&lt;/div&gt;
+                    [class.button--effects-active]&#x3D;&quot;effects[0].active&quot;&gt;1&lt;/div&gt;
                   &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot; (click)&#x3D;&quot;applyEffect(1)&quot;
-                    [class.button--effects-active]&#x3D;&quot;effectsActive[1]&quot;&gt;2&lt;/div&gt;
+                    [class.button--effects-active]&#x3D;&quot;effects[1].active&quot;&gt;2&lt;/div&gt;
                   &lt;div class&#x3D;&quot;button button--effects button--upper-row&quot; (click)&#x3D;&quot;applyEffect(2)&quot;
-                    [class.button--effects-active]&#x3D;&quot;effectsActive[2]&quot;&gt;3&lt;/div&gt;
+                    [class.button--effects-active]&#x3D;&quot;effects[2].active&quot;&gt;3&lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div class&#x3D;&quot;button-container button-container--effects--lower-row&quot;&gt;
                   &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot; (click)&#x3D;&quot;applyEffect(3)&quot;
-                    [class.button--effects-active]&#x3D;&quot;effectsActive[3]&quot;&gt;4&lt;/div&gt;
+                    [class.button--effects-active]&#x3D;&quot;effects[3].active&quot;&gt;4&lt;/div&gt;
                   &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot; (click)&#x3D;&quot;applyEffect(4)&quot;
-                    [class.button--effects-active]&#x3D;&quot;effectsActive[4]&quot;&gt;5&lt;/div&gt;
+                    [class.button--effects-active]&#x3D;&quot;effects[4].active&quot;&gt;5&lt;/div&gt;
                   &lt;div class&#x3D;&quot;button button--effects button--lower-row&quot; (click)&#x3D;&quot;applyEffect(5)&quot;
-                    [class.button--effects-active]&#x3D;&quot;effectsActive[5]&quot;&gt;6&lt;/div&gt;
+                    [class.button--effects-active]&#x3D;&quot;effects[5].active&quot;&gt;6&lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
@@ -817,7 +815,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="deck-container">  <div class="deck-layout components-container">    <!-- TODO: Make this more visually appealing -->    <div class="sound-wave" [id]="\'deck_\'+deckNumber+\'_wave\'">    </div>    <div class="dj-deck-container">      <div class="song-name">        <ng-container *ngIf="song">{{song.name}}</ng-container>      </div>      <div class="dj-deck ">        <div class="plate-loops">          <div class="plate">            <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">          </div>          <div class="button-container button-container--loops">            <div class="button button--loops">2x</div>            <div class="button button--loops">4x</div>            <div class="button button--loops">8x</div>            <div class="button button--loops">16x</div>            <div class="button button--loops">32x</div>          </div>        </div>        <div class="layout-buttons">          <div class="layout-cue-effects-pitch">            <div class="layout-cue-effects">              CUEs              <div class="button-container button-container--cues">                <div class="button button--cues">CUE 1</div>                <div class="button button--cues">CUE 2</div>                <div class="button button--cues">CUE 3</div>                <div class="button button--cues">CUE 4</div>              </div>              Effects              <div class="button-container--effects">                <div class="button-container button-container--effects--upper-row">                  <div class="button button--effects button--upper-row" (click)="applyEffect(0)"                    [class.button--effects-active]="effectsActive[0]">1</div>                  <div class="button button--effects button--upper-row" (click)="applyEffect(1)"                    [class.button--effects-active]="effectsActive[1]">2</div>                  <div class="button button--effects button--upper-row" (click)="applyEffect(2)"                    [class.button--effects-active]="effectsActive[2]">3</div>                </div>                <div class="button-container button-container--effects--lower-row">                  <div class="button button--effects button--lower-row" (click)="applyEffect(3)"                    [class.button--effects-active]="effectsActive[3]">4</div>                  <div class="button button--effects button--lower-row" (click)="applyEffect(4)"                    [class.button--effects-active]="effectsActive[4]">5</div>                  <div class="button button--effects button--lower-row" (click)="applyEffect(5)"                    [class.button--effects-active]="effectsActive[5]">6</div>                </div>              </div>            </div>            <div class="layout-pitch">              <slider-controller [config]="{id:\'pitch-deck-1\',                min:-25,                max:25,                vertical:true,                thumb:\'sliderthumb-pitch-vertical\',                track:\'slidertrack-pitch-vertical\'}"></slider-controller>            </div>          </div>          <div class="button-container button-container--cue-play">            <div class="button button--cue">CUE</div>            <div class="button button--play" (click)="playPause()">              <div class="play-pause">                <div class="arrow-right"></div>                <div class="pause-stick"></div>                <div class="pause-space"></div>                <div class="pause-stick"></div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="deck-container">  <div class="deck-layout components-container">    <!-- TODO: Make this more visually appealing -->    <div class="sound-wave" [id]="\'deck_\'+deckNumber+\'_wave\'">    </div>    <div class="dj-deck-container">      <div class="song-name">        <ng-container *ngIf="song">{{song.name}}</ng-container>      </div>      <div class="dj-deck ">        <div class="plate-loops">          <div class="plate">            <img class="vynil" [ngStyle]="{\'transform\': \'rotate(\' + rotation+ \'deg)\'}" src="assets/images/vynil.svg">          </div>          <div class="button-container button-container--loops">            <div class="button button--loops">2x</div>            <div class="button button--loops">4x</div>            <div class="button button--loops">8x</div>            <div class="button button--loops">16x</div>            <div class="button button--loops">32x</div>          </div>        </div>        <div class="layout-buttons">          <div class="layout-cue-effects-pitch">            <div class="layout-cue-effects">              CUEs              <div class="button-container button-container--cues">                <div class="button button--cues">CUE 1</div>                <div class="button button--cues">CUE 2</div>                <div class="button button--cues">CUE 3</div>                <div class="button button--cues">CUE 4</div>              </div>              Effects              <div class="button-container--effects">                <div class="button-container button-container--effects--upper-row">                  <div class="button button--effects button--upper-row" (click)="applyEffect(0)"                    [class.button--effects-active]="effects[0].active">1</div>                  <div class="button button--effects button--upper-row" (click)="applyEffect(1)"                    [class.button--effects-active]="effects[1].active">2</div>                  <div class="button button--effects button--upper-row" (click)="applyEffect(2)"                    [class.button--effects-active]="effects[2].active">3</div>                </div>                <div class="button-container button-container--effects--lower-row">                  <div class="button button--effects button--lower-row" (click)="applyEffect(3)"                    [class.button--effects-active]="effects[3].active">4</div>                  <div class="button button--effects button--lower-row" (click)="applyEffect(4)"                    [class.button--effects-active]="effects[4].active">5</div>                  <div class="button button--effects button--lower-row" (click)="applyEffect(5)"                    [class.button--effects-active]="effects[5].active">6</div>                </div>              </div>            </div>            <div class="layout-pitch">              <slider-controller [config]="{id:\'pitch-deck-1\',                min:-25,                max:25,                vertical:true,                thumb:\'sliderthumb-pitch-vertical\',                track:\'slidertrack-pitch-vertical\'}"></slider-controller>            </div>          </div>          <div class="button-container button-container--cue-play">            <div class="button button--cue">CUE</div>            <div class="button button--play" (click)="playPause()">              <div class="play-pause">                <div class="arrow-right"></div>                <div class="pause-stick"></div>                <div class="pause-space"></div>                <div class="pause-stick"></div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppDeckComponent'};

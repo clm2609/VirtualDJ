@@ -44,7 +44,6 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   rotate() {
     const percent = (this.value - this.configSlider.min) / (this.configSlider.max - this.configSlider.min);
     this.rotation = 135 * 2 * (percent - 0.5);
-    console.log(this.value);
     this.onChangeCallback(this.value);
   }
   unfold() {
