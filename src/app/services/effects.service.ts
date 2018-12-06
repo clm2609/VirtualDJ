@@ -9,6 +9,7 @@ export class EffectsService {
     {
       name: 'Basic moog filter',
       type: 'MoogFilter',
+      id: 1,
       active: false,
       config: {
         cutoff: 0.065, // 0 to 1
@@ -19,6 +20,7 @@ export class EffectsService {
     {
       name: 'Basic ping pong',
       type: 'PingPongDelay',
+      id: 2,
       active: false,
       config: {
         cutoff: 0.065, // 0 to 1
@@ -29,6 +31,7 @@ export class EffectsService {
     {
       name: 'Basic left panner',
       type: 'Panner',
+      id: 3,
       active: false,
       config: {
         pan: -1 // -1 (left) to 1 (right)
@@ -37,6 +40,7 @@ export class EffectsService {
     {
       name: 'Basic right panner',
       type: 'Panner',
+      id: 4,
       active: false,
       config: {
         pan: 1 // -1 (left) to 1 (right)
@@ -45,6 +49,7 @@ export class EffectsService {
     {
       name: 'Basic bitcrusher',
       type: 'Bitcrusher',
+      id: 0,
       active: false,
       config: {
         bits: 4, // 1 to 16
@@ -55,6 +60,7 @@ export class EffectsService {
     {
       name: 'Basic phaser',
       type: 'Phaser',
+      id: 5,
       active: false,
       config: {
         rate: 1.2, // 0.01 to 8 is a decent range, but higher values are possible
@@ -70,6 +76,7 @@ export class EffectsService {
     return JSON.parse(JSON.stringify(this.effects));
   }
   addEffect(effect) {
+    effect.id = this.effects.reduce((valorAnterior, valorActual) => Math.max(valorAnterior, valorActual.id), 0) + 1;
     this.effects.push(effect);
   }
 

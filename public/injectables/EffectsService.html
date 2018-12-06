@@ -120,7 +120,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/services/effects.service.ts:74</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/services/effects.service.ts:81</a></div>
                             </td>
                         </tr>
 
@@ -155,7 +155,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/services/effects.service.ts:72</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/services/effects.service.ts:78</a></div>
                             </td>
                         </tr>
 
@@ -220,7 +220,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/services/effects.service.ts:69</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/services/effects.service.ts:75</a></div>
                             </td>
                         </tr>
 
@@ -274,6 +274,7 @@
     {
       name: &#x27;Basic moog filter&#x27;,
       type: &#x27;MoogFilter&#x27;,
+      id: 1,
       active: false,
       config: {
         cutoff: 0.065, // 0 to 1
@@ -284,6 +285,7 @@
     {
       name: &#x27;Basic ping pong&#x27;,
       type: &#x27;PingPongDelay&#x27;,
+      id: 2,
       active: false,
       config: {
         cutoff: 0.065, // 0 to 1
@@ -294,6 +296,7 @@
     {
       name: &#x27;Basic left panner&#x27;,
       type: &#x27;Panner&#x27;,
+      id: 3,
       active: false,
       config: {
         pan: -1 // -1 (left) to 1 (right)
@@ -302,6 +305,7 @@
     {
       name: &#x27;Basic right panner&#x27;,
       type: &#x27;Panner&#x27;,
+      id: 4,
       active: false,
       config: {
         pan: 1 // -1 (left) to 1 (right)
@@ -310,6 +314,7 @@
     {
       name: &#x27;Basic bitcrusher&#x27;,
       type: &#x27;Bitcrusher&#x27;,
+      id: 0,
       active: false,
       config: {
         bits: 4, // 1 to 16
@@ -320,6 +325,7 @@
     {
       name: &#x27;Basic phaser&#x27;,
       type: &#x27;Phaser&#x27;,
+      id: 5,
       active: false,
       config: {
         rate: 1.2, // 0.01 to 8 is a decent range, but higher values are possible
@@ -359,6 +365,7 @@ export class EffectsService {
     {
       name: &#x27;Basic moog filter&#x27;,
       type: &#x27;MoogFilter&#x27;,
+      id: 1,
       active: false,
       config: {
         cutoff: 0.065, // 0 to 1
@@ -369,6 +376,7 @@ export class EffectsService {
     {
       name: &#x27;Basic ping pong&#x27;,
       type: &#x27;PingPongDelay&#x27;,
+      id: 2,
       active: false,
       config: {
         cutoff: 0.065, // 0 to 1
@@ -379,6 +387,7 @@ export class EffectsService {
     {
       name: &#x27;Basic left panner&#x27;,
       type: &#x27;Panner&#x27;,
+      id: 3,
       active: false,
       config: {
         pan: -1 // -1 (left) to 1 (right)
@@ -387,6 +396,7 @@ export class EffectsService {
     {
       name: &#x27;Basic right panner&#x27;,
       type: &#x27;Panner&#x27;,
+      id: 4,
       active: false,
       config: {
         pan: 1 // -1 (left) to 1 (right)
@@ -395,6 +405,7 @@ export class EffectsService {
     {
       name: &#x27;Basic bitcrusher&#x27;,
       type: &#x27;Bitcrusher&#x27;,
+      id: 0,
       active: false,
       config: {
         bits: 4, // 1 to 16
@@ -405,6 +416,7 @@ export class EffectsService {
     {
       name: &#x27;Basic phaser&#x27;,
       type: &#x27;Phaser&#x27;,
+      id: 5,
       active: false,
       config: {
         rate: 1.2, // 0.01 to 8 is a decent range, but higher values are possible
@@ -420,10 +432,11 @@ export class EffectsService {
     return JSON.parse(JSON.stringify(this.effects));
   }
   addEffect(effect) {
+    effect.id &#x3D; this.effects.reduce((valorAnterior, valorActual) &#x3D;&gt; Math.max(valorAnterior, valorActual.id), 0) + 1
     this.effects.push(effect);
   }
 
-  constructor() {}
+  constructor() { }
 }
 </code></pre>
     </div>
