@@ -242,7 +242,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/services/player.service.ts:89</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/services/player.service.ts:73</a></div>
                             </td>
                         </tr>
 
@@ -363,7 +363,7 @@
                     <td class="col-md-4">
 
                             <div class="io-description">
-                                <b>Returns : </b>    <code>{}</code>
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
                     </td>
@@ -753,7 +753,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/app/services/player.service.ts:82</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/services/player.service.ts:66</a></div>
                             </td>
                         </tr>
 
@@ -836,7 +836,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/services/player.service.ts:77</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/services/player.service.ts:61</a></div>
                             </td>
                         </tr>
 
@@ -1446,23 +1446,7 @@ export class PlayerService {
 
   equalizer() {
     if (this.deck[0] &amp;&amp; this.deck[1] &amp;&amp; this.eq[0] &amp;&amp; this.eq[1]) {
-      const filter0 &#x3D; this.eq[0].map(band &#x3D;&gt; {
-        const filter &#x3D; this.deck[0].backend.ac.createBiquadFilter();
-        filter.type &#x3D; band.type;
-        filter.gain.value &#x3D; band.value;
-        filter.Q.value &#x3D; 1;
-        filter.frequency.value &#x3D; band.f;
-        return filter;
-      });
-      const filter1 &#x3D; this.eq[1].map(band &#x3D;&gt; {
-        const filter &#x3D; this.deck[1].backend.ac.createBiquadFilter();
-        filter.type &#x3D; band.type;
-        filter.gain.value &#x3D; band.value;
-        filter.Q.value &#x3D; 1;
-        filter.frequency.value &#x3D; band.f;
-        return filter;
-      });
-      return [filter0, filter1];
+      return this.effectServ.createEQEffect(this.deck, this.eq);
     }
   }
 
@@ -1481,11 +1465,7 @@ export class PlayerService {
   activateEffect(deck, i) {
     this.effects[deck][i].active &#x3D; !this.effects[deck][i].active;
     const effects &#x3D; this.effects[deck].filter(a &#x3D;&gt; a.active);
-    const tuna &#x3D; new Tuna(this.deck[deck].backend.ac);
-    this.activeEffects[deck] &#x3D; [];
-    for (const effect of effects) {
-      this.activeEffects[deck].push(new tuna[effect.type](effect.config));
-    }
+    this.activeEffects[deck] &#x3D; this.effectServ.createEffects(this.deck[deck].backend.ac, effects);
     this.applyEffects();
     this.effectLoader[deck].next(this.effects[deck]);
   }

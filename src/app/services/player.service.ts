@@ -54,23 +54,7 @@ export class PlayerService {
 
   equalizer() {
     if (this.deck[0] && this.deck[1] && this.eq[0] && this.eq[1]) {
-      const filter0 = this.eq[0].map(band => {
-        const filter = this.deck[0].backend.ac.createBiquadFilter();
-        filter.type = band.type;
-        filter.gain.value = band.value;
-        filter.Q.value = 1;
-        filter.frequency.value = band.f;
-        return filter;
-      });
-      const filter1 = this.eq[1].map(band => {
-        const filter = this.deck[1].backend.ac.createBiquadFilter();
-        filter.type = band.type;
-        filter.gain.value = band.value;
-        filter.Q.value = 1;
-        filter.frequency.value = band.f;
-        return filter;
-      });
-      return [filter0, filter1];
+      return this.effectServ.createEQEffect(this.deck, this.eq);
     }
   }
 
@@ -89,11 +73,7 @@ export class PlayerService {
   activateEffect(deck, i) {
     this.effects[deck][i].active = !this.effects[deck][i].active;
     const effects = this.effects[deck].filter(a => a.active);
-    const tuna = new Tuna(this.deck[deck].backend.ac);
-    this.activeEffects[deck] = [];
-    for (const effect of effects) {
-      this.activeEffects[deck].push(new tuna[effect.type](effect.config));
-    }
+    this.activeEffects[deck] = this.effectServ.createEffects(this.deck[deck].backend.ac, effects);
     this.applyEffects();
     this.effectLoader[deck].next(this.effects[deck]);
   }

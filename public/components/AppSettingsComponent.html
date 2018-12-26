@@ -522,7 +522,11 @@ export class AppSettingsComponent implements OnInit {
     });
   }
   change(i, j) {
-    this.playerServ.saveEffects(i, j, JSON.parse(JSON.stringify(this.availableEffects.find(a &#x3D;&gt; Number(a.id) &#x3D;&#x3D;&#x3D; Number(this.selectedEffects[i][j])))));
+    this.playerServ.saveEffects(
+      i,
+      j,
+      JSON.parse(JSON.stringify(this.availableEffects.find(a &#x3D;&gt; Number(a.id) &#x3D;&#x3D;&#x3D; Number(this.selectedEffects[i][j]))))
+    );
   }
 }
 </code></pre>
