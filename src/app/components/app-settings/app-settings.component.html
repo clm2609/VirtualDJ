@@ -24,7 +24,7 @@
           <td>Effect {{j}}</td>
           <td>
             <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">
-              <option *ngFor="let availableEffect of availableEffects" [value]="JSON.stringify(availableEffect)">{{availableEffect.name}}</option>
+              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">{{availableEffect.name}}</option>
             </select>
           </td>
         </tr>

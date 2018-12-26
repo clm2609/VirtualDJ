@@ -254,7 +254,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:60</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -340,7 +340,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -373,7 +373,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -412,7 +412,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -445,7 +445,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -479,7 +479,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/app-settings/app-settings.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -502,19 +502,9 @@ import { PlayerService } from &#x27;../../services/player.service&#x27;;
 })
 export class AppSettingsComponent implements OnInit {
   constructor(private effectServ: EffectsService, private playerServ: PlayerService) {
-    this.effects[0] &#x3D; JSON.parse(JSON.stringify(this.playerServ.effects[0]));
-    this.effects[1] &#x3D; JSON.parse(JSON.stringify(this.playerServ.effects[1]));
+    this.effects &#x3D; JSON.parse(JSON.stringify(this.playerServ.effects));
     this.availableEffects &#x3D; this.effectServ.getEffects();
-    this.selectedEffects &#x3D; this.effects.map(c &#x3D;&gt;
-      c.map(a &#x3D;&gt; {
-        return JSON.stringify(
-          this.availableEffects.find(b &#x3D;&gt; {
-            a.active &#x3D; false;
-            return JSON.stringify(a) &#x3D;&#x3D;&#x3D; JSON.stringify(b);
-          })
-        );
-      })
-    );
+    this.selectedEffects &#x3D; this.effects.map(c &#x3D;&gt; c.map(a &#x3D;&gt; this.availableEffects.find(b &#x3D;&gt; a.id &#x3D;&#x3D;&#x3D; b.id).id));
   }
   JSON &#x3D; JSON;
   effectsNum &#x3D; 6;
@@ -524,35 +514,19 @@ export class AppSettingsComponent implements OnInit {
   ngOnInit() {
     this.playerServ.effects$[0].subscribe(effects &#x3D;&gt; {
       this.effects[0] &#x3D; JSON.parse(JSON.stringify(effects));
-      this.availableEffects &#x3D; this.effectServ.getEffects();
-      this.selectedEffects &#x3D; this.effects.map(c &#x3D;&gt;
-        c.map(a &#x3D;&gt; {
-          return JSON.stringify(
-            this.availableEffects.find(b &#x3D;&gt; {
-              a.active &#x3D; false;
-              return JSON.stringify(a) &#x3D;&#x3D;&#x3D; JSON.stringify(b);
-            })
-          );
-        })
-      );
+      this.selectedEffects &#x3D; this.effects.map(c &#x3D;&gt; c.map(a &#x3D;&gt; this.availableEffects.find(b &#x3D;&gt; a.id &#x3D;&#x3D;&#x3D; b.id).id));
     });
     this.playerServ.effects$[1].subscribe(effects &#x3D;&gt; {
       this.effects[1] &#x3D; JSON.parse(JSON.stringify(effects));
-      this.availableEffects &#x3D; this.effectServ.getEffects();
-      this.selectedEffects &#x3D; this.effects.map(c &#x3D;&gt;
-        c.map(a &#x3D;&gt; {
-          return JSON.stringify(
-            this.availableEffects.find(b &#x3D;&gt; {
-              a.active &#x3D; false;
-              return JSON.stringify(a) &#x3D;&#x3D;&#x3D; JSON.stringify(b);
-            })
-          );
-        })
-      );
+      this.selectedEffects &#x3D; this.effects.map(c &#x3D;&gt; c.map(a &#x3D;&gt; this.availableEffects.find(b &#x3D;&gt; a.id &#x3D;&#x3D;&#x3D; b.id).id));
     });
   }
   change(i, j) {
-    this.playerServ.saveEffects(i, j, this.selectedEffects.map(a &#x3D;&gt; a.map(b &#x3D;&gt; this.JSON.parse(b)))[i][j]);
+    this.playerServ.saveEffects(
+      i,
+      j,
+      JSON.parse(JSON.stringify(this.availableEffects.find(a &#x3D;&gt; Number(a.id) &#x3D;&#x3D;&#x3D; Number(this.selectedEffects[i][j]))))
+    );
   }
 }
 </code></pre>
@@ -585,7 +559,7 @@ export class AppSettingsComponent implements OnInit {
           &lt;td&gt;Effect {{j}}&lt;/td&gt;
           &lt;td&gt;
             &lt;select [(ngModel)]&#x3D;&quot;selectedEffects[i][j]&quot; (ngModelChange)&#x3D;&quot;change(i,j)&quot;&gt;
-              &lt;option *ngFor&#x3D;&quot;let availableEffect of availableEffects&quot; [value]&#x3D;&quot;JSON.stringify(availableEffect)&quot;&gt;{{availableEffect.name}}&lt;/option&gt;
+              &lt;option *ngFor&#x3D;&quot;let availableEffect of availableEffects&quot; [value]&#x3D;&quot;availableEffect.id&quot;&gt;{{availableEffect.name}}&lt;/option&gt;
             &lt;/select&gt;
           &lt;/td&gt;
         &lt;/tr&gt;
@@ -603,7 +577,7 @@ export class AppSettingsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="settings-container">  <div class="question-container">    <div class="question">      <div class="question-label">Language</div>      <select>        <option value="es">Spanish</option>        <option value="en">English</option>      </select>    </div>    <div class="question">      <div class="question-label">Template</div>      <select>        <option value="li">Light</option>        <option value="da">Dark</option>      </select>    </div>  </div>  <div class="question-container">    <div class="effects-container" *ngFor="let deck of effects;let i=index">      <div class="question-label">Effects deck {{i+1}}</div>      <table>        <tr *ngFor="let effect of deck;let j=index">          <td>Effect {{j}}</td>          <td>            <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">              <option *ngFor="let availableEffect of availableEffects" [value]="JSON.stringify(availableEffect)">{{availableEffect.name}}</option>            </select>          </td>        </tr>      </table>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="settings-container">  <div class="question-container">    <div class="question">      <div class="question-label">Language</div>      <select>        <option value="es">Spanish</option>        <option value="en">English</option>      </select>    </div>    <div class="question">      <div class="question-label">Template</div>      <select>        <option value="li">Light</option>        <option value="da">Dark</option>      </select>    </div>  </div>  <div class="question-container">    <div class="effects-container" *ngFor="let deck of effects;let i=index">      <div class="question-label">Effects deck {{i+1}}</div>      <table>        <tr *ngFor="let effect of deck;let j=index">          <td>Effect {{j}}</td>          <td>            <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">{{availableEffect.name}}</option>            </select>          </td>        </tr>      </table>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppSettingsComponent'};
