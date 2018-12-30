@@ -72,12 +72,162 @@ export class EffectsService {
       }
     }
   ];
+  effectsCreator = [
+    {
+      name: 'Chorus',
+      effect: 'Chorus',
+      description: 'A basic chorus effect.',
+      configs: [
+        { name: 'rate', min: 0.01, max: 8 },
+        { name: 'feedback', min: 0, max: 1 },
+        { name: 'delay', min: 0, max: 1 },
+        { name: 'bypass', values: [0, 1] }
+      ]
+    },
+    {
+      description: 'A delay effect with feedback and a lowpass filter applied to the delayed signal.',
+      name: 'Delay',
+      effect: 'Delay',
+
+      configs: [
+        { name: 'feedback', min: 0, max: 1 },
+        { name: 'delayTime', min: 1, max: 10000 },
+        { name: 'wetLevel', min: 0, max: 1 },
+        { name: 'dryLevel', min: 0, max: 1 },
+        { name: 'cutoff', min: 20, max: 22050 },
+        { name: 'bypass', value: 0 }
+      ]
+    },
+    {
+      description: 'A basic phaser effect.',
+      name: 'Phaser',
+      effect: 'Phaser',
+      configs: [
+        { name: 'rate', min: 0.01, max: 8 },
+        { name: 'depth', min: 0, max: 1 },
+        { name: 'feedback', min: 0, max: 1 },
+        { name: 'stereoPhase', min: 0, max: 180 },
+        { name: 'baseModulationFrequency', min: 500, max: 1500 },
+        { name: 'bypass', value: 0 }
+      ]
+    },
+    {
+      description: 'A basic overdrive effect.',
+      name: 'Overdrive',
+      effect: 'Overdrive',
+      configs: [
+        { name: 'outputGain', min: 0, max: 1 },
+        { name: 'drive', min: 0, max: 1 },
+        { name: 'curveAmount', min: 0, max: 1 },
+        { name: 'algorithmIndex', values: [0, 1, 2, 3, 4, 5] },
+        { name: 'bypass', value: 0 }
+      ]
+    },
+    {
+      description: 'A compressor with the option to use automatic makeup gain.',
+      name: 'Compressor',
+      effect: 'Compressor',
+      configs: [
+        { name: 'threshold', min: -100, max: 0 },
+        { name: 'makeupGain', min: 0, max: 10 },
+        { name: 'attack', min: 0, max: 1000 },
+        { name: 'release', min: 0, max: 3000 },
+        { name: 'ratio', min: 1, max: 20 },
+        { name: 'knee', min: 0, max: 40 },
+        { name: 'automakeup', values: [true, false] },
+        { name: 'bypass', value: 0 }
+      ]
+    },
+    {
+      description: 'A basic filter.',
+      name: 'Filter',
+      effect: 'Filter',
+      configs: [
+        { name: 'frequency', min: 20, max: 22050 },
+        { name: 'Q', min: 0.001, max: 100 },
+        { name: 'gain', min: -40, max: 40 },
+        {
+          name: 'filterType',
+          values: ['lowpass', 'highpass', 'bandpass', 'lowshelf', 'highshelf', 'peaking', 'notch', 'allpass']
+        },
+        { name: 'bypass', value: 0 }
+      ]
+    },
+    {
+      description: 'A basic tremolo.',
+      name: 'Tremolo',
+      effect: 'Tremolo',
+      configs: [
+        { name: 'intensity', min: 0, max: 1 },
+        { name: 'rate', min: 0.001, max: 8 },
+        { name: 'stereoPhase', min: 0, max: 180 },
+        { name: 'bypass', value: 0 }
+      ]
+    },
+    {
+      description: 'A wahwah with an auto wah option.',
+      name: 'WahWah',
+      effect: 'WahWah',
+      configs: [
+        { name: 'automode', values: [true, false] },
+        { name: 'baseFrequency', min: 0, max: 1 },
+        { name: 'excursionOctaves', min: 1, max: 6 },
+        { name: 'sweep', min: 0, max: 1 },
+        { name: 'resonance', min: 1, max: 100 },
+        { name: 'sensitivity', min: -1, max: 1 },
+        { name: 'bypass', value: 0 }
+      ]
+    },
+    {
+      description: 'A lo- fi bitcrusher effect.',
+      name: 'Bitcrusher',
+      effect: 'Bitcrusher',
+      configs: [
+        { name: 'bits', min: 1, max: 16 },
+        { name: 'normfreq', min: 0, max: 1 },
+        { name: 'bufferSize', values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
+      ]
+    },
+    {
+      description: 'A resonant, analog- sounding filter.',
+      name: 'MoogFilter',
+      effect: 'MoogFilter',
+      configs: [
+        { name: 'cutoff', min: 0, max: 1 },
+        { name: 'resonance', min: 0, max: 4 },
+        { name: 'bufferSize', values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
+      ]
+    },
+    {
+      description: 'A delay that bounces between the left and right channel.',
+      name: 'Ping Pong Delay',
+      effect: 'PingPongDelay',
+      configs: [
+        { name: 'wetLevel', min: 0, max: 1 },
+        { name: 'feedback', min: 0, max: 1 },
+        { name: 'delayTimeLeft', min: 1, max: 10000 },
+        { name: 'delayTimeRight', min: 1, max: 10000 }
+      ]
+    },
+    {
+      description: 'A basic gain.',
+      name: 'Gain',
+      effect: 'Gain',
+      configs: [{ name: 'gain', min: 0, max: 40 }]
+    }
+  ];
   getEffects() {
     return JSON.parse(JSON.stringify(this.effects));
   }
   addEffect(effect) {
     effect.id = this.effects.reduce((valorAnterior, valorActual) => Math.max(valorAnterior, valorActual.id), 0) + 1;
     this.effects.push(effect);
+    localStorage.setItem('effects', JSON.stringify(this.effects));
+  }
+
+  removeEffect(id) {
+    this.effects = this.effects.filter(effects => effects.id !== id);
+    localStorage.setItem('effects', JSON.stringify(this.effects));
   }
   createEffects(ac, effects) {
     const tuna = new Tuna(ac);
@@ -222,5 +372,11 @@ export class EffectsService {
     });
     return [filter0, filter1];
   }
-  constructor() {}
+  constructor() {
+    if (localStorage.getItem('effects')) {
+      this.effects = JSON.parse(localStorage.getItem('effects'));
+    } else {
+      localStorage.setItem('effects', JSON.stringify(this.effects));
+    }
+  }
 }
