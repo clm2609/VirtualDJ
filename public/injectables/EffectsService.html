@@ -135,7 +135,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="371" class="link-to-prism">src/app/services/effects.service.ts:371</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="374" class="link-to-prism">src/app/services/effects.service.ts:374</a></div>
                             </td>
                         </tr>
 
@@ -170,7 +170,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="219" class="link-to-prism">src/app/services/effects.service.ts:219</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="222" class="link-to-prism">src/app/services/effects.service.ts:222</a></div>
                             </td>
                         </tr>
 
@@ -235,7 +235,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="229" class="link-to-prism">src/app/services/effects.service.ts:229</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="232" class="link-to-prism">src/app/services/effects.service.ts:232</a></div>
                             </td>
                         </tr>
 
@@ -309,7 +309,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">src/app/services/effects.service.ts:238</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">src/app/services/effects.service.ts:241</a></div>
                             </td>
                         </tr>
 
@@ -419,7 +419,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="353" class="link-to-prism">src/app/services/effects.service.ts:353</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="356" class="link-to-prism">src/app/services/effects.service.ts:356</a></div>
                             </td>
                         </tr>
 
@@ -493,7 +493,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="216" class="link-to-prism">src/app/services/effects.service.ts:216</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="219" class="link-to-prism">src/app/services/effects.service.ts:219</a></div>
                             </td>
                         </tr>
 
@@ -531,7 +531,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/app/services/effects.service.ts:225</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="228" class="link-to-prism">src/app/services/effects.service.ts:228</a></div>
                             </td>
                         </tr>
 
@@ -736,7 +736,7 @@
         { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
         { name: &#x27;dryLevel&#x27;, min: 0, max: 1 },
         { name: &#x27;cutoff&#x27;, min: 20, max: 22050 },
-        { name: &#x27;bypass&#x27;, value: 0 },
+        { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
     {
@@ -757,7 +757,6 @@
       name: &#x27;Overdrive&#x27;,
       effect: &#x27;Overdrive&#x27;,
       configs: [
-
         { name: &#x27;outputGain&#x27;, min: 0, max: 1 },
         { name: &#x27;drive&#x27;, min: 0, max: 1 },
         { name: &#x27;curveAmount&#x27;, min: 0, max: 1 },
@@ -779,27 +778,31 @@
         { name: &#x27;automakeup&#x27;, values: [true, false] },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
-    }, {
+    },
+    {
       description: &#x27;A basic filter.&#x27;,
       name: &#x27;Filter&#x27;,
       effect: &#x27;Filter&#x27;,
-      configs: [{ name: &#x27;frequency&#x27;, min: 20, max: 22050 },
-      { name: &#x27;Q&#x27;, min: 0.001, max: 100 },
-      { name: &#x27;gain&#x27;, min: -40, max: 40 },
-      {
-        name: &#x27;filterType&#x27;, values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;]
-      },
-      { name: &#x27;bypass&#x27;, value: 0 }
+      configs: [
+        { name: &#x27;frequency&#x27;, min: 20, max: 22050 },
+        { name: &#x27;Q&#x27;, min: 0.001, max: 100 },
+        { name: &#x27;gain&#x27;, min: -40, max: 40 },
+        {
+          name: &#x27;filterType&#x27;,
+          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;]
+        },
+        { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
     {
       description: &#x27;A basic tremolo.&#x27;,
       name: &#x27;Tremolo&#x27;,
       effect: &#x27;Tremolo&#x27;,
-      configs: [{ name: &#x27;intensity&#x27;, min: 0, max: 1 },
-      { name: &#x27;rate&#x27;, min: 0.001, max: 8 },
-      { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
-      { name: &#x27;bypass&#x27;, value: 0 }
+      configs: [
+        { name: &#x27;intensity&#x27;, min: 0, max: 1 },
+        { name: &#x27;rate&#x27;, min: 0.001, max: 8 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
+        { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
     {
@@ -835,7 +838,8 @@
         { name: &#x27;resonance&#x27;, min: 0, max: 4 },
         { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
       ]
-    }, {
+    },
+    {
       description: &#x27;A delay that bounces between the left and right channel.&#x27;,
       name: &#x27;Ping Pong Delay&#x27;,
       effect: &#x27;PingPongDelay&#x27;,
@@ -843,15 +847,14 @@
         { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
         { name: &#x27;feedback&#x27;, min: 0, max: 1 },
         { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000 },
-        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000 },
+        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000 }
       ]
-    }, {
+    },
+    {
       description: &#x27;A basic gain.&#x27;,
       name: &#x27;Gain&#x27;,
       effect: &#x27;Gain&#x27;,
-      configs: [
-        { name: &#x27;gain&#x27;, min: 0, max: 40 },
-      ]
+      configs: [{ name: &#x27;gain&#x27;, min: 0, max: 40 }]
     }
   ]</code>
                         </td>
@@ -968,7 +971,7 @@ export class EffectsService {
         { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
         { name: &#x27;dryLevel&#x27;, min: 0, max: 1 },
         { name: &#x27;cutoff&#x27;, min: 20, max: 22050 },
-        { name: &#x27;bypass&#x27;, value: 0 },
+        { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
     {
@@ -989,7 +992,6 @@ export class EffectsService {
       name: &#x27;Overdrive&#x27;,
       effect: &#x27;Overdrive&#x27;,
       configs: [
-
         { name: &#x27;outputGain&#x27;, min: 0, max: 1 },
         { name: &#x27;drive&#x27;, min: 0, max: 1 },
         { name: &#x27;curveAmount&#x27;, min: 0, max: 1 },
@@ -1011,27 +1013,31 @@ export class EffectsService {
         { name: &#x27;automakeup&#x27;, values: [true, false] },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
-    }, {
+    },
+    {
       description: &#x27;A basic filter.&#x27;,
       name: &#x27;Filter&#x27;,
       effect: &#x27;Filter&#x27;,
-      configs: [{ name: &#x27;frequency&#x27;, min: 20, max: 22050 },
-      { name: &#x27;Q&#x27;, min: 0.001, max: 100 },
-      { name: &#x27;gain&#x27;, min: -40, max: 40 },
-      {
-        name: &#x27;filterType&#x27;, values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;]
-      },
-      { name: &#x27;bypass&#x27;, value: 0 }
+      configs: [
+        { name: &#x27;frequency&#x27;, min: 20, max: 22050 },
+        { name: &#x27;Q&#x27;, min: 0.001, max: 100 },
+        { name: &#x27;gain&#x27;, min: -40, max: 40 },
+        {
+          name: &#x27;filterType&#x27;,
+          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;]
+        },
+        { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
     {
       description: &#x27;A basic tremolo.&#x27;,
       name: &#x27;Tremolo&#x27;,
       effect: &#x27;Tremolo&#x27;,
-      configs: [{ name: &#x27;intensity&#x27;, min: 0, max: 1 },
-      { name: &#x27;rate&#x27;, min: 0.001, max: 8 },
-      { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
-      { name: &#x27;bypass&#x27;, value: 0 }
+      configs: [
+        { name: &#x27;intensity&#x27;, min: 0, max: 1 },
+        { name: &#x27;rate&#x27;, min: 0.001, max: 8 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
+        { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
     {
@@ -1067,7 +1073,8 @@ export class EffectsService {
         { name: &#x27;resonance&#x27;, min: 0, max: 4 },
         { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
       ]
-    }, {
+    },
+    {
       description: &#x27;A delay that bounces between the left and right channel.&#x27;,
       name: &#x27;Ping Pong Delay&#x27;,
       effect: &#x27;PingPongDelay&#x27;,
@@ -1075,29 +1082,28 @@ export class EffectsService {
         { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
         { name: &#x27;feedback&#x27;, min: 0, max: 1 },
         { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000 },
-        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000 },
+        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000 }
       ]
-    }, {
+    },
+    {
       description: &#x27;A basic gain.&#x27;,
       name: &#x27;Gain&#x27;,
       effect: &#x27;Gain&#x27;,
-      configs: [
-        { name: &#x27;gain&#x27;, min: 0, max: 40 },
-      ]
+      configs: [{ name: &#x27;gain&#x27;, min: 0, max: 40 }]
     }
-  ]
+  ];
   getEffects() {
     return JSON.parse(JSON.stringify(this.effects));
   }
   addEffect(effect) {
     effect.id &#x3D; this.effects.reduce((valorAnterior, valorActual) &#x3D;&gt; Math.max(valorAnterior, valorActual.id), 0) + 1;
     this.effects.push(effect);
-    localStorage.setItem(&quot;effects&quot;, JSON.stringify(this.effects))
+    localStorage.setItem(&#x27;effects&#x27;, JSON.stringify(this.effects));
   }
 
   removeEffect(id) {
     this.effects &#x3D; this.effects.filter(effects &#x3D;&gt; effects.id !&#x3D;&#x3D; id);
-    localStorage.setItem(&quot;effects&quot;, JSON.stringify(this.effects))
+    localStorage.setItem(&#x27;effects&#x27;, JSON.stringify(this.effects));
   }
   createEffects(ac, effects) {
     const tuna &#x3D; new Tuna(ac);
@@ -1243,10 +1249,10 @@ export class EffectsService {
     return [filter0, filter1];
   }
   constructor() {
-    if (localStorage.getItem(&quot;effects&quot;)) {
-      this.effects &#x3D; JSON.parse(localStorage.getItem(&quot;effects&quot;))
+    if (localStorage.getItem(&#x27;effects&#x27;)) {
+      this.effects &#x3D; JSON.parse(localStorage.getItem(&#x27;effects&#x27;));
     } else {
-      localStorage.setItem(&quot;effects&quot;, JSON.stringify(this.effects))
+      localStorage.setItem(&#x27;effects&#x27;, JSON.stringify(this.effects));
     }
   }
 }
