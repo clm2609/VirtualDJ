@@ -110,6 +110,9 @@
                                 <a href="#getEffects">getEffects</a>
                             </li>
                             <li>
+                                <a href="#getEffectsCreator">getEffectsCreator</a>
+                            </li>
+                            <li>
                                 <a href="#removeEffect">removeEffect</a>
                             </li>
                         </ul>
@@ -135,7 +138,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="374" class="link-to-prism">src/app/services/effects.service.ts:374</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="384" class="link-to-prism">src/app/services/effects.service.ts:384</a></div>
                             </td>
                         </tr>
 
@@ -170,7 +173,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="222" class="link-to-prism">src/app/services/effects.service.ts:222</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="232" class="link-to-prism">src/app/services/effects.service.ts:232</a></div>
                             </td>
                         </tr>
 
@@ -235,7 +238,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="232" class="link-to-prism">src/app/services/effects.service.ts:232</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="242" class="link-to-prism">src/app/services/effects.service.ts:242</a></div>
                             </td>
                         </tr>
 
@@ -309,7 +312,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">src/app/services/effects.service.ts:241</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="251" class="link-to-prism">src/app/services/effects.service.ts:251</a></div>
                             </td>
                         </tr>
 
@@ -419,7 +422,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="356" class="link-to-prism">src/app/services/effects.service.ts:356</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="366" class="link-to-prism">src/app/services/effects.service.ts:366</a></div>
                             </td>
                         </tr>
 
@@ -493,7 +496,45 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="219" class="link-to-prism">src/app/services/effects.service.ts:219</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="226" class="link-to-prism">src/app/services/effects.service.ts:226</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getEffectsCreator"></a>
+                        <span class="name">
+                            <b>
+                            getEffectsCreator
+                            </b>
+                            <a href="#getEffectsCreator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getEffectsCreator()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="229" class="link-to-prism">src/app/services/effects.service.ts:229</a></div>
                             </td>
                         </tr>
 
@@ -531,7 +572,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="228" class="link-to-prism">src/app/services/effects.service.ts:228</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">src/app/services/effects.service.ts:238</a></div>
                             </td>
                         </tr>
 
@@ -719,10 +760,10 @@
       effect: &#x27;Chorus&#x27;,
       description: &#x27;A basic chorus effect.&#x27;,
       configs: [
-        { name: &#x27;rate&#x27;, min: 0.01, max: 8 },
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;delay&#x27;, min: 0, max: 1 },
-        { name: &#x27;bypass&#x27;, values: [0, 1] }
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;delay&#x27;, min: 0, max: 1, default: 0.0045, step: 0.0001 },
+        { name: &#x27;bypass&#x27;, values: [0, 1], default: 0 }
       ]
     },
     {
@@ -731,11 +772,11 @@
       effect: &#x27;Delay&#x27;,
 
       configs: [
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;delayTime&#x27;, min: 1, max: 10000 },
-        { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
-        { name: &#x27;dryLevel&#x27;, min: 0, max: 1 },
-        { name: &#x27;cutoff&#x27;, min: 20, max: 22050 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.45 },
+        { name: &#x27;delayTime&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.25 },
+        { name: &#x27;dryLevel&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;cutoff&#x27;, min: 20, max: 22050, default: 2000 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -744,11 +785,11 @@
       name: &#x27;Phaser&#x27;,
       effect: &#x27;Phaser&#x27;,
       configs: [
-        { name: &#x27;rate&#x27;, min: 0.01, max: 8 },
-        { name: &#x27;depth&#x27;, min: 0, max: 1 },
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
-        { name: &#x27;baseModulationFrequency&#x27;, min: 500, max: 1500 },
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.2 },
+        { name: &#x27;depth&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 30, step: 1 },
+        { name: &#x27;baseModulationFrequency&#x27;, min: 500, max: 1500, default: 700, step: 1 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -757,10 +798,10 @@
       name: &#x27;Overdrive&#x27;,
       effect: &#x27;Overdrive&#x27;,
       configs: [
-        { name: &#x27;outputGain&#x27;, min: 0, max: 1 },
-        { name: &#x27;drive&#x27;, min: 0, max: 1 },
-        { name: &#x27;curveAmount&#x27;, min: 0, max: 1 },
-        { name: &#x27;algorithmIndex&#x27;, values: [0, 1, 2, 3, 4, 5] },
+        { name: &#x27;outputGain&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;drive&#x27;, min: 0, max: 1, default: 0.7 },
+        { name: &#x27;curveAmount&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;algorithmIndex&#x27;, values: [0, 1, 2, 3, 4, 5], default: 0 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -769,13 +810,13 @@
       name: &#x27;Compressor&#x27;,
       effect: &#x27;Compressor&#x27;,
       configs: [
-        { name: &#x27;threshold&#x27;, min: -100, max: 0 },
-        { name: &#x27;makeupGain&#x27;, min: 0, max: 10 },
-        { name: &#x27;attack&#x27;, min: 0, max: 1000 },
-        { name: &#x27;release&#x27;, min: 0, max: 3000 },
-        { name: &#x27;ratio&#x27;, min: 1, max: 20 },
-        { name: &#x27;knee&#x27;, min: 0, max: 40 },
-        { name: &#x27;automakeup&#x27;, values: [true, false] },
+        { name: &#x27;threshold&#x27;, min: -100, max: 0, default: -1 },
+        { name: &#x27;makeupGain&#x27;, min: 0, max: 50, default: 1 },
+        { name: &#x27;attack&#x27;, min: 0, max: 1000, default: 1 },
+        { name: &#x27;release&#x27;, min: 0, max: 3000, default: 0 },
+        { name: &#x27;ratio&#x27;, min: 1, max: 20, default: 4 },
+        { name: &#x27;knee&#x27;, min: 0, max: 40, default: 5 },
+        { name: &#x27;automakeup&#x27;, values: [true, false], default: true },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -784,12 +825,13 @@
       name: &#x27;Filter&#x27;,
       effect: &#x27;Filter&#x27;,
       configs: [
-        { name: &#x27;frequency&#x27;, min: 20, max: 22050 },
-        { name: &#x27;Q&#x27;, min: 0.001, max: 100 },
-        { name: &#x27;gain&#x27;, min: -40, max: 40 },
+        { name: &#x27;frequency&#x27;, min: 20, max: 22050, default: 440, step: 1 },
+        { name: &#x27;Q&#x27;, min: 0.001, max: 100, default: 1 },
+        { name: &#x27;gain&#x27;, min: -40, max: 40, default: 0 },
         {
           name: &#x27;filterType&#x27;,
-          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;]
+          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;],
+          default: &#x27;lowpass&#x27;
         },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
@@ -799,9 +841,9 @@
       name: &#x27;Tremolo&#x27;,
       effect: &#x27;Tremolo&#x27;,
       configs: [
-        { name: &#x27;intensity&#x27;, min: 0, max: 1 },
-        { name: &#x27;rate&#x27;, min: 0.001, max: 8 },
-        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
+        { name: &#x27;intensity&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;rate&#x27;, min: 0.001, max: 8, default: 4 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 0 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -810,12 +852,12 @@
       name: &#x27;WahWah&#x27;,
       effect: &#x27;WahWah&#x27;,
       configs: [
-        { name: &#x27;automode&#x27;, values: [true, false] },
-        { name: &#x27;baseFrequency&#x27;, min: 0, max: 1 },
-        { name: &#x27;excursionOctaves&#x27;, min: 1, max: 6 },
-        { name: &#x27;sweep&#x27;, min: 0, max: 1 },
-        { name: &#x27;resonance&#x27;, min: 1, max: 100 },
-        { name: &#x27;sensitivity&#x27;, min: -1, max: 1 },
+        { name: &#x27;automode&#x27;, values: [true, false], default: true },
+        { name: &#x27;baseFrequency&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;excursionOctaves&#x27;, min: 1, max: 6, default: 2, step: 1 },
+        { name: &#x27;sweep&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;resonance&#x27;, min: 1, max: 100, default: 10 },
+        { name: &#x27;sensitivity&#x27;, min: -1, max: 1, default: 0.5 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -824,9 +866,9 @@
       name: &#x27;Bitcrusher&#x27;,
       effect: &#x27;Bitcrusher&#x27;,
       configs: [
-        { name: &#x27;bits&#x27;, min: 1, max: 16 },
-        { name: &#x27;normfreq&#x27;, min: 0, max: 1 },
-        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
+        { name: &#x27;bits&#x27;, min: 1, max: 16, default: 4 },
+        { name: &#x27;normfreq&#x27;, min: 0, max: 1, default: 0.1 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
       ]
     },
     {
@@ -834,9 +876,9 @@
       name: &#x27;MoogFilter&#x27;,
       effect: &#x27;MoogFilter&#x27;,
       configs: [
-        { name: &#x27;cutoff&#x27;, min: 0, max: 1 },
-        { name: &#x27;resonance&#x27;, min: 0, max: 4 },
-        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
+        { name: &#x27;cutoff&#x27;, min: 0, max: 1, default: 0.065, step: 0.001 },
+        { name: &#x27;resonance&#x27;, min: 0, max: 4, default: 3.5 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
       ]
     },
     {
@@ -844,10 +886,10 @@
       name: &#x27;Ping Pong Delay&#x27;,
       effect: &#x27;PingPongDelay&#x27;,
       configs: [
-        { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000 },
-        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000 }
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000, default: 200, step: 1 }
       ]
     },
     {
@@ -855,6 +897,12 @@
       name: &#x27;Gain&#x27;,
       effect: &#x27;Gain&#x27;,
       configs: [{ name: &#x27;gain&#x27;, min: 0, max: 40 }]
+    },
+    {
+      description: &#x27;A stereo panner (-1 is left, 1 is right). May not work in Safari and IE.&#x27;,
+      name: &#x27;Panner&#x27;,
+      effect: &#x27;Panner&#x27;,
+      configs: [{ name: &#x27;pan&#x27;, min: -1, max: 1, default: 0 }]
     }
   ]</code>
                         </td>
@@ -954,10 +1002,10 @@ export class EffectsService {
       effect: &#x27;Chorus&#x27;,
       description: &#x27;A basic chorus effect.&#x27;,
       configs: [
-        { name: &#x27;rate&#x27;, min: 0.01, max: 8 },
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;delay&#x27;, min: 0, max: 1 },
-        { name: &#x27;bypass&#x27;, values: [0, 1] }
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;delay&#x27;, min: 0, max: 1, default: 0.0045, step: 0.0001 },
+        { name: &#x27;bypass&#x27;, values: [0, 1], default: 0 }
       ]
     },
     {
@@ -966,11 +1014,11 @@ export class EffectsService {
       effect: &#x27;Delay&#x27;,
 
       configs: [
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;delayTime&#x27;, min: 1, max: 10000 },
-        { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
-        { name: &#x27;dryLevel&#x27;, min: 0, max: 1 },
-        { name: &#x27;cutoff&#x27;, min: 20, max: 22050 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.45 },
+        { name: &#x27;delayTime&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.25 },
+        { name: &#x27;dryLevel&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;cutoff&#x27;, min: 20, max: 22050, default: 2000 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -979,11 +1027,11 @@ export class EffectsService {
       name: &#x27;Phaser&#x27;,
       effect: &#x27;Phaser&#x27;,
       configs: [
-        { name: &#x27;rate&#x27;, min: 0.01, max: 8 },
-        { name: &#x27;depth&#x27;, min: 0, max: 1 },
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
-        { name: &#x27;baseModulationFrequency&#x27;, min: 500, max: 1500 },
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.2 },
+        { name: &#x27;depth&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 30, step: 1 },
+        { name: &#x27;baseModulationFrequency&#x27;, min: 500, max: 1500, default: 700, step: 1 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -992,10 +1040,10 @@ export class EffectsService {
       name: &#x27;Overdrive&#x27;,
       effect: &#x27;Overdrive&#x27;,
       configs: [
-        { name: &#x27;outputGain&#x27;, min: 0, max: 1 },
-        { name: &#x27;drive&#x27;, min: 0, max: 1 },
-        { name: &#x27;curveAmount&#x27;, min: 0, max: 1 },
-        { name: &#x27;algorithmIndex&#x27;, values: [0, 1, 2, 3, 4, 5] },
+        { name: &#x27;outputGain&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;drive&#x27;, min: 0, max: 1, default: 0.7 },
+        { name: &#x27;curveAmount&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;algorithmIndex&#x27;, values: [0, 1, 2, 3, 4, 5], default: 0 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -1004,13 +1052,13 @@ export class EffectsService {
       name: &#x27;Compressor&#x27;,
       effect: &#x27;Compressor&#x27;,
       configs: [
-        { name: &#x27;threshold&#x27;, min: -100, max: 0 },
-        { name: &#x27;makeupGain&#x27;, min: 0, max: 10 },
-        { name: &#x27;attack&#x27;, min: 0, max: 1000 },
-        { name: &#x27;release&#x27;, min: 0, max: 3000 },
-        { name: &#x27;ratio&#x27;, min: 1, max: 20 },
-        { name: &#x27;knee&#x27;, min: 0, max: 40 },
-        { name: &#x27;automakeup&#x27;, values: [true, false] },
+        { name: &#x27;threshold&#x27;, min: -100, max: 0, default: -1 },
+        { name: &#x27;makeupGain&#x27;, min: 0, max: 50, default: 1 },
+        { name: &#x27;attack&#x27;, min: 0, max: 1000, default: 1 },
+        { name: &#x27;release&#x27;, min: 0, max: 3000, default: 0 },
+        { name: &#x27;ratio&#x27;, min: 1, max: 20, default: 4 },
+        { name: &#x27;knee&#x27;, min: 0, max: 40, default: 5 },
+        { name: &#x27;automakeup&#x27;, values: [true, false], default: true },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -1019,12 +1067,13 @@ export class EffectsService {
       name: &#x27;Filter&#x27;,
       effect: &#x27;Filter&#x27;,
       configs: [
-        { name: &#x27;frequency&#x27;, min: 20, max: 22050 },
-        { name: &#x27;Q&#x27;, min: 0.001, max: 100 },
-        { name: &#x27;gain&#x27;, min: -40, max: 40 },
+        { name: &#x27;frequency&#x27;, min: 20, max: 22050, default: 440, step: 1 },
+        { name: &#x27;Q&#x27;, min: 0.001, max: 100, default: 1 },
+        { name: &#x27;gain&#x27;, min: -40, max: 40, default: 0 },
         {
           name: &#x27;filterType&#x27;,
-          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;]
+          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;],
+          default: &#x27;lowpass&#x27;
         },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
@@ -1034,9 +1083,9 @@ export class EffectsService {
       name: &#x27;Tremolo&#x27;,
       effect: &#x27;Tremolo&#x27;,
       configs: [
-        { name: &#x27;intensity&#x27;, min: 0, max: 1 },
-        { name: &#x27;rate&#x27;, min: 0.001, max: 8 },
-        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180 },
+        { name: &#x27;intensity&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;rate&#x27;, min: 0.001, max: 8, default: 4 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 0 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -1045,12 +1094,12 @@ export class EffectsService {
       name: &#x27;WahWah&#x27;,
       effect: &#x27;WahWah&#x27;,
       configs: [
-        { name: &#x27;automode&#x27;, values: [true, false] },
-        { name: &#x27;baseFrequency&#x27;, min: 0, max: 1 },
-        { name: &#x27;excursionOctaves&#x27;, min: 1, max: 6 },
-        { name: &#x27;sweep&#x27;, min: 0, max: 1 },
-        { name: &#x27;resonance&#x27;, min: 1, max: 100 },
-        { name: &#x27;sensitivity&#x27;, min: -1, max: 1 },
+        { name: &#x27;automode&#x27;, values: [true, false], default: true },
+        { name: &#x27;baseFrequency&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;excursionOctaves&#x27;, min: 1, max: 6, default: 2, step: 1 },
+        { name: &#x27;sweep&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;resonance&#x27;, min: 1, max: 100, default: 10 },
+        { name: &#x27;sensitivity&#x27;, min: -1, max: 1, default: 0.5 },
         { name: &#x27;bypass&#x27;, value: 0 }
       ]
     },
@@ -1059,9 +1108,9 @@ export class EffectsService {
       name: &#x27;Bitcrusher&#x27;,
       effect: &#x27;Bitcrusher&#x27;,
       configs: [
-        { name: &#x27;bits&#x27;, min: 1, max: 16 },
-        { name: &#x27;normfreq&#x27;, min: 0, max: 1 },
-        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
+        { name: &#x27;bits&#x27;, min: 1, max: 16, default: 4 },
+        { name: &#x27;normfreq&#x27;, min: 0, max: 1, default: 0.1 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
       ]
     },
     {
@@ -1069,9 +1118,9 @@ export class EffectsService {
       name: &#x27;MoogFilter&#x27;,
       effect: &#x27;MoogFilter&#x27;,
       configs: [
-        { name: &#x27;cutoff&#x27;, min: 0, max: 1 },
-        { name: &#x27;resonance&#x27;, min: 0, max: 4 },
-        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384] }
+        { name: &#x27;cutoff&#x27;, min: 0, max: 1, default: 0.065, step: 0.001 },
+        { name: &#x27;resonance&#x27;, min: 0, max: 4, default: 3.5 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
       ]
     },
     {
@@ -1079,10 +1128,10 @@ export class EffectsService {
       name: &#x27;Ping Pong Delay&#x27;,
       effect: &#x27;PingPongDelay&#x27;,
       configs: [
-        { name: &#x27;wetLevel&#x27;, min: 0, max: 1 },
-        { name: &#x27;feedback&#x27;, min: 0, max: 1 },
-        { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000 },
-        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000 }
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000, default: 200, step: 1 }
       ]
     },
     {
@@ -1090,10 +1139,19 @@ export class EffectsService {
       name: &#x27;Gain&#x27;,
       effect: &#x27;Gain&#x27;,
       configs: [{ name: &#x27;gain&#x27;, min: 0, max: 40 }]
+    },
+    {
+      description: &#x27;A stereo panner (-1 is left, 1 is right). May not work in Safari and IE.&#x27;,
+      name: &#x27;Panner&#x27;,
+      effect: &#x27;Panner&#x27;,
+      configs: [{ name: &#x27;pan&#x27;, min: -1, max: 1, default: 0 }]
     }
   ];
   getEffects() {
     return JSON.parse(JSON.stringify(this.effects));
+  }
+  getEffectsCreator() {
+    return JSON.parse(JSON.stringify(this.effectsCreator));
   }
   addEffect(effect) {
     effect.id &#x3D; this.effects.reduce((valorAnterior, valorActual) &#x3D;&gt; Math.max(valorAnterior, valorActual.id), 0) + 1;
@@ -1102,7 +1160,7 @@ export class EffectsService {
   }
 
   removeEffect(id) {
-    this.effects &#x3D; this.effects.filter(effects &#x3D;&gt; effects.id !&#x3D;&#x3D; id);
+    this.effects &#x3D; this.effects.filter(effect &#x3D;&gt; effect.id !&#x3D;&#x3D; Number(id));
     localStorage.setItem(&#x27;effects&#x27;, JSON.stringify(this.effects));
   }
   createEffects(ac, effects) {
