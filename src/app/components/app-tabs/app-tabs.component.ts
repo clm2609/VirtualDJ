@@ -9,9 +9,13 @@ import { MusicLoaderService } from '../../services/music-loader.service';
 export class AppTabsComponent {
   active = 'music';
   dragging = false;
+  maximized = false;
   musicService: MusicLoaderService;
   setActive(active) {
     this.active = active;
+  }
+  maximize() {
+    this.maximized = !this.maximized;
   }
   constructor(musicService: MusicLoaderService) {
     this.musicService = musicService;

@@ -57,13 +57,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-345ebfbd3e8ff0f60dc588474232115d"' : 'data-target="#xs-components-links-module-AppModule-345ebfbd3e8ff0f60dc588474232115d"' }>
+                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' : 'data-target="#xs-components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' }>
                                     <span class="icon ion-md-cog"></span>
                                     <span>Components</span>
                                     <span class="icon ion-ios-arrow-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                    ${ isNormalMode ? 'id="components-links-module-AppModule-345ebfbd3e8ff0f60dc588474232115d"' : 'id="xs-components-links-module-AppModule-345ebfbd3e8ff0f60dc588474232115d"' }>
+                                    ${ isNormalMode ? 'id="components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' : 'id="xs-components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' }>
                                         <li class="link">
                                             <a href="components/AppAboutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppAboutComponent</a>
                                         </li>
@@ -72,6 +72,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </li>
                                         <li class="link">
                                             <a href="components/AppDeckComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppDeckComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppEffectsCreatorComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppEffectsCreatorComponent</a>
                                         </li>
                                         <li class="link">
                                             <a href="components/AppLayoutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppLayoutComponent</a>
@@ -125,6 +128,20 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                     </ul>
                 </li>
+        <li class="chapter">
+            <div class="simple menu-toggler" data-toggle="collapse"
+            ${ isNormalMode ? 'data-target="#miscellaneous-links"' : 'data-target="#xs-miscellaneous-links"' }>
+                <span class="icon ion-ios-cube"></span>
+                <span>Miscellaneous</span>
+                <span class="icon ion-ios-arrow-down"></span>
+            </div>
+            <ul class="links collapse"
+            ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                    <li class="link">
+                      <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
+                    </li>
+            </ul>
+        </li>
     </ul>
 </nav>`);
         this.innerHTML = tp.strings;

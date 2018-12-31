@@ -1,5 +1,5 @@
 <div class="tabs-container" (drop)="droped($event)">
-  <div class="tabs" *ngIf="!dragging">
+  <div [ngClass]="{'tabs':true,'maximized-tabs':maximized}" *ngIf="!dragging">
     <div class="tablist">
       <div [ngClass]="{'tab':true, 'tab--active':active=='music'}" (click)="setActive('music')">
         Music
@@ -7,13 +7,21 @@
       <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')">
         Settings
       </div>
+      <div [ngClass]="{'tab':true, 'tab--active':active=='effectscr'}" (click)="setActive('effectscr')">
+        Effects creator
+      </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='about'}" (click)="setActive('about')">
         About
+      </div>
+      <div style="margin-left: auto;margin-right:5px; display:flex; align-items: center;" (click)="maximize()">
+        <img class="icon icon--clickable" src="assets/images/maximize.svg" *ngIf="!maximized">
+        <img class="icon icon--clickable" src="assets/images/minimize.svg" *ngIf="maximized">
       </div>
     </div>
     <div class="contents">
       <app-music-list *ngIf="active=='music'"></app-music-list>
       <app-settings *ngIf="active=='settings'"></app-settings>
+      <app-effects-creator *ngIf="active=='effectscr'"></app-effects-creator>
       <app-about *ngIf="active=='about'"></app-about>
     </div>
   </div>
