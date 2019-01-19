@@ -54,6 +54,7 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   writeValue(value: any) {
     if (!(typeof value === 'undefined' || value === null)) {
       this.value = value;
+      this.rotate();
     }
   }
   registerOnChange(fn: any) {

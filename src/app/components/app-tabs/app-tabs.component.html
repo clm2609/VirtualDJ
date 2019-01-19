@@ -1,5 +1,5 @@
-<div class="tabs-container" (drop)="droped($event)">
-  <div [ngClass]="{'tabs':true,'maximized-tabs':maximized}" *ngIf="!dragging">
+<div class="tabs-container" [ngClass]="{'maximized-container':maximized}" (drop)="droped($event)">
+  <div class="tabs" [ngClass]="{'maximized-tabs':maximized}" *ngIf="!dragging">
     <div class="tablist">
       <div [ngClass]="{'tab':true, 'tab--active':active=='music'}" (click)="setActive('music')">
         Music

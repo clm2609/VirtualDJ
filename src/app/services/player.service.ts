@@ -33,6 +33,9 @@ export class PlayerService {
   setVolume(deck, volume) {
     this.deck[deck].setVolume(volume);
   }
+  setPitch(deck, playback) {
+    this.deck[deck].setPlaybackRate(playback);
+  }
   on(deck, event, callback) {
     this.deck[deck].on(event, callback);
   }
@@ -76,5 +79,14 @@ export class PlayerService {
     this.activeEffects[deck] = this.effectServ.createEffects(this.deck[deck].backend.ac, effects);
     this.applyEffects();
     this.effectLoader[deck].next(this.effects[deck]);
+  }
+  getCurrentTime(deck) {
+    return this.deck[deck].getCurrentTime();
+  }
+  getDuration(deck) {
+    return this.deck[deck].getDuration();
+  }
+  playFromPosition(deck, start) {
+    this.deck[deck].seekAndCenter(start);
   }
 }

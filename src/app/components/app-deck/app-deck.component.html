@@ -3,6 +3,14 @@
     <!-- TODO: Make this more visually appealing -->
 
     <div class="sound-wave" [id]="'deck_'+deckNumber+'_wave'">
+      <ng-container *ngFor="let cue of cues; let i = index">
+        <div class="cue-marker" [style.left.%]="cue.percent"></div>
+        <div class="cue-tag-container" [style.left.%]="cue.percent">
+          <div class="cue-tag-text">
+            CUE {{i+1}}
+          </div>
+        </div>
+      </ng-container>
     </div>
 
     <div class="dj-deck-container">
@@ -28,10 +36,11 @@
             <div class="layout-cue-effects">
               CUEs
               <div class="button-container button-container--cues">
-                <div class="button button--cues">CUE 1</div>
-                <div class="button button--cues">CUE 2</div>
-                <div class="button button--cues">CUE 3</div>
-                <div class="button button--cues">CUE 4</div>
+                <div class="button button--cues" (click)="startCUE(0)">1</div>
+                <div class="button button--cues" (click)="startCUE(1)">2</div>
+                <div class="button button--cues" (click)="startCUE(2)">3</div>
+                <div class="button button--cues" (click)="startCUE(3)">4</div>
+                <div class="button button--cues" (click)="resetCUE()">Reset</div>
               </div>
               Effects
               <div class="button-container--effects">
@@ -54,16 +63,27 @@
               </div>
             </div>
             <div class="layout-pitch">
-              <slider-controller [config]="{id:'pitch-deck-1',
-                min:-25,
-                max:25,
-                vertical:true,
-                thumb:'sliderthumb-pitch-vertical',
-                track:'slidertrack-pitch-vertical'}"></slider-controller>
+              <div class="layout-pitch-data">
+                {{pitch}}%
+              </div>
+              <div class="layout-pitch-slider">
+                <slider-controller [config]="{id:'pitch-deck-1',
+                              min:-25,
+                              max:25,
+                              vertical:true,
+                              thumb:'sliderthumb-pitch-vertical',
+                              track:'slidertrack-pitch-vertical'}"
+                  [(ngModel)]="pitch" (ngModelChange)="changePitch()"></slider-controller>
+              </div>
+              <div class="layout-pitch-reset">
+                <img class="icon" src="assets/images/reset.svg" (click)="resetPitch()">
+              </div>
+
             </div>
           </div>
-          <div class="button-container button-container--cue-play">
-            <div class="button button--cue">CUE</div>
+          <div class="
+                button-container button-container--cue-play">
+            <div class="button button--cue" (click)="addCUE()">CUE</div>
             <div class="button button--play" (click)="playPause()">
               <div class="play-pause">
                 <div class="arrow-right"></div>

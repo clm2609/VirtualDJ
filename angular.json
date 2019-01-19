@@ -20,7 +20,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
-            "scripts": []
+            "scripts": ["node_modules/wavesurfer.js/dist/plugin/wavesurfer.cursor.js"]
           },
           "configurations": {
             "production": {

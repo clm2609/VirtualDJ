@@ -15,13 +15,30 @@
         <option value="da">Dark</option>
       </select>
     </div>
+    <div class="question">
+      <div class="question-label">Resolution</div>
+
+      <select [(ngModel)]=size (ngModelChange)="changeSize()">
+        <option value="auto">Automatic</option>
+        <option value="1920x1200">1920x1200</option>
+        <option value="1920x1080">1920x1080</option>
+        <option value="1600x900">1600x900</option>
+        <option value="1680x1050">1680x1050</option>
+        <option value="1366x768">1366x768</option>
+        <option value="1360x768">1360x768</option>
+        <option value="1280x1024">1280x1024</option>
+        <option value="1280x800">1280x800</option>
+        <option value="1280x720">1280x720</option>
+        <option value="1024x768">1024x768</option>
+      </select>
+    </div>
   </div>
   <div class="question-container">
     <div class="effects-container" *ngFor="let deck of effects;let i=index">
       <div class="question-label">Effects deck {{i+1}}</div>
       <table>
         <tr *ngFor="let effect of deck;let j=index">
-          <td>Effect {{j}}</td>
+          <td>Effect {{j+1}}</td>
           <td>
             <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">
               <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">{{availableEffect.name}}</option>

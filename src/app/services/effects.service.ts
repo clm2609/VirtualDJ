@@ -144,7 +144,7 @@ export class EffectsService {
       effect: 'Filter',
       configs: [
         { name: 'frequency', min: 20, max: 22050, default: 440, step: 1 },
-        { name: 'Q', min: 0.001, max: 100, default: 1 },
+        { name: 'Q', min: 0.001, max: 100, default: 1, step: 0.001 },
         { name: 'gain', min: -40, max: 40, default: 0 },
         {
           name: 'filterType',
