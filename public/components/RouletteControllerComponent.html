@@ -279,7 +279,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:66</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:67</a></div>
                             </td>
                         </tr>
 
@@ -315,7 +315,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:59</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:60</a></div>
                             </td>
                         </tr>
 
@@ -384,7 +384,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:62</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/roulette-controller/roulette-controller.component.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -785,6 +785,7 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   writeValue(value: any) {
     if (!(typeof value &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27; || value &#x3D;&#x3D;&#x3D; null)) {
       this.value &#x3D; value;
+      this.rotate();
     }
   }
   registerOnChange(fn: any) {

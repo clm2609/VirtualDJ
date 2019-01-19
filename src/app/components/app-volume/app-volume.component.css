@@ -45,3 +45,15 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.roulete-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-reset {
+  width: 25px;
+  height: 25px;
+}

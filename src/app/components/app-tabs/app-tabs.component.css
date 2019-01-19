@@ -3,6 +3,9 @@
   height: 100%;
   padding: 2px;
   position: relative;
+}
+
+.maximized-container {
   z-index: 10;
 }
 
