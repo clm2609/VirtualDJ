@@ -67,12 +67,24 @@
   padding: 5px;
 }
 
-.song-name {
+.song-name-container {
   width: 100%;
   height: 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+.song-name {
+  width: 80%;
+  height: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.bpm {
+  width: 20%;
+  height: 100%;
 }
 
 .dj-deck {
@@ -310,16 +322,6 @@
   opacity: 1;
   pointer-events: none;
   height: 100%;
-  /* Safari */
-  -webkit-transform: rotate(-90deg);
-  /* Firefox */
-  -moz-transform: rotate(-90deg);
-  /* IE */
-  -ms-transform: rotate(-90deg);
-  /* Opera */
-  -o-transform: rotate(-90deg);
-  /* Internet Explorer */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .cue-tag-text {

@@ -852,7 +852,7 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
     private musicService: MusicLoaderService,
     private effectServ: EffectsService,
     private playerService: PlayerService
-  ) { }
+  ) {}
   volume0 &#x3D; 100;
   volume1 &#x3D; 100;
   volumeMaster &#x3D; 0;
@@ -881,7 +881,6 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
     this.playerService.saveEQ(EQ);
   }
   resetEQ(deck) {
-    console.log(deck);
     if (deck &#x3D;&#x3D;&#x3D; 0) {
       this.bass0 &#x3D; 0;
       this.mid0 &#x3D; 0;

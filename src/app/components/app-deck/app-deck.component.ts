@@ -4,6 +4,7 @@ import { PlayerService } from '../../services/player.service';
 import { Subscription } from 'rxjs';
 import * as WaveSurfer from 'wavesurfer.js';
 import * as Cursor from 'wavesurfer.js/dist/plugin/wavesurfer.cursor.min.js';
+import * as Regions from 'wavesurfer.js/dist/plugin/wavesurfer.regions.min.js';
 
 @Component({
   selector: 'app-deck',
@@ -17,9 +18,14 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   rotation = 0;
   private active = false;
   song: any;
+  bpm: any;
+  beats: any;
   effects = [{}, {}, {}, {}, {}, {}] as any;
   pitch = 0;
   cues = [];
+  activeLoop: any;
+  activeLoopRegion: any;
+  loops = [0.25, 0.5, 1, 2, 4, 8, 16, 32];
   constructor(private musicService: MusicLoaderService, private playerService: PlayerService) {}
   ngOnInit() {
     setInterval(() => {
@@ -51,6 +57,9 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
                 height: height,
                 'font-size': '10px'
               }
+            }),
+            Regions.create({
+              regions: []
             })
           ]
         })
@@ -60,10 +69,13 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     });
     this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
+      const data = a as any;
       this.resetDisc();
       this.resetCUE();
       this.resetPitch();
-      this.song = a as File;
+      this.song = data.song as File;
+      this.bpm = data.bpm;
+      this.beats = data.beats;
     });
   }
   rotate() {
@@ -95,21 +107,42 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.playerService.setPitch(deck, 1);
   }
   addCUE() {
-    const cue = {};
-    console.log(this.playerService.getCurrentTime(this.deckNumber));
-    console.log(this.playerService.getDuration(this.deckNumber));
-    cue['percent'] =
-      (this.playerService.getCurrentTime(this.deckNumber) / this.playerService.getDuration(this.deckNumber)) * 100;
-    cue['pos'] = this.playerService.getCurrentTime(this.deckNumber) / this.playerService.getDuration(this.deckNumber);
-    if (this.cues.length === 4) {
-      this.cues.shift();
+    if (this.song) {
+      const cue = {};
+      cue['percent'] =
+        (this.playerService.getCurrentTime(this.deckNumber) / this.playerService.getDuration(this.deckNumber)) * 100;
+      cue['pos'] = this.playerService.getCurrentTime(this.deckNumber) / this.playerService.getDuration(this.deckNumber);
+      if (this.cues.length === 4) {
+        this.cues.shift();
+      }
+      this.cues.push(cue);
     }
-    this.cues.push(cue);
   }
   startCUE(cue) {
     this.playerService.playFromPosition(this.deckNumber, this.cues[cue].pos);
   }
   resetCUE() {
     this.cues = [];
+  }
+  createLoop(loop) {
+    if (this.song) {
+      if (this.activeLoop !== loop) {
+        this.activeLoop = loop;
+        this.activeLoopRegion = this.playerService.createLoop(
+          this.deckNumber,
+          this.playerService.getCurrentTime(this.deckNumber),
+          this.playerService.getCurrentTime(this.deckNumber) + 10
+        );
+      } else {
+        this.resetLoop();
+      }
+    }
+  }
+  resetLoop() {
+    if (this.activeLoopRegion) {
+      this.activeLoopRegion.remove();
+      this.activeLoopRegion = null;
+    }
+    this.activeLoop = null;
   }
 }

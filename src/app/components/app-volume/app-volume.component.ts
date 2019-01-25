@@ -42,7 +42,6 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
     this.playerService.saveEQ(EQ);
   }
   resetEQ(deck) {
-    console.log(deck);
     if (deck === 0) {
       this.bass0 = 0;
       this.mid0 = 0;
