@@ -7,15 +7,16 @@
         <div class="cue-marker" [style.left.%]="cue.percent"></div>
         <div class="cue-tag-container" [style.left.%]="cue.percent">
           <div class="cue-tag-text">
-            CUE {{i+1}}
+            {{i+1}}
           </div>
         </div>
       </ng-container>
     </div>
 
     <div class="dj-deck-container">
-      <div class="song-name">
-        <ng-container *ngIf="song">{{song.name}}</ng-container>
+      <div class="song-name-container">
+        <div class="song-name" *ngIf="song" [attr.title]="song.name">{{song.name}}</div>
+        <div class="bpm" *ngIf="bpm">{{bpm*(1+pitch/100)}} bpm</div>
       </div>
 
       <div class="dj-deck ">
@@ -25,7 +26,7 @@
           </div>
           <div class="button-container button-container--loops">
             <div class="button button--loops">2x</div>
-            <div class="button button--loops">4x</div>
+            <div class="button button--loops" (click)="createLoop(4)" [class.button--effects-active]="activeLoop === 4">4x</div>
             <div class="button button--loops">8x</div>
             <div class="button button--loops">16x</div>
             <div class="button button--loops">32x</div>

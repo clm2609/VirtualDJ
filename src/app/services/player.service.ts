@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import Tuna from 'tunajs';
 import { EffectsService } from './effects.service';
 
 @Injectable({
@@ -88,5 +87,8 @@ export class PlayerService {
   }
   playFromPosition(deck, start) {
     this.deck[deck].seekAndCenter(start);
+  }
+  createLoop(deck, start, end) {
+    return this.deck[deck].addRegion({ start: start, end: end, loop: true });
   }
 }
