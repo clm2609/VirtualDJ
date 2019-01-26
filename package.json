@@ -39,6 +39,7 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "music-tempo": "^1.0.3",
+    "ngx-web-worker": "0.0.4",
     "rxjs": "^6.0.0",
     "tunajs": "^1.0.2",
     "wavesurfer.js": "^2.1.1",

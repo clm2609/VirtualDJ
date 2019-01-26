@@ -25,11 +25,14 @@
             <img class="vynil" [ngStyle]="{'transform': 'rotate(' + rotation+ 'deg)'}" src="assets/images/vynil.svg">
           </div>
           <div class="button-container button-container--loops">
-            <div class="button button--loops">2x</div>
-            <div class="button button--loops" (click)="createLoop(4)" [class.button--effects-active]="activeLoop === 4">4x</div>
-            <div class="button button--loops">8x</div>
-            <div class="button button--loops">16x</div>
-            <div class="button button--loops">32x</div>
+            <div class="button button--loops" (click)="moveLoop(-1)">
+              <div class="arrow-small-left"></div>
+            </div>
+            <div *ngFor="let loopi of loops.slice(actualLoop, actualLoop+showedLoops)" class="button button--loops"
+              (click)="createLoop(loopi)" [class.button--effects-active]="activeLoop === loopi">{{loopi}}</div>
+            <div class="button button--loops" (click)="moveLoop(+1)">
+              <div class="arrow-small-right"></div>
+            </div>
           </div>
         </div>
         <div class="layout-buttons">

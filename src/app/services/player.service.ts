@@ -29,6 +29,9 @@ export class PlayerService {
     this.eqEffect = this.equalizer();
     this.applyEffects();
   }
+  getInstance(deck) {
+    return this.deck[deck];
+  }
   setVolume(deck, volume) {
     this.deck[deck].setVolume(volume);
   }
@@ -89,6 +92,7 @@ export class PlayerService {
     this.deck[deck].seekAndCenter(start);
   }
   createLoop(deck, start, end) {
-    return this.deck[deck].addRegion({ start: start, end: end, loop: true });
+    console.log(start, end);
+    return this.deck[deck].addRegion({ start: start, end: end, loop: true, drag: false, resize: false });
   }
 }

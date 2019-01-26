@@ -25,7 +25,12 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   cues = [];
   activeLoop: any;
   activeLoopRegion: any;
-  loops = [0.25, 0.5, 1, 2, 4, 8, 16, 32];
+  loops = [0.25, 0.5, 1, 2, 4, 8, 16];
+  actualLoop = 2;
+  showedLoops = 3;
+  lastLoopStart: any;
+  lastLoopEnd: any;
+  loopChanger: any;
   constructor(private musicService: MusicLoaderService, private playerService: PlayerService) {}
   ngOnInit() {
     setInterval(() => {
@@ -75,7 +80,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       this.resetPitch();
       this.song = data.song as File;
       this.bpm = data.bpm;
-      this.beats = data.beats;
+      this.beats = data.beats.reverse();
     });
   }
   rotate() {
@@ -126,13 +131,36 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   createLoop(loop) {
     if (this.song) {
-      if (this.activeLoop !== loop) {
+      const currentTIme = this.playerService.getCurrentTime(this.deckNumber);
+      const index = this.beats.findIndex(e => e <= currentTIme);
+      console.log(this.activeLoop);
+      if (!this.activeLoop) {
         this.activeLoop = loop;
-        this.activeLoopRegion = this.playerService.createLoop(
-          this.deckNumber,
-          this.playerService.getCurrentTime(this.deckNumber),
-          this.playerService.getCurrentTime(this.deckNumber) + 10
-        );
+        const start = this.beats[index];
+        this.lastLoopStart = start;
+        const end =
+          loop >= 1 ? this.beats[index - loop] : this.beats[index] + (this.beats[index - 1] - this.beats[index]) * loop;
+        this.lastLoopEnd = end;
+        this.activeLoopRegion = this.playerService.createLoop(this.deckNumber, start, end);
+      } else if (this.activeLoop !== loop) {
+        console.log('enter sandman');
+        this.resetLoop();
+        this.playerService.getInstance(this.deckNumber).on('audioprocess', () => {
+          if (this.playerService.getCurrentTime(this.deckNumber) >= this.lastLoopEnd) {
+            this.activeLoop = loop;
+            const start = this.lastLoopStart;
+            const indx = this.beats.findIndex(e => e <= this.lastLoopStart);
+            const end =
+              loop >= 1 ? this.beats[indx - loop] : this.beats[indx] + (this.beats[indx - 1] - this.beats[indx]) * loop;
+            this.lastLoopEnd = end;
+            this.activeLoopRegion = this.playerService.createLoop(this.deckNumber, start, end);
+            this.playerService.playFromPosition(
+              this.deckNumber,
+              start / this.playerService.getDuration(this.deckNumber)
+            );
+            this.playerService.getInstance(this.deckNumber).un('audioprocess');
+          }
+        });
       } else {
         this.resetLoop();
       }
@@ -144,5 +172,10 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       this.activeLoopRegion = null;
     }
     this.activeLoop = null;
+  }
+  moveLoop(step) {
+    if (!(this.actualLoop + step + this.showedLoops > this.loops.length || this.actualLoop + step < 0)) {
+      this.actualLoop += step;
+    }
   }
 }
