@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { PlayerService } from './player.service';
-import MusicTempo from 'music-tempo';
 import { WebWorkerService } from 'ngx-web-worker';
+import { CALC_BEATS } from '../scripts/beats.script';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,7 @@ export class MusicLoaderService {
   deckLoader = [new Subject(), new Subject()];
   decksongs$ = [this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()];
   decksongs: any[] = [{}, {}];
-  constructor(private playerService: PlayerService, private _webWorkerService: WebWorkerService) {}
+  constructor(private playerService: PlayerService) {}
   load(deck, song) {
     requestAnimationFrame(() => {
       const reader = new FileReader();
@@ -41,21 +42,18 @@ export class MusicLoaderService {
           } else {
             audioData = buffer.getChannelData(0) as any;
           }
-          this._webWorkerService
-            .run(ad => {
-              const mt = new MusicTempo(ad);
-              const beatCalc = {};
-              beatCalc['bpm'] = mt.tempo;
-              beatCalc['beats'] = mt.beats;
-              return beatCalc;
-            }, audioData)
-            .then(beatCalc => {
-              beatCalc['song'] = song;
-              this.decksongs[deck] = beatCalc;
-              this.deckLoader[deck].next(this.decksongs[deck]);
-            });
-
-          this.deckLoader[deck].next(this.decksongs[deck]);
+          const webWorkerService = new WebWorkerService();
+          const input = {
+            ad: audioData,
+            host: window.location.host,
+            path: window.location.pathname,
+            protocol: window.location.protocol
+          };
+          webWorkerService.run(CALC_BEATS, input).then(beatCalc => {
+            beatCalc['song'] = song;
+            this.decksongs[deck] = beatCalc;
+            this.deckLoader[deck].next(this.decksongs[deck]);
+          });
         });
       };
       reader1.onerror = error => {
