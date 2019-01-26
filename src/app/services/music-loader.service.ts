@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { PlayerService } from './player.service';
 import MusicTempo from 'music-tempo';
+import { WebWorkerService } from 'ngx-web-worker';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,10 +13,7 @@ export class MusicLoaderService {
   deckLoader = [new Subject(), new Subject()];
   decksongs$ = [this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()];
   decksongs: any[] = [{}, {}];
-  playerService: PlayerService;
-  constructor(playerService: PlayerService) {
-    this.playerService = playerService;
-  }
+  constructor(private playerService: PlayerService, private _webWorkerService: WebWorkerService) {}
   load(deck, song) {
     requestAnimationFrame(() => {
       const reader = new FileReader();
@@ -43,11 +41,20 @@ export class MusicLoaderService {
           } else {
             audioData = buffer.getChannelData(0) as any;
           }
-          const mt = new MusicTempo(audioData);
-          this.decksongs[deck] = {};
-          this.decksongs[deck]['song'] = song;
-          this.decksongs[deck]['bpm'] = mt.tempo;
-          this.decksongs[deck]['beats'] = mt.beats;
+          this._webWorkerService
+            .run(ad => {
+              const mt = new MusicTempo(ad);
+              const beatCalc = {};
+              beatCalc['bpm'] = mt.tempo;
+              beatCalc['beats'] = mt.beats;
+              return beatCalc;
+            }, audioData)
+            .then(beatCalc => {
+              beatCalc['song'] = song;
+              this.decksongs[deck] = beatCalc;
+              this.deckLoader[deck].next(this.decksongs[deck]);
+            });
+
           this.deckLoader[deck].next(this.decksongs[deck]);
         });
       };

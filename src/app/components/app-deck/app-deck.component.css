@@ -333,3 +333,19 @@
   padding: 2px;
   font-size: 10px;
 }
+
+.arrow-small-right {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid white;
+}
+
+.arrow-small-left {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 9px solid white;
+}
