@@ -562,7 +562,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="176" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:176</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:186</a></div>
                             </td>
                         </tr>
 
@@ -741,7 +741,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:169</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">src/app/components/app-deck/app-deck.component.ts:179</a></div>
                             </td>
                         </tr>
 
@@ -1483,7 +1483,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   lastLoopStart: any;
   lastLoopEnd: any;
   loopChanger: any;
-  constructor(private musicService: MusicLoaderService, private playerService: PlayerService) {}
+  constructor(private musicService: MusicLoaderService, private playerService: PlayerService) { }
   ngOnInit() {
     setInterval(() &#x3D;&gt; {
       this.rotate();
@@ -1583,38 +1583,48 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   createLoop(loop) {
     if (this.song) {
-      const currentTIme &#x3D; this.playerService.getCurrentTime(this.deckNumber);
-      const index &#x3D; this.beats.findIndex(e &#x3D;&gt; e &lt;&#x3D; currentTIme);
-      console.log(this.activeLoop);
-      if (!this.activeLoop) {
-        this.activeLoop &#x3D; loop;
-        const start &#x3D; this.beats[index];
-        this.lastLoopStart &#x3D; start;
-        const end &#x3D;
-          loop &gt;&#x3D; 1 ? this.beats[index - loop] : this.beats[index] + (this.beats[index - 1] - this.beats[index]) * loop;
-        this.lastLoopEnd &#x3D; end;
-        this.activeLoopRegion &#x3D; this.playerService.createLoop(this.deckNumber, start, end);
-      } else if (this.activeLoop !&#x3D;&#x3D; loop) {
-        console.log(&#x27;enter sandman&#x27;);
-        this.resetLoop();
-        this.playerService.getInstance(this.deckNumber).on(&#x27;audioprocess&#x27;, () &#x3D;&gt; {
-          if (this.playerService.getCurrentTime(this.deckNumber) &gt;&#x3D; this.lastLoopEnd) {
-            this.activeLoop &#x3D; loop;
-            const start &#x3D; this.lastLoopStart;
-            const indx &#x3D; this.beats.findIndex(e &#x3D;&gt; e &lt;&#x3D; this.lastLoopStart);
-            const end &#x3D;
-              loop &gt;&#x3D; 1 ? this.beats[indx - loop] : this.beats[indx] + (this.beats[indx - 1] - this.beats[indx]) * loop;
-            this.lastLoopEnd &#x3D; end;
-            this.activeLoopRegion &#x3D; this.playerService.createLoop(this.deckNumber, start, end);
+      const currentTime &#x3D; this.playerService.getCurrentTime(this.deckNumber);
+      const index &#x3D; this.beats.findIndex(e &#x3D;&gt; e &lt;&#x3D; currentTime);
+      if (index !&#x3D;&#x3D; -1) {
+        if (!this.activeLoop &amp;&amp; index) {
+          this.activeLoop &#x3D; loop;
+          const start &#x3D; this.beats[index];
+          this.lastLoopStart &#x3D; start;
+          const end &#x3D;
+            loop &gt;&#x3D; 1 ? this.beats[index - loop] : this.beats[index] + (this.beats[index - 1] - this.beats[index]) * loop;
+          this.lastLoopEnd &#x3D; end;
+          if (currentTime &gt; end) {
             this.playerService.playFromPosition(
               this.deckNumber,
               start / this.playerService.getDuration(this.deckNumber)
             );
-            this.playerService.getInstance(this.deckNumber).un(&#x27;audioprocess&#x27;);
           }
-        });
+          this.activeLoopRegion &#x3D; this.playerService.createLoop(this.deckNumber, start, end);
+        } else if (this.activeLoop !&#x3D;&#x3D; loop) {
+          this.resetLoop();
+          this.playerService.getInstance(this.deckNumber).on(&#x27;audioprocess&#x27;, () &#x3D;&gt; {
+            if (this.playerService.getCurrentTime(this.deckNumber) &gt;&#x3D; this.lastLoopEnd) {
+              this.activeLoop &#x3D; loop;
+              const start &#x3D; this.lastLoopStart;
+              console.log(start)
+              const indx &#x3D; this.beats.findIndex(e &#x3D;&gt; e &lt;&#x3D; this.lastLoopStart);
+              const end &#x3D;
+                loop &gt;&#x3D; 1 ? this.beats[indx - loop] : this.beats[indx] + (this.beats[indx - 1] - this.beats[indx]) * loop;
+              this.lastLoopEnd &#x3D; end;
+              this.activeLoopRegion &#x3D; this.playerService.createLoop(this.deckNumber, start, end);
+              this.playerService.playFromPosition(
+                this.deckNumber,
+                start / this.playerService.getDuration(this.deckNumber)
+              );
+              this.playerService.getInstance(this.deckNumber).un(&#x27;audioprocess&#x27;);
+            }
+          });
+        } else {
+          this.resetLoop();
+        }
       } else {
         this.resetLoop();
+
       }
     }
   }

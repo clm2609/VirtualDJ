@@ -5,7 +5,6 @@ declare function postMessage(message: any): void;
 declare const MusicTempo: any;
 
 export const CALC_BEATS = input => {
-  // importScripts('https://killercrush.github.io/music-tempo/dist/browser/music-tempo.min.js')
   importScripts(`${input.protocol}//${input.host}/scripts/browser/music-tempo.js`);
   const mt = new MusicTempo(input.ad);
   const beatCalc = {};

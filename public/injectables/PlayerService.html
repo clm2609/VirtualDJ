@@ -1928,7 +1928,6 @@ export class PlayerService {
     this.deck[deck].seekAndCenter(start);
   }
   createLoop(deck, start, end) {
-    console.log(start, end);
     return this.deck[deck].addRegion({ start: start, end: end, loop: true, drag: false, resize: false });
   }
 }
