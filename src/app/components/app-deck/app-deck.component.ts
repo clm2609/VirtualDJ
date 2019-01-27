@@ -131,36 +131,49 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   createLoop(loop) {
     if (this.song) {
-      const currentTIme = this.playerService.getCurrentTime(this.deckNumber);
-      const index = this.beats.findIndex(e => e <= currentTIme);
-      console.log(this.activeLoop);
-      if (!this.activeLoop) {
-        this.activeLoop = loop;
-        const start = this.beats[index];
-        this.lastLoopStart = start;
-        const end =
-          loop >= 1 ? this.beats[index - loop] : this.beats[index] + (this.beats[index - 1] - this.beats[index]) * loop;
-        this.lastLoopEnd = end;
-        this.activeLoopRegion = this.playerService.createLoop(this.deckNumber, start, end);
-      } else if (this.activeLoop !== loop) {
-        console.log('enter sandman');
-        this.resetLoop();
-        this.playerService.getInstance(this.deckNumber).on('audioprocess', () => {
-          if (this.playerService.getCurrentTime(this.deckNumber) >= this.lastLoopEnd) {
-            this.activeLoop = loop;
-            const start = this.lastLoopStart;
-            const indx = this.beats.findIndex(e => e <= this.lastLoopStart);
-            const end =
-              loop >= 1 ? this.beats[indx - loop] : this.beats[indx] + (this.beats[indx - 1] - this.beats[indx]) * loop;
-            this.lastLoopEnd = end;
-            this.activeLoopRegion = this.playerService.createLoop(this.deckNumber, start, end);
+      const currentTime = this.playerService.getCurrentTime(this.deckNumber);
+      const index = this.beats.findIndex(e => e <= currentTime);
+      if (index !== -1) {
+        if (!this.activeLoop && index) {
+          this.activeLoop = loop;
+          const start = this.beats[index];
+          this.lastLoopStart = start;
+          const end =
+            loop >= 1
+              ? this.beats[index - loop]
+              : this.beats[index] + (this.beats[index - 1] - this.beats[index]) * loop;
+          this.lastLoopEnd = end;
+          if (currentTime > end) {
             this.playerService.playFromPosition(
               this.deckNumber,
               start / this.playerService.getDuration(this.deckNumber)
             );
-            this.playerService.getInstance(this.deckNumber).un('audioprocess');
           }
-        });
+          this.activeLoopRegion = this.playerService.createLoop(this.deckNumber, start, end);
+        } else if (this.activeLoop !== loop) {
+          this.resetLoop();
+          this.playerService.getInstance(this.deckNumber).on('audioprocess', () => {
+            if (this.playerService.getCurrentTime(this.deckNumber) >= this.lastLoopEnd) {
+              this.activeLoop = loop;
+              const start = this.lastLoopStart;
+              console.log(start);
+              const indx = this.beats.findIndex(e => e <= this.lastLoopStart);
+              const end =
+                loop >= 1
+                  ? this.beats[indx - loop]
+                  : this.beats[indx] + (this.beats[indx - 1] - this.beats[indx]) * loop;
+              this.lastLoopEnd = end;
+              this.activeLoopRegion = this.playerService.createLoop(this.deckNumber, start, end);
+              this.playerService.playFromPosition(
+                this.deckNumber,
+                start / this.playerService.getDuration(this.deckNumber)
+              );
+              this.playerService.getInstance(this.deckNumber).un('audioprocess');
+            }
+          });
+        } else {
+          this.resetLoop();
+        }
       } else {
         this.resetLoop();
       }

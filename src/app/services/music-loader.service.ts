@@ -46,7 +46,6 @@ export class MusicLoaderService {
           const input = {
             ad: audioData,
             host: window.location.host,
-            path: window.location.pathname,
             protocol: window.location.protocol
           };
           webWorkerService.run(CALC_BEATS, input).then(beatCalc => {

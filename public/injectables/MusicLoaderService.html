@@ -203,7 +203,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/services/music-loader.service.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/services/music-loader.service.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -272,7 +272,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/services/music-loader.service.ts:69</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/services/music-loader.service.ts:67</a></div>
                             </td>
                         </tr>
 
@@ -672,15 +672,13 @@ export class MusicLoaderService {
           const input &#x3D; {
             ad: audioData,
             host: window.location.host,
-            path: window.location.pathname,
-            protocol: window.location.protocol,
+            protocol: window.location.protocol
           };
-          webWorkerService.run(CALC_BEATS, input)
-            .then(beatCalc &#x3D;&gt; {
-              beatCalc[&#x27;song&#x27;] &#x3D; song;
-              this.decksongs[deck] &#x3D; beatCalc;
-              this.deckLoader[deck].next(this.decksongs[deck]);
-            });
+          webWorkerService.run(CALC_BEATS, input).then(beatCalc &#x3D;&gt; {
+            beatCalc[&#x27;song&#x27;] &#x3D; song;
+            this.decksongs[deck] &#x3D; beatCalc;
+            this.deckLoader[deck].next(this.decksongs[deck]);
+          });
         });
       };
       reader1.onerror &#x3D; error &#x3D;&gt; {
