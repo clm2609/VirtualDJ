@@ -10,6 +10,9 @@
       <div [ngClass]="{'tab':true, 'tab--active':active=='effectscr'}" (click)="setActive('effectscr')">
         Effects creator
       </div>
+      <div [ngClass]="{'tab':true, 'tab--active':active=='help'}" (click)="setActive('help')">
+        Help
+      </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='about'}" (click)="setActive('about')">
         About
       </div>
@@ -22,6 +25,7 @@
       <app-music-list *ngIf="active=='music'"></app-music-list>
       <app-settings *ngIf="active=='settings'"></app-settings>
       <app-effects-creator *ngIf="active=='effectscr'"></app-effects-creator>
+      <app-help *ngIf="active=='help'"></app-help>
       <app-about *ngIf="active=='about'"></app-about>
     </div>
   </div>

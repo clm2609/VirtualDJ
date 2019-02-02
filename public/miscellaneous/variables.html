@@ -96,12 +96,12 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>input &#x3D;&gt; {
-    importScripts(&#x60;${input.protocol}//${input.host}/scripts/browser/music-tempo.js&#x60;);
-    const mt &#x3D; new MusicTempo(input.ad);
-    const beatCalc &#x3D; {};
-    beatCalc[&#x27;bpm&#x27;] &#x3D; mt.tempo;
-    beatCalc[&#x27;beats&#x27;] &#x3D; mt.beats;
-    postMessage(beatCalc);
+  importScripts(&#x60;${input.protocol}//${input.host}/scripts/browser/music-tempo.js&#x60;);
+  const mt &#x3D; new MusicTempo(input.ad);
+  const beatCalc &#x3D; {};
+  beatCalc[&#x27;bpm&#x27;] &#x3D; mt.tempo;
+  beatCalc[&#x27;beats&#x27;] &#x3D; mt.beats;
+  postMessage(beatCalc);
 }</code>
                         </td>
                     </tr>

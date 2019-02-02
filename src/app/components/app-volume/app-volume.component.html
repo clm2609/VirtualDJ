@@ -1,7 +1,7 @@
 <div class="volume-container">
   <div class="volume components-container">
     <div class="volume-eq">
-      <div class="volume-decks">
+      <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
         <slider-controller [config]="{id:'volume-deck-0',
                        min:0, max:100,
                         
@@ -10,7 +10,7 @@
                         track:'slidertrack-vol-vertical'}"
           [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)"></slider-controller>
       </div>
-      <div class="volume-equalizers">
+      <div class="volume-equalizers" [class.help]="help === 'equalizer'">
         <div class="roulette-container">
           <div class="roulete-title">
             <p style="margin-bottom:3px;">High</p>
@@ -43,7 +43,7 @@
           <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">
         </div>
       </div>
-      <div class="volume-decks">
+      <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
         <slider-controller [config]="{id:'volume-deck-1',
                        min:0,
                         max:100,
@@ -54,7 +54,7 @@
           [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)"></slider-controller>
       </div>
     </div>
-    <div class="volume-master">
+    <div class="volume-master" [class.help]="help === 'mastervolume'">
       <slider-controller [config]="{id:'volume-master',
                  min:-100,
                   max:100,

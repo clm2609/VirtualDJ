@@ -640,7 +640,7 @@ export class MusicLoaderService {
   deckLoader &#x3D; [new Subject(), new Subject()];
   decksongs$ &#x3D; [this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()];
   decksongs: any[] &#x3D; [{}, {}];
-  constructor(private playerService: PlayerService) { }
+  constructor(private playerService: PlayerService) {}
   load(deck, song) {
     requestAnimationFrame(() &#x3D;&gt; {
       const reader &#x3D; new FileReader();

@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import * as WaveSurfer from 'wavesurfer.js';
 import * as Cursor from 'wavesurfer.js/dist/plugin/wavesurfer.cursor.min.js';
 import * as Regions from 'wavesurfer.js/dist/plugin/wavesurfer.regions.min.js';
+import { HelpService } from 'src/app/services/help.service';
 
 @Component({
   selector: 'app-deck',
@@ -31,7 +32,16 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   lastLoopStart: any;
   lastLoopEnd: any;
   loopChanger: any;
-  constructor(private musicService: MusicLoaderService, private playerService: PlayerService) {}
+  help: any;
+  constructor(
+    private musicService: MusicLoaderService,
+    private playerService: PlayerService,
+    helpService: HelpService
+  ) {
+    helpService.help$.subscribe(help => {
+      this.help = help;
+    });
+  }
   ngOnInit() {
     setInterval(() => {
       this.rotate();
@@ -136,6 +146,13 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       if (index !== -1) {
         if (!this.activeLoop && index) {
           this.activeLoop = loop;
+          if (this.loops.indexOf(loop) - 1 + this.showedLoops > this.loops.length) {
+            this.actualLoop = this.loops.length - this.showedLoops;
+          } else if (this.loops.indexOf(loop) - 1 < 0) {
+            this.actualLoop = 0;
+          } else {
+            this.actualLoop = this.loops.indexOf(loop) - 1;
+          }
           const start = this.beats[index];
           this.lastLoopStart = start;
           const end =
@@ -155,6 +172,13 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
           this.playerService.getInstance(this.deckNumber).on('audioprocess', () => {
             if (this.playerService.getCurrentTime(this.deckNumber) >= this.lastLoopEnd) {
               this.activeLoop = loop;
+              if (this.loops.indexOf(loop) - 1 + this.showedLoops > this.loops.length) {
+                this.actualLoop = this.loops.length - this.showedLoops;
+              } else if (this.loops.indexOf(loop) - 1 < 0) {
+                this.actualLoop = 0;
+              } else {
+                this.actualLoop = this.loops.indexOf(loop) - 1;
+              }
               const start = this.lastLoopStart;
               console.log(start);
               const indx = this.beats.findIndex(e => e <= this.lastLoopStart);
