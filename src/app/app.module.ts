@@ -16,6 +16,7 @@ import { AppSettingsComponent } from './components/app-settings/app-settings.com
 import { AppAboutComponent } from './components/app-about/app-about.component';
 import { AppEffectsCreatorComponent } from './components/app-effects-creator/app-effects-creator.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppHelpComponent } from './components/app-help/app-help.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppMusicListComponent,
     AppSettingsComponent,
     AppAboutComponent,
-    AppEffectsCreatorComponent
+    AppEffectsCreatorComponent,
+    AppHelpComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

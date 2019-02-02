@@ -57,13 +57,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' : 'data-target="#xs-components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' }>
+                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' : 'data-target="#xs-components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' }>
                                     <span class="icon ion-md-cog"></span>
                                     <span>Components</span>
                                     <span class="icon ion-ios-arrow-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                    ${ isNormalMode ? 'id="components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' : 'id="xs-components-links-module-AppModule-acedf5dd8c76af8d6006fd9f7fe0a756"' }>
+                                    ${ isNormalMode ? 'id="components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' : 'id="xs-components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' }>
                                         <li class="link">
                                             <a href="components/AppAboutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppAboutComponent</a>
                                         </li>
@@ -75,6 +75,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </li>
                                         <li class="link">
                                             <a href="components/AppEffectsCreatorComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppEffectsCreatorComponent</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="components/AppHelpComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppHelpComponent</a>
                                         </li>
                                         <li class="link">
                                             <a href="components/AppLayoutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppLayoutComponent</a>
@@ -119,6 +122,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                     ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                             <li class="link">
                                 <a href="injectables/EffectsService.html" data-type="entity-link">EffectsService</a>
+                            </li>
+                            <li class="link">
+                                <a href="injectables/HelpService.html" data-type="entity-link">HelpService</a>
                             </li>
                             <li class="link">
                                 <a href="injectables/MusicLoaderService.html" data-type="entity-link">MusicLoaderService</a>

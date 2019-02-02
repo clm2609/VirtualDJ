@@ -38,7 +38,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AppLayoutComponent</li>
+  <li>AppHelpComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,11 +58,17 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/components/app-layout/app-layout.component.ts</code>
+    <code>src/app/components/app-help/app-help.component.ts</code>
 </p>
 
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
 
 
 <section>
@@ -82,19 +88,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-layout</code></td>
+                <td class="col-md-9"><code>app-help</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>app-layout.component.css</code></td>
+                <td class="col-md-9"><code>app-help.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app-layout.component.html</code></td>
+                <td class="col-md-9"><code>./app-help.component.html</code></td>
             </tr>
 
 
@@ -106,27 +112,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
+                        <h6><b>Methods</b></h6>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#height">height</a>
-                            </li>
-                            <li>
-                                <a href="#width">width</a>
-                            </li>
-                            <li>
-                                <a href="#window">window</a>
+                                <a href="#help">help</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
-
 
 
 
@@ -142,12 +142,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(sizeService: <a href="../injectables/SizeService.html">SizeService</a>)</code>
+<code>constructor(helpService: <a href="../injectables/HelpService.html">HelpService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/app-layout/app-layout.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/components/app-help/app-help.component.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -165,10 +165,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>sizeService</td>
+                                                        <td>helpService</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/SizeService.html" target="_self" >SizeService</a></code>
+                                                                    <code><a href="../injectables/HelpService.html" target="_self" >HelpService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -189,181 +189,136 @@
 
 
 
-
     <section>
     
-        <h3 id="inputs">
-            Properties
+        <h3 id="methods">
+            Methods
         </h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="height"></a>
+                        <a name="help"></a>
                         <span class="name">
                             <b>
-                            height
+                            help
                             </b>
-                            <a href="#height"><span class="icon ion-ios-link"></span></a>
+                            <a href="#help"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>height:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
+<code>help(helpquery: )</code>
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
-                        </td>
-                    </tr>
+
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/app-layout/app-layout.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-help/app-help.component.ts:15</a></div>
                             </td>
                         </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="width"></a>
-                        <span class="name">
-                            <b>
-                            width
-                            </b>
-                            <a href="#width"><span class="icon ion-ios-link"></span></a>
-                        </span>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>helpquery</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>width:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/components/app-layout/app-layout.component.ts:10</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="window"></a>
-                        <span class="name">
-                            <b>
-                            window
-                            </b>
-                            <a href="#window"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>window:     <code></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>window</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/app-layout/app-layout.component.ts:12</a></div>
-                            </td>
-                        </tr>
-
-
             </tbody>
         </table>
 </section>
+
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { SizeService } from &#x27;../../services/size.service&#x27;;
+import { HelpService } from &#x27;src/app/services/help.service&#x27;;
 
 @Component({
-  selector: &#x27;app-layout&#x27;,
-  templateUrl: &#x27;./app-layout.component.html&#x27;,
-  styleUrls: [&#x27;./app-layout.component.css&#x27;]
+  selector: &#x27;app-help&#x27;,
+  templateUrl: &#x27;./app-help.component.html&#x27;,
+  styleUrls: [&#x27;./app-help.component.css&#x27;]
 })
-export class AppLayoutComponent {
-  width: number;
-  height: number;
-  window &#x3D; window;
-  constructor(sizeService: SizeService) {
-    this.width &#x3D; sizeService.getWidth();
-    this.height &#x3D; sizeService.getHeight();
-    sizeService.width$.subscribe(value &#x3D;&gt; {
-      if (value) {
-        this.width &#x3D; Number(value);
-      } else {
-        this.width &#x3D; null;
-      }
-    });
-    sizeService.height$.subscribe(value &#x3D;&gt; {
-      if (value) {
-        this.height &#x3D; Number(value) - 1;
-      } else {
-        this.height &#x3D; null;
-      }
-    });
+export class AppHelpComponent implements OnInit {
+
+  constructor(private helpService: HelpService) { }
+
+  ngOnInit() {
+  }
+  help(helpquery) {
+    this.helpService.save(helpquery)
+    setTimeout(() &#x3D;&gt; { this.helpService.save(null) }, 3000)
   }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;layout&quot; [style.width.px]&#x3D;&quot;width&quot; [style.height.px]&#x3D;&quot;height&quot; *ngIf&#x3D;&quot;((width &amp;&amp; height) || window.innerWidth &gt; window.innerHeight);else warning&quot;&gt;
-  &lt;div class&#x3D;&quot; top-layout&quot;&gt;
-    &lt;div class&#x3D;&quot;deck&quot;&gt;
-      &lt;app-deck [deckNumber]&#x3D;&quot;0&quot;&gt;&lt;/app-deck&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;volume-control&quot;&gt;
-      &lt;app-volume&gt;&lt;/app-volume&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;deck&quot;&gt;
-      &lt;app-deck [deckNumber]&#x3D;&quot;1&quot;&gt;&lt;/app-deck&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class&#x3D;&quot;bottom-layout&quot;&gt;
-    &lt;div class&#x3D;&quot;search&quot;&gt;
-      &lt;app-search&gt;&lt;/app-search&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;tabs&quot;&gt;
-      &lt;app-tabs&gt;&lt;/app-tabs&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;ng-template #warning&gt;
-  &lt;div class&#x3D;&quot;layout&quot;&gt;
-    For the application to work properly you must have a higher width than height in your device, thought at least
-    width being 1.2 times the height is recommended.
-  &lt;/div&gt;
-&lt;/ng-template&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;help-container&quot;&gt;
+  &lt;p&gt;To start mixing music load a song. Click over any feature to highlight it.&lt;/p&gt;
+  &lt;p&gt;Features:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;play&#x27;)&quot;&gt;Play: You can play the song.&lt;/li&gt;
+
+    &lt;li (click)&#x3D;&quot;help(&#x27;maindeckvolume&#x27;)&quot;&gt;Main deck volume: Each deck as a main volume, change that to modify the volume
+      of that deck.&lt;/li&gt;
+
+    &lt;li (click)&#x3D;&quot;help(&#x27;mastervolume&#x27;)&quot;&gt;Master Volume: You can control which deck you want to hear, while lowering the
+      volume of the other.&lt;/li&gt;
+
+    &lt;li (click)&#x3D;&quot;help(&#x27;equalizer&#x27;)&quot;&gt;Equalizer: You can control the high, middle and low frecuencies of each deck
+      sepparately. You can also reset it. It will reset automatically after loading a new song.&lt;/li&gt;
+
+    &lt;li (click)&#x3D;&quot;help(&#x27;cue&#x27;)&quot;&gt;CUE: you can save any time in the song and the replay the song from that point. To save a
+      point (up to 4) press the cue button. To replay from a point select what point you want. CUEs will reset after
+      loading a new song.&lt;/li&gt;
+
+    &lt;li (click)&#x3D;&quot;help(&#x27;pitch&#x27;)&quot;&gt;Pitch: Control the frecuency (and speed) of the song playing. Pitch will reset after
+      loading a new song.&lt;/li&gt;
+
+    &lt;li (click)&#x3D;&quot;help(&#x27;loop&#x27;)&quot;&gt;Loops: You can play in loop some parts of the song in units of beats.&lt;/li&gt;
+
+    &lt;li (click)&#x3D;&quot;help(&#x27;effects&#x27;)&quot;&gt;Effects: You can play effects over the song. To select what effect you want go to
+      settings tab. You can create you own effects in the effects creator tab.&lt;/li&gt;
+
+
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -374,10 +329,10 @@ export class AppLayoutComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="layout" [style.width.px]="width" [style.height.px]="height" *ngIf="((width && height) || window.innerWidth > window.innerHeight);else warning">  <div class=" top-layout">    <div class="deck">      <app-deck [deckNumber]="0"></app-deck>    </div>    <div class="volume-control">      <app-volume></app-volume>    </div>    <div class="deck">      <app-deck [deckNumber]="1"></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="search">      <app-search></app-search>    </div>    <div class="tabs">      <app-tabs></app-tabs>    </div>  </div></div><ng-template #warning>  <div class="layout">    For the application to work properly you must have a higher width than height in your device, thought at least    width being 1.2 times the height is recommended.  </div></ng-template></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="help-container">  <p>To start mixing music load a song. Click over any feature to highlight it.</p>  <p>Features:</p>  <ul>    <li (click)="help(\'play\')">Play: You can play the song.</li>    <li (click)="help(\'maindeckvolume\')">Main deck volume: Each deck as a main volume, change that to modify the volume      of that deck.</li>    <li (click)="help(\'mastervolume\')">Master Volume: You can control which deck you want to hear, while lowering the      volume of the other.</li>    <li (click)="help(\'equalizer\')">Equalizer: You can control the high, middle and low frecuencies of each deck      sepparately. You can also reset it. It will reset automatically after loading a new song.</li>    <li (click)="help(\'cue\')">CUE: you can save any time in the song and the replay the song from that point. To save a      point (up to 4) press the cue button. To replay from a point select what point you want. CUEs will reset after      loading a new song.</li>    <li (click)="help(\'pitch\')">Pitch: Control the frecuency (and speed) of the song playing. Pitch will reset after      loading a new song.</li>    <li (click)="help(\'loop\')">Loops: You can play in loop some parts of the song in units of beats.</li>    <li (click)="help(\'effects\')">Effects: You can play effects over the song. To select what effect you want go to      settings tab. You can create you own effects in the effects creator tab.</li>  </ul></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppLayoutComponent'};
+    var ACTUAL_COMPONENT = {'name': 'AppHelpComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -411,7 +366,7 @@ export class AppLayoutComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppLayoutComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppHelpComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
