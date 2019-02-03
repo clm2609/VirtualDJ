@@ -203,7 +203,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/services/music-loader.service.ts:63</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/services/music-loader.service.ts:64</a></div>
                             </td>
                         </tr>
 
@@ -272,7 +272,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/services/music-loader.service.ts:67</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/services/music-loader.service.ts:68</a></div>
                             </td>
                         </tr>
 
@@ -640,9 +640,10 @@ export class MusicLoaderService {
   deckLoader &#x3D; [new Subject(), new Subject()];
   decksongs$ &#x3D; [this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()];
   decksongs: any[] &#x3D; [{}, {}];
-  constructor(private playerService: PlayerService) {}
+  constructor(private playerService: PlayerService) { }
   load(deck, song) {
     requestAnimationFrame(() &#x3D;&gt; {
+      this.deckLoader[deck].next({ song: { name: &quot;DECK.LOADING&quot; } });
       const reader &#x3D; new FileReader();
       reader.readAsDataURL(song);
       reader.onload &#x3D; () &#x3D;&gt; {
