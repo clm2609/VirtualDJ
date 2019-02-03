@@ -1585,7 +1585,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     });
     this.musicSubscription &#x3D; this.musicService.decksongs$[this.deckNumber].subscribe(a &#x3D;&gt; {
-      console.log(a)
+      console.log(a);
       const data &#x3D; a as any;
       this.resetDisc();
       this.resetCUE();

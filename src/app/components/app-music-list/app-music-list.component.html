@@ -5,6 +5,12 @@
       <td>
         <div class="music-search">
           <div>{{ 'MUSIC.SONG' | translate }}</div>
+          <div class="centered">
+            <input class="hide-input" id="load_music" type="file" (input)="fileChangeEvent($event)" accept="audio/*"
+              multiple=true />
+            <label class="button button--green" for="load_music" id="load_music_button">{{ 'MUSIC.CHOOSE' | translate
+              }}</label>
+          </div>
           <div class="searchbar">
             <input type="text" class="searchbox" [(ngModel)]="query" (ngModelChange)="updateMusic()" />
             <div id="b" class="searchbutton"></div>
@@ -13,7 +19,7 @@
       </td>
       <!-- <td class="header">Artist</td> -->
       <td>
-        <div title="Remove all" class="icon-container">
+        <div title="Remove all" class="icon-container" (click)="removeAllSongs()">
           <img class="icon icon--clickable" src="assets/images/error.svg">
         </div>
       </td>
@@ -44,8 +50,11 @@
 
   </table>
   <div *ngIf="musicList.length === 0" class="start-instructions">
-    <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->
     {{ 'MUSIC.START' | translate }}
+    <div class="centered margintop">
+      <input class="hide-input" id="load_music" type="file" (input)="fileChangeEvent($event)" accept="audio/*" multiple=true />
+      <label class="button button--green" for="load_music" id="load_music_button">{{ 'MUSIC.CHOOSE' | translate }}</label>
+    </div>
   </div>
   <!-- {{musicService.music}} -->
 </div>

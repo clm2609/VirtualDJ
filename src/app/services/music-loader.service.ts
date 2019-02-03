@@ -69,4 +69,8 @@ export class MusicLoaderService {
     this.music.splice(this.music.indexOf(song), 1);
     this.musicLoader.next(this.music);
   }
+  deleteAllSongs() {
+    this.music = [];
+    this.musicLoader.next(this.music);
+  }
 }
