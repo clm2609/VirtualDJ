@@ -84,13 +84,14 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     });
     this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
+      console.log(a);
       const data = a as any;
       this.resetDisc();
       this.resetCUE();
       this.resetPitch();
       this.song = data.song as File;
       this.bpm = data.bpm;
-      this.beats = data.beats.reverse();
+      this.beats = data.beats ? data.beats.reverse() : null;
     });
   }
   rotate() {
@@ -140,7 +141,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.cues = [];
   }
   createLoop(loop) {
-    if (this.song) {
+    if (this.song && this.beats) {
       const currentTime = this.playerService.getCurrentTime(this.deckNumber);
       const index = this.beats.findIndex(e => e <= currentTime);
       if (index !== -1) {
