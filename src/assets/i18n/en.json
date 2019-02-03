@@ -1,0 +1,59 @@
+{
+  "TABS": {
+    "MUSIC": "Music",
+    "SETTINGS": "Settings",
+    "EFFCREATOR": "Effects Creator",
+    "HELP": "Help",
+    "ABOUT": "About",
+    "DROP": "Drop your song here"
+  },
+  "MUSIC": {
+    "START": "To start load music with the button or drag music here from your computer.",
+    "CHOOSE": "Choose a file",
+    "NOMATCH": "No songs match",
+    "SONG": "Song"
+  },
+  "SETTINGS": {
+    "LANGUAGE": "Language",
+    "AUTO": "Automatic",
+    "RESOLUTION": "Resolution",
+    "EFFDECK": "Effects deck",
+    "EFFECT": "Effect"
+  },
+  "EFFCREATOR": {
+    "CREATE": "Create effect",
+    "CREATEBUTTON": "Create",
+    "REMOVE": "Remove effect",
+    "TOREMOVE": "To remove effects you must have at least 6 effects",
+    "REMOVEBUTTON": "Remove",
+    "CONFIG": "Configuration:",
+    "NAME": "Name:"
+  },
+  "HELP": {
+    "START": "To start mixing music load a song. Click over any feature to highlight it.",
+    "FEATURES": "Features:",
+    "PLAY": "Play: You can play the song.",
+    "MDECKVOLUME": "Main deck volume: Each deck as a main volume, change that to modify the volume of that deck.",
+    "MVOLUME": "Master Volume: You can control which deck you want to hear, while lowering the volume of the other.",
+    "EQUALIZER": "Equalizer: You can control the high, middle and low frecuencies of each deck sepparately. You can also reset it. It will reset automatically after loading a new song.",
+    "CUE": "CUE: you can save any time in the song and the replay the song from that point. To save a point (up to 4) press the cue button. To replay from a point select what point you want. CUEs will reset after loading a new song.",
+    "PITCH": "Pitch: Control the frecuency (and speed) of the song playing. Pitch will reset after loading a new song.",
+    "LOOPS": "Loops: You can play in loop some parts of the song in units of beats.",
+    "EFFECTS": "Effects: You can play effects over the song. To select what effect you want go to settings tab. You can create you own effects in the effects creator tab."
+  },
+  "ABOUT": {
+    "CONTENT": "Content attribution:"
+  },
+  "DECK": {
+    "CUES": "CUEs",
+    "EFFECTS": "Effects"
+  },
+  "VOLUME": {
+    "HIGH": "High",
+    "MID": "Mid",
+    "LOW": "Low"
+  },
+  "LAYOUT": {
+    "INFO": "For the application to work properly you must have a higher width than height in your device, thought at least width being 1.2 times the height is recommended."
+  }
+}

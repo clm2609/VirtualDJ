@@ -390,6 +390,15 @@ import { AppEffectsCreatorComponent } from &#x27;./components/app-effects-creato
 import { ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
 import { AppHelpComponent } from &#x27;./components/app-help/app-help.component&#x27;;
 
+
+import { TranslateModule, TranslateLoader } from &#x27;@ngx-translate/core&#x27;;
+import { TranslateHttpLoader } from &#x27;@ngx-translate/http-loader&#x27;;
+import { HttpClient, HttpClientModule } from &#x27;@angular/common/http&#x27;;
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -406,7 +415,14 @@ import { AppHelpComponent } from &#x27;./components/app-help/app-help.component&
     AppEffectsCreatorComponent,
     AppHelpComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, TranslateModule.forRoot({
+    loader: {
+      provide: TranslateLoader,
+      useFactory: HttpLoaderFactory,
+      deps: [HttpClient]
+    }
+  })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

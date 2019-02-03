@@ -41,7 +41,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>HelpService</li>
+  <li>TranslationService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -59,7 +59,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/services/help.service.ts</code>
+            <code>src/app/services/translation.service.ts</code>
         </p>
 
 
@@ -77,10 +77,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#help">help</a>
+                                <a href="#lang">lang</a>
                             </li>
                             <li>
-                                <a href="#help$">help$</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#translate">translate</a>
                             </li>
                         </ul>
                     </td>
@@ -95,7 +96,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#save">save</a>
+                                <a href="#changeLanguage">changeLanguage</a>
+                            </li>
+                            <li>
+                                <a href="#getActualLang">getActualLang</a>
+                            </li>
+                            <li>
+                                <a href="#getTranslation">getTranslation</a>
                             </li>
                         </ul>
                     </td>
@@ -109,6 +116,54 @@
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(translate: TranslateService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/translation.service.ts:10</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>translate</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslateService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -119,25 +174,25 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="save"></a>
+                        <a name="changeLanguage"></a>
                         <span class="name">
                             <b>
-                            save
+                            changeLanguage
                             </b>
-                            <a href="#save"><span class="icon ion-ios-link"></span></a>
+                            <a href="#changeLanguage"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>save(helpquery: )</code>
+<code>changeLanguage(newLang: )</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/help.service.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/translation.service.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -156,7 +211,7 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>helpquery</td>
+                                                        <td>newLang</td>
                                                     
                                                     <td>
                                                             No
@@ -180,6 +235,82 @@
                 </tr>
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getActualLang"></a>
+                        <span class="name">
+                            <b>
+                            getActualLang
+                            </b>
+                            <a href="#getActualLang"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getActualLang()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/translation.service.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTranslation"></a>
+                        <span class="name">
+                            <b>
+                            getTranslation
+                            </b>
+                            <a href="#getTranslation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getTranslation()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/services/translation.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 </section>
 
             <section>
@@ -191,29 +322,30 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="help"></a>
+                        <a name="lang"></a>
                         <span class="name">
                             <b>
-                            help
+                            lang
                             </b>
-                            <a href="#help"><span class="icon ion-ios-link"></span></a>
+                            <a href="#lang"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>help:     <code></code>
+                        <code>lang:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new Subject()</code>
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/services/help.service.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/translation.service.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -224,29 +356,31 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="help$"></a>
+                        <a name="translate"></a>
                         <span class="name">
                             <b>
-                            help$
+                                <span class="modifier">Public</span>
+                            translate
                             </b>
-                            <a href="#help$"><span class="icon ion-ios-link"></span></a>
+                            <a href="#translate"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>help$:     <code></code>
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>translate:     <code>TranslateService</code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>this.help.asObservable()</code>
+                            <i>Type : </i>    <code>TranslateService</code>
+
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/services/help.service.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/translation.service.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -260,18 +394,35 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { Subject } from &#x27;rxjs&#x27;;
+import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+
 
 @Injectable({
-  providedIn: &#x27;root&#x27;
+    providedIn: &#x27;root&#x27;
 })
-export class HelpService {
-  help &#x3D; new Subject();
-  help$ &#x3D; this.help.asObservable();
+export class TranslationService {
 
-  save(helpquery) {
-    this.help.next(helpquery);
-  }
+    lang: string;
+    constructor(public translate: TranslateService) {
+        if (localStorage.getItem(&#x27;lang&#x27;)) {
+            this.lang &#x3D; localStorage.getItem(&#x27;lang&#x27;);
+        } else {
+            this.lang &#x3D; &#x27;en&#x27;;
+        }
+        translate.addLangs([&#x27;en&#x27;, &#x27;es&#x27;]);
+        translate.setDefaultLang(this.lang);
+    }
+    getTranslation() {
+        return this.translate;
+    }
+    getActualLang() {
+        return this.lang;
+    }
+    changeLanguage(newLang) {
+        this.translate.use(newLang);
+        localStorage.setItem(&#x27;lang&#x27;, newLang);
+
+    }
 }
 </code></pre>
     </div>
@@ -305,7 +456,7 @@ export class HelpService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'HelpService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'TranslationService.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

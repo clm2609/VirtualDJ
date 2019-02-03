@@ -57,13 +57,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' : 'data-target="#xs-components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' }>
+                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-9dfa3c68139eae6eddd3781f7bbbdb08"' : 'data-target="#xs-components-links-module-AppModule-9dfa3c68139eae6eddd3781f7bbbdb08"' }>
                                     <span class="icon ion-md-cog"></span>
                                     <span>Components</span>
                                     <span class="icon ion-ios-arrow-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                    ${ isNormalMode ? 'id="components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' : 'id="xs-components-links-module-AppModule-d536dfae8c0b11815216fc1879b96537"' }>
+                                    ${ isNormalMode ? 'id="components-links-module-AppModule-9dfa3c68139eae6eddd3781f7bbbdb08"' : 'id="xs-components-links-module-AppModule-9dfa3c68139eae6eddd3781f7bbbdb08"' }>
                                         <li class="link">
                                             <a href="components/AppAboutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppAboutComponent</a>
                                         </li>
@@ -134,6 +134,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="injectables/SizeService.html" data-type="entity-link">SizeService</a>
+                            </li>
+                            <li class="link">
+                                <a href="injectables/TranslationService.html" data-type="entity-link">TranslationService</a>
                             </li>
                     </ul>
                 </li>

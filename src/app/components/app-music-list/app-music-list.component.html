@@ -4,7 +4,7 @@
       <td></td>
       <td>
         <div class="music-search">
-          <div>Song</div>
+          <div>{{ 'MUSIC.SONG' | translate }}</div>
           <div class="searchbar">
             <input type="text" class="searchbox" [(ngModel)]="query" (ngModelChange)="updateMusic()" />
             <div id="b" class="searchbutton"></div>
@@ -39,13 +39,13 @@
       </td>
     </tr>
     <tr *ngIf="shownMusic.length === 0">
-      <td COLSPAN="3">No songs match {{query}}</td>
+      <td COLSPAN="3">{{ 'MUSIC.NOMATCH' | translate }} {{query}}</td>
     </tr>
 
   </table>
   <div *ngIf="musicList.length === 0" class="start-instructions">
     <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->
-    To start load music from the search or drag music here from your computer.
+    {{ 'MUSIC.START' | translate }}
   </div>
   <!-- {{musicService.music}} -->
 </div>

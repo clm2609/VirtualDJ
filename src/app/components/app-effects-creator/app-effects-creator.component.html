@@ -1,7 +1,7 @@
 <div class="settings-container">
   <div class="question-container">
     <div class="question">
-      <div class="question-label">Create effect</div>
+      <div class="question-label">{{ 'EFFCREATOR.CREATE' | translate }}</div>
       <select [(ngModel)]="selectedEffect" (ngModelChange)="updateEffect($event)">
         <option *ngFor="let effect of effectsCreatorArray" [value]="JSON.stringify(effect)" title="{{effect.description}}">{{effect.name}}</option>
       </select>
@@ -13,11 +13,11 @@
       {{effectStruct.description}}
     </div>
     <div class="question" style="width:250px">
-      <p style="margin: 0px 5px 5px 0px;">Name:</p>
+      <p style="margin: 0px 5px 5px 0px;">{{ 'EFFCREATOR.NAME' | translate }}</p>
       <input type="text" [(ngModel)]="name" (ngModelChange)="checkName()" [title]="'At least '+ nameChars+' characters'">
     </div>
     <div class="question">
-      <div class="question-label">Configuration:</div>
+      <div class="question-label">{{ 'EFFCREATOR.CoNFIG' | translate }}</div>
     </div>
     <div class="question">
       <table [formGroup]="config">
@@ -34,14 +34,16 @@
         </tr>
       </table>
     </div>
-    <button (click)="createEffect()" [disabled]="!validName || !config.valid">Create</button>
+    <button (click)="createEffect()" [disabled]="!validName || !config.valid">{{ 'EFFCREATOR.CREATEBUTTON' | translate
+      }}</button>
   </div>
   <div class="question">
-    <div class="question-label">Remove effect</div>
-    <div *ngIf="effects.length<=6">To remove effects you must have at least 6 effects</div>
+    <div class="question-label">{{ 'EFFCREATOR.REMOVE' | translate }}</div>
+    <div *ngIf="effects.length<=6">{{ 'EFFCREATOR.TOREMOVE' | translate }}</div>
     <select *ngIf="effects.length>6" [(ngModel)]="selectedEffectRemove" style="width:250px">
       <option *ngFor="let effect of effects" [value]="effect.id">{{effect.name}}</option>
     </select>
-    <button *ngIf="effects.length>6" style="width:250px" (click)="removeEffect()" [disabled]="">Remove</button>
+    <button *ngIf="effects.length>6" style="width:250px" (click)="removeEffect()" [disabled]="">{{
+      'EFFCREATOR.REMOVEBUTTON' | translate }}</button>
   </div>
 </div>

@@ -38,7 +38,7 @@
         <div class="layout-buttons">
           <div class="layout-cue-effects-pitch">
             <div class="layout-cue-effects">
-              CUEs
+              {{ 'DECK.CUES' | translate }}
               <div class="button-container button-container--cues" [class.help]="help === 'cue'">
                 <div class="button button--cues" (click)="startCUE(0)">1</div>
                 <div class="button button--cues" (click)="startCUE(1)">2</div>
@@ -46,7 +46,7 @@
                 <div class="button button--cues" (click)="startCUE(3)">4</div>
                 <div class="button button--cues" (click)="resetCUE()">Reset</div>
               </div>
-              Effects
+              {{ 'DECK.EFFECTS' | translate }}
               <div class="button-container--effects" [class.help]="help === 'effects'">
                 <div class="
                 button-container button-container--effects--upper-row">

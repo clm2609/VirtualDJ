@@ -216,7 +216,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-help/app-help.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/app-help/app-help.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -275,14 +275,14 @@ import { HelpService } from &#x27;src/app/services/help.service&#x27;;
   styleUrls: [&#x27;./app-help.component.css&#x27;]
 })
 export class AppHelpComponent implements OnInit {
+  constructor(private helpService: HelpService) {}
 
-  constructor(private helpService: HelpService) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
   help(helpquery) {
-    this.helpService.save(helpquery)
-    setTimeout(() &#x3D;&gt; { this.helpService.save(null) }, 3000)
+    this.helpService.save(helpquery);
+    setTimeout(() &#x3D;&gt; {
+      this.helpService.save(null);
+    }, 3000);
   }
 }
 </code></pre>
@@ -290,31 +290,24 @@ export class AppHelpComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;help-container&quot;&gt;
-  &lt;p&gt;To start mixing music load a song. Click over any feature to highlight it.&lt;/p&gt;
-  &lt;p&gt;Features:&lt;/p&gt;
+  &lt;p&gt;{{ &#x27;HELP.START&#x27; | translate }}&lt;/p&gt;
+  &lt;p&gt;{{ &#x27;HELP.FEATURES&#x27; | translate }}&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li (click)&#x3D;&quot;help(&#x27;play&#x27;)&quot;&gt;Play: You can play the song.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;play&#x27;)&quot;&gt;{{ &#x27;HELP.PLAY&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;maindeckvolume&#x27;)&quot;&gt;Main deck volume: Each deck as a main volume, change that to modify the volume
-      of that deck.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;maindeckvolume&#x27;)&quot;&gt;{{ &#x27;HELP.MDECKVOLUME&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;mastervolume&#x27;)&quot;&gt;Master Volume: You can control which deck you want to hear, while lowering the
-      volume of the other.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;mastervolume&#x27;)&quot;&gt;{{ &#x27;HELP.MVOLUME&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;equalizer&#x27;)&quot;&gt;Equalizer: You can control the high, middle and low frecuencies of each deck
-      sepparately. You can also reset it. It will reset automatically after loading a new song.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;equalizer&#x27;)&quot;&gt;{{ &#x27;HELP.EQUALIZER&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;cue&#x27;)&quot;&gt;CUE: you can save any time in the song and the replay the song from that point. To save a
-      point (up to 4) press the cue button. To replay from a point select what point you want. CUEs will reset after
-      loading a new song.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;cue&#x27;)&quot;&gt;{{ &#x27;HELP.CUE&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;pitch&#x27;)&quot;&gt;Pitch: Control the frecuency (and speed) of the song playing. Pitch will reset after
-      loading a new song.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;pitch&#x27;)&quot;&gt;{{ &#x27;HELP.PITCH&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;loop&#x27;)&quot;&gt;Loops: You can play in loop some parts of the song in units of beats.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;loop&#x27;)&quot;&gt;{{ &#x27;HELP.LOOPS&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;effects&#x27;)&quot;&gt;Effects: You can play effects over the song. To select what effect you want go to
-      settings tab. You can create you own effects in the effects creator tab.&lt;/li&gt;
+    &lt;li (click)&#x3D;&quot;help(&#x27;effects&#x27;)&quot;&gt;{{ &#x27;HELP.EFFECTS&#x27; | translate }}&lt;/li&gt;
 
 
   &lt;/ul&gt;
@@ -329,7 +322,7 @@ export class AppHelpComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="help-container">  <p>To start mixing music load a song. Click over any feature to highlight it.</p>  <p>Features:</p>  <ul>    <li (click)="help(\'play\')">Play: You can play the song.</li>    <li (click)="help(\'maindeckvolume\')">Main deck volume: Each deck as a main volume, change that to modify the volume      of that deck.</li>    <li (click)="help(\'mastervolume\')">Master Volume: You can control which deck you want to hear, while lowering the      volume of the other.</li>    <li (click)="help(\'equalizer\')">Equalizer: You can control the high, middle and low frecuencies of each deck      sepparately. You can also reset it. It will reset automatically after loading a new song.</li>    <li (click)="help(\'cue\')">CUE: you can save any time in the song and the replay the song from that point. To save a      point (up to 4) press the cue button. To replay from a point select what point you want. CUEs will reset after      loading a new song.</li>    <li (click)="help(\'pitch\')">Pitch: Control the frecuency (and speed) of the song playing. Pitch will reset after      loading a new song.</li>    <li (click)="help(\'loop\')">Loops: You can play in loop some parts of the song in units of beats.</li>    <li (click)="help(\'effects\')">Effects: You can play effects over the song. To select what effect you want go to      settings tab. You can create you own effects in the effects creator tab.</li>  </ul></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="help-container">  <p>{{ \'HELP.START\' | translate }}</p>  <p>{{ \'HELP.FEATURES\' | translate }}</p>  <ul>    <li (click)="help(\'play\')">{{ \'HELP.PLAY\' | translate }}</li>    <li (click)="help(\'maindeckvolume\')">{{ \'HELP.MDECKVOLUME\' | translate }}</li>    <li (click)="help(\'mastervolume\')">{{ \'HELP.MVOLUME\' | translate }}</li>    <li (click)="help(\'equalizer\')">{{ \'HELP.EQUALIZER\' | translate }}</li>    <li (click)="help(\'cue\')">{{ \'HELP.CUE\' | translate }}</li>    <li (click)="help(\'pitch\')">{{ \'HELP.PITCH\' | translate }}</li>    <li (click)="help(\'loop\')">{{ \'HELP.LOOPS\' | translate }}</li>    <li (click)="help(\'effects\')">{{ \'HELP.EFFECTS\' | translate }}</li>  </ul></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppHelpComponent'};

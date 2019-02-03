@@ -360,8 +360,7 @@ export class AppLayoutComponent {
 &lt;/div&gt;
 &lt;ng-template #warning&gt;
   &lt;div class&#x3D;&quot;layout&quot;&gt;
-    For the application to work properly you must have a higher width than height in your device, thought at least
-    width being 1.2 times the height is recommended.
+    {{ &#x27;LAYOUT.INFO&#x27; | translate }}
   &lt;/div&gt;
 &lt;/ng-template&gt;</code></pre>
     </div>
@@ -374,7 +373,7 @@ export class AppLayoutComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="layout" [style.width.px]="width" [style.height.px]="height" *ngIf="((width && height) || window.innerWidth > window.innerHeight);else warning">  <div class=" top-layout">    <div class="deck">      <app-deck [deckNumber]="0"></app-deck>    </div>    <div class="volume-control">      <app-volume></app-volume>    </div>    <div class="deck">      <app-deck [deckNumber]="1"></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="search">      <app-search></app-search>    </div>    <div class="tabs">      <app-tabs></app-tabs>    </div>  </div></div><ng-template #warning>  <div class="layout">    For the application to work properly you must have a higher width than height in your device, thought at least    width being 1.2 times the height is recommended.  </div></ng-template></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="layout" [style.width.px]="width" [style.height.px]="height" *ngIf="((width && height) || window.innerWidth > window.innerHeight);else warning">  <div class=" top-layout">    <div class="deck">      <app-deck [deckNumber]="0"></app-deck>    </div>    <div class="volume-control">      <app-volume></app-volume>    </div>    <div class="deck">      <app-deck [deckNumber]="1"></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="search">      <app-search></app-search>    </div>    <div class="tabs">      <app-tabs></app-tabs>    </div>  </div></div><ng-template #warning>  <div class="layout">    {{ \'LAYOUT.INFO\' | translate }}  </div></ng-template></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppLayoutComponent'};
