@@ -46,7 +46,8 @@
   },
   "DECK": {
     "CUES": "CUEs",
-    "EFFECTS": "Efectos"
+    "EFFECTS": "Efectos",
+    "LOADING": "Cargando..."
   },
   "VOLUME": {
     "HIGH": "Alt",

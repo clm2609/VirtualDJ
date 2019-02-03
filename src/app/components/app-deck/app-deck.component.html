@@ -15,7 +15,7 @@
 
     <div class="dj-deck-container">
       <div class="song-name-container">
-        <div class="song-name" *ngIf="song" [attr.title]="song.name">{{song.name}}</div>
+        <div class="song-name" *ngIf="song" [attr.title]="song.name">{{song.name | translate}}</div>
         <div class="bpm" *ngIf="bpm">{{bpm*(1+pitch/100)}} bpm</div>
       </div>
 

@@ -17,6 +17,7 @@ export class MusicLoaderService {
   constructor(private playerService: PlayerService) {}
   load(deck, song) {
     requestAnimationFrame(() => {
+      this.deckLoader[deck].next({ song: { name: 'DECK.LOADING' } });
       const reader = new FileReader();
       reader.readAsDataURL(song);
       reader.onload = () => {

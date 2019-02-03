@@ -46,7 +46,8 @@
   },
   "DECK": {
     "CUES": "CUEs",
-    "EFFECTS": "Effects"
+    "EFFECTS": "Effects",
+    "LOADING": "Loading, please wait"
   },
   "VOLUME": {
     "HIGH": "High",
