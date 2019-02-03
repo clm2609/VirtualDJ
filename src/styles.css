@@ -56,3 +56,35 @@
   border-radius: 2px;
   border: 1px solid #666666;
 }
+
+.searchbox {
+  padding: 6px 0px 6px 6px;
+  font-size: 17px;
+  border: none;
+  width: calc(100% - 35px);
+  height: 35px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.searchbutton {
+  text-indent: -99999px;
+  width: 35px;
+  height: 35px;
+  display: block;
+  background: white url('./assets/images/button.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.searchbar {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+}
+
+.help {
+  border: 3px solid red;
+}

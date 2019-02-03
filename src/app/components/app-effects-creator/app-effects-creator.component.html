@@ -1,0 +1,49 @@
+<div class="settings-container">
+  <div class="question-container">
+    <div class="question">
+      <div class="question-label">{{ 'EFFCREATOR.CREATE' | translate }}</div>
+      <select [(ngModel)]="selectedEffect" (ngModelChange)="updateEffect($event)">
+        <option *ngFor="let effect of effectsCreatorArray" [value]="JSON.stringify(effect)" title="{{effect.description}}">{{effect.name}}</option>
+      </select>
+    </div>
+  </div>
+  <div *ngIf="effectStruct">
+    <div class="question">
+      <div class="question-label">{{effectStruct.name}}</div>
+      {{effectStruct.description}}
+    </div>
+    <div class="question" style="width:250px">
+      <p style="margin: 0px 5px 5px 0px;">{{ 'EFFCREATOR.NAME' | translate }}</p>
+      <input type="text" [(ngModel)]="name" (ngModelChange)="checkName()" [title]="'At least '+ nameChars+' characters'">
+    </div>
+    <div class="question">
+      <div class="question-label">{{ 'EFFCREATOR.CoNFIG' | translate }}</div>
+    </div>
+    <div class="question">
+      <table [formGroup]="config">
+        <tr *ngFor="let config of effectStruct.configs;let j=index" style="height:40px;">
+          <td [attr.title]="isDefined(config.min)?'A value between '+config.min+' and '+config.max+' in steps of '+(config.step?config.step:defaultStep):null">{{config.name}}:</td>
+          <td>
+            <input *ngIf="isDefined(config.min)" style="width: 100%" type="number" [formControlName]="config.name"
+              [min]="config.min" [max]="config.max" [step]="config.step?config.step:defaultStep" [attr.title]="'A value between '+config.min+' and '+config.max+' in steps of '+(config.step?config.step:defaultStep)">
+            <select *ngIf="isDefined(config.values)" [formControlName]="config.name">
+              <option *ngFor="let value of config.values" [value]="value">{{value}}</option>
+            </select>
+            <div *ngIf="isDefined(config.value)">{{config.value}}</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <button (click)="createEffect()" [disabled]="!validName || !config.valid">{{ 'EFFCREATOR.CREATEBUTTON' | translate
+      }}</button>
+  </div>
+  <div class="question">
+    <div class="question-label">{{ 'EFFCREATOR.REMOVE' | translate }}</div>
+    <div *ngIf="effects.length<=6">{{ 'EFFCREATOR.TOREMOVE' | translate }}</div>
+    <select *ngIf="effects.length>6" [(ngModel)]="selectedEffectRemove" style="width:250px">
+      <option *ngFor="let effect of effects" [value]="effect.id">{{effect.name}}</option>
+    </select>
+    <button *ngIf="effects.length>6" style="width:250px" (click)="removeEffect()" [disabled]="">{{
+      'EFFCREATOR.REMOVEBUTTON' | translate }}</button>
+  </div>
+</div>

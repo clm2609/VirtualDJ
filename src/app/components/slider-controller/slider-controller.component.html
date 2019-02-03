@@ -1,32 +1,13 @@
 <div class="slidershell {{config.track}}" #sliderShell [id]="config.id+'_slidershell'">
-	<div [class.hidden]="!config.fill"
-	 [ngClass]="{'sliderfill':!config.vertical,
-	 'sliderfill-vertical':config.vertical}"
-	[id]="config.id+'sliderfill'"
-	[style.width]="fillWidth+'px'"
-		[style.height]="fillHeight+'px'"
-		[style.top]="fillTop+'px'"
-		[style.left]="fillLeft+'px'"></div>
-		<div [class.hidden]="!config.fill"
-	 [ngClass]="{'slidertrack':!config.vertical,
-	 'slidertrack-vertical':config.vertical}"
-	[id]="config.id+'slidertrack'"
-	[style.width]="trackWidth+'px'"
-		[style.height]="trackHeight+'px'"
-		[style.top]="trackTop+'px'"
-		[style.left]="trackLeft+'px'"></div>
-	<div class="sliderthumb {{config.thumb}}"
-	  [id]="config.id+'sliderthumb'"
-		[style.width]="thumbWidth+'px'"
-		[style.height]="thumbHeight+'px'"
-		[style.top]="thumbTop+'px'"
-		[style.left]="thumbLeft+'px'"></div>
+	<div *ngIf="config.fill" [ngClass]="{'sliderfill':!config.vertical,
+	 'sliderfill-vertical':config.vertical}" [id]="config.id+'sliderfill'"
+	 [style.width]="fillWidth+'px'" [style.height]="fillHeight+'px'" [style.top]="fillTop+'px'" [style.left]="fillLeft+'px'"></div>
+	<div *ngIf="config.fill" [ngClass]="{'slidertrack':!config.vertical,
+	 'slidertrack-vertical':config.vertical}" [id]="config.id+'slidertrack'"
+	 [style.width]="trackWidth+'px'" [style.height]="trackHeight+'px'" [style.top]="trackTop+'px'" [style.left]="trackLeft+'px'"></div>
+	<div class="sliderthumb {{config.thumb}}" [id]="config.id+'sliderthumb'" [style.width]="thumbWidth+'px'"
+	 [style.height]="thumbHeight+'px'" [style.top]="thumbTop+'px'" [style.left]="thumbLeft+'px'"></div>
 	<input [ngClass]="{'slider':!config.vertical,
-	 'slidervertical':config.vertical}"
-	  id="slider" type="range"
-	   min="{{config.min}}"
-	    max="{{config.max}}"
-		  [(ngModel)]="slider"
-		  (ngModelChange)="setValue()"
-	[attr.orient]="config.vertical?'vertical':null" />
+	 'slidervertical':config.vertical}" id="slider" type="range" min="{{config.min}}"
+	 max="{{config.max}}" [(ngModel)]="slider" (ngModelChange)="setValue()" [attr.orient]="config.vertical?'vertical':null" />
 </div>

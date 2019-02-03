@@ -1,0 +1,16 @@
+.help-container {
+  margin: 5px;
+}
+
+p {
+  margin-top: 5px;
+}
+
+ul {
+  margin-top: 5px;
+}
+
+li {
+  margin: 5px;
+  cursor: pointer;
+}

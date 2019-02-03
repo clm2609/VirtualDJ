@@ -1,7 +1,7 @@
 .volume-container {
   width: 100%;
   height: 100%;
-  padding: 5px;
+  padding: 2px;
 }
 
 .volume {
@@ -44,4 +44,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.roulete-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-reset {
+  width: 25px;
+  height: 25px;
 }

@@ -67,7 +67,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
     </p>
 
 
@@ -108,6 +108,62 @@
     </table>
 </section>
 
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#musicList">musicList</a>
+                            </li>
+                            <li>
+                                <a href="#musicService">musicService</a>
+                            </li>
+                            <li>
+                                <a href="#query">query</a>
+                            </li>
+                            <li>
+                                <a href="#shownMusic">shownMusic</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loadOnDeck">loadOnDeck</a>
+                            </li>
+                            <li>
+                                <a href="#removeSong">removeSong</a>
+                            </li>
+                            <li>
+                                <a href="#updateMusic">updateMusic</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
 
     <section>
     <h3 id="constructor">Constructor</h3>
@@ -115,15 +171,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(musicService: <a href="../injectables/MusicLoaderService.html">MusicLoaderService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>musicService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/MusicLoaderService.html" target="_self" >MusicLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -132,350 +218,447 @@
 
 
 
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loadOnDeck"></a>
+                        <span class="name">
+                            <b>
+                            loadOnDeck
+                            </b>
+                            <a href="#loadOnDeck"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>loadOnDeck(deck: , song: )</code>
+                    </td>
+                </tr>
 
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>deck</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>song</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeSong"></a>
+                        <span class="name">
+                            <b>
+                            removeSong
+                            </b>
+                            <a href="#removeSong"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>removeSong(song: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>song</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateMusic"></a>
+                        <span class="name">
+                            <b>
+                            updateMusic
+                            </b>
+                            <a href="#updateMusic"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>updateMusic()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="musicList"></a>
+                        <span class="name">
+                            <b>
+                            musicList
+                            </b>
+                            <a href="#musicList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>musicList:     <code>File[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>File[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="musicService"></a>
+                        <span class="name">
+                            <b>
+                            musicService
+                            </b>
+                            <a href="#musicService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>musicService:     <code><a href="../injectables/MusicLoaderService.html" target="_self" >MusicLoaderService</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/MusicLoaderService.html" target="_self" >MusicLoaderService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="query"></a>
+                        <span class="name">
+                            <b>
+                            query
+                            </b>
+                            <a href="#query"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>query:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shownMusic"></a>
+                        <span class="name">
+                            <b>
+                            shownMusic
+                            </b>
+                            <a href="#shownMusic"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>shownMusic:     <code>File[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>File[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/app-music-list/app-music-list.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { MusicLoaderService } from &#x27;../../services/music-loader.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
 
 @Component({
   selector: &#x27;app-music-list&#x27;,
   templateUrl: &#x27;./app-music-list.component.html&#x27;,
   styleUrls: [&#x27;./app-music-list.component.css&#x27;]
 })
-export class AppMusicListComponent implements OnInit {
-  constructor() {}
+export class AppMusicListComponent implements OnDestroy {
+  musicService: MusicLoaderService;
+  private musicSubscription: Subscription;
+  musicList: File[];
+  shownMusic: File[];
+  query: string;
+  constructor(musicService: MusicLoaderService) {
+    this.musicService &#x3D; musicService;
+    this.musicList &#x3D; musicService.music;
+    this.updateMusic();
+    this.musicSubscription &#x3D; musicService.music$.subscribe(a &#x3D;&gt; {
+      this.musicList &#x3D; a as File[];
+      this.updateMusic();
+    });
+  }
 
-  ngOnInit() {}
+  ngOnDestroy(): void {
+    this.musicSubscription.unsubscribe();
+  }
+
+  loadOnDeck(deck, song) {
+    this.musicService.load(deck, song);
+  }
+  removeSong(song) {
+    this.musicService.deleteSong(song);
+  }
+  updateMusic() {
+    if (!this.query) {
+      this.shownMusic &#x3D; this.musicList;
+    } else {
+      const searchMusic &#x3D; (searchQuery, music: any[]) &#x3D;&gt; {
+        const lowSearch &#x3D; searchQuery
+          .toLowerCase()
+          .normalize(&#x27;NFD&#x27;)
+          .replace(/[\u0300-\u036f]/g, &#x27;&#x27;);
+        return music.filter(mus &#x3D;&gt; {
+          return String(mus.name)
+            .toLowerCase()
+            .normalize(&#x27;NFD&#x27;)
+            .replace(/[\u0300-\u036f]/g, &#x27;&#x27;)
+            .includes(lowSearch);
+        });
+      };
+      this.shownMusic &#x3D; searchMusic(this.query, this.musicList);
+    }
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;music-container&quot;&gt;
-  &lt;table&gt;
+  &lt;table *ngIf&#x3D;&quot;musicList.length&gt;0&quot;&gt;
     &lt;tr class&#x3D;&quot;header&quot;&gt;
       &lt;td&gt;&lt;/td&gt;
-      &lt;td class&#x3D;&quot;header&quot;&gt;Song&lt;/td&gt;
-      &lt;td class&#x3D;&quot;header&quot;&gt;Artist&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class&#x3D;&quot;music-search&quot;&gt;
+          &lt;div&gt;{{ &#x27;MUSIC.SONG&#x27; | translate }}&lt;/div&gt;
+          &lt;div class&#x3D;&quot;searchbar&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;searchbox&quot; [(ngModel)]&#x3D;&quot;query&quot; (ngModelChange)&#x3D;&quot;updateMusic()&quot; /&gt;
+            &lt;div id&#x3D;&quot;b&quot; class&#x3D;&quot;searchbutton&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+      &lt;!-- &lt;td class&#x3D;&quot;header&quot;&gt;Artist&lt;/td&gt; --&gt;
       &lt;td&gt;
         &lt;div title&#x3D;&quot;Remove all&quot; class&#x3D;&quot;icon-container&quot;&gt;
           &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
         &lt;/div&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
+    &lt;tr class&#x3D;&quot;elements&quot; *ngFor&#x3D;&quot;let song of shownMusic;let i &#x3D; index&quot;&gt;
       &lt;td class&#x3D;&quot;icon-container&quot;&gt;
         &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
       &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
+      &lt;td title&#x3D;&quot;&quot; class&#x3D;&quot;info&quot;&gt;{{song.name}}&lt;/td&gt;
+      &lt;!-- &lt;td title&#x3D;&quot;&quot; class&#x3D;&quot;info&quot;&gt;&lt;/td&gt; --&gt;
       &lt;td&gt;
         &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;loadOnDeck(0, song)&quot;&gt;
             &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
           &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;loadOnDeck(1, song)&quot;&gt;
             &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
           &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
+          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot; (click)&#x3D;&quot;removeSong(song)&quot;&gt;
             &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
+    &lt;tr *ngIf&#x3D;&quot;shownMusic.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+      &lt;td COLSPAN&#x3D;&quot;3&quot;&gt;{{ &#x27;MUSIC.NOMATCH&#x27; | translate }} {{query}}&lt;/td&gt;
     &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class&#x3D;&quot;elements&quot;&gt;
-      &lt;td class&#x3D;&quot;icon-container&quot;&gt;
-        &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/music-player.svg&quot;&gt;
-      &lt;/td&gt;
-      &lt;td title&#x3D;&quot;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon
-          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the
-          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I
-          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises&quot;
-        class&#x3D;&quot;info&quot;&gt;Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00
-        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a
-        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,
-        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I
-        Don’t Like Surprises&lt;/td&gt;
-      &lt;td title&#x3D;&quot;Christine Lavin&quot; class&#x3D;&quot;info&quot;&gt;Christine Lavin&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class&#x3D;&quot;icons-container&quot;&gt;
-          &lt;div title&#x3D;&quot;Load in deck 1&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/uno.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Load in deck 2&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/dos.svg&quot;&gt;
-          &lt;/div&gt;
-          &lt;div title&#x3D;&quot;Remove&quot; class&#x3D;&quot;icon-container&quot;&gt;
-            &lt;img class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/error.svg&quot;&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
 
+  &lt;/table&gt;
+  &lt;div *ngIf&#x3D;&quot;musicList.length &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;start-instructions&quot;&gt;
+    &lt;!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. --&gt;
+    {{ &#x27;MUSIC.START&#x27; | translate }}
+  &lt;/div&gt;
+  &lt;!-- {{musicService.music}} --&gt;
 &lt;/div&gt;</code></pre>
     </div>
 
@@ -487,8 +670,8 @@ export class AppMusicListComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="music-container">  <table>    <tr class="header">      <td></td>      <td class="header">Song</td>      <td class="header">Artist</td>      <td>        <div title="Remove all" class="icon-container">          <img class="icon icon--clickable" src="assets/images/error.svg">        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon icon--clickable" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon icon--clickable" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon icon--clickable" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr class="elements">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00 Friday Afternoon          You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a Plane to Go Skiing in the          Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town, I’m Not a Very Good Skier, I          Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I Don’t Like Surprises"        class="info">Regretting What I Said to You When You Called Me 11:00 On a Friday Morning to Tell Me that at 1:00        Friday Afternoon You’re Gonna Leave Your Office, Go Downstairs, Hail a Cab to Go Out to the Airport to Catch a        Plane to Go Skiing in the Alps for Two Weeks, Not that I Wanted to Go With You, I Wasn’t Able to Leave Town,        I’m Not a Very Good Skier, I Couldn’t Expect You to Pay My Way, But After Going Out With You for Three Years I        Don’t Like Surprises</td>      <td title="Christine Lavin" class="info">Christine Lavin</td>      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container">            <img class="icon" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container">            <img class="icon" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container">            <img class="icon" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>  </table></div></div>'
-    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+        var COMPONENT_TEMPLATE = '<div><div class="music-container">  <table *ngIf="musicList.length>0">    <tr class="header">      <td></td>      <td>        <div class="music-search">          <div>{{ \'MUSIC.SONG\' | translate }}</div>          <div class="searchbar">            <input type="text" class="searchbox" [(ngModel)]="query" (ngModelChange)="updateMusic()" />            <div id="b" class="searchbutton"></div>          </div>        </div>      </td>      <!-- <td class="header">Artist</td> -->      <td>        <div title="Remove all" class="icon-container">          <img class="icon icon--clickable" src="assets/images/error.svg">        </div>      </td>    </tr>    <tr class="elements" *ngFor="let song of shownMusic;let i = index">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="" class="info">{{song.name}}</td>      <!-- <td title="" class="info"></td> -->      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, song)">            <img class="icon icon--clickable" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, song)">            <img class="icon icon--clickable" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container" (click)="removeSong(song)">            <img class="icon icon--clickable" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr *ngIf="shownMusic.length === 0">      <td COLSPAN="3">{{ \'MUSIC.NOMATCH\' | translate }} {{query}}</td>    </tr>  </table>  <div *ngIf="musicList.length === 0" class="start-instructions">    <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->    {{ \'MUSIC.START\' | translate }}  </div>  <!-- {{musicService.music}} --></div></div>'
+    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppMusicListComponent'};
 </script>

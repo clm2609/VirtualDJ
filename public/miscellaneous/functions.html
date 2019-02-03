@@ -60,7 +60,19 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#NativeElement" title="src/app/components/decorators/native-element.decorator.ts"><b>NativeElement</b>&nbsp;&nbsp;&nbsp;(src/.../native-element.decorator.ts)</a>
+                            <a href="#decimalAdjust" title="src/app/components/app-effects-creator/app-effects-creator.component.ts"><b>decimalAdjust</b>&nbsp;&nbsp;&nbsp;(src/.../app-effects-creator.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#HttpLoaderFactory" title="src/app/app.module.ts"><b>HttpLoaderFactory</b>&nbsp;&nbsp;&nbsp;(src/.../app.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#importScripts" title="src/app/scripts/beats.script.ts"><b>importScripts</b>&nbsp;&nbsp;&nbsp;(src/.../beats.script.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#postMessage" title="src/app/scripts/beats.script.ts"><b>postMessage</b>&nbsp;&nbsp;&nbsp;(src/.../beats.script.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#stepValidator" title="src/app/components/app-effects-creator/app-effects-creator.component.ts"><b>stepValidator</b>&nbsp;&nbsp;&nbsp;(src/.../app-effects-creator.component.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -69,24 +81,24 @@
     </table>
 </section>
 
-    <h3>src/app/components/decorators/native-element.decorator.ts</h3>
+    <h3>src/app/components/app-effects-creator/app-effects-creator.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="NativeElement"></a>
+                        <a name="decimalAdjust"></a>
                         <span class="name">
                             <b>
-                            NativeElement
+                            decimalAdjust
                             </b>
-                            <a href="#NativeElement"><span class="icon ion-ios-link"></span></a>
+                            <a href="#decimalAdjust"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>NativeElement(selector: undefined)</code>
+<code>decimalAdjust(type: , value: , exp: )</code>
                     </td>
                 </tr>
 
@@ -95,9 +107,6 @@
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>To get the native element instead of ElementRef.nativeElement
-Caveats: it won’t work with AOT</p>
-</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -106,22 +115,257 @@ Caveats: it won’t work with AOT</p>
                                             <tr>
                                                 <td>Name</td>
                                                 <td>Optional</td>
-                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>selector</td>
+                                                        <td>type</td>
                                                     
                                                     <td>
                                                             No
                                                     </td>
                                                     
 
+                                                </tr>
+                                                <tr>
+                                                        <td>value</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>exp</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stepValidator"></a>
+                        <span class="name">
+                            <b>
+                            stepValidator
+                            </b>
+                            <a href="#stepValidator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>stepValidator(step: undefined)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>step</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/app.module.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="HttpLoaderFactory"></a>
+                        <span class="name">
+                            <b>
+                            HttpLoaderFactory
+                            </b>
+                            <a href="#HttpLoaderFactory"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>HttpLoaderFactory(httpClient: undefined)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>httpClient</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/scripts/beats.script.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="importScripts"></a>
+                        <span class="name">
+                            <b>
+                            importScripts
+                            </b>
+                            <a href="#importScripts"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>importScripts(...urls: undefined)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>urls</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="postMessage"></a>
+                        <span class="name">
+                            <b>
+                            postMessage
+                            </b>
+                            <a href="#postMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>postMessage(message: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>message</td>
                                                         <td>
-                                                                <code><p>Selector. Example: &lt;div #selector&gt;</div></p>
-</code>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                                         </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
                                                 </tr>
                                         </tbody>
                                     </table>

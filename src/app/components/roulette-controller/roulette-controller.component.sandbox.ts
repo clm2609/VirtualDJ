@@ -6,9 +6,18 @@ import { FormsModule } from '@angular/forms';
 export default sandboxOf(RouletteControllerComponent, {
   imports: [FormsModule],
   declarations: [SliderControllerComponent]
-}).add('default', {
-  template: `<div style="height:200px"></div><roulette-controller [config]="config"></roulette-controller>`,
-  context: {
-    config: { id: 'roulette' }
-  }
-});
+})
+  .add('default', {
+    template: `{{ input.value }}
+  <div style="height:200px"></div><roulette-controller [config]="config" #input></roulette-controller>`,
+    context: {
+      config: { id: 'roulette' }
+    }
+  })
+  .add('max 50', {
+    template: `{{ input.value }}
+  <div style="height:200px"></div><roulette-controller [config]="config" #input></roulette-controller>`,
+    context: {
+      config: { id: 'roulette', max: 50, min: -50 }
+    }
+  });

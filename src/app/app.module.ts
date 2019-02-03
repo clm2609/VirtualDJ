@@ -14,6 +14,17 @@ import { AppTabsComponent } from './components/app-tabs/app-tabs.component';
 import { AppMusicListComponent } from './components/app-music-list/app-music-list.component';
 import { AppSettingsComponent } from './components/app-settings/app-settings.component';
 import { AppAboutComponent } from './components/app-about/app-about.component';
+import { AppEffectsCreatorComponent } from './components/app-effects-creator/app-effects-creator.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppHelpComponent } from './components/app-help/app-help.component';
+
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -27,9 +38,24 @@ import { AppAboutComponent } from './components/app-about/app-about.component';
     AppTabsComponent,
     AppMusicListComponent,
     AppSettingsComponent,
-    AppAboutComponent
+    AppAboutComponent,
+    AppEffectsCreatorComponent,
+    AppHelpComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

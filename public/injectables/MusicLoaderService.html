@@ -77,13 +77,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#decksong">decksong</a>
+                                <a href="#deckLoader">deckLoader</a>
+                            </li>
+                            <li>
+                                <a href="#decksongs">decksongs</a>
+                            </li>
+                            <li>
+                                <a href="#decksongs$">decksongs$</a>
                             </li>
                             <li>
                                 <a href="#music">music</a>
                             </li>
                             <li>
-                                <a href="#newSong">newSong</a>
+                                <a href="#music$">music$</a>
+                            </li>
+                            <li>
+                                <a href="#musicLoader">musicLoader</a>
                             </li>
                         </ul>
                     </td>
@@ -118,6 +127,54 @@
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(playerService: <a href="../injectables/PlayerService.html">PlayerService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/music-loader.service.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>playerService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/PlayerService.html" target="_self" >PlayerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -139,14 +196,14 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>addSong(song: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>addSong(song: File)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/services/music-loader.service.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/services/music-loader.service.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -168,7 +225,7 @@
                                                 <tr>
                                                         <td>song</td>
                                                         <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                                    <code>File</code>
                                                         </td>
                                                     
                                                     <td>
@@ -208,14 +265,14 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>deleteSong(i: )</code>
+<code>deleteSong(song: )</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/music-loader.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/services/music-loader.service.ts:67</a></div>
                             </td>
                         </tr>
 
@@ -234,7 +291,7 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>i</td>
+                                                        <td>song</td>
                                                     
                                                     <td>
                                                             No
@@ -280,7 +337,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/services/music-loader.service.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/music-loader.service.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -343,18 +400,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="decksong"></a>
+                        <a name="deckLoader"></a>
                         <span class="name">
                             <b>
-                            decksong
+                            deckLoader
                             </b>
-                            <a href="#decksong"><span class="icon ion-ios-link"></span></a>
+                            <a href="#deckLoader"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>decksong:     <code>[]</code>
+                        <code>deckLoader:     <code>[]</code>
 </code>
                     </td>
                 </tr>
@@ -366,12 +423,90 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[null, null]</code>
+                            <i>Default value : </i><code>[new Subject(), new Subject()]</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/services/music-loader.service.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/music-loader.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="decksongs"></a>
+                        <span class="name">
+                            <b>
+                            decksongs
+                            </b>
+                            <a href="#decksongs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>decksongs:     <code>any[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[{}, {}]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/music-loader.service.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="decksongs$"></a>
+                        <span class="name">
+                            <b>
+                            decksongs$
+                            </b>
+                            <a href="#decksongs$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>decksongs$:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/music-loader.service.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -393,13 +528,13 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>music:     <code>[]</code>
+                        <code>music:     <code>File[]</code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
+                            <i>Type : </i>    <code>File[]</code>
 
                         </td>
                     </tr>
@@ -410,7 +545,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/services/music-loader.service.ts:7</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/services/music-loader.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -421,30 +556,62 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="newSong"></a>
+                        <a name="music$"></a>
                         <span class="name">
                             <b>
-                            newSong
+                            music$
                             </b>
-                            <a href="#newSong"><span class="icon ion-ios-link"></span></a>
+                            <a href="#music$"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>newSong:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <code>music$:     <code></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
+                            <i>Default value : </i><code>this.musicLoader.asObservable()</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/services/music-loader.service.ts:6</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/services/music-loader.service.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="musicLoader"></a>
+                        <span class="name">
+                            <b>
+                            musicLoader
+                            </b>
+                            <a href="#musicLoader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>musicLoader:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/music-loader.service.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -458,21 +625,74 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+import { PlayerService } from &#x27;./player.service&#x27;;
+import { WebWorkerService } from &#x27;ngx-web-worker&#x27;;
+import { CALC_BEATS } from &#x27;../scripts/beats.script&#x27;;
+
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class MusicLoaderService {
-  newSong: any;
-  music &#x3D; [];
-  decksong &#x3D; [null, null];
+  musicLoader &#x3D; new Subject();
+  music$ &#x3D; this.musicLoader.asObservable();
+  music: File[] &#x3D; [];
+  deckLoader &#x3D; [new Subject(), new Subject()];
+  decksongs$ &#x3D; [this.deckLoader[0].asObservable(), this.deckLoader[1].asObservable()];
+  decksongs: any[] &#x3D; [{}, {}];
+  constructor(private playerService: PlayerService) {}
   load(deck, song) {
-    this.decksong[deck] &#x3D; song;
+    requestAnimationFrame(() &#x3D;&gt; {
+      const reader &#x3D; new FileReader();
+      reader.readAsDataURL(song);
+      reader.onload &#x3D; () &#x3D;&gt; {
+        this.playerService.load(deck, reader.result);
+      };
+      reader.onerror &#x3D; error &#x3D;&gt; {
+        console.log(&#x27;Error: &#x27;, error);
+      };
+      const reader1 &#x3D; new FileReader();
+      reader1.readAsArrayBuffer(song);
+      reader1.onload &#x3D; () &#x3D;&gt; {
+        const context &#x3D; new AudioContext();
+        context.decodeAudioData(reader1.result as ArrayBuffer, buffer &#x3D;&gt; {
+          let audioData &#x3D; [];
+          // Take the average of the two channels
+          if (buffer.numberOfChannels &#x3D;&#x3D;&#x3D; 2) {
+            const channel1Data &#x3D; buffer.getChannelData(0);
+            const channel2Data &#x3D; buffer.getChannelData(1);
+            const length &#x3D; channel1Data.length;
+            for (let i &#x3D; 0; i &lt; length; i++) {
+              audioData[i] &#x3D; (channel1Data[i] + channel2Data[i]) / 2;
+            }
+          } else {
+            audioData &#x3D; buffer.getChannelData(0) as any;
+          }
+          const webWorkerService &#x3D; new WebWorkerService();
+          const input &#x3D; {
+            ad: audioData,
+            host: window.location.host,
+            protocol: window.location.protocol
+          };
+          webWorkerService.run(CALC_BEATS, input).then(beatCalc &#x3D;&gt; {
+            beatCalc[&#x27;song&#x27;] &#x3D; song;
+            this.decksongs[deck] &#x3D; beatCalc;
+            this.deckLoader[deck].next(this.decksongs[deck]);
+          });
+        });
+      };
+      reader1.onerror &#x3D; error &#x3D;&gt; {
+        console.log(&#x27;Error: &#x27;, error);
+      };
+    });
   }
-  addSong(song: any) {
+  addSong(song: File) {
     this.music.push(song);
+    this.musicLoader.next(this.music);
   }
-  deleteSong(i) {
-    this.music.splice(i, 1);
+  deleteSong(song) {
+    this.music.splice(this.music.indexOf(song), 1);
+    this.musicLoader.next(this.music);
   }
 }
 </code></pre>

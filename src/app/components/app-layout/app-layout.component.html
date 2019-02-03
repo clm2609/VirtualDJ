@@ -1,13 +1,13 @@
-<div class="layout">
-  <div class="top-layout">
+<div class="layout" [style.width.px]="width" [style.height.px]="height" *ngIf="((width && height) || window.innerWidth > window.innerHeight);else warning">
+  <div class=" top-layout">
     <div class="deck">
-      <app-deck></app-deck>
+      <app-deck [deckNumber]="0"></app-deck>
     </div>
     <div class="volume-control">
       <app-volume></app-volume>
     </div>
     <div class="deck">
-      <app-deck></app-deck>
+      <app-deck [deckNumber]="1"></app-deck>
     </div>
   </div>
   <div class="bottom-layout">
@@ -19,3 +19,8 @@
     </div>
   </div>
 </div>
+<ng-template #warning>
+  <div class="layout">
+    {{ 'LAYOUT.INFO' | translate }}
+  </div>
+</ng-template>

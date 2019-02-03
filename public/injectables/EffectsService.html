@@ -1,0 +1,1378 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Virtual DJ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Virtual DJ</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>EffectsService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/effects.service.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#effects">effects</a>
+                            </li>
+                            <li>
+                                <a href="#effectsCreator">effectsCreator</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addEffect">addEffect</a>
+                            </li>
+                            <li>
+                                <a href="#createEffects">createEffects</a>
+                            </li>
+                            <li>
+                                <a href="#createEQ">createEQ</a>
+                            </li>
+                            <li>
+                                <a href="#createEQEffect">createEQEffect</a>
+                            </li>
+                            <li>
+                                <a href="#getEffects">getEffects</a>
+                            </li>
+                            <li>
+                                <a href="#getEffectsCreator">getEffectsCreator</a>
+                            </li>
+                            <li>
+                                <a href="#removeEffect">removeEffect</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="384" class="link-to-prism">src/app/services/effects.service.ts:384</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addEffect"></a>
+                        <span class="name">
+                            <b>
+                            addEffect
+                            </b>
+                            <a href="#addEffect"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>addEffect(effect: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="232" class="link-to-prism">src/app/services/effects.service.ts:232</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>effect</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createEffects"></a>
+                        <span class="name">
+                            <b>
+                            createEffects
+                            </b>
+                            <a href="#createEffects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>createEffects(ac: , effects: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="242" class="link-to-prism">src/app/services/effects.service.ts:242</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>ac</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>effects</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>{}</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createEQ"></a>
+                        <span class="name">
+                            <b>
+                            createEQ
+                            </b>
+                            <a href="#createEQ"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>createEQ(bass0: , mid0: , trebble0: , bass1: , mid1: , trebble1: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="251" class="link-to-prism">src/app/services/effects.service.ts:251</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>bass0</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>mid0</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>trebble0</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>bass1</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>mid1</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>trebble1</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>{}</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createEQEffect"></a>
+                        <span class="name">
+                            <b>
+                            createEQEffect
+                            </b>
+                            <a href="#createEQEffect"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>createEQEffect(deck: , eq: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="366" class="link-to-prism">src/app/services/effects.service.ts:366</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>deck</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>eq</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>{}</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getEffects"></a>
+                        <span class="name">
+                            <b>
+                            getEffects
+                            </b>
+                            <a href="#getEffects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getEffects()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="226" class="link-to-prism">src/app/services/effects.service.ts:226</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getEffectsCreator"></a>
+                        <span class="name">
+                            <b>
+                            getEffectsCreator
+                            </b>
+                            <a href="#getEffectsCreator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getEffectsCreator()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="229" class="link-to-prism">src/app/services/effects.service.ts:229</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removeEffect"></a>
+                        <span class="name">
+                            <b>
+                            removeEffect
+                            </b>
+                            <a href="#removeEffect"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>removeEffect(id: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="238" class="link-to-prism">src/app/services/effects.service.ts:238</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="effects"></a>
+                        <span class="name">
+                            <b>
+                            effects
+                            </b>
+                            <a href="#effects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>effects:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      name: &#x27;Basic moog filter&#x27;,
+      type: &#x27;MoogFilter&#x27;,
+      id: 1,
+      active: false,
+      config: {
+        cutoff: 0.065, // 0 to 1
+        resonance: 3.5, // 0 to 4
+        bufferSize: 4096 // 256 to 16384
+      }
+    },
+    {
+      name: &#x27;Basic ping pong&#x27;,
+      type: &#x27;PingPongDelay&#x27;,
+      id: 2,
+      active: false,
+      config: {
+        cutoff: 0.065, // 0 to 1
+        resonance: 3.5, // 0 to 4
+        bufferSize: 4096 // 256 to 16384
+      }
+    },
+    {
+      name: &#x27;Basic left panner&#x27;,
+      type: &#x27;Panner&#x27;,
+      id: 3,
+      active: false,
+      config: {
+        pan: -1 // -1 (left) to 1 (right)
+      }
+    },
+    {
+      name: &#x27;Basic right panner&#x27;,
+      type: &#x27;Panner&#x27;,
+      id: 4,
+      active: false,
+      config: {
+        pan: 1 // -1 (left) to 1 (right)
+      }
+    },
+    {
+      name: &#x27;Basic bitcrusher&#x27;,
+      type: &#x27;Bitcrusher&#x27;,
+      id: 0,
+      active: false,
+      config: {
+        bits: 4, // 1 to 16
+        normfreq: 0.1, // 0 to 1
+        bufferSize: 4096 // 256 to 16384
+      }
+    },
+    {
+      name: &#x27;Basic phaser&#x27;,
+      type: &#x27;Phaser&#x27;,
+      id: 5,
+      active: false,
+      config: {
+        rate: 1.2, // 0.01 to 8 is a decent range, but higher values are possible
+        depth: 0.3, // 0 to 1
+        feedback: 0.2, // 0 to 1+
+        stereoPhase: 30, // 0 to 180
+        baseModulationFrequency: 700, // 500 to 1500
+        bypass: 0
+      }
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/services/effects.service.ts:8</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="effectsCreator"></a>
+                        <span class="name">
+                            <b>
+                            effectsCreator
+                            </b>
+                            <a href="#effectsCreator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>effectsCreator:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      name: &#x27;Chorus&#x27;,
+      effect: &#x27;Chorus&#x27;,
+      description: &#x27;A basic chorus effect.&#x27;,
+      configs: [
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;delay&#x27;, min: 0, max: 1, default: 0.0045, step: 0.0001 },
+        { name: &#x27;bypass&#x27;, values: [0, 1], default: 0 }
+      ]
+    },
+    {
+      description: &#x27;A delay effect with feedback and a lowpass filter applied to the delayed signal.&#x27;,
+      name: &#x27;Delay&#x27;,
+      effect: &#x27;Delay&#x27;,
+
+      configs: [
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.45 },
+        { name: &#x27;delayTime&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.25 },
+        { name: &#x27;dryLevel&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;cutoff&#x27;, min: 20, max: 22050, default: 2000 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic phaser effect.&#x27;,
+      name: &#x27;Phaser&#x27;,
+      effect: &#x27;Phaser&#x27;,
+      configs: [
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.2 },
+        { name: &#x27;depth&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 30, step: 1 },
+        { name: &#x27;baseModulationFrequency&#x27;, min: 500, max: 1500, default: 700, step: 1 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic overdrive effect.&#x27;,
+      name: &#x27;Overdrive&#x27;,
+      effect: &#x27;Overdrive&#x27;,
+      configs: [
+        { name: &#x27;outputGain&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;drive&#x27;, min: 0, max: 1, default: 0.7 },
+        { name: &#x27;curveAmount&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;algorithmIndex&#x27;, values: [0, 1, 2, 3, 4, 5], default: 0 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A compressor with the option to use automatic makeup gain.&#x27;,
+      name: &#x27;Compressor&#x27;,
+      effect: &#x27;Compressor&#x27;,
+      configs: [
+        { name: &#x27;threshold&#x27;, min: -100, max: 0, default: -1 },
+        { name: &#x27;makeupGain&#x27;, min: 0, max: 50, default: 1 },
+        { name: &#x27;attack&#x27;, min: 0, max: 1000, default: 1 },
+        { name: &#x27;release&#x27;, min: 0, max: 3000, default: 0 },
+        { name: &#x27;ratio&#x27;, min: 1, max: 20, default: 4 },
+        { name: &#x27;knee&#x27;, min: 0, max: 40, default: 5 },
+        { name: &#x27;automakeup&#x27;, values: [true, false], default: true },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic filter.&#x27;,
+      name: &#x27;Filter&#x27;,
+      effect: &#x27;Filter&#x27;,
+      configs: [
+        { name: &#x27;frequency&#x27;, min: 20, max: 22050, default: 440, step: 1 },
+        { name: &#x27;Q&#x27;, min: 0.001, max: 100, default: 1, step: 0.001 },
+        { name: &#x27;gain&#x27;, min: -40, max: 40, default: 0 },
+        {
+          name: &#x27;filterType&#x27;,
+          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;],
+          default: &#x27;lowpass&#x27;
+        },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic tremolo.&#x27;,
+      name: &#x27;Tremolo&#x27;,
+      effect: &#x27;Tremolo&#x27;,
+      configs: [
+        { name: &#x27;intensity&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;rate&#x27;, min: 0.001, max: 8, default: 4 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 0 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A wahwah with an auto wah option.&#x27;,
+      name: &#x27;WahWah&#x27;,
+      effect: &#x27;WahWah&#x27;,
+      configs: [
+        { name: &#x27;automode&#x27;, values: [true, false], default: true },
+        { name: &#x27;baseFrequency&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;excursionOctaves&#x27;, min: 1, max: 6, default: 2, step: 1 },
+        { name: &#x27;sweep&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;resonance&#x27;, min: 1, max: 100, default: 10 },
+        { name: &#x27;sensitivity&#x27;, min: -1, max: 1, default: 0.5 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A lo- fi bitcrusher effect.&#x27;,
+      name: &#x27;Bitcrusher&#x27;,
+      effect: &#x27;Bitcrusher&#x27;,
+      configs: [
+        { name: &#x27;bits&#x27;, min: 1, max: 16, default: 4 },
+        { name: &#x27;normfreq&#x27;, min: 0, max: 1, default: 0.1 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
+      ]
+    },
+    {
+      description: &#x27;A resonant, analog- sounding filter.&#x27;,
+      name: &#x27;MoogFilter&#x27;,
+      effect: &#x27;MoogFilter&#x27;,
+      configs: [
+        { name: &#x27;cutoff&#x27;, min: 0, max: 1, default: 0.065, step: 0.001 },
+        { name: &#x27;resonance&#x27;, min: 0, max: 4, default: 3.5 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
+      ]
+    },
+    {
+      description: &#x27;A delay that bounces between the left and right channel.&#x27;,
+      name: &#x27;Ping Pong Delay&#x27;,
+      effect: &#x27;PingPongDelay&#x27;,
+      configs: [
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000, default: 200, step: 1 }
+      ]
+    },
+    {
+      description: &#x27;A basic gain.&#x27;,
+      name: &#x27;Gain&#x27;,
+      effect: &#x27;Gain&#x27;,
+      configs: [{ name: &#x27;gain&#x27;, min: 0, max: 40 }]
+    },
+    {
+      description: &#x27;A stereo panner (-1 is left, 1 is right). May not work in Safari and IE.&#x27;,
+      name: &#x27;Panner&#x27;,
+      effect: &#x27;Panner&#x27;,
+      configs: [{ name: &#x27;pan&#x27;, min: -1, max: 1, default: 0 }]
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/services/effects.service.ts:75</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import Tuna from &#x27;tunajs&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class EffectsService {
+  effects &#x3D; [
+    {
+      name: &#x27;Basic moog filter&#x27;,
+      type: &#x27;MoogFilter&#x27;,
+      id: 1,
+      active: false,
+      config: {
+        cutoff: 0.065, // 0 to 1
+        resonance: 3.5, // 0 to 4
+        bufferSize: 4096 // 256 to 16384
+      }
+    },
+    {
+      name: &#x27;Basic ping pong&#x27;,
+      type: &#x27;PingPongDelay&#x27;,
+      id: 2,
+      active: false,
+      config: {
+        cutoff: 0.065, // 0 to 1
+        resonance: 3.5, // 0 to 4
+        bufferSize: 4096 // 256 to 16384
+      }
+    },
+    {
+      name: &#x27;Basic left panner&#x27;,
+      type: &#x27;Panner&#x27;,
+      id: 3,
+      active: false,
+      config: {
+        pan: -1 // -1 (left) to 1 (right)
+      }
+    },
+    {
+      name: &#x27;Basic right panner&#x27;,
+      type: &#x27;Panner&#x27;,
+      id: 4,
+      active: false,
+      config: {
+        pan: 1 // -1 (left) to 1 (right)
+      }
+    },
+    {
+      name: &#x27;Basic bitcrusher&#x27;,
+      type: &#x27;Bitcrusher&#x27;,
+      id: 0,
+      active: false,
+      config: {
+        bits: 4, // 1 to 16
+        normfreq: 0.1, // 0 to 1
+        bufferSize: 4096 // 256 to 16384
+      }
+    },
+    {
+      name: &#x27;Basic phaser&#x27;,
+      type: &#x27;Phaser&#x27;,
+      id: 5,
+      active: false,
+      config: {
+        rate: 1.2, // 0.01 to 8 is a decent range, but higher values are possible
+        depth: 0.3, // 0 to 1
+        feedback: 0.2, // 0 to 1+
+        stereoPhase: 30, // 0 to 180
+        baseModulationFrequency: 700, // 500 to 1500
+        bypass: 0
+      }
+    }
+  ];
+  effectsCreator &#x3D; [
+    {
+      name: &#x27;Chorus&#x27;,
+      effect: &#x27;Chorus&#x27;,
+      description: &#x27;A basic chorus effect.&#x27;,
+      configs: [
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;delay&#x27;, min: 0, max: 1, default: 0.0045, step: 0.0001 },
+        { name: &#x27;bypass&#x27;, values: [0, 1], default: 0 }
+      ]
+    },
+    {
+      description: &#x27;A delay effect with feedback and a lowpass filter applied to the delayed signal.&#x27;,
+      name: &#x27;Delay&#x27;,
+      effect: &#x27;Delay&#x27;,
+
+      configs: [
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.45 },
+        { name: &#x27;delayTime&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.25 },
+        { name: &#x27;dryLevel&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;cutoff&#x27;, min: 20, max: 22050, default: 2000 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic phaser effect.&#x27;,
+      name: &#x27;Phaser&#x27;,
+      effect: &#x27;Phaser&#x27;,
+      configs: [
+        { name: &#x27;rate&#x27;, min: 0.01, max: 8, default: 1.2 },
+        { name: &#x27;depth&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 30, step: 1 },
+        { name: &#x27;baseModulationFrequency&#x27;, min: 500, max: 1500, default: 700, step: 1 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic overdrive effect.&#x27;,
+      name: &#x27;Overdrive&#x27;,
+      effect: &#x27;Overdrive&#x27;,
+      configs: [
+        { name: &#x27;outputGain&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;drive&#x27;, min: 0, max: 1, default: 0.7 },
+        { name: &#x27;curveAmount&#x27;, min: 0, max: 1, default: 1 },
+        { name: &#x27;algorithmIndex&#x27;, values: [0, 1, 2, 3, 4, 5], default: 0 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A compressor with the option to use automatic makeup gain.&#x27;,
+      name: &#x27;Compressor&#x27;,
+      effect: &#x27;Compressor&#x27;,
+      configs: [
+        { name: &#x27;threshold&#x27;, min: -100, max: 0, default: -1 },
+        { name: &#x27;makeupGain&#x27;, min: 0, max: 50, default: 1 },
+        { name: &#x27;attack&#x27;, min: 0, max: 1000, default: 1 },
+        { name: &#x27;release&#x27;, min: 0, max: 3000, default: 0 },
+        { name: &#x27;ratio&#x27;, min: 1, max: 20, default: 4 },
+        { name: &#x27;knee&#x27;, min: 0, max: 40, default: 5 },
+        { name: &#x27;automakeup&#x27;, values: [true, false], default: true },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic filter.&#x27;,
+      name: &#x27;Filter&#x27;,
+      effect: &#x27;Filter&#x27;,
+      configs: [
+        { name: &#x27;frequency&#x27;, min: 20, max: 22050, default: 440, step: 1 },
+        { name: &#x27;Q&#x27;, min: 0.001, max: 100, default: 1, step: 0.001 },
+        { name: &#x27;gain&#x27;, min: -40, max: 40, default: 0 },
+        {
+          name: &#x27;filterType&#x27;,
+          values: [&#x27;lowpass&#x27;, &#x27;highpass&#x27;, &#x27;bandpass&#x27;, &#x27;lowshelf&#x27;, &#x27;highshelf&#x27;, &#x27;peaking&#x27;, &#x27;notch&#x27;, &#x27;allpass&#x27;],
+          default: &#x27;lowpass&#x27;
+        },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A basic tremolo.&#x27;,
+      name: &#x27;Tremolo&#x27;,
+      effect: &#x27;Tremolo&#x27;,
+      configs: [
+        { name: &#x27;intensity&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;rate&#x27;, min: 0.001, max: 8, default: 4 },
+        { name: &#x27;stereoPhase&#x27;, min: 0, max: 180, default: 0 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A wahwah with an auto wah option.&#x27;,
+      name: &#x27;WahWah&#x27;,
+      effect: &#x27;WahWah&#x27;,
+      configs: [
+        { name: &#x27;automode&#x27;, values: [true, false], default: true },
+        { name: &#x27;baseFrequency&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;excursionOctaves&#x27;, min: 1, max: 6, default: 2, step: 1 },
+        { name: &#x27;sweep&#x27;, min: 0, max: 1, default: 0.2 },
+        { name: &#x27;resonance&#x27;, min: 1, max: 100, default: 10 },
+        { name: &#x27;sensitivity&#x27;, min: -1, max: 1, default: 0.5 },
+        { name: &#x27;bypass&#x27;, value: 0 }
+      ]
+    },
+    {
+      description: &#x27;A lo- fi bitcrusher effect.&#x27;,
+      name: &#x27;Bitcrusher&#x27;,
+      effect: &#x27;Bitcrusher&#x27;,
+      configs: [
+        { name: &#x27;bits&#x27;, min: 1, max: 16, default: 4 },
+        { name: &#x27;normfreq&#x27;, min: 0, max: 1, default: 0.1 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
+      ]
+    },
+    {
+      description: &#x27;A resonant, analog- sounding filter.&#x27;,
+      name: &#x27;MoogFilter&#x27;,
+      effect: &#x27;MoogFilter&#x27;,
+      configs: [
+        { name: &#x27;cutoff&#x27;, min: 0, max: 1, default: 0.065, step: 0.001 },
+        { name: &#x27;resonance&#x27;, min: 0, max: 4, default: 3.5 },
+        { name: &#x27;bufferSize&#x27;, values: [256, 512, 1024, 2048, 4096, 8192, 16384], default: 4096 }
+      ]
+    },
+    {
+      description: &#x27;A delay that bounces between the left and right channel.&#x27;,
+      name: &#x27;Ping Pong Delay&#x27;,
+      effect: &#x27;PingPongDelay&#x27;,
+      configs: [
+        { name: &#x27;wetLevel&#x27;, min: 0, max: 1, default: 0.5 },
+        { name: &#x27;feedback&#x27;, min: 0, max: 1, default: 0.3 },
+        { name: &#x27;delayTimeLeft&#x27;, min: 1, max: 10000, default: 150, step: 1 },
+        { name: &#x27;delayTimeRight&#x27;, min: 1, max: 10000, default: 200, step: 1 }
+      ]
+    },
+    {
+      description: &#x27;A basic gain.&#x27;,
+      name: &#x27;Gain&#x27;,
+      effect: &#x27;Gain&#x27;,
+      configs: [{ name: &#x27;gain&#x27;, min: 0, max: 40 }]
+    },
+    {
+      description: &#x27;A stereo panner (-1 is left, 1 is right). May not work in Safari and IE.&#x27;,
+      name: &#x27;Panner&#x27;,
+      effect: &#x27;Panner&#x27;,
+      configs: [{ name: &#x27;pan&#x27;, min: -1, max: 1, default: 0 }]
+    }
+  ];
+  getEffects() {
+    return JSON.parse(JSON.stringify(this.effects));
+  }
+  getEffectsCreator() {
+    return JSON.parse(JSON.stringify(this.effectsCreator));
+  }
+  addEffect(effect) {
+    effect.id &#x3D; this.effects.reduce((valorAnterior, valorActual) &#x3D;&gt; Math.max(valorAnterior, valorActual.id), 0) + 1;
+    this.effects.push(effect);
+    localStorage.setItem(&#x27;effects&#x27;, JSON.stringify(this.effects));
+  }
+
+  removeEffect(id) {
+    this.effects &#x3D; this.effects.filter(effect &#x3D;&gt; effect.id !&#x3D;&#x3D; Number(id));
+    localStorage.setItem(&#x27;effects&#x27;, JSON.stringify(this.effects));
+  }
+  createEffects(ac, effects) {
+    const tuna &#x3D; new Tuna(ac);
+    const preparedEffects &#x3D; [];
+    for (const effect of effects) {
+      preparedEffects.push(new tuna[effect.type](effect.config));
+    }
+    return preparedEffects;
+  }
+  // Advanced volume
+  createEQ(bass0, mid0, trebble0, bass1, mid1, trebble1) {
+    const adjustEQValue &#x3D; value &#x3D;&gt; {
+      if (value &gt; 0) {
+        return value / 5;
+      }
+      return value;
+    };
+    const EQ &#x3D; [
+      [
+        {
+          f: 32,
+          type: &#x27;lowshelf&#x27;,
+          value: adjustEQValue(bass0)
+        },
+        {
+          f: 64,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(bass0)
+        },
+        {
+          f: 125,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(bass0)
+        },
+        {
+          f: 250,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(bass0)
+        },
+        {
+          f: 500,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * bass0 + 0.25 * mid0)
+        },
+        {
+          f: 1000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * mid0 + 0.25 * bass0)
+        },
+        {
+          f: 2000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * mid0 + 0.25 * trebble0)
+        },
+        {
+          f: 4000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * trebble0 + 0.25 * mid0)
+        },
+        {
+          f: 8000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(trebble0)
+        },
+        {
+          f: 16000,
+          type: &#x27;highshelf&#x27;,
+          value: adjustEQValue(trebble0)
+        }
+      ],
+      [
+        {
+          f: 32,
+          type: &#x27;lowshelf&#x27;,
+          value: adjustEQValue(bass1)
+        },
+        {
+          f: 64,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(bass1)
+        },
+        {
+          f: 125,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(bass1)
+        },
+        {
+          f: 250,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(bass1)
+        },
+        {
+          f: 500,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * bass1 + 0.25 * mid1)
+        },
+        {
+          f: 1000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * mid1 + 0.25 * bass1)
+        },
+        {
+          f: 2000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * mid1 + 0.25 * trebble1)
+        },
+        {
+          f: 4000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(0.75 * trebble1 + 0.25 * mid1)
+        },
+        {
+          f: 8000,
+          type: &#x27;peaking&#x27;,
+          value: adjustEQValue(trebble1)
+        },
+        {
+          f: 16000,
+          type: &#x27;highshelf&#x27;,
+          value: adjustEQValue(trebble1)
+        }
+      ]
+    ];
+    return EQ;
+  }
+  createEQEffect(deck, eq) {
+    const filter0 &#x3D; eq[0].map(band &#x3D;&gt; {
+      const filter &#x3D; deck[0].backend.ac.createBiquadFilter();
+      filter.type &#x3D; band.type;
+      filter.gain.value &#x3D; band.value;
+      filter.Q.value &#x3D; 1;
+      filter.frequency.value &#x3D; band.f;
+      return filter;
+    });
+    const filter1 &#x3D; eq[1].map(band &#x3D;&gt; {
+      const filter &#x3D; deck[1].backend.ac.createBiquadFilter();
+      filter.type &#x3D; band.type;
+      filter.gain.value &#x3D; band.value;
+      filter.Q.value &#x3D; 1;
+      filter.frequency.value &#x3D; band.f;
+      return filter;
+    });
+    return [filter0, filter1];
+  }
+  constructor() {
+    if (localStorage.getItem(&#x27;effects&#x27;)) {
+      this.effects &#x3D; JSON.parse(localStorage.getItem(&#x27;effects&#x27;));
+    } else {
+      localStorage.setItem(&#x27;effects&#x27;, JSON.stringify(this.effects));
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'EffectsService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -68,6 +68,7 @@
     </p>
     <p class="comment">
                 <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
     </p>
 
 
@@ -108,6 +109,83 @@
     </table>
 </section>
 
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bass0">bass0</a>
+                            </li>
+                            <li>
+                                <a href="#bass1">bass1</a>
+                            </li>
+                            <li>
+                                <a href="#help">help</a>
+                            </li>
+                            <li>
+                                <a href="#mid0">mid0</a>
+                            </li>
+                            <li>
+                                <a href="#mid1">mid1</a>
+                            </li>
+                            <li>
+                                <a href="#musicSubscription">musicSubscription</a>
+                            </li>
+                            <li>
+                                <a href="#trebble0">trebble0</a>
+                            </li>
+                            <li>
+                                <a href="#trebble1">trebble1</a>
+                            </li>
+                            <li>
+                                <a href="#volume0">volume0</a>
+                            </li>
+                            <li>
+                                <a href="#volume1">volume1</a>
+                            </li>
+                            <li>
+                                <a href="#volumeMaster">volumeMaster</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeVolume">changeVolume</a>
+                            </li>
+                            <li>
+                                <a href="#resetEQ">resetEQ</a>
+                            </li>
+                            <li>
+                                <a href="#setEQ">setEQ</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
 
     <section>
     <h3 id="constructor">Constructor</h3>
@@ -115,15 +193,81 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(musicService: <a href="../injectables/MusicLoaderService.html">MusicLoaderService</a>, effectServ: <a href="../injectables/EffectsService.html">EffectsService</a>, playerService: <a href="../injectables/PlayerService.html">PlayerService</a>, helpService: <a href="../injectables/HelpService.html">HelpService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:12</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>musicService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/MusicLoaderService.html" target="_self" >MusicLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>effectServ</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/EffectsService.html" target="_self" >EffectsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>playerService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/PlayerService.html" target="_self" >PlayerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>helpService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/HelpService.html" target="_self" >HelpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -132,23 +276,684 @@
 
 
 
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeVolume"></a>
+                        <span class="name">
+                            <b>
+                            changeVolume
+                            </b>
+                            <a href="#changeVolume"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>changeVolume(deck: )</code>
+                    </td>
+                </tr>
 
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>deck</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resetEQ"></a>
+                        <span class="name">
+                            <b>
+                            resetEQ
+                            </b>
+                            <a href="#resetEQ"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>resetEQ(deck: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>deck</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setEQ"></a>
+                        <span class="name">
+                            <b>
+                            setEQ
+                            </b>
+                            <a href="#setEQ"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setEQ()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bass0"></a>
+                        <span class="name">
+                            <b>
+                            bass0
+                            </b>
+                            <a href="#bass0"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>bass0:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bass1"></a>
+                        <span class="name">
+                            <b>
+                            bass1
+                            </b>
+                            <a href="#bass1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>bass1:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="help"></a>
+                        <span class="name">
+                            <b>
+                            help
+                            </b>
+                            <a href="#help"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>help:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mid0"></a>
+                        <span class="name">
+                            <b>
+                            mid0
+                            </b>
+                            <a href="#mid0"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>mid0:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mid1"></a>
+                        <span class="name">
+                            <b>
+                            mid1
+                            </b>
+                            <a href="#mid1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>mid1:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="musicSubscription"></a>
+                        <span class="name">
+                            <b>
+                            musicSubscription
+                            </b>
+                            <a href="#musicSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>musicSubscription:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[null, null]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trebble0"></a>
+                        <span class="name">
+                            <b>
+                            trebble0
+                            </b>
+                            <a href="#trebble0"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>trebble0:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trebble1"></a>
+                        <span class="name">
+                            <b>
+                            trebble1
+                            </b>
+                            <a href="#trebble1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>trebble1:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="volume0"></a>
+                        <span class="name">
+                            <b>
+                            volume0
+                            </b>
+                            <a href="#volume0"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>volume0:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>100</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="volume1"></a>
+                        <span class="name">
+                            <b>
+                            volume1
+                            </b>
+                            <a href="#volume1"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>volume1:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>100</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="volumeMaster"></a>
+                        <span class="name">
+                            <b>
+                            volumeMaster
+                            </b>
+                            <a href="#volumeMaster"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>volumeMaster:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, AfterViewInit } from &#x27;@angular/core&#x27;;
+import { PlayerService } from &#x27;../../services/player.service&#x27;;
+import { EffectsService } from &#x27;../../services/effects.service&#x27;;
+import { MusicLoaderService } from &#x27;../../services/music-loader.service&#x27;;
+import { HelpService } from &#x27;src/app/services/help.service&#x27;;
 
 @Component({
   selector: &#x27;app-volume&#x27;,
   templateUrl: &#x27;./app-volume.component.html&#x27;,
   styleUrls: [&#x27;./app-volume.component.css&#x27;]
 })
-export class AppVolumeComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class AppVolumeComponent implements OnInit, AfterViewInit {
+  constructor(
+    private musicService: MusicLoaderService,
+    private effectServ: EffectsService,
+    private playerService: PlayerService,
+    helpService: HelpService
+  ) {
+    helpService.help$.subscribe(help &#x3D;&gt; {
+      this.help &#x3D; help;
+    });
+  }
+  help: any;
+  volume0 &#x3D; 100;
+  volume1 &#x3D; 100;
+  volumeMaster &#x3D; 0;
+  bass0 &#x3D; 0;
+  mid0 &#x3D; 0;
+  trebble0 &#x3D; 0;
+  bass1 &#x3D; 0;
+  mid1 &#x3D; 0;
+  trebble1 &#x3D; 0;
+  musicSubscription &#x3D; [null, null];
+  changeVolume(deck) {
+    let masterMultiplier &#x3D; 1;
+    if (deck &#x3D;&#x3D;&#x3D; 0 &amp;&amp; this.volumeMaster &gt; 0) {
+      masterMultiplier &#x3D; (100 - this.volumeMaster) / 100;
+    }
+    if (deck &#x3D;&#x3D;&#x3D; 1 &amp;&amp; this.volumeMaster &lt; 0) {
+      masterMultiplier &#x3D; (100 + this.volumeMaster) / 100;
+    }
+    this.playerService.setVolume(deck, (this[&#x27;volume&#x27; + deck] / 100) * masterMultiplier);
+  }
+  ngOnInit() {
+    this.setEQ();
+  }
+  setEQ() {
+    const EQ &#x3D; this.effectServ.createEQ(this.bass0, this.mid0, this.trebble0, this.bass1, this.mid1, this.trebble1);
+    this.playerService.saveEQ(EQ);
+  }
+  resetEQ(deck) {
+    if (deck &#x3D;&#x3D;&#x3D; 0) {
+      this.bass0 &#x3D; 0;
+      this.mid0 &#x3D; 0;
+      this.trebble0 &#x3D; 0;
+    }
+    if (deck &#x3D;&#x3D;&#x3D; 1) {
+      this.bass1 &#x3D; 0;
+      this.mid1 &#x3D; 0;
+      this.trebble1 &#x3D; 0;
+    }
+    this.setEQ();
+  }
+  ngAfterViewInit() {
+    this.musicSubscription[0] &#x3D; this.musicService.decksongs$[0].subscribe(a &#x3D;&gt; {
+      this.resetEQ(0);
+    });
+  }
 }
 </code></pre>
     </div>
@@ -157,43 +962,67 @@ export class AppVolumeComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;volume-container&quot;&gt;
   &lt;div class&#x3D;&quot;volume components-container&quot;&gt;
     &lt;div class&#x3D;&quot;volume-eq&quot;&gt;
-      &lt;div class&#x3D;&quot;volume-decks&quot;&gt;
-        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-1&#x27;,
+      &lt;div class&#x3D;&quot;volume-decks&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;maindeckvolume&#x27;&quot;&gt;
+        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-0&#x27;,
                        min:0, max:100,
-                        default:100,
+                        
                         vertical:true,
                         thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
-                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;&gt;&lt;/slider-controller&gt;
+                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;
+          [(ngModel)]&#x3D;&quot;volume0&quot; (ngModelChange)&#x3D;&quot;changeVolume(0)&quot;&gt;&lt;/slider-controller&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;volume-equalizers&quot;&gt;
+      &lt;div class&#x3D;&quot;volume-equalizers&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;equalizer&#x27;&quot;&gt;
         &lt;div class&#x3D;&quot;roulette-container&quot;&gt;
-          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_1&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
-          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_1&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
-          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_1&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
+            &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.HIGH&#x27; | translate }}&lt;/p&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_1&#x27;, min:-40, max:40 }&quot; [(ngModel)]&#x3D;&quot;trebble0&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
+            &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.MID&#x27; | translate }}&lt;/p&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid0&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
+            &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.LOW&#x27; | translate }}&lt;/p&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass0&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;/div&gt;
+          &lt;img class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.svg&quot; (click)&#x3D;&quot;resetEQ(0)&quot;&gt;
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;roulette-container&quot;&gt;
-          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_2&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
-          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_2&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
-          &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_2&#x27; }&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
+            &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.HIGH&#x27; | translate }}&lt;/p&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;trebble1&quot;
+              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
+            &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.MID&#x27; | translate }}&lt;/p&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid1&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
+            &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.LOW&#x27; | translate }}&lt;/p&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass1&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+          &lt;/div&gt;
+          &lt;img class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.svg&quot; (click)&#x3D;&quot;resetEQ(1)&quot;&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class&#x3D;&quot;volume-decks&quot;&gt;
-        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-2&#x27;,
+      &lt;div class&#x3D;&quot;volume-decks&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;maindeckvolume&#x27;&quot;&gt;
+        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-deck-1&#x27;,
                        min:0,
                         max:100,
-                         default:100,
+                         
                          vertical:true,
                         thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
-                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;&gt;&lt;/slider-controller&gt;
+                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;
+          [(ngModel)]&#x3D;&quot;volume1&quot; (ngModelChange)&#x3D;&quot;changeVolume(1)&quot;&gt;&lt;/slider-controller&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;volume-master&quot;&gt;
+    &lt;div class&#x3D;&quot;volume-master&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;mastervolume&#x27;&quot;&gt;
       &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume-master&#x27;,
                  min:-100,
                   max:100,
-                   default:0,
+                   
                 thumb:&#x27;sliderthumb-pitch&#x27;,
-                track:&#x27;slidertrack-vol&#x27;}&quot;&gt;&lt;/slider-controller&gt;
+                track:&#x27;slidertrack-vol&#x27;}&quot;
+        [(ngModel)]&#x3D;&quot;volumeMaster&quot; (ngModelChange)&#x3D;&quot;changeVolume(0);changeVolume(1)&quot;&gt;&lt;/slider-controller&gt;
 
     &lt;/div&gt;
   &lt;/div&gt;
@@ -208,8 +1037,8 @@ export class AppVolumeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="volume-container">  <div class="volume components-container">    <div class="volume-eq">      <div class="volume-decks">        <slider-controller [config]="{id:\'volume-deck-1\',                       min:0, max:100,                        default:100,                        vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"></slider-controller>      </div>      <div class="volume-equalizers">        <div class="roulette-container">          <roulette-controller [config]="{ id: \'trebble_1\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'middle_1\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'bass_1\' }"></roulette-controller>        </div>        <div class="roulette-container">          <roulette-controller [config]="{ id: \'trebble_2\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'middle_2\' }"></roulette-controller>          <roulette-controller [config]="{ id: \'bass_2\' }"></roulette-controller>        </div>      </div>      <div class="volume-decks">        <slider-controller [config]="{id:\'volume-deck-2\',                       min:0,                        max:100,                         default:100,                         vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"></slider-controller>      </div>    </div>    <div class="volume-master">      <slider-controller [config]="{id:\'volume-master\',                 min:-100,                  max:100,                   default:0,                thumb:\'sliderthumb-pitch\',                track:\'slidertrack-vol\'}"></slider-controller>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+        var COMPONENT_TEMPLATE = '<div><div class="volume-container">  <div class="volume components-container">    <div class="volume-eq">      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume-deck-0\',                       min:0, max:100,                                                vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"          [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)"></slider-controller>      </div>      <div class="volume-equalizers" [class.help]="help === \'equalizer\'">        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_1\', min:-40, max:40 }" [(ngModel)]="trebble0" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_1\', min:-40, max:40  }" [(ngModel)]="mid0" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_1\', min:-40, max:40  }" [(ngModel)]="bass0" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(0)">        </div>        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_2\', min:-40, max:40  }" [(ngModel)]="trebble1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_2\', min:-40, max:40  }" [(ngModel)]="mid1" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_2\', min:-40, max:40  }" [(ngModel)]="bass1" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">        </div>      </div>      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume-deck-1\',                       min:0,                        max:100,                                                  vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"          [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)"></slider-controller>      </div>    </div>    <div class="volume-master" [class.help]="help === \'mastervolume\'">      <slider-controller [config]="{id:\'volume-master\',                 min:-100,                  max:100,                                   thumb:\'sliderthumb-pitch\',                track:\'slidertrack-vol\'}"        [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)"></slider-controller>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppVolumeComponent'};
 </script>

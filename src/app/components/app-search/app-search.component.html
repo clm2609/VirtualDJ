@@ -67,5 +67,10 @@
       </div>
 
     </div>
+    <div class="centered">
+      <input class="hide-input" id="load_music" type="file" (input)="fileChangeEvent($event)" accept="audio/*" multiple=true />
+      <label class="button button--green" for="load_music" id="load_music_button">Choose a
+        file</label>
+    </div>
   </div>
 </div>
