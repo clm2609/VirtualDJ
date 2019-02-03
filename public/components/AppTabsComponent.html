@@ -748,19 +748,19 @@ export class AppTabsComponent {
   &lt;div class&#x3D;&quot;tabs&quot; [ngClass]&#x3D;&quot;{&#x27;maximized-tabs&#x27;:maximized}&quot; *ngIf&#x3D;&quot;!dragging&quot;&gt;
     &lt;div class&#x3D;&quot;tablist&quot;&gt;
       &lt;div [ngClass]&#x3D;&quot;{&#x27;tab&#x27;:true, &#x27;tab--active&#x27;:active&#x3D;&#x3D;&#x27;music&#x27;}&quot; (click)&#x3D;&quot;setActive(&#x27;music&#x27;)&quot;&gt;
-        Music
+        {{ &#x27;TABS.MUSIC&#x27; | translate }}
       &lt;/div&gt;
       &lt;div [ngClass]&#x3D;&quot;{&#x27;tab&#x27;:true, &#x27;tab--active&#x27;:active&#x3D;&#x3D;&#x27;settings&#x27;}&quot; (click)&#x3D;&quot;setActive(&#x27;settings&#x27;)&quot;&gt;
-        Settings
+        {{ &#x27;TABS.SETTINGS&#x27; | translate }}
       &lt;/div&gt;
       &lt;div [ngClass]&#x3D;&quot;{&#x27;tab&#x27;:true, &#x27;tab--active&#x27;:active&#x3D;&#x3D;&#x27;effectscr&#x27;}&quot; (click)&#x3D;&quot;setActive(&#x27;effectscr&#x27;)&quot;&gt;
-        Effects creator
+        {{ &#x27;TABS.EFFCREATOR&#x27; | translate }}
       &lt;/div&gt;
       &lt;div [ngClass]&#x3D;&quot;{&#x27;tab&#x27;:true, &#x27;tab--active&#x27;:active&#x3D;&#x3D;&#x27;help&#x27;}&quot; (click)&#x3D;&quot;setActive(&#x27;help&#x27;)&quot;&gt;
-        Help
+        {{ &#x27;TABS.HELP&#x27; | translate }}
       &lt;/div&gt;
       &lt;div [ngClass]&#x3D;&quot;{&#x27;tab&#x27;:true, &#x27;tab--active&#x27;:active&#x3D;&#x3D;&#x27;about&#x27;}&quot; (click)&#x3D;&quot;setActive(&#x27;about&#x27;)&quot;&gt;
-        About
+        {{ &#x27;TABS.ABOUT&#x27; | translate }}
       &lt;/div&gt;
       &lt;div style&#x3D;&quot;margin-left: auto;margin-right:5px; display:flex; align-items: center;&quot; (click)&#x3D;&quot;maximize()&quot;&gt;
         &lt;img class&#x3D;&quot;icon icon--clickable&quot; src&#x3D;&quot;assets/images/maximize.svg&quot; *ngIf&#x3D;&quot;!maximized&quot;&gt;
@@ -776,7 +776,8 @@ export class AppTabsComponent {
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;drop&quot; *ngIf&#x3D;&quot;dragging&quot;&gt;
-    Drop your song here
+    {{ &#x27;TABS.DROP&#x27; | translate }}
+
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
@@ -789,7 +790,7 @@ export class AppTabsComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="tabs-container" [ngClass]="{\'maximized-container\':maximized}" (drop)="droped($event)">  <div class="tabs" [ngClass]="{\'maximized-tabs\':maximized}" *ngIf="!dragging">    <div class="tablist">      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'music\'}" (click)="setActive(\'music\')">        Music      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'settings\'}" (click)="setActive(\'settings\')">        Settings      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'effectscr\'}" (click)="setActive(\'effectscr\')">        Effects creator      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'help\'}" (click)="setActive(\'help\')">        Help      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'about\'}" (click)="setActive(\'about\')">        About      </div>      <div style="margin-left: auto;margin-right:5px; display:flex; align-items: center;" (click)="maximize()">        <img class="icon icon--clickable" src="assets/images/maximize.svg" *ngIf="!maximized">        <img class="icon icon--clickable" src="assets/images/minimize.svg" *ngIf="maximized">      </div>    </div>    <div class="contents">      <app-music-list *ngIf="active==\'music\'"></app-music-list>      <app-settings *ngIf="active==\'settings\'"></app-settings>      <app-effects-creator *ngIf="active==\'effectscr\'"></app-effects-creator>      <app-help *ngIf="active==\'help\'"></app-help>      <app-about *ngIf="active==\'about\'"></app-about>    </div>  </div>  <div class="drop" *ngIf="dragging">    Drop your song here  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="tabs-container" [ngClass]="{\'maximized-container\':maximized}" (drop)="droped($event)">  <div class="tabs" [ngClass]="{\'maximized-tabs\':maximized}" *ngIf="!dragging">    <div class="tablist">      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'music\'}" (click)="setActive(\'music\')">        {{ \'TABS.MUSIC\' | translate }}      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'settings\'}" (click)="setActive(\'settings\')">        {{ \'TABS.SETTINGS\' | translate }}      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'effectscr\'}" (click)="setActive(\'effectscr\')">        {{ \'TABS.EFFCREATOR\' | translate }}      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'help\'}" (click)="setActive(\'help\')">        {{ \'TABS.HELP\' | translate }}      </div>      <div [ngClass]="{\'tab\':true, \'tab--active\':active==\'about\'}" (click)="setActive(\'about\')">        {{ \'TABS.ABOUT\' | translate }}      </div>      <div style="margin-left: auto;margin-right:5px; display:flex; align-items: center;" (click)="maximize()">        <img class="icon icon--clickable" src="assets/images/maximize.svg" *ngIf="!maximized">        <img class="icon icon--clickable" src="assets/images/minimize.svg" *ngIf="maximized">      </div>    </div>    <div class="contents">      <app-music-list *ngIf="active==\'music\'"></app-music-list>      <app-settings *ngIf="active==\'settings\'"></app-settings>      <app-effects-creator *ngIf="active==\'effectscr\'"></app-effects-creator>      <app-help *ngIf="active==\'help\'"></app-help>      <app-about *ngIf="active==\'about\'"></app-about>    </div>  </div>  <div class="drop" *ngIf="dragging">    {{ \'TABS.DROP\' | translate }}  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppTabsComponent'};

@@ -615,7 +615,7 @@ export class AppMusicListComponent implements OnDestroy {
       &lt;td&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class&#x3D;&quot;music-search&quot;&gt;
-          &lt;div&gt;Song&lt;/div&gt;
+          &lt;div&gt;{{ &#x27;MUSIC.SONG&#x27; | translate }}&lt;/div&gt;
           &lt;div class&#x3D;&quot;searchbar&quot;&gt;
             &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;searchbox&quot; [(ngModel)]&#x3D;&quot;query&quot; (ngModelChange)&#x3D;&quot;updateMusic()&quot; /&gt;
             &lt;div id&#x3D;&quot;b&quot; class&#x3D;&quot;searchbutton&quot;&gt;&lt;/div&gt;
@@ -650,13 +650,13 @@ export class AppMusicListComponent implements OnDestroy {
       &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr *ngIf&#x3D;&quot;shownMusic.length &#x3D;&#x3D;&#x3D; 0&quot;&gt;
-      &lt;td COLSPAN&#x3D;&quot;3&quot;&gt;No songs match {{query}}&lt;/td&gt;
+      &lt;td COLSPAN&#x3D;&quot;3&quot;&gt;{{ &#x27;MUSIC.NOMATCH&#x27; | translate }} {{query}}&lt;/td&gt;
     &lt;/tr&gt;
 
   &lt;/table&gt;
   &lt;div *ngIf&#x3D;&quot;musicList.length &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;start-instructions&quot;&gt;
     &lt;!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. --&gt;
-    To start load music from the search or drag music here from your computer.
+    {{ &#x27;MUSIC.START&#x27; | translate }}
   &lt;/div&gt;
   &lt;!-- {{musicService.music}} --&gt;
 &lt;/div&gt;</code></pre>
@@ -670,7 +670,7 @@ export class AppMusicListComponent implements OnDestroy {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="music-container">  <table *ngIf="musicList.length>0">    <tr class="header">      <td></td>      <td>        <div class="music-search">          <div>Song</div>          <div class="searchbar">            <input type="text" class="searchbox" [(ngModel)]="query" (ngModelChange)="updateMusic()" />            <div id="b" class="searchbutton"></div>          </div>        </div>      </td>      <!-- <td class="header">Artist</td> -->      <td>        <div title="Remove all" class="icon-container">          <img class="icon icon--clickable" src="assets/images/error.svg">        </div>      </td>    </tr>    <tr class="elements" *ngFor="let song of shownMusic;let i = index">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="" class="info">{{song.name}}</td>      <!-- <td title="" class="info"></td> -->      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, song)">            <img class="icon icon--clickable" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, song)">            <img class="icon icon--clickable" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container" (click)="removeSong(song)">            <img class="icon icon--clickable" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr *ngIf="shownMusic.length === 0">      <td COLSPAN="3">No songs match {{query}}</td>    </tr>  </table>  <div *ngIf="musicList.length === 0" class="start-instructions">    <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->    To start load music from the search or drag music here from your computer.  </div>  <!-- {{musicService.music}} --></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="music-container">  <table *ngIf="musicList.length>0">    <tr class="header">      <td></td>      <td>        <div class="music-search">          <div>{{ \'MUSIC.SONG\' | translate }}</div>          <div class="searchbar">            <input type="text" class="searchbox" [(ngModel)]="query" (ngModelChange)="updateMusic()" />            <div id="b" class="searchbutton"></div>          </div>        </div>      </td>      <!-- <td class="header">Artist</td> -->      <td>        <div title="Remove all" class="icon-container">          <img class="icon icon--clickable" src="assets/images/error.svg">        </div>      </td>    </tr>    <tr class="elements" *ngFor="let song of shownMusic;let i = index">      <td class="icon-container">        <img class="icon" src="assets/images/music-player.svg">      </td>      <td title="" class="info">{{song.name}}</td>      <!-- <td title="" class="info"></td> -->      <td>        <div class="icons-container">          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, song)">            <img class="icon icon--clickable" src="assets/images/uno.svg">          </div>          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, song)">            <img class="icon icon--clickable" src="assets/images/dos.svg">          </div>          <div title="Remove" class="icon-container" (click)="removeSong(song)">            <img class="icon icon--clickable" src="assets/images/error.svg">          </div>        </div>      </td>    </tr>    <tr *ngIf="shownMusic.length === 0">      <td COLSPAN="3">{{ \'MUSIC.NOMATCH\' | translate }} {{query}}</td>    </tr>  </table>  <div *ngIf="musicList.length === 0" class="start-instructions">    <!-- Para empezar carga musica desde la busqueda o arrastra musica hasta aqui desde tu ordenador. -->    {{ \'MUSIC.START\' | translate }}  </div>  <!-- {{musicService.music}} --></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppMusicListComponent'};
