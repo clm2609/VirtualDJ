@@ -53,4 +53,18 @@ export class AppMusicListComponent implements OnDestroy {
       this.shownMusic = searchMusic(this.query, this.musicList);
     }
   }
+  fileChangeEvent(fileInput: any) {
+    this.recievedFiles(fileInput.target.files);
+  }
+
+  recievedFiles(files: FileList) {
+    if (files) {
+      for (let i = 0; i < files.length; i++) {
+        this.musicService.addSong(files.item(i));
+      }
+    }
+  }
+  removeAllSongs() {
+    this.musicService.deleteAllSongs();
+  }
 }

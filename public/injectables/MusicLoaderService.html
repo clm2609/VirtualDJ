@@ -110,6 +110,9 @@
                                 <a href="#addSong">addSong</a>
                             </li>
                             <li>
+                                <a href="#deleteAllSongs">deleteAllSongs</a>
+                            </li>
+                            <li>
                                 <a href="#deleteSong">deleteSong</a>
                             </li>
                             <li>
@@ -246,6 +249,44 @@
                                 <div class="io-description">
                                     
                                 </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteAllSongs"></a>
+                        <span class="name">
+                            <b>
+                            deleteAllSongs
+                            </b>
+                            <a href="#deleteAllSongs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>deleteAllSongs()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/services/music-loader.service.ts:72</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -643,7 +684,7 @@ export class MusicLoaderService {
   constructor(private playerService: PlayerService) { }
   load(deck, song) {
     requestAnimationFrame(() &#x3D;&gt; {
-      this.deckLoader[deck].next({ song: { name: &quot;DECK.LOADING&quot; } });
+      this.deckLoader[deck].next({ song: { name: &#x27;DECK.LOADING&#x27; } });
       const reader &#x3D; new FileReader();
       reader.readAsDataURL(song);
       reader.onload &#x3D; () &#x3D;&gt; {
@@ -693,6 +734,10 @@ export class MusicLoaderService {
   }
   deleteSong(song) {
     this.music.splice(this.music.indexOf(song), 1);
+    this.musicLoader.next(this.music);
+  }
+  deleteAllSongs() {
+    this.music &#x3D; [];
     this.musicLoader.next(this.music);
   }
 }
