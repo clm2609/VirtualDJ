@@ -1,19 +1,22 @@
 <div class="tabs-container" [ngClass]="{'maximized-container':maximized}" (drop)="droped($event)">
   <div class="tabs" [ngClass]="{'maximized-tabs':maximized}" *ngIf="!dragging">
     <div class="tablist">
-      <div [ngClass]="{'tab':true, 'tab--active':active=='music'}" (click)="setActive('music')">
+      <div [ngClass]="{'tab':true, 'tab--active':active=='music'}" (click)="setActive('music')"
+        id="app_tabs_music_list">
         {{ 'TABS.MUSIC' | translate }}
       </div>
-      <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')">
+      <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')"
+        id="app_tabs_settings">
         {{ 'TABS.SETTINGS' | translate }}
       </div>
-      <div [ngClass]="{'tab':true, 'tab--active':active=='effectscr'}" (click)="setActive('effectscr')">
+      <div [ngClass]="{'tab':true, 'tab--active':active=='effectscr'}" (click)="setActive('effectscr')"
+        id="app_tabs_effects_creator">
         {{ 'TABS.EFFCREATOR' | translate }}
       </div>
-      <div [ngClass]="{'tab':true, 'tab--active':active=='help'}" (click)="setActive('help')">
+      <div [ngClass]="{'tab':true, 'tab--active':active=='help'}" (click)="setActive('help')" id="app_tabs_help">
         {{ 'TABS.HELP' | translate }}
       </div>
-      <div [ngClass]="{'tab':true, 'tab--active':active=='about'}" (click)="setActive('about')">
+      <div [ngClass]="{'tab':true, 'tab--active':active=='about'}" (click)="setActive('about')" id="app_tabs_about">
         {{ 'TABS.ABOUT' | translate }}
       </div>
       <div style="margin-left: auto;margin-right:5px; display:flex; align-items: center;" (click)="maximize()">

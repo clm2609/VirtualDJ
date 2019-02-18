@@ -1,5 +1,5 @@
-<div class="music-container">
-  <table *ngIf="musicList.length>0">
+<div class="music-container" id="app_music_list_container">
+  <table *ngIf="musicList.length>0" id="app_music_list">
     <tr class="header">
       <td></td>
       <td>
@@ -47,13 +47,14 @@
     <tr *ngIf="shownMusic.length === 0">
       <td COLSPAN="3">{{ 'MUSIC.NOMATCH' | translate }} {{query}}</td>
     </tr>
-
   </table>
-  <div *ngIf="musicList.length === 0" class="start-instructions">
-    {{ 'MUSIC.START' | translate }}
+  <div *ngIf="musicList.length === 0" class="start-instructions" id="app_start_instructions">
+    <div class="start-text">{{ 'MUSIC.START' | translate }}</div>
     <div class="centered margintop">
-      <input class="hide-input" id="load_music" type="file" (input)="fileChangeEvent($event)" accept="audio/*" multiple=true />
-      <label class="button button--green" for="load_music" id="load_music_button">{{ 'MUSIC.CHOOSE' | translate }}</label>
+      <input class="hide-input" id="load_music" type="file" (input)="fileChangeEvent($event)" accept="audio/*"
+        multiple=true />
+      <label class="button button--green" for="load_music"
+        id="load_music_button">{{ 'MUSIC.CHOOSE' | translate }}</label>
     </div>
   </div>
   <!-- {{musicService.music}} -->

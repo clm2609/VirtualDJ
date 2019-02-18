@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { SizeService } from '../../services/size.service';
 
 @Component({
@@ -9,8 +9,12 @@ import { SizeService } from '../../services/size.service';
 export class AppLayoutComponent {
   width: number;
   height: number;
+  actualWidth: number;
+  actualHeight: number;
   window = window;
   constructor(sizeService: SizeService) {
+    this.actualWidth = window.innerWidth;
+    this.actualHeight = window.innerHeight;
     this.width = sizeService.getWidth();
     this.height = sizeService.getHeight();
     sizeService.width$.subscribe(value => {
@@ -27,5 +31,10 @@ export class AppLayoutComponent {
         this.height = null;
       }
     });
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.actualWidth = window.innerWidth;
+    this.actualHeight = window.innerHeight;
   }
 }

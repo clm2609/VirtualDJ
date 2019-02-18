@@ -46,6 +46,7 @@
   border: 1px solid #666666;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  cursor: pointer;
 }
 
 .tab--active {

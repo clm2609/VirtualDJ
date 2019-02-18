@@ -22,6 +22,7 @@ export class TranslationService {
     return this.lang;
   }
   changeLanguage(newLang) {
+    this.lang = newLang;
     this.translate.use(newLang);
     localStorage.setItem('lang', newLang);
   }
