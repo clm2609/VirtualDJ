@@ -1,22 +1,22 @@
-<div class="help-container">
+<div class="help-container" id="app_help">
   <p>{{ 'HELP.START' | translate }}</p>
   <p>{{ 'HELP.FEATURES' | translate }}</p>
   <ul>
-    <li (click)="help('play')">{{ 'HELP.PLAY' | translate }}</li>
+    <li (click)="help('play')" id="app_help_play">{{ 'HELP.PLAY' | translate }}</li>
 
-    <li (click)="help('maindeckvolume')">{{ 'HELP.MDECKVOLUME' | translate }}</li>
+    <li (click)="help('maindeckvolume')" id="app_help_main_deck_volume">{{ 'HELP.MDECKVOLUME' | translate }}</li>
 
-    <li (click)="help('mastervolume')">{{ 'HELP.MVOLUME' | translate }}</li>
+    <li (click)="help('mastervolume')" id="app_help_master_volume">{{ 'HELP.MVOLUME' | translate }}</li>
 
-    <li (click)="help('equalizer')">{{ 'HELP.EQUALIZER' | translate }}</li>
+    <li (click)="help('equalizer')" id="app_help_play_equalizer">{{ 'HELP.EQUALIZER' | translate }}</li>
 
-    <li (click)="help('cue')">{{ 'HELP.CUE' | translate }}</li>
+    <li (click)="help('cue')" id="app_help_play_cue">{{ 'HELP.CUE' | translate }}</li>
 
-    <li (click)="help('pitch')">{{ 'HELP.PITCH' | translate }}</li>
+    <li (click)="help('pitch')" id="app_help_play_pitch">{{ 'HELP.PITCH' | translate }}</li>
 
-    <li (click)="help('loop')">{{ 'HELP.LOOPS' | translate }}</li>
+    <li (click)="help('loop')" id="app_help_play_loop">{{ 'HELP.LOOPS' | translate }}</li>
 
-    <li (click)="help('effects')">{{ 'HELP.EFFECTS' | translate }}</li>
+    <li (click)="help('effects')" id="app_help_play_effects">{{ 'HELP.EFFECTS' | translate }}</li>
 
 
   </ul>

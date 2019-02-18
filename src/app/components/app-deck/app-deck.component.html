@@ -1,4 +1,4 @@
-<div class="deck-container">
+<div class="deck-container" [id]="'app_deck_'+deckNumber">
   <div class="deck-layout components-container">
     <!-- TODO: Make this more visually appealing -->
 
@@ -29,7 +29,8 @@
               <div class="arrow-small-left"></div>
             </div>
             <div *ngFor="let loopi of loops.slice(actualLoop, actualLoop+showedLoops)" class="button button--loops"
-              (click)="createLoop(loopi)" [class.button--effects-active]="activeLoop === loopi">{{loopi}}</div>
+              (click)="createLoop(loopi)" [class.button--effects-active]="activeLoop === loopi"
+              [class.button--effects-ready]="incomingLoop === loopi">{{loopi}}</div>
             <div class="button button--loops" (click)="moveLoop(+1)">
               <div class="arrow-small-right"></div>
             </div>
@@ -52,19 +53,25 @@
                 button-container button-container--effects--upper-row">
                   <div class=" button
                 button--effects button--upper-row" (click)="applyEffect(0)"
-                    [class.button--effects-active]="effects[0].active">1</div>
+                    [class.button--effects-active]="effects[0].active"
+                    [id]="'app_deck_'+deckNumber+'_activate_effect_1'">1</div>
                   <div class="button button--effects button--upper-row" (click)="applyEffect(1)"
-                    [class.button--effects-active]="effects[1].active">2</div>
+                    [class.button--effects-active]="effects[1].active"
+                    [id]="'app_deck_'+deckNumber+'_activate_effect_2'">2</div>
                   <div class="button button--effects button--upper-row" (click)="applyEffect(2)"
-                    [class.button--effects-active]="effects[2].active">3</div>
+                    [class.button--effects-active]="effects[2].active"
+                    [id]="'app_deck_'+deckNumber+'_activate_effect_3'">3</div>
                 </div>
                 <div class="button-container button-container--effects--lower-row">
                   <div class="button button--effects button--lower-row" (click)="applyEffect(3)"
-                    [class.button--effects-active]="effects[3].active">4</div>
+                    [class.button--effects-active]="effects[3].active"
+                    [id]="'app_deck_'+deckNumber+'_activate_effect_4'">4</div>
                   <div class="button button--effects button--lower-row" (click)="applyEffect(4)"
-                    [class.button--effects-active]="effects[4].active">5</div>
+                    [class.button--effects-active]="effects[4].active"
+                    [id]="'app_deck_'+deckNumber+'_activate_effect_5'">5</div>
                   <div class="button button--effects button--lower-row" (click)="applyEffect(5)"
-                    [class.button--effects-active]="effects[5].active">6</div>
+                    [class.button--effects-active]="effects[5].active"
+                    [id]="'app_deck_'+deckNumber+'_activate_effect_6'">6</div>
                 </div>
               </div>
             </div>
@@ -78,8 +85,8 @@
                               max:25,
                               vertical:true,
                               thumb:'sliderthumb-pitch-vertical',
-                              track:'slidertrack-pitch-vertical'}"
-                  [(ngModel)]="pitch" (ngModelChange)="changePitch()"></slider-controller>
+                              track:'slidertrack-pitch-vertical'}" [(ngModel)]="pitch" (ngModelChange)="changePitch()">
+                </slider-controller>
               </div>
               <div class="layout-pitch-reset">
                 <img class="icon" src="assets/images/reset.svg" (click)="resetPitch()">

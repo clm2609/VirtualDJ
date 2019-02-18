@@ -959,7 +959,7 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;volume-container&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;volume-container&quot; id&#x3D;&quot;app_volume&quot;&gt;
   &lt;div class&#x3D;&quot;volume components-container&quot;&gt;
     &lt;div class&#x3D;&quot;volume-eq&quot;&gt;
       &lt;div class&#x3D;&quot;volume-decks&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;maindeckvolume&#x27;&quot;&gt;
@@ -968,22 +968,25 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
                         
                         vertical:true,
                         thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
-                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;
-          [(ngModel)]&#x3D;&quot;volume0&quot; (ngModelChange)&#x3D;&quot;changeVolume(0)&quot;&gt;&lt;/slider-controller&gt;
+                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot; [(ngModel)]&#x3D;&quot;volume0&quot; (ngModelChange)&#x3D;&quot;changeVolume(0)&quot;&gt;
+        &lt;/slider-controller&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;volume-equalizers&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;equalizer&#x27;&quot;&gt;
         &lt;div class&#x3D;&quot;roulette-container&quot;&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.HIGH&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_1&#x27;, min:-40, max:40 }&quot; [(ngModel)]&#x3D;&quot;trebble0&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_1&#x27;, min:-40, max:40 }&quot; [(ngModel)]&#x3D;&quot;trebble0&quot;
+              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.MID&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid0&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid0&quot;
+              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.LOW&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass0&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass0&quot;
+              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;img class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.svg&quot; (click)&#x3D;&quot;resetEQ(0)&quot;&gt;
         &lt;/div&gt;
@@ -995,11 +998,13 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.MID&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid1&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid1&quot;
+              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.LOW&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass1&quot; (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass1&quot;
+              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;img class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.svg&quot; (click)&#x3D;&quot;resetEQ(1)&quot;&gt;
         &lt;/div&gt;
@@ -1011,8 +1016,8 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
                          
                          vertical:true,
                         thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
-                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot;
-          [(ngModel)]&#x3D;&quot;volume1&quot; (ngModelChange)&#x3D;&quot;changeVolume(1)&quot;&gt;&lt;/slider-controller&gt;
+                        track:&#x27;slidertrack-vol-vertical&#x27;}&quot; [(ngModel)]&#x3D;&quot;volume1&quot; (ngModelChange)&#x3D;&quot;changeVolume(1)&quot;&gt;
+        &lt;/slider-controller&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;volume-master&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;mastervolume&#x27;&quot;&gt;
@@ -1021,8 +1026,8 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
                   max:100,
                    
                 thumb:&#x27;sliderthumb-pitch&#x27;,
-                track:&#x27;slidertrack-vol&#x27;}&quot;
-        [(ngModel)]&#x3D;&quot;volumeMaster&quot; (ngModelChange)&#x3D;&quot;changeVolume(0);changeVolume(1)&quot;&gt;&lt;/slider-controller&gt;
+                track:&#x27;slidertrack-vol&#x27;}&quot; [(ngModel)]&#x3D;&quot;volumeMaster&quot; (ngModelChange)&#x3D;&quot;changeVolume(0);changeVolume(1)&quot;&gt;
+      &lt;/slider-controller&gt;
 
     &lt;/div&gt;
   &lt;/div&gt;
@@ -1037,8 +1042,8 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="volume-container">  <div class="volume components-container">    <div class="volume-eq">      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume-deck-0\',                       min:0, max:100,                                                vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"          [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)"></slider-controller>      </div>      <div class="volume-equalizers" [class.help]="help === \'equalizer\'">        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_1\', min:-40, max:40 }" [(ngModel)]="trebble0" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_1\', min:-40, max:40  }" [(ngModel)]="mid0" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_1\', min:-40, max:40  }" [(ngModel)]="bass0" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(0)">        </div>        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_2\', min:-40, max:40  }" [(ngModel)]="trebble1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_2\', min:-40, max:40  }" [(ngModel)]="mid1" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_2\', min:-40, max:40  }" [(ngModel)]="bass1" (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">        </div>      </div>      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume-deck-1\',                       min:0,                        max:100,                                                  vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}"          [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)"></slider-controller>      </div>    </div>    <div class="volume-master" [class.help]="help === \'mastervolume\'">      <slider-controller [config]="{id:\'volume-master\',                 min:-100,                  max:100,                                   thumb:\'sliderthumb-pitch\',                track:\'slidertrack-vol\'}"        [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)"></slider-controller>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSearchComponent', 'selector': 'app-search'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+        var COMPONENT_TEMPLATE = '<div><div class="volume-container" id="app_volume">  <div class="volume components-container">    <div class="volume-eq">      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume-deck-0\',                       min:0, max:100,                                                vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}" [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)">        </slider-controller>      </div>      <div class="volume-equalizers" [class.help]="help === \'equalizer\'">        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_1\', min:-40, max:40 }" [(ngModel)]="trebble0"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_1\', min:-40, max:40  }" [(ngModel)]="mid0"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_1\', min:-40, max:40  }" [(ngModel)]="bass0"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(0)">        </div>        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_2\', min:-40, max:40  }" [(ngModel)]="trebble1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_2\', min:-40, max:40  }" [(ngModel)]="mid1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_2\', min:-40, max:40  }" [(ngModel)]="bass1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">        </div>      </div>      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume-deck-1\',                       min:0,                        max:100,                                                  vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}" [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)">        </slider-controller>      </div>    </div>    <div class="volume-master" [class.help]="help === \'mastervolume\'">      <slider-controller [config]="{id:\'volume-master\',                 min:-100,                  max:100,                                   thumb:\'sliderthumb-pitch\',                track:\'slidertrack-vol\'}" [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)">      </slider-controller>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppVolumeComponent'};
 </script>

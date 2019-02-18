@@ -76,6 +76,7 @@ to provide a positioning context for the range input and other elements.*/
   text-align: center;
   pointer-events: none;
   z-index: 3;
+  cursor: pointer;
 }
 
 input[type='range']::-ms-track {
@@ -143,6 +144,7 @@ input[type='range']::-ms-thumb {
   border-radius: 0px;
   border: 0 none;
   background: transparent;
+  cursor: pointer;
 }
 
 input[type='range']::-moz-range-thumb {
@@ -151,6 +153,7 @@ input[type='range']::-moz-range-thumb {
   border-radius: 0px;
   border: 0 none;
   background: transparent;
+  cursor: pointer;
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -160,6 +163,7 @@ input[type='range']::-webkit-slider-thumb {
   border: 0 none;
   background: transparent;
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 /* microsoft IE10+ and Edge - eliminates default fills before and after thumb */
