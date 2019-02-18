@@ -9,7 +9,6 @@ import { AppVolumeComponent } from './components/app-volume/app-volume.component
 import { SliderControllerComponent } from './components/slider-controller/slider-controller.component';
 import { FormsModule } from '@angular/forms';
 import { RouletteControllerComponent } from './components/roulette-controller/roulette-controller.component';
-import { AppSearchComponent } from './components/app-search/app-search.component';
 import { AppTabsComponent } from './components/app-tabs/app-tabs.component';
 import { AppMusicListComponent } from './components/app-music-list/app-music-list.component';
 import { AppSettingsComponent } from './components/app-settings/app-settings.component';
@@ -21,6 +20,7 @@ import { AppHelpComponent } from './components/app-help/app-help.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { APP_BASE_HREF } from '@angular/common';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -34,7 +34,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppVolumeComponent,
     SliderControllerComponent,
     RouletteControllerComponent,
-    AppSearchComponent,
     AppTabsComponent,
     AppMusicListComponent,
     AppSettingsComponent,
@@ -56,7 +55,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

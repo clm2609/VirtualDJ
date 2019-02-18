@@ -1,22 +1,22 @@
 {
   "TABS": {
-    "MUSIC": "Musica",
+    "MUSIC": "Música",
     "SETTINGS": "Ajustes",
     "EFFCREATOR": "Creador de efectos",
     "HELP": "Ayuda",
-    "ABOUT": "Informacion",
+    "ABOUT": "Información",
     "DROP": "Suelta aqui la cancion"
   },
   "MUSIC": {
-    "START": "Para empezar carga musica con el boton o arrastrandola hasta aqui.",
-    "CHOOSE": "Elige archivos",
-    "NOMATCH": "Ninguna cancion coincide con",
-    "SONG": "Cancion"
+    "START": "Para empezar carga musica con el botón o arrastrandola hasta aquí. Puedes cambiar el idioma en los ajustes. Recuerda que puedes revisar como funciona todo en la ayuda.",
+    "CHOOSE": "Cargar canciones",
+    "NOMATCH": "Ninguna canción coincide con",
+    "SONG": "Canción"
   },
   "SETTINGS": {
     "LANGUAGE": "Idioma",
     "AUTO": "Automatico",
-    "RESOLUTION": "Resolucion",
+    "RESOLUTION": "Resolución",
     "EFFDECK": "Efectos de la platina",
     "EFFECT": "Efecto"
   },
@@ -24,25 +24,25 @@
     "CREATE": "Crear efecto",
     "CREATEBUTTON": "Crear",
     "REMOVE": "Eliminar efecto",
-    "TOREMOVE": "Para elimianr efectos necesitas al menos 6 efectos",
+    "TOREMOVE": "Para eliminar efectos necesitas al menos 6 efectos",
     "REMOVEBUTTON": "Eliminar",
-    "CONFIG": "Configuracion:",
+    "CONFIG": "Configuración:",
     "NAME": "Name:"
   },
   "HELP": {
-    "START": "Para empezar a mezclar carga una cancion. Clicka sobre cualquier funcionalidad para mostrarla en la interfaz.",
+    "START": "Para empezar a mezclar carga una canción. Clicka sobre cualquier funcionalidad para mostrarla en la interfaz.",
     "FEATURES": "Funcionalidades:",
-    "PLAY": "Reproducir: Puedes reproducir una cancion.",
+    "PLAY": "Reproducir: Puedes reproducir una canción.",
     "MDECKVOLUME": "Volumen principal de platina: Cada platina tiene un volumen principal, puedes cambiarlo para modificar el volumen de esa platina.",
-    "MVOLUME": "Volumen maestro: Puedes elegir que platina escudchar, mientras bajas el volumen de la otra.",
-    "EQUALIZER": "Ecualizador: Puedes controlar las frecuencias altas, medias y bajas de cada platina por separado. Tambien puedes resetearlo. Se resetea automaticamente al cargar una nueva cancion.",
-    "CUE": "CUE: Puedes guardar cualquier moment en la cancion para retomar la cancion desde ese punto. Para guardar un momento (hasta 4) pulsa el boton de CUE y se guardara el momento actual. Para retomar desde un momento seleccionelo. Los CUE se resetean tras cargar una nueva canion.",
-    "PITCH": "Pitch: Controla la frecuencia (y velocidad) de la cancion sonando. Se reseteara tras cargar una nueva cancion",
-    "LOOPS": "Loops: Puedes reproducir pequeños fragmentos de la cancion en bucle en unidades de beats.",
-    "EFFECTS": "Efectos: Puedes reproducir efectos con la cancion. Para seleccionar que efectos quieres debes ir a la pestaña de ajustes. Tambien puedes crear efectos en la pestaña de creacion de efectos."
+    "MVOLUME": "Volumen maestro: Puedes elegir qué platina escuchar, mientras bajas el volumen de la otra.",
+    "EQUALIZER": "Ecualizador: Puedes controlar las frecuencias altas, medias y bajas de cada platina por separado. Tambien puedes resetearlo. Se resetea automáticamente al cargar una nueva canción.",
+    "CUE": "CUE: Puedes guardar cualquier moment en la canción para retomar la canción desde ese punto. Para guardar un momento (hasta 4) pulsa el botón de CUE y se guardará el momento actual. Para retomar desde un momento selecciónelo. Los CUE se resetean tras cargar una nueva canción.",
+    "PITCH": "Pitch: Controla la frecuencia (y velocidad) de la canción sonando. Se reseteara tras cargar una nueva canción",
+    "LOOPS": "Loops: Puedes reproducir pequeños fragmentos de la canción en bucle en unidades de beats.",
+    "EFFECTS": "Efectos: Puedes reproducir efectos con la canción. Para seleccionar qué efectos quieres debes ir a la pestaña de ajustes. También puedes crear efectos en la pestaña de creación de efectos."
   },
   "ABOUT": {
-    "CONTENT": "Atribucion de contenido (ingles):"
+    "CONTENT": "Atribución de contenido (inglés):"
   },
   "DECK": {
     "CUES": "CUEs",
@@ -55,6 +55,6 @@
     "LOW": "Baj"
   },
   "LAYOUT": {
-    "INFO": "Para que la aplicacion funcione correctamente debes tener un aspecto con mayor ancho que alto, aunque al menos un ratio de 1,2 de ancho por alto es lo recomendado."
+    "INFO": "Para que la aplicación funcione correctamente debes tener un aspecto con mayor ancho que alto, aunque al menos un ratio de 1,2 de ancho por alto es lo recomendado."
   }
 }

@@ -1,4 +1,4 @@
-<div class="volume-container">
+<div class="volume-container" id="app_volume">
   <div class="volume components-container">
     <div class="volume-eq">
       <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
@@ -7,22 +7,25 @@
                         
                         vertical:true,
                         thumb:'sliderthumb-pitch-vertical',
-                        track:'slidertrack-vol-vertical'}"
-          [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)"></slider-controller>
+                        track:'slidertrack-vol-vertical'}" [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)">
+        </slider-controller>
       </div>
       <div class="volume-equalizers" [class.help]="help === 'equalizer'">
         <div class="roulette-container">
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.HIGH' | translate }}</p>
-            <roulette-controller [config]="{ id: 'trebble_1', min:-40, max:40 }" [(ngModel)]="trebble0" (ngModelChange)="setEQ()"></roulette-controller>
+            <roulette-controller [config]="{ id: 'trebble_1', min:-40, max:40 }" [(ngModel)]="trebble0"
+              (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.MID' | translate }}</p>
-            <roulette-controller [config]="{ id: 'middle_1', min:-40, max:40  }" [(ngModel)]="mid0" (ngModelChange)="setEQ()"></roulette-controller>
+            <roulette-controller [config]="{ id: 'middle_1', min:-40, max:40  }" [(ngModel)]="mid0"
+              (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.LOW' | translate }}</p>
-            <roulette-controller [config]="{ id: 'bass_1', min:-40, max:40  }" [(ngModel)]="bass0" (ngModelChange)="setEQ()"></roulette-controller>
+            <roulette-controller [config]="{ id: 'bass_1', min:-40, max:40  }" [(ngModel)]="bass0"
+              (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(0)">
         </div>
@@ -34,11 +37,13 @@
           </div>
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.MID' | translate }}</p>
-            <roulette-controller [config]="{ id: 'middle_2', min:-40, max:40  }" [(ngModel)]="mid1" (ngModelChange)="setEQ()"></roulette-controller>
+            <roulette-controller [config]="{ id: 'middle_2', min:-40, max:40  }" [(ngModel)]="mid1"
+              (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.LOW' | translate }}</p>
-            <roulette-controller [config]="{ id: 'bass_2', min:-40, max:40  }" [(ngModel)]="bass1" (ngModelChange)="setEQ()"></roulette-controller>
+            <roulette-controller [config]="{ id: 'bass_2', min:-40, max:40  }" [(ngModel)]="bass1"
+              (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">
         </div>
@@ -50,8 +55,8 @@
                          
                          vertical:true,
                         thumb:'sliderthumb-pitch-vertical',
-                        track:'slidertrack-vol-vertical'}"
-          [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)"></slider-controller>
+                        track:'slidertrack-vol-vertical'}" [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)">
+        </slider-controller>
       </div>
     </div>
     <div class="volume-master" [class.help]="help === 'mastervolume'">
@@ -60,8 +65,8 @@
                   max:100,
                    
                 thumb:'sliderthumb-pitch',
-                track:'slidertrack-vol'}"
-        [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)"></slider-controller>
+                track:'slidertrack-vol'}" [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)">
+      </slider-controller>
 
     </div>
   </div>

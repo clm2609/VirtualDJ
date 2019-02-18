@@ -417,6 +417,7 @@ export class TranslationService {
     return this.lang;
   }
   changeLanguage(newLang) {
+    this.lang &#x3D; newLang;
     this.translate.use(newLang);
     localStorage.setItem(&#x27;lang&#x27;, newLang);
   }

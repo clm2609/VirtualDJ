@@ -7,7 +7,9 @@ import { TranslationService } from './services/translation.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  translationService: any;
   constructor(translationService: TranslationService) {
+    this.translationService = translationService;
     translationService.getActualLang();
   }
 }
