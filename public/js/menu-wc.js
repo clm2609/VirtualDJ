@@ -57,13 +57,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-2d5ccd27a8a50a1269349970d07165e2"' : 'data-target="#xs-components-links-module-AppModule-2d5ccd27a8a50a1269349970d07165e2"' }>
+                                    ${ isNormalMode ? 'data-target="#components-links-module-AppModule-f8d9e84c490fe9bfd2071df7cf807813"' : 'data-target="#xs-components-links-module-AppModule-f8d9e84c490fe9bfd2071df7cf807813"' }>
                                     <span class="icon ion-md-cog"></span>
                                     <span>Components</span>
                                     <span class="icon ion-ios-arrow-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                    ${ isNormalMode ? 'id="components-links-module-AppModule-2d5ccd27a8a50a1269349970d07165e2"' : 'id="xs-components-links-module-AppModule-2d5ccd27a8a50a1269349970d07165e2"' }>
+                                    ${ isNormalMode ? 'id="components-links-module-AppModule-f8d9e84c490fe9bfd2071df7cf807813"' : 'id="xs-components-links-module-AppModule-f8d9e84c490fe9bfd2071df7cf807813"' }>
                                         <li class="link">
                                             <a href="components/AppAboutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppAboutComponent</a>
                                         </li>
@@ -84,9 +84,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         </li>
                                         <li class="link">
                                             <a href="components/AppMusicListComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppMusicListComponent</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="components/AppSearchComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppSearchComponent</a>
                                         </li>
                                         <li class="link">
                                             <a href="components/AppSettingsComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppSettingsComponent</a>

@@ -32,6 +32,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   lastLoopStart: any;
   lastLoopEnd: any;
   loopChanger: any;
+  incomingLoop = null;
   help: any;
   constructor(
     private musicService: MusicLoaderService,
@@ -46,6 +47,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     setInterval(() => {
       this.rotate();
     }, 50);
+    this.effects = this.playerService.effects[this.deckNumber].filter(_ => true);
     this.playerService.effects$[this.deckNumber].subscribe(effects => {
       const eff = effects as any;
       this.effects = eff.filter(_ => true);
@@ -84,7 +86,6 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     });
     this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
-      console.log(a);
       const data = a as any;
       this.resetDisc();
       this.resetCUE();
@@ -141,7 +142,7 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.cues = [];
   }
   createLoop(loop) {
-    if (this.song && this.beats) {
+    if (this.song && this.beats && this.incomingLoop === null) {
       const currentTime = this.playerService.getCurrentTime(this.deckNumber);
       const index = this.beats.findIndex(e => e <= currentTime);
       if (index !== -1) {
@@ -170,9 +171,11 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
           this.activeLoopRegion = this.playerService.createLoop(this.deckNumber, start, end);
         } else if (this.activeLoop !== loop) {
           this.resetLoop();
+          this.incomingLoop = loop;
           this.playerService.getInstance(this.deckNumber).on('audioprocess', () => {
             if (this.playerService.getCurrentTime(this.deckNumber) >= this.lastLoopEnd) {
               this.activeLoop = loop;
+              this.incomingLoop = null;
               if (this.loops.indexOf(loop) - 1 + this.showedLoops > this.loops.length) {
                 this.actualLoop = this.loops.length - this.showedLoops;
               } else if (this.loops.indexOf(loop) - 1 < 0) {
@@ -181,7 +184,6 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
                 this.actualLoop = this.loops.indexOf(loop) - 1;
               }
               const start = this.lastLoopStart;
-              console.log(start);
               const indx = this.beats.findIndex(e => e <= this.lastLoopStart);
               const end =
                 loop >= 1

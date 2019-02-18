@@ -1,4 +1,4 @@
-<div class="settings-container">
+<div class="settings-container" id="app_settings">
   <div class="question-container">
     <div class="question">
       <div class="question-label">{{ 'SETTINGS.LANGUAGE' | translate }}</div>
@@ -41,7 +41,8 @@
           <td>{{ 'SETTINGS.EFFECT' | translate }} {{j+1}}</td>
           <td>
             <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">
-              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">{{availableEffect.name}}</option>
+              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">
+                {{availableEffect.name}}</option>
             </select>
           </td>
         </tr>

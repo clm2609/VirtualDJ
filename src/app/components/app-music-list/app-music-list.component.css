@@ -151,3 +151,9 @@ td {
 .margintop {
   margin-top: 5px;
 }
+
+.start-text {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 10px;
+}
