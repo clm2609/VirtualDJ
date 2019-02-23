@@ -8,9 +8,29 @@ cache:
 
 # test_unit:
 #   before_script:
+#     - apt-get update -yqqq
+#     - apt-get install -y xvfb
+#     - apt-get install iceweasel -yqq
+#     - Xvfb :99 -ac &
+#     - export DISPLAY=:99
 #     - npm install --silent
+#     - ./node_modules/.bin/webdriver-manager update --versions.gecko=v0.17.0
 #   script:
 #     - npm run test:ci
+test_unit:
+  before_script:
+    - apt-get update -yqqq
+    - apt-get install -y xvfb
+    - apt-get install iceweasel -yqq
+    - apt-get install fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatspi2.0-0 libgtk-3-0 libnspr4 libnss3 libxss1 libxtst6 lsb-release xdg-utils -y
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+    - Xvfb :99 -ac &
+    - export DISPLAY=:99
+    - npm install --silent
+    - ./node_modules/.bin/webdriver-manager update --versions.gecko=v0.17.0
+  script:
+    - npm run test:ci
 # test_e2e:
 #   before_script:
 #     - apt-get update -yqqq

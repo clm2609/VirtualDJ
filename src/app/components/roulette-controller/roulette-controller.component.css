@@ -6,16 +6,14 @@
   z-index: 5;
   overflow-y: auto;
   height: 160px;
-  top: -9999px;
-  left: -9999px;
+  top: 20px;
+  left: -20px;
   border-radius: 4px;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 
 .unfolded {
-  top: 20px;
-  left: -20px;
 }
 
 .roulette-container {

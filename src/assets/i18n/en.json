@@ -8,7 +8,7 @@
     "DROP": "Drop your song here"
   },
   "MUSIC": {
-    "START": "To start load music with the button or drag music here from your computer. You can change the language in settings. Remember you can check how everything works in help.",
+    "START": "To start, load music with the button or drag music here from your computer. You can change the language in settings. Remember you can check how everything works in help.",
     "CHOOSE": "Load songs",
     "NOMATCH": "No songs match",
     "SONG": "Song"

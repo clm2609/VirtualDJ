@@ -94,4 +94,7 @@ export class PlayerService {
   createLoop(deck, start, end) {
     return this.deck[deck].addRegion({ start: start, end: end, loop: true, drag: false, resize: false });
   }
+  adjustHeight(deck, height) {
+    this.deck[deck].setHeight(height);
+  }
 }

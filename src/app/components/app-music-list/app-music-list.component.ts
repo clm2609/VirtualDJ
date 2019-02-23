@@ -24,7 +24,9 @@ export class AppMusicListComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.musicSubscription.unsubscribe();
+    if (this.musicSubscription) {
+      this.musicSubscription.unsubscribe();
+    }
   }
 
   loadOnDeck(deck, song) {
