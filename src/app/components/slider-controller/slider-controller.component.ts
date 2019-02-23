@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, forwardRef, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, forwardRef, ViewChild, ElementRef, AfterContentInit } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 /** @ignore */ const noop = () => {};
@@ -16,7 +16,7 @@ export const CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR: any = {
   styleUrls: ['./slider-controller.component.css'],
   providers: [CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR]
 })
-export class SliderControllerComponent implements OnInit, ControlValueAccessor {
+export class SliderControllerComponent implements OnInit, ControlValueAccessor, AfterContentInit {
   @Input()
   config: any;
   @ViewChild('sliderShell')
@@ -25,15 +25,19 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
   slider: any;
   fillsize = 16;
   zindex = 0;
-
+  contentInit;
   get thumbWidth(): any {
-    const vertical = !!this.config.vertical;
-    const shell = this.shell;
-    const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
-    if (vertical) {
-      return smallval;
+    if (this.shell) {
+      const vertical = !!this.config.vertical;
+      const shell = this.shell;
+      const smallval = vertical ? shell.offsetWidth : shell.offsetHeight;
+      if (vertical) {
+        return smallval;
+      } else {
+        return smallval / 2.5;
+      }
     } else {
-      return smallval / 2.5;
+      return null;
     }
   }
   get thumbHeight(): any {
@@ -176,8 +180,7 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
       const shell = this.shell;
       const bigval = vertical ? shell.offsetHeight : shell.offsetWidth;
       const thumbsize = vertical ? this.thumbHeight : this.thumbWidth;
-
-      return bigval - thumbsize * 1.25;
+      return bigval - thumbsize * 1.25 > 0 ? bigval - thumbsize * 1.25 : null;
     } else {
       return null;
     }
@@ -228,5 +231,10 @@ export class SliderControllerComponent implements OnInit, ControlValueAccessor {
   }
   registerOnTouched(fn: any) {
     this.onTouchedCallback = fn;
+  }
+  ngAfterContentInit(): void {
+    setTimeout(() => {
+      this.contentInit = true;
+    }, 0);
   }
 }
