@@ -2,13 +2,13 @@
   *ngIf="((width && height) || actualWidth > actualHeight);else warning">
   <div class=" top-layout">
     <div class="deck">
-      <app-deck [deckNumber]="0"></app-deck>
+      <app-deck [deckNumber]="0" id="app_deck_0_component"></app-deck>
     </div>
     <div class="volume-control">
-      <app-volume></app-volume>
+      <app-volume id="app_volume_component"></app-volume>
     </div>
     <div class="deck">
-      <app-deck [deckNumber]="1"></app-deck>
+      <app-deck [deckNumber]="1" id="app_deck_1_component"></app-deck>
     </div>
   </div>
   <div class="bottom-layout">

@@ -125,6 +125,9 @@
                                 <a href="#activateEffect">activateEffect</a>
                             </li>
                             <li>
+                                <a href="#adjustHeight">adjustHeight</a>
+                            </li>
+                            <li>
                                 <a href="#applyEffects">applyEffects</a>
                             </li>
                             <li>
@@ -289,6 +292,80 @@
                                                 </tr>
                                                 <tr>
                                                         <td>i</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="adjustHeight"></a>
+                        <span class="name">
+                            <b>
+                            adjustHeight
+                            </b>
+                            <a href="#adjustHeight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>adjustHeight(deck: , height: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/services/player.service.ts:97</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>deck</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>height</td>
                                                     
                                                     <td>
                                                             No
@@ -1929,6 +2006,9 @@ export class PlayerService {
   }
   createLoop(deck, start, end) {
     return this.deck[deck].addRegion({ start: start, end: end, loop: true, drag: false, resize: false });
+  }
+  adjustHeight(deck, height) {
+    this.deck[deck].setHeight(height);
   }
 }
 </code></pre>

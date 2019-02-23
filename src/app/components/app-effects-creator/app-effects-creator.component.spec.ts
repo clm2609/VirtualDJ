@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AppEffectsCreatorComponent } from './app-effects-creator.component';
+import { AppModule } from 'src/app/app.module';
 
 describe('AppEffectsCreatorComponent', () => {
   let component: AppEffectsCreatorComponent;
@@ -8,7 +9,7 @@ describe('AppEffectsCreatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppEffectsCreatorComponent]
+      imports: [AppModule]
     }).compileComponents();
   }));
 

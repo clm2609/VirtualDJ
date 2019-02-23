@@ -1,4 +1,14 @@
-import { Component, OnInit, Input, AfterViewInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  AfterViewInit,
+  OnDestroy,
+  AfterContentInit,
+  ViewChild,
+  ElementRef,
+  HostListener
+} from '@angular/core';
 import { MusicLoaderService } from '../../services/music-loader.service';
 import { PlayerService } from '../../services/player.service';
 import { Subscription } from 'rxjs';
@@ -15,6 +25,8 @@ import { HelpService } from 'src/app/services/help.service';
 export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input()
   deckNumber: number;
+  @ViewChild('waveform')
+  waveform: ElementRef;
   private musicSubscription: Subscription;
   rotation = 0;
   private active = false;
@@ -34,11 +46,9 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   loopChanger: any;
   incomingLoop = null;
   help: any;
-  constructor(
-    private musicService: MusicLoaderService,
-    private playerService: PlayerService,
-    helpService: HelpService
-  ) {
+  playerService: PlayerService;
+  constructor(private musicService: MusicLoaderService, playerService: PlayerService, helpService: HelpService) {
+    this.playerService = playerService;
     helpService.help$.subscribe(help => {
       this.help = help;
     });
@@ -54,47 +64,57 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
   ngAfterViewInit(): void {
-    const height = document.getElementById('deck_' + this.deckNumber + '_wave').offsetHeight;
-    requestAnimationFrame(() => {
-      this.playerService.save(
-        this.deckNumber,
-        WaveSurfer.create({
-          container: '#deck_' + this.deckNumber + '_wave',
-          waveColor: 'red',
-          progressColor: 'purple',
-          height: height,
-          plugins: [
-            Cursor.create({
-              showTime: true,
-              opacity: 1,
-              customShowTimeStyle: {
-                'background-color': '#000',
-                color: '#fff',
-                padding: '2px',
-                height: height,
-                'font-size': '10px'
-              }
-            }),
-            Regions.create({
-              regions: []
-            })
-          ]
-        })
-      );
-      this.playerService.on(this.deckNumber, 'finish', () => {
-        this.resetDisc();
+    setTimeout(() => {
+      const height = this.waveform.nativeElement.offsetHeight;
+      requestAnimationFrame(() => {
+        this.playerService.save(
+          this.deckNumber,
+          WaveSurfer.create({
+            container: '#' + this.waveform.nativeElement.id,
+            waveColor: 'red',
+            progressColor: 'purple',
+            height: height,
+            responsive: 0,
+            plugins: [
+              Cursor.create({
+                showTime: true,
+                opacity: 1,
+                customShowTimeStyle: {
+                  'background-color': '#000',
+                  color: '#fff',
+                  padding: '2px',
+                  height: height,
+                  'font-size': '10px'
+                }
+              }),
+              Regions.create({
+                regions: []
+              })
+            ]
+          })
+        );
+        this.playerService.on(this.deckNumber, 'finish', () => {
+          this.resetDisc();
+        });
       });
-    });
-    this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
-      const data = a as any;
-      this.resetDisc();
-      this.resetCUE();
-      this.resetPitch();
-      this.song = data.song as File;
-      this.bpm = data.bpm;
-      this.beats = data.beats ? data.beats.reverse() : null;
-    });
+      this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
+        const data = a as any;
+        this.resetDisc();
+        this.resetCUE();
+        this.resetPitch();
+        this.song = data.song as File;
+        this.bpm = data.bpm;
+        this.beats = data.beats ? data.beats.reverse() : null;
+      });
+      // Necessary delay for testing
+    }, 100);
   }
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    const height = this.waveform.nativeElement.offsetHeight;
+    this.playerService.adjustHeight(this.deckNumber, height);
+  }
+
   rotate() {
     if (this.active) {
       this.rotation = (this.rotation + (10 * (100 + this.pitch)) / 100) % 360;
@@ -105,7 +125,9 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
     this.rotation = 0;
   }
   ngOnDestroy(): void {
-    this.musicSubscription.unsubscribe();
+    if (this.musicSubscription) {
+      this.musicSubscription.unsubscribe();
+    }
   }
   playPause() {
     this.playerService.playPause(this.deckNumber);

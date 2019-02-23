@@ -2,7 +2,7 @@
   <div class="volume components-container">
     <div class="volume-eq">
       <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
-        <slider-controller [config]="{id:'volume-deck-0',
+        <slider-controller [config]="{id:'volume_deck_0',
                        min:0, max:100,
                         
                         vertical:true,
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
-        <slider-controller [config]="{id:'volume-deck-1',
+        <slider-controller [config]="{id:'volume_deck_1',
                        min:0,
                         max:100,
                          
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="volume-master" [class.help]="help === 'mastervolume'">
-      <slider-controller [config]="{id:'volume-master',
+      <slider-controller [config]="{id:'volume_balance',
                  min:-100,
                   max:100,
                    

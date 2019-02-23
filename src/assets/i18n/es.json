@@ -8,7 +8,7 @@
     "DROP": "Suelta aqui la cancion"
   },
   "MUSIC": {
-    "START": "Para empezar carga musica con el botón o arrastrandola hasta aquí. Puedes cambiar el idioma en los ajustes. Recuerda que puedes revisar como funciona todo en la ayuda.",
+    "START": "Para empezar, carga musica con el botón o arrastrandola hasta aquí. Puedes cambiar el idioma en los ajustes. Recuerda que puedes revisar como funciona todo en la ayuda.",
     "CHOOSE": "Cargar canciones",
     "NOMATCH": "Ninguna canción coincide con",
     "SONG": "Canción"
