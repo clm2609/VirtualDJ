@@ -311,7 +311,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:90</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:96</a></div>
                             </td>
                         </tr>
 
@@ -349,7 +349,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:77</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:83</a></div>
                             </td>
                         </tr>
 
@@ -387,7 +387,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:74</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:80</a></div>
                             </td>
                         </tr>
 
@@ -452,7 +452,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:110</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:116</a></div>
                             </td>
                         </tr>
 
@@ -490,7 +490,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:66</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:72</a></div>
                             </td>
                         </tr>
 
@@ -528,7 +528,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:70</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:76</a></div>
                             </td>
                         </tr>
 
@@ -566,7 +566,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:42</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/app-effects-creator/app-effects-creator.component.ts:48</a></div>
                             </td>
                         </tr>
 
@@ -1125,24 +1125,30 @@ export class AppEffectsCreatorComponent implements OnInit {
   nameChars &#x3D; 5;
   validName &#x3D; false;
   defaultStep &#x3D; 0.01;
-  selectedEffects
+  selectedEffects;
   removableEffects;
   constructor(private effectServ: EffectsService, private builder: FormBuilder, private playerServ: PlayerService) {
     this.effectsCreatorArray &#x3D; this.effectServ.getEffectsCreator();
     this.effects &#x3D; this.effectServ.getEffects();
   }
   updateRemovableEffects() {
-    console.log(this.effects, this.effects.filter(effect &#x3D;&gt; {
-      console.log(effect.id)
-      return this.selectedEffects.indexOf(effect.id) &#x3D;&#x3D;&#x3D; -1
-    }))
+    console.log(
+      this.effects,
+      this.effects.filter(effect &#x3D;&gt; {
+        console.log(effect.id);
+        return this.selectedEffects.indexOf(effect.id) &#x3D;&#x3D;&#x3D; -1;
+      })
+    );
     this.removableEffects &#x3D; this.effects.filter(effect &#x3D;&gt; {
-      return this.selectedEffects.indexOf(effect.id) &#x3D;&#x3D;&#x3D; -1
-    })
+      return this.selectedEffects.indexOf(effect.id) &#x3D;&#x3D;&#x3D; -1;
+    });
   }
   ngOnInit() {
-    this.selectedEffects &#x3D; [...this.playerServ.effects[0].map(effect &#x3D;&gt; effect.id), ...this.playerServ.effects[1].map(effect &#x3D;&gt; effect.id)]
-    this.updateRemovableEffects()
+    this.selectedEffects &#x3D; [
+      ...this.playerServ.effects[0].map(effect &#x3D;&gt; effect.id),
+      ...this.playerServ.effects[1].map(effect &#x3D;&gt; effect.id)
+    ];
+    this.updateRemovableEffects();
   }
   updateEffect(effect) {
     this.effectStruct &#x3D; JSON.parse(effect);
@@ -1173,7 +1179,7 @@ export class AppEffectsCreatorComponent implements OnInit {
     this.effectStruct &#x3D; null;
   }
   resetRemove() {
-    this.updateRemovableEffects()
+    this.updateRemovableEffects();
     this.selectedEffectRemove &#x3D; null;
   }
   isDefined(something) {
@@ -1189,7 +1195,7 @@ export class AppEffectsCreatorComponent implements OnInit {
       });
       this.effects &#x3D; this.effectServ.getEffects();
       this.reset();
-      this.updateRemovableEffects()
+      this.updateRemovableEffects();
     }
   }
   checkName() {
