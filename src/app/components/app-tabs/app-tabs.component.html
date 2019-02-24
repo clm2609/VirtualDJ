@@ -9,6 +9,10 @@
         id="app_tabs_settings">
         {{ 'TABS.SETTINGS' | translate }}
       </div>
+      <div [ngClass]="{'tab':true, 'tab--active':active=='effectssel'}" (click)="setActive('effectssel')"
+        id="app_tabs_effectssel">
+        {{ 'TABS.EFFECTSSEL' | translate }}
+      </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='effectscr'}" (click)="setActive('effectscr')"
         id="app_tabs_effects_creator">
         {{ 'TABS.EFFCREATOR' | translate }}
@@ -26,6 +30,7 @@
     </div>
     <div class="contents">
       <app-music-list *ngIf="active=='music'"></app-music-list>
+      <app-effects-selector *ngIf="active=='effectssel'"></app-effects-selector>
       <app-settings *ngIf="active=='settings'"></app-settings>
       <app-effects-creator *ngIf="active=='effectscr'"></app-effects-creator>
       <app-help *ngIf="active=='help'"></app-help>
