@@ -5,7 +5,8 @@
     "EFFCREATOR": "Creador de efectos",
     "HELP": "Ayuda",
     "ABOUT": "Información",
-    "DROP": "Suelta aqui la cancion"
+    "DROP": "Suelta aqui la cancion",
+    "EFFECTSSEL": "Selector de efectos"
   },
   "MUSIC": {
     "START": "Para empezar, carga musica con el botón o arrastrandola hasta aquí. Puedes cambiar el idioma en los ajustes. Recuerda que puedes revisar como funciona todo en la ayuda.",

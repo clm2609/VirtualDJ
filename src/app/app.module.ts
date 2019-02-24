@@ -12,6 +12,7 @@ import { RouletteControllerComponent } from './components/roulette-controller/ro
 import { AppTabsComponent } from './components/app-tabs/app-tabs.component';
 import { AppMusicListComponent } from './components/app-music-list/app-music-list.component';
 import { AppSettingsComponent } from './components/app-settings/app-settings.component';
+import { AppEffectsSelectorComponent } from './components/app-effects-selector/app-effects-selector.component';
 import { AppAboutComponent } from './components/app-about/app-about.component';
 import { AppEffectsCreatorComponent } from './components/app-effects-creator/app-effects-creator.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -39,7 +40,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppSettingsComponent,
     AppAboutComponent,
     AppEffectsCreatorComponent,
-    AppHelpComponent
+    AppHelpComponent,
+    AppEffectsSelectorComponent
   ],
   imports: [
     BrowserModule,

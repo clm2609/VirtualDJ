@@ -33,20 +33,4 @@
       </select>
     </div>
   </div>
-  <div class="question-container">
-    <div class="effects-container" *ngFor="let deck of effects;let i=index">
-      <div class="question-label">{{ 'SETTINGS.EFFDECK' | translate }} {{i+1}}</div>
-      <table>
-        <tr *ngFor="let effect of deck;let j=index">
-          <td>{{ 'SETTINGS.EFFECT' | translate }} {{j+1}}</td>
-          <td>
-            <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">
-              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">
-                {{availableEffect.name}}</option>
-            </select>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
 </div>
