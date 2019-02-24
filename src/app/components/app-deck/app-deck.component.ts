@@ -96,12 +96,14 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
         this.playerService.on(this.deckNumber, 'finish', () => {
           this.resetDisc();
         });
+        this.playerService.on(this.deckNumber, 'ready', () => {
+          this.resetDisc();
+          this.resetCUE();
+          this.resetPitch();
+        });
       });
       this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
         const data = a as any;
-        this.resetDisc();
-        this.resetCUE();
-        this.resetPitch();
         this.song = data.song as File;
         this.bpm = data.bpm;
         this.beats = data.beats ? data.beats.reverse() : null;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EffectsService } from '../../services/effects.service';
 import { FormBuilder, FormGroup, AbstractControl, Validators, ValidatorFn } from '@angular/forms';
+import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
   selector: 'app-effects-creator',
@@ -19,11 +20,31 @@ export class AppEffectsCreatorComponent implements OnInit {
   nameChars = 5;
   validName = false;
   defaultStep = 0.01;
-  constructor(private effectServ: EffectsService, private builder: FormBuilder) {
+  selectedEffects;
+  removableEffects;
+  constructor(private effectServ: EffectsService, private builder: FormBuilder, private playerServ: PlayerService) {
     this.effectsCreatorArray = this.effectServ.getEffectsCreator();
     this.effects = this.effectServ.getEffects();
   }
-  ngOnInit() {}
+  updateRemovableEffects() {
+    console.log(
+      this.effects,
+      this.effects.filter(effect => {
+        console.log(effect.id);
+        return this.selectedEffects.indexOf(effect.id) === -1;
+      })
+    );
+    this.removableEffects = this.effects.filter(effect => {
+      return this.selectedEffects.indexOf(effect.id) === -1;
+    });
+  }
+  ngOnInit() {
+    this.selectedEffects = [
+      ...this.playerServ.effects[0].map(effect => effect.id),
+      ...this.playerServ.effects[1].map(effect => effect.id)
+    ];
+    this.updateRemovableEffects();
+  }
   updateEffect(effect) {
     this.effectStruct = JSON.parse(effect);
     const config = {};
@@ -53,6 +74,7 @@ export class AppEffectsCreatorComponent implements OnInit {
     this.effectStruct = null;
   }
   resetRemove() {
+    this.updateRemovableEffects();
     this.selectedEffectRemove = null;
   }
   isDefined(something) {
@@ -68,6 +90,7 @@ export class AppEffectsCreatorComponent implements OnInit {
       });
       this.effects = this.effectServ.getEffects();
       this.reset();
+      this.updateRemovableEffects();
     }
   }
   checkName() {
