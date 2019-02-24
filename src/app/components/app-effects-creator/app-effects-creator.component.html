@@ -44,9 +44,9 @@
   </div>
   <div class="question">
     <div class="question-label">{{ 'EFFCREATOR.REMOVE' | translate }}</div>
-    <div *ngIf="effects.length<=6">{{ 'EFFCREATOR.TOREMOVE' | translate }}</div>
-    <select *ngIf="effects.length>6" [(ngModel)]="selectedEffectRemove" style="width:250px">
-      <option *ngFor="let effect of effects" [value]="effect.id">{{effect.name}}</option>
+    <div *ngIf="!(effects.length>6 && removableEffects.length)">{{ 'EFFCREATOR.TOREMOVE' | translate }}</div>
+    <select *ngIf="effects.length>6 && removableEffects.length" [(ngModel)]="selectedEffectRemove" style="width:250px">
+      <option *ngFor="let effect of removableEffects" [value]="effect.id">{{effect.name}}</option>
     </select>
     <button *ngIf="effects.length>6" style="width:250px" (click)="removeEffect()" [disabled]="">{{
       'EFFCREATOR.REMOVEBUTTON' | translate }}</button>

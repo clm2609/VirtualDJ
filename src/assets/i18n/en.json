@@ -24,7 +24,7 @@
     "CREATE": "Create effect",
     "CREATEBUTTON": "Create",
     "REMOVE": "Remove effect",
-    "TOREMOVE": "To remove effects you must have at least 6 effects",
+    "TOREMOVE": "To remove effects you must have at least 6 effects, and have at least one non selected effect",
     "REMOVEBUTTON": "Remove",
     "CONFIG": "Configuration:",
     "NAME": "Name:"
