@@ -14,6 +14,6 @@ export class AppHelpComponent implements OnInit {
     this.helpService.save(helpquery);
     setTimeout(() => {
       this.helpService.save(null);
-    }, 3000);
+    }, 1000);
   }
 }

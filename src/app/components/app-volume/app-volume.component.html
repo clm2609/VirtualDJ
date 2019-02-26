@@ -27,7 +27,7 @@
             <roulette-controller [config]="{ id: 'bass_1', min:-40, max:40  }" [(ngModel)]="bass0"
               (ngModelChange)="setEQ()"></roulette-controller>
           </div>
-          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(0)">
+          <img class="icon-reset" src="assets/images/reset.png" (click)="resetEQ(0)">
         </div>
         <div class="roulette-container">
           <div class="roulete-title">
@@ -45,7 +45,7 @@
             <roulette-controller [config]="{ id: 'bass_2', min:-40, max:40, right:true  }" [(ngModel)]="bass1"
               (ngModelChange)="setEQ()"></roulette-controller>
           </div>
-          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">
+          <img class="icon-reset" src="assets/images/reset.png" (click)="resetEQ(1)">
         </div>
       </div>
       <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
