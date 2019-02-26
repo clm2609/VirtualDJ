@@ -32,17 +32,17 @@
         <div class="roulette-container">
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.HIGH' | translate }}</p>
-            <roulette-controller [config]="{ id: 'trebble_2', min:-40, max:40  }" [(ngModel)]="trebble1"
+            <roulette-controller [config]="{ id: 'trebble_2', min:-40, max:40, right:true  }" [(ngModel)]="trebble1"
               (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.MID' | translate }}</p>
-            <roulette-controller [config]="{ id: 'middle_2', min:-40, max:40  }" [(ngModel)]="mid1"
+            <roulette-controller [config]="{ id: 'middle_2', min:-40, max:40, right:true  }" [(ngModel)]="mid1"
               (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <div class="roulete-title">
             <p style="margin-bottom:3px;">{{ 'VOLUME.LOW' | translate }}</p>
-            <roulette-controller [config]="{ id: 'bass_2', min:-40, max:40  }" [(ngModel)]="bass1"
+            <roulette-controller [config]="{ id: 'bass_2', min:-40, max:40, right:true  }" [(ngModel)]="bass1"
               (ngModelChange)="setEQ()"></roulette-controller>
           </div>
           <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">
