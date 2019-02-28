@@ -22,7 +22,8 @@
       <div class="dj-deck ">
         <div class="plate-loops">
           <div class="plate">
-            <img class="vynil" [ngStyle]="{'transform': 'rotate(' + rotation+ 'deg)'}" src="assets/images/vynil.svg">
+            <img (dragstart)="$event.preventDefault()" draggable="false" class="vynil"
+              [ngStyle]="{'transform': 'rotate(' + rotation+ 'deg)'}" src="assets/images/vynil.svg">
           </div>
           Loops
           <div class="button-container button-container--loops" [class.help]="help === 'loop'">
@@ -79,7 +80,8 @@
                 </slider-controller>
               </div>
               <div class="layout-pitch-reset">
-                <img class="icon" src="assets/images/reset.png" (click)="resetPitch()">
+                <img (dragstart)="$event.preventDefault()" draggable="false" class="icon" src="assets/images/reset.png"
+                  (click)="resetPitch()">
               </div>
 
             </div>
