@@ -3,28 +3,35 @@
     <p>{{ 'HELP.START' | translate }}</p>
     <p>{{ 'HELP.FEATURES' | translate }}</p>
     <ul>
-      <li (click)="help('play')" id="app_help_play"> <img class="icon" src="assets/images/question.png">
+      <li (click)="help('play')" id="app_help_play"> <img (dragstart)="$event.preventDefault()" draggable="false"
+          class="icon" src="assets/images/question.png">
         {{ 'HELP.PLAY' | translate }}</li>
 
-      <li (click)="help('maindeckvolume')" id="app_help_main_deck_volume"><img class="icon"
-          src="assets/images/question.png"> {{ 'HELP.MDECKVOLUME' | translate }}</li>
+      <li (click)="help('maindeckvolume')" id="app_help_main_deck_volume"><img (dragstart)="$event.preventDefault()"
+          draggable="false" class="icon" src="assets/images/question.png"> {{ 'HELP.MDECKVOLUME' | translate }}</li>
 
-      <li (click)="help('mastervolume')" id="app_help_master_volume"><img class="icon" src="assets/images/question.png">
+      <li (click)="help('mastervolume')" id="app_help_master_volume"><img (dragstart)="$event.preventDefault()"
+          draggable="false" class="icon" src="assets/images/question.png">
         {{ 'HELP.MVOLUME' | translate }}</li>
 
-      <li (click)="help('equalizer')" id="app_help_play_equalizer"><img class="icon" src="assets/images/question.png">
+      <li (click)="help('equalizer')" id="app_help_play_equalizer"><img (dragstart)="$event.preventDefault()"
+          draggable="false" class="icon" src="assets/images/question.png">
         {{ 'HELP.EQUALIZER' | translate }}</li>
 
-      <li (click)="help('cue')" id="app_help_play_cue"><img class="icon" src="assets/images/question.png">
+      <li (click)="help('cue')" id="app_help_play_cue"><img (dragstart)="$event.preventDefault()" draggable="false"
+          class="icon" src="assets/images/question.png">
         {{ 'HELP.CUE' | translate }}</li>
 
-      <li (click)="help('pitch')" id="app_help_play_pitch"><img class="icon" src="assets/images/question.png">
+      <li (click)="help('pitch')" id="app_help_play_pitch"><img (dragstart)="$event.preventDefault()" draggable="false"
+          class="icon" src="assets/images/question.png">
         {{ 'HELP.PITCH' | translate }}</li>
 
-      <li (click)="help('loop')" id="app_help_play_loop"><img class="icon" src="assets/images/question.png">
+      <li (click)="help('loop')" id="app_help_play_loop"><img (dragstart)="$event.preventDefault()" draggable="false"
+          class="icon" src="assets/images/question.png">
         {{ 'HELP.LOOPS' | translate }}</li>
 
-      <li (click)="help('effects')" id="app_help_play_effects"><img class="icon" src="assets/images/question.png">
+      <li (click)="help('effects')" id="app_help_play_effects"><img (dragstart)="$event.preventDefault()"
+          draggable="false" class="icon" src="assets/images/question.png">
         {{ 'HELP.EFFECTS' | translate }}</li>
 
 
