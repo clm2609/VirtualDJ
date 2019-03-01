@@ -394,6 +394,7 @@ import { TranslateModule, TranslateLoader } from &#x27;@ngx-translate/core&#x27;
 import { TranslateHttpLoader } from &#x27;@ngx-translate/http-loader&#x27;;
 import { HttpClient, HttpClientModule } from &#x27;@angular/common/http&#x27;;
 import { APP_BASE_HREF } from &#x27;@angular/common&#x27;;
+import { AngularDraggableModule } from &#x27;angular2-draggable&#x27;;
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -427,7 +428,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    AngularDraggableModule
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: &#x27;/&#x27; }],
   bootstrap: [AppComponent]

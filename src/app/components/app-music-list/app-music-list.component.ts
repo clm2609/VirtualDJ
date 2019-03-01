@@ -1,6 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChildren } from '@angular/core';
 import { MusicLoaderService } from '../../services/music-loader.service';
-import { Subscription } from 'rxjs';
+import { Subscription, iif } from 'rxjs';
+import { AngularDraggableDirective } from 'angular2-draggable';
 
 @Component({
   selector: 'app-music-list',
@@ -13,6 +14,11 @@ export class AppMusicListComponent implements OnDestroy {
   musicList: File[];
   shownMusic: File[];
   query: string;
+  dragging: boolean;
+  startX;
+  startY;
+  @ViewChildren(AngularDraggableDirective)
+  songs: any;
   constructor(musicService: MusicLoaderService) {
     this.musicService = musicService;
     this.musicList = musicService.music;
@@ -68,5 +74,25 @@ export class AppMusicListComponent implements OnDestroy {
   }
   removeAllSongs() {
     this.musicService.deleteAllSongs();
+  }
+  dragStart() {
+    this.dragging = true;
+  }
+  dragEnd(pos, i) {
+    this.dragging = false;
+    // TODO: search a more elegant solution than by cursor position
+    console.log(window.outerWidth, this.startX + pos.x, window.outerHeight, this.startY + pos.y);
+    if (window.outerHeight * 0.5 > this.startY + pos.y) {
+      if (window.outerWidth * 0.4 > this.startX + pos.x) {
+        this.loadOnDeck(0, this.shownMusic[i]);
+      } else if (window.outerWidth * 0.6 < this.startX + pos.x) {
+        this.loadOnDeck(1, this.shownMusic[i]);
+      }
+    }
+    this.songs._results[i].resetPosition();
+  }
+  saveStartPos(event) {
+    this.startX = event.clientX;
+    this.startY = event.clientY;
   }
 }

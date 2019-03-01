@@ -98,3 +98,8 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+html {
+  max-height: 100%;
+  overflow: hidden;
+}

@@ -29,6 +29,8 @@
     </div>
   </div>
   <div class="icon-attribution">
+    <img (dragstart)="$event.preventDefault()" draggable="false" class="icon" src="assets/images/high-volume.png">
+    <img (dragstart)="$event.preventDefault()" draggable="false" class="icon" src="assets/images/mute.png">
     <img (dragstart)="$event.preventDefault()" draggable="false" class="icon" src="assets/images/reset.png">
     <img (dragstart)="$event.preventDefault()" draggable="false" class="icon" src="assets/images/maximize.png">
     <img (dragstart)="$event.preventDefault()" draggable="false" class="icon" src="assets/images/minimize.png">
