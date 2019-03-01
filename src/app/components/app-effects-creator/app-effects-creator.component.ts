@@ -17,7 +17,6 @@ export class AppEffectsCreatorComponent implements OnInit {
   JSON = JSON;
   config: FormGroup;
   name = '';
-  nameChars = 5;
   validName = false;
   defaultStep = 0.01;
   selectedEffects;
@@ -105,8 +104,7 @@ export class AppEffectsCreatorComponent implements OnInit {
             .toLowerCase()
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
-      ) &&
-      this.name.length >= this.nameChars
+      )
     ) {
       this.validName = true;
     } else {

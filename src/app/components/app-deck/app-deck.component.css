@@ -160,13 +160,13 @@
 .button--play {
   width: 50%;
   height: 100%;
-  background-color: #009973;
+  background-color: #13c78b;
 }
 
 .button--cue {
   width: 50%;
   height: 100%;
-  background-color: #dd0000;
+  background-color: #d75a4a;
   color: #ffffff;
   font-size: 20px;
   font-weight: 900;
