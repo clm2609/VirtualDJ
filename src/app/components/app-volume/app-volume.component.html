@@ -2,13 +2,24 @@
   <div class="volume components-container">
     <div class="volume-eq">
       <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
-        <slider-controller [config]="{id:'volume_deck_0',
+        <div class="volume-images">
+          <img (click)="maxVol(0)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"
+            src="assets/images/high-volume.png">
+        </div>
+        <div class="volume-slider">
+
+          <slider-controller [config]="{id:'volume_deck_0',
                        min:0, max:100,
                         
                         vertical:true,
                         thumb:'sliderthumb-pitch-vertical',
                         track:'slidertrack-vol-vertical'}" [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)">
-        </slider-controller>
+          </slider-controller>
+        </div>
+        <div class="volume-images">
+          <img (click)="mute(0)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"
+            src="assets/images/mute.png">
+        </div>
       </div>
       <div class="volume-equalizers" [class.help]="help === 'equalizer'">
         <div class="roulette-container">
@@ -51,14 +62,24 @@
         </div>
       </div>
       <div class="volume-decks" [class.help]="help === 'maindeckvolume'">
-        <slider-controller [config]="{id:'volume_deck_1',
+        <div class="volume-images">
+          <img (click)="maxVol(1)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"
+            src="assets/images/high-volume.png">
+        </div>
+        <div class="volume-slider">
+          <slider-controller [config]="{id:'volume_deck_1',
                        min:0,
                         max:100,
                          
                          vertical:true,
                         thumb:'sliderthumb-pitch-vertical',
                         track:'slidertrack-vol-vertical'}" [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)">
-        </slider-controller>
+          </slider-controller>
+        </div>
+        <div class="volume-images">
+          <img (click)="mute(1)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"
+            src="assets/images/mute.png">
+        </div>
       </div>
     </div>
     <div class="volume-master" [class.help]="help === 'mastervolume'">

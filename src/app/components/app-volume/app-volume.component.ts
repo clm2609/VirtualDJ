@@ -66,4 +66,12 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
       this.resetEQ(0);
     });
   }
+  maxVol(deck) {
+    this['volume' + deck] = 100;
+    this.changeVolume(deck);
+  }
+  mute(deck) {
+    this['volume' + deck] = 0;
+    this.changeVolume(deck);
+  }
 }

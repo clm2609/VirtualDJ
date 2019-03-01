@@ -1,4 +1,4 @@
-<div class="music-container" id="app_music_list_container">
+<div class="music-container" id="app_music_list_container" [ngClass]="{'music-container-dragging':dragging}">
   <table *ngIf="musicList.length>0" id="app_music_list">
     <tr class="header">
       <td></td>
@@ -24,7 +24,8 @@
         </div>
       </td>
     </tr>
-    <tr class="elements" *ngFor="let song of shownMusic;let i = index">
+    <tr class="elements" *ngFor="let song of shownMusic;let i = index" ngDraggable [zIndexMoving]="9999"
+      (started)="dragStart()" (endOffset)="dragEnd($event,i)" (mousedown)="saveStartPos($event)" [lockAxis]="x">
       <td class="icon-container">
         <img (dragstart)="$event.preventDefault()" class="icon" src="assets/images/music-player.svg">
       </td>
@@ -32,13 +33,16 @@
       <!-- <td title="" class="info"></td> -->
       <td>
         <div class="icons-container">
-          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, song)">
+          <div title="Load in deck 1" class="icon-container" (click)="loadOnDeck(0, song)"
+            (mousedown)="$event.stopPropagation()" (touchstart)="$event.stopPropagation()">
             <img (dragstart)="$event.preventDefault()" class="icon icon--clickable" src="assets/images/uno.svg">
           </div>
-          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, song)">
+          <div title="Load in deck 2" class="icon-container" (click)="loadOnDeck(1, song)"
+            (mousedown)="$event.stopPropagation()" (touchstart)="$event.stopPropagation()">
             <img (dragstart)="$event.preventDefault()" class="icon icon--clickable" src="assets/images/dos.svg">
           </div>
-          <div title="Remove" class="icon-container" (click)="removeSong(song)">
+          <div title="Remove" class="icon-container" (click)="removeSong(song)" (mousedown)="$event.stopPropagation()"
+            (touchstart)="$event.stopPropagation()">
             <img (dragstart)="$event.preventDefault()" class="icon icon--clickable" src="assets/images/error.svg">
           </div>
         </div>
