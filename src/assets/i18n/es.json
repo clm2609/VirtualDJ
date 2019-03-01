@@ -31,13 +31,13 @@
     "NAME": "Name:"
   },
   "HELP": {
-    "START": "Para empezar a mezclar carga una canción. Clicka sobre cualquier funcionalidad para mostrarla en la interfaz.",
+    "START": "Para empezar a mezclar carga una canción. Haz click sobre cualquier funcionalidad para mostrarla en la interfaz.",
     "FEATURES": "Funcionalidades:",
     "PLAY": "Reproducir: Puedes reproducir una canción.",
     "MDECKVOLUME": "Volumen principal de platina: Cada platina tiene un volumen principal, puedes cambiarlo para modificar el volumen de esa platina.",
     "MVOLUME": "Volumen maestro: Puedes elegir qué platina escuchar, mientras bajas el volumen de la otra.",
     "EQUALIZER": "Ecualizador: Puedes controlar las frecuencias altas, medias y bajas de cada platina por separado. Tambien puedes resetearlo. Se resetea automáticamente al cargar una nueva canción.",
-    "CUE": "CUE: Puedes guardar cualquier moment en la canción para retomar la canción desde ese punto. Para guardar un momento (hasta 4) pulsa el botón de CUE y se guardará el momento actual. Para retomar desde un momento selecciónelo. Los CUE se resetean tras cargar una nueva canción.",
+    "CUE": "CUE: Puedes guardar cualquier momento en la canción para retomar la canción desde ese punto. Para guardar un momento (hasta 4) pulsa el botón de CUE y se guardará el momento actual. Para retomar desde un momento selecciónelo. Los CUE se resetean tras cargar una nueva canción.",
     "PITCH": "Pitch: Controla la frecuencia (y velocidad) de la canción sonando. Se reseteara tras cargar una nueva canción",
     "LOOPS": "Loops: Puedes reproducir pequeños fragmentos de la canción en bucle en unidades de beats.",
     "EFFECTS": "Efectos: Puedes reproducir efectos con la canción. Para seleccionar qué efectos quieres debes ir a la pestaña de ajustes. También puedes crear efectos en la pestaña de creación de efectos."
