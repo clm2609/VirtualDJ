@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Renderer2 } from '@angular/core';
 import { MusicLoaderService } from '../../services/music-loader.service';
 
 @Component({
@@ -10,20 +10,18 @@ export class AppTabsComponent {
   active = 'music';
   dragging = false;
   maximized = false;
-  musicService: MusicLoaderService;
+  dragLeaveList;
+  dropList;
   setActive(active) {
     this.active = active;
   }
   maximize() {
     this.maximized = !this.maximized;
   }
-  constructor(musicService: MusicLoaderService) {
-    this.musicService = musicService;
-  }
+  constructor(private musicService: MusicLoaderService, private renderer: Renderer2) {}
 
   droped(event) {
     event.preventDefault();
-    event.stopPropagation();
     this.recievedFiles(event.dataTransfer.files);
     this.dragging = false;
   }
@@ -32,10 +30,17 @@ export class AppTabsComponent {
     event.stopPropagation();
     event.preventDefault();
     this.dragging = true;
+    this.dragLeaveList = this.renderer.listen('window', 'dragleave', () => {
+      this.stopDrag();
+    });
+    this.dropList = this.renderer.listen('window', 'drop', () => {
+      this.stopDrag();
+    });
   }
-  @HostListener('window:dragleave')
-  stopdrag() {
+  stopDrag() {
     this.dragging = false;
+    this.dragLeaveList();
+    this.dropList();
   }
   recievedFiles(files: FileList) {
     if (files) {

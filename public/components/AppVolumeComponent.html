@@ -170,6 +170,12 @@
                                 <a href="#changeVolume">changeVolume</a>
                             </li>
                             <li>
+                                <a href="#maxVol">maxVol</a>
+                            </li>
+                            <li>
+                                <a href="#mute">mute</a>
+                            </li>
+                            <li>
                                 <a href="#resetEQ">resetEQ</a>
                             </li>
                             <li>
@@ -193,7 +199,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(musicService: <a href="../injectables/MusicLoaderService.html">MusicLoaderService</a>, effectServ: <a href="../injectables/EffectsService.html">EffectsService</a>, playerService: <a href="../injectables/PlayerService.html">PlayerService</a>, helpService: <a href="../injectables/HelpService.html">HelpService</a>)</code>
+<code>constructor(musicService: <a href="../injectables/MusicLoaderService.html">MusicLoaderService</a>, eqServ: <a href="../injectables/EQService.html">EQService</a>, playerService: <a href="../injectables/PlayerService.html">PlayerService</a>, helpService: <a href="../injectables/HelpService.html">HelpService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -228,10 +234,10 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                        <td>effectServ</td>
+                                                        <td>eqServ</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/EffectsService.html" target="_self" >EffectsService</a></code>
+                                                                    <code><a href="../injectables/EQService.html" target="_self" >EQService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -350,6 +356,136 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="maxVol"></a>
+                        <span class="name">
+                            <b>
+                            maxVol
+                            </b>
+                            <a href="#maxVol"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>maxVol(deck: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>deck</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mute"></a>
+                        <span class="name">
+                            <b>
+                            mute
+                            </b>
+                            <a href="#mute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>mute(deck: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:77</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>deck</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="resetEQ"></a>
                         <span class="name">
                             <b>
@@ -368,7 +504,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:51</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:52</a></div>
                             </td>
                         </tr>
 
@@ -426,14 +562,14 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>setEQ()</code>
+<code>setEQ(i: )</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/app-volume/app-volume.component.ts:48</a></div>
                             </td>
                         </tr>
 
@@ -442,9 +578,36 @@
                     <td class="col-md-4">
 
                             <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>i</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                             </div>
+                                <div class="io-description">
+                                    
+                                </div>
                     </td>
                 </tr>
             </tbody>
@@ -888,7 +1051,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, AfterViewInit } from &#x27;@angular/core&#x27;;
 import { PlayerService } from &#x27;../../services/player.service&#x27;;
-import { EffectsService } from &#x27;../../services/effects.service&#x27;;
+import { EQService } from &#x27;../../services/eq.service&#x27;;
 import { MusicLoaderService } from &#x27;../../services/music-loader.service&#x27;;
 import { HelpService } from &#x27;src/app/services/help.service&#x27;;
 
@@ -900,7 +1063,7 @@ import { HelpService } from &#x27;src/app/services/help.service&#x27;;
 export class AppVolumeComponent implements OnInit, AfterViewInit {
   constructor(
     private musicService: MusicLoaderService,
-    private effectServ: EffectsService,
+    private eqServ: EQService,
     private playerService: PlayerService,
     helpService: HelpService
   ) {
@@ -930,11 +1093,12 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
     this.playerService.setVolume(deck, (this[&#x27;volume&#x27; + deck] / 100) * masterMultiplier);
   }
   ngOnInit() {
-    this.setEQ();
+    this.setEQ(0);
+    this.setEQ(1);
   }
-  setEQ() {
-    const EQ &#x3D; this.effectServ.createEQ(this.bass0, this.mid0, this.trebble0, this.bass1, this.mid1, this.trebble1);
-    this.playerService.saveEQ(EQ);
+  setEQ(i) {
+    const EQ &#x3D; this.eqServ.createEQ(this[&#x27;bass&#x27; + i], this[&#x27;mid&#x27; + i], this[&#x27;trebble&#x27; + i]);
+    this.playerService.saveEQ(EQ, i);
   }
   resetEQ(deck) {
     if (deck &#x3D;&#x3D;&#x3D; 0) {
@@ -947,12 +1111,23 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
       this.mid1 &#x3D; 0;
       this.trebble1 &#x3D; 0;
     }
-    this.setEQ();
+    this.setEQ(deck);
   }
   ngAfterViewInit() {
     this.musicSubscription[0] &#x3D; this.musicService.decksongs$[0].subscribe(a &#x3D;&gt; {
       this.resetEQ(0);
     });
+    this.musicSubscription[1] &#x3D; this.musicService.decksongs$[1].subscribe(a &#x3D;&gt; {
+      this.resetEQ(1);
+    });
+  }
+  maxVol(deck) {
+    this[&#x27;volume&#x27; + deck] &#x3D; 100;
+    this.changeVolume(deck);
+  }
+  mute(deck) {
+    this[&#x27;volume&#x27; + deck] &#x3D; 0;
+    this.changeVolume(deck);
   }
 }
 </code></pre>
@@ -963,61 +1138,84 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
   &lt;div class&#x3D;&quot;volume components-container&quot;&gt;
     &lt;div class&#x3D;&quot;volume-eq&quot;&gt;
       &lt;div class&#x3D;&quot;volume-decks&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;maindeckvolume&#x27;&quot;&gt;
-        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume_deck_0&#x27;,
+        &lt;div class&#x3D;&quot;volume-images&quot;&gt;
+          &lt;img (click)&#x3D;&quot;maxVol(0)&quot; (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot;
+            src&#x3D;&quot;assets/images/high-volume.png&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;volume-slider&quot;&gt;
+
+          &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume_deck_0&#x27;,
                        min:0, max:100,
                         
                         vertical:true,
                         thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
                         track:&#x27;slidertrack-vol-vertical&#x27;}&quot; [(ngModel)]&#x3D;&quot;volume0&quot; (ngModelChange)&#x3D;&quot;changeVolume(0)&quot;&gt;
-        &lt;/slider-controller&gt;
+          &lt;/slider-controller&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;volume-images&quot;&gt;
+          &lt;img (click)&#x3D;&quot;mute(0)&quot; (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot;
+            src&#x3D;&quot;assets/images/mute.png&quot;&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;volume-equalizers&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;equalizer&#x27;&quot;&gt;
         &lt;div class&#x3D;&quot;roulette-container&quot;&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.HIGH&#x27; | translate }}&lt;/p&gt;
             &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_1&#x27;, min:-40, max:40 }&quot; [(ngModel)]&#x3D;&quot;trebble0&quot;
-              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+              (ngModelChange)&#x3D;&quot;setEQ(0)&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.MID&#x27; | translate }}&lt;/p&gt;
             &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid0&quot;
-              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+              (ngModelChange)&#x3D;&quot;setEQ(0)&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.LOW&#x27; | translate }}&lt;/p&gt;
             &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_1&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass0&quot;
-              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+              (ngModelChange)&#x3D;&quot;setEQ(0)&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
-          &lt;img class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.svg&quot; (click)&#x3D;&quot;resetEQ(0)&quot;&gt;
+          &lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.png&quot;
+            (click)&#x3D;&quot;resetEQ(0)&quot;&gt;
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;roulette-container&quot;&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.HIGH&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;trebble1&quot;
-              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;trebble_2&#x27;, min:-40, max:40, right:true  }&quot; [(ngModel)]&#x3D;&quot;trebble1&quot;
+              (ngModelChange)&#x3D;&quot;setEQ(1)&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.MID&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;mid1&quot;
-              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;middle_2&#x27;, min:-40, max:40, right:true  }&quot; [(ngModel)]&#x3D;&quot;mid1&quot;
+              (ngModelChange)&#x3D;&quot;setEQ(1)&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
           &lt;div class&#x3D;&quot;roulete-title&quot;&gt;
             &lt;p style&#x3D;&quot;margin-bottom:3px;&quot;&gt;{{ &#x27;VOLUME.LOW&#x27; | translate }}&lt;/p&gt;
-            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_2&#x27;, min:-40, max:40  }&quot; [(ngModel)]&#x3D;&quot;bass1&quot;
-              (ngModelChange)&#x3D;&quot;setEQ()&quot;&gt;&lt;/roulette-controller&gt;
+            &lt;roulette-controller [config]&#x3D;&quot;{ id: &#x27;bass_2&#x27;, min:-40, max:40, right:true  }&quot; [(ngModel)]&#x3D;&quot;bass1&quot;
+              (ngModelChange)&#x3D;&quot;setEQ(1)&quot;&gt;&lt;/roulette-controller&gt;
           &lt;/div&gt;
-          &lt;img class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.svg&quot; (click)&#x3D;&quot;resetEQ(1)&quot;&gt;
+          &lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon-reset&quot; src&#x3D;&quot;assets/images/reset.png&quot;
+            (click)&#x3D;&quot;resetEQ(1)&quot;&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;volume-decks&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;maindeckvolume&#x27;&quot;&gt;
-        &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume_deck_1&#x27;,
+        &lt;div class&#x3D;&quot;volume-images&quot;&gt;
+          &lt;img (click)&#x3D;&quot;maxVol(1)&quot; (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot;
+            src&#x3D;&quot;assets/images/high-volume.png&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;volume-slider&quot;&gt;
+          &lt;slider-controller [config]&#x3D;&quot;{id:&#x27;volume_deck_1&#x27;,
                        min:0,
                         max:100,
                          
                          vertical:true,
                         thumb:&#x27;sliderthumb-pitch-vertical&#x27;,
                         track:&#x27;slidertrack-vol-vertical&#x27;}&quot; [(ngModel)]&#x3D;&quot;volume1&quot; (ngModelChange)&#x3D;&quot;changeVolume(1)&quot;&gt;
-        &lt;/slider-controller&gt;
+          &lt;/slider-controller&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;volume-images&quot;&gt;
+          &lt;img (click)&#x3D;&quot;mute(1)&quot; (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot;
+            src&#x3D;&quot;assets/images/mute.png&quot;&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;volume-master&quot; [class.help]&#x3D;&quot;help &#x3D;&#x3D;&#x3D; &#x27;mastervolume&#x27;&quot;&gt;
@@ -1042,9 +1240,9 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="volume-container" id="app_volume">  <div class="volume components-container">    <div class="volume-eq">      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume_deck_0\',                       min:0, max:100,                                                vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}" [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)">        </slider-controller>      </div>      <div class="volume-equalizers" [class.help]="help === \'equalizer\'">        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_1\', min:-40, max:40 }" [(ngModel)]="trebble0"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_1\', min:-40, max:40  }" [(ngModel)]="mid0"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_1\', min:-40, max:40  }" [(ngModel)]="bass0"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(0)">        </div>        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_2\', min:-40, max:40  }" [(ngModel)]="trebble1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_2\', min:-40, max:40  }" [(ngModel)]="mid1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_2\', min:-40, max:40  }" [(ngModel)]="bass1"              (ngModelChange)="setEQ()"></roulette-controller>          </div>          <img class="icon-reset" src="assets/images/reset.svg" (click)="resetEQ(1)">        </div>      </div>      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <slider-controller [config]="{id:\'volume_deck_1\',                       min:0,                        max:100,                                                  vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}" [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)">        </slider-controller>      </div>    </div>    <div class="volume-master" [class.help]="help === \'mastervolume\'">      <slider-controller [config]="{id:\'volume_balance\',                 min:-100,                  max:100,                                   thumb:\'sliderthumb-pitch\',                track:\'slidertrack-vol\'}" [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)">      </slider-controller>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
-    var DIRECTIVES = [];
+        var COMPONENT_TEMPLATE = '<div><div class="volume-container" id="app_volume">  <div class="volume components-container">    <div class="volume-eq">      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <div class="volume-images">          <img (click)="maxVol(0)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"            src="assets/images/high-volume.png">        </div>        <div class="volume-slider">          <slider-controller [config]="{id:\'volume_deck_0\',                       min:0, max:100,                                                vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}" [(ngModel)]="volume0" (ngModelChange)="changeVolume(0)">          </slider-controller>        </div>        <div class="volume-images">          <img (click)="mute(0)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"            src="assets/images/mute.png">        </div>      </div>      <div class="volume-equalizers" [class.help]="help === \'equalizer\'">        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_1\', min:-40, max:40 }" [(ngModel)]="trebble0"              (ngModelChange)="setEQ(0)"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_1\', min:-40, max:40  }" [(ngModel)]="mid0"              (ngModelChange)="setEQ(0)"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_1\', min:-40, max:40  }" [(ngModel)]="bass0"              (ngModelChange)="setEQ(0)"></roulette-controller>          </div>          <img (dragstart)="$event.preventDefault()" draggable="false" class="icon-reset" src="assets/images/reset.png"            (click)="resetEQ(0)">        </div>        <div class="roulette-container">          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.HIGH\' | translate }}</p>            <roulette-controller [config]="{ id: \'trebble_2\', min:-40, max:40, right:true  }" [(ngModel)]="trebble1"              (ngModelChange)="setEQ(1)"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.MID\' | translate }}</p>            <roulette-controller [config]="{ id: \'middle_2\', min:-40, max:40, right:true  }" [(ngModel)]="mid1"              (ngModelChange)="setEQ(1)"></roulette-controller>          </div>          <div class="roulete-title">            <p style="margin-bottom:3px;">{{ \'VOLUME.LOW\' | translate }}</p>            <roulette-controller [config]="{ id: \'bass_2\', min:-40, max:40, right:true  }" [(ngModel)]="bass1"              (ngModelChange)="setEQ(1)"></roulette-controller>          </div>          <img (dragstart)="$event.preventDefault()" draggable="false" class="icon-reset" src="assets/images/reset.png"            (click)="resetEQ(1)">        </div>      </div>      <div class="volume-decks" [class.help]="help === \'maindeckvolume\'">        <div class="volume-images">          <img (click)="maxVol(1)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"            src="assets/images/high-volume.png">        </div>        <div class="volume-slider">          <slider-controller [config]="{id:\'volume_deck_1\',                       min:0,                        max:100,                                                  vertical:true,                        thumb:\'sliderthumb-pitch-vertical\',                        track:\'slidertrack-vol-vertical\'}" [(ngModel)]="volume1" (ngModelChange)="changeVolume(1)">          </slider-controller>        </div>        <div class="volume-images">          <img (click)="mute(1)" (dragstart)="$event.preventDefault()" draggable="false" class="icon"            src="assets/images/mute.png">        </div>      </div>    </div>    <div class="volume-master" [class.help]="help === \'mastervolume\'">      <slider-controller [config]="{id:\'volume_balance\',                 min:-100,                  max:100,                                   thumb:\'sliderthumb-pitch\',                track:\'slidertrack-vol\'}" [(ngModel)]="volumeMaster" (ngModelChange)="changeVolume(0);changeVolume(1)">      </slider-controller>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppEffectsSelectorComponent', 'selector': 'app-effects-selector'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+    var DIRECTIVES = [{'name': 'AngularDraggableDirective', 'selector': '[ngDraggable]'}];
     var ACTUAL_COMPONENT = {'name': 'AppVolumeComponent'};
 </script>
 <script src="../js/tree.js"></script>

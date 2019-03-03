@@ -1,14 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  AfterViewInit,
-  OnDestroy,
-  AfterContentInit,
-  ViewChild,
-  ElementRef,
-  HostListener
-} from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, OnDestroy, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { MusicLoaderService } from '../../services/music-loader.service';
 import { PlayerService } from '../../services/player.service';
 import { Subscription } from 'rxjs';
@@ -16,6 +6,7 @@ import * as WaveSurfer from 'wavesurfer.js';
 import * as Cursor from 'wavesurfer.js/dist/plugin/wavesurfer.cursor.min.js';
 import * as Regions from 'wavesurfer.js/dist/plugin/wavesurfer.regions.min.js';
 import { HelpService } from 'src/app/services/help.service';
+import { TranslationService } from 'src/app/services/translation.service';
 
 @Component({
   selector: 'app-deck',
@@ -47,10 +38,20 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
   incomingLoop = null;
   help: any;
   playerService: PlayerService;
-  constructor(private musicService: MusicLoaderService, playerService: PlayerService, helpService: HelpService) {
+  locale: string;
+  constructor(
+    private musicService: MusicLoaderService,
+    playerService: PlayerService,
+    helpService: HelpService,
+    translationService: TranslationService
+  ) {
     this.playerService = playerService;
     helpService.help$.subscribe(help => {
       this.help = help;
+    });
+    this.locale = translationService.getActualLang();
+    translationService.getTranslation().onLangChange.subscribe(value => {
+      this.locale = value.lang;
     });
   }
   ngOnInit() {
@@ -96,12 +97,14 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
         this.playerService.on(this.deckNumber, 'finish', () => {
           this.resetDisc();
         });
+        this.playerService.on(this.deckNumber, 'ready', () => {
+          this.resetDisc();
+          this.resetCUE();
+          this.resetPitch();
+        });
       });
       this.musicSubscription = this.musicService.decksongs$[this.deckNumber].subscribe(a => {
         const data = a as any;
-        this.resetDisc();
-        this.resetCUE();
-        this.resetPitch();
         this.song = data.song as File;
         this.bpm = data.bpm;
         this.beats = data.beats ? data.beats.reverse() : null;
@@ -109,8 +112,8 @@ export class AppDeckComponent implements OnInit, AfterViewInit, OnDestroy {
       // Necessary delay for testing
     }, 100);
   }
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  @HostListener('window:resize')
+  onResize() {
     const height = this.waveform.nativeElement.offsetHeight;
     this.playerService.adjustHeight(this.deckNumber, height);
   }

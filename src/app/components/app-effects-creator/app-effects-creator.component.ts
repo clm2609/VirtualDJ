@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EffectsService } from '../../services/effects.service';
 import { FormBuilder, FormGroup, AbstractControl, Validators, ValidatorFn } from '@angular/forms';
+import { PlayerService } from 'src/app/services/player.service';
+import { effectsCreatorArray } from 'src/app/data/effectsCreator';
 
 @Component({
   selector: 'app-effects-creator',
@@ -16,14 +18,26 @@ export class AppEffectsCreatorComponent implements OnInit {
   JSON = JSON;
   config: FormGroup;
   name = '';
-  nameChars = 5;
   validName = false;
   defaultStep = 0.01;
-  constructor(private effectServ: EffectsService, private builder: FormBuilder) {
-    this.effectsCreatorArray = this.effectServ.getEffectsCreator();
+  selectedEffects;
+  removableEffects;
+  constructor(private effectServ: EffectsService, private builder: FormBuilder, private playerServ: PlayerService) {
+    this.effectsCreatorArray = effectsCreatorArray;
     this.effects = this.effectServ.getEffects();
   }
-  ngOnInit() {}
+  updateRemovableEffects() {
+    this.removableEffects = this.effects.filter(effect => {
+      return this.selectedEffects.indexOf(effect.id) === -1;
+    });
+  }
+  ngOnInit() {
+    this.selectedEffects = [
+      ...this.playerServ.effects[0].map(effect => effect.id),
+      ...this.playerServ.effects[1].map(effect => effect.id)
+    ];
+    this.updateRemovableEffects();
+  }
   updateEffect(effect) {
     this.effectStruct = JSON.parse(effect);
     const config = {};
@@ -53,6 +67,7 @@ export class AppEffectsCreatorComponent implements OnInit {
     this.effectStruct = null;
   }
   resetRemove() {
+    this.updateRemovableEffects();
     this.selectedEffectRemove = null;
   }
   isDefined(something) {
@@ -68,6 +83,7 @@ export class AppEffectsCreatorComponent implements OnInit {
       });
       this.effects = this.effectServ.getEffects();
       this.reset();
+      this.updateRemovableEffects();
     }
   }
   checkName() {
@@ -82,8 +98,7 @@ export class AppEffectsCreatorComponent implements OnInit {
             .toLowerCase()
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
-      ) &&
-      this.name.length >= this.nameChars
+      )
     ) {
       this.validName = true;
     } else {

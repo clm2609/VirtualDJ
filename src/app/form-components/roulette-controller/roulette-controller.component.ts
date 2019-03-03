@@ -18,6 +18,7 @@ export const CUSTOM_TEXT_INPUT_CONTROL_VALUE_ACCESSOR: any = {
 export class RouletteControllerComponent implements OnInit, ControlValueAccessor {
   @Input()
   config: any;
+  left: number;
   folded = true;
   value = 0;
   configSlider: any;
@@ -28,6 +29,7 @@ export class RouletteControllerComponent implements OnInit, ControlValueAccessor
   constructor() {}
 
   ngOnInit() {
+    this.left = this.config.right ? 20 : -60;
     this.configSlider = {
       id: this.config.id + 'slider',
       min: this.config.min || 0,

@@ -282,7 +282,7 @@ export class AppHelpComponent implements OnInit {
     this.helpService.save(helpquery);
     setTimeout(() &#x3D;&gt; {
       this.helpService.save(null);
-    }, 3000);
+    }, 1000);
   }
 }
 </code></pre>
@@ -290,27 +290,44 @@ export class AppHelpComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;help-container&quot; id&#x3D;&quot;app_help&quot;&gt;
-  &lt;p&gt;{{ &#x27;HELP.START&#x27; | translate }}&lt;/p&gt;
-  &lt;p&gt;{{ &#x27;HELP.FEATURES&#x27; | translate }}&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li (click)&#x3D;&quot;help(&#x27;play&#x27;)&quot; id&#x3D;&quot;app_help_play&quot;&gt;{{ &#x27;HELP.PLAY&#x27; | translate }}&lt;/li&gt;
+  &lt;div class&#x3D;&quot;margins&quot;&gt;
+    &lt;p&gt;{{ &#x27;HELP.START&#x27; | translate }}&lt;/p&gt;
+    &lt;p&gt;{{ &#x27;HELP.FEATURES&#x27; | translate }}&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;play&#x27;)&quot; id&#x3D;&quot;app_help_play&quot;&gt; &lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot;
+          class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt;
+        {{ &#x27;HELP.PLAY&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;maindeckvolume&#x27;)&quot; id&#x3D;&quot;app_help_main_deck_volume&quot;&gt;{{ &#x27;HELP.MDECKVOLUME&#x27; | translate }}&lt;/li&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;maindeckvolume&#x27;)&quot; id&#x3D;&quot;app_help_main_deck_volume&quot;&gt;&lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot;
+          draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt; {{ &#x27;HELP.MDECKVOLUME&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;mastervolume&#x27;)&quot; id&#x3D;&quot;app_help_master_volume&quot;&gt;{{ &#x27;HELP.MVOLUME&#x27; | translate }}&lt;/li&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;mastervolume&#x27;)&quot; id&#x3D;&quot;app_help_master_volume&quot;&gt;&lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot;
+          draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt;
+        {{ &#x27;HELP.MVOLUME&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;equalizer&#x27;)&quot; id&#x3D;&quot;app_help_play_equalizer&quot;&gt;{{ &#x27;HELP.EQUALIZER&#x27; | translate }}&lt;/li&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;equalizer&#x27;)&quot; id&#x3D;&quot;app_help_play_equalizer&quot;&gt;&lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot;
+          draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt;
+        {{ &#x27;HELP.EQUALIZER&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;cue&#x27;)&quot; id&#x3D;&quot;app_help_play_cue&quot;&gt;{{ &#x27;HELP.CUE&#x27; | translate }}&lt;/li&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;cue&#x27;)&quot; id&#x3D;&quot;app_help_play_cue&quot;&gt;&lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot;
+          class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt;
+        {{ &#x27;HELP.CUE&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;pitch&#x27;)&quot; id&#x3D;&quot;app_help_play_pitch&quot;&gt;{{ &#x27;HELP.PITCH&#x27; | translate }}&lt;/li&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;pitch&#x27;)&quot; id&#x3D;&quot;app_help_play_pitch&quot;&gt;&lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot;
+          class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt;
+        {{ &#x27;HELP.PITCH&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;loop&#x27;)&quot; id&#x3D;&quot;app_help_play_loop&quot;&gt;{{ &#x27;HELP.LOOPS&#x27; | translate }}&lt;/li&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;loop&#x27;)&quot; id&#x3D;&quot;app_help_play_loop&quot;&gt;&lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot; draggable&#x3D;&quot;false&quot;
+          class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt;
+        {{ &#x27;HELP.LOOPS&#x27; | translate }}&lt;/li&gt;
 
-    &lt;li (click)&#x3D;&quot;help(&#x27;effects&#x27;)&quot; id&#x3D;&quot;app_help_play_effects&quot;&gt;{{ &#x27;HELP.EFFECTS&#x27; | translate }}&lt;/li&gt;
+      &lt;li (click)&#x3D;&quot;help(&#x27;effects&#x27;)&quot; id&#x3D;&quot;app_help_play_effects&quot;&gt;&lt;img (dragstart)&#x3D;&quot;$event.preventDefault()&quot;
+          draggable&#x3D;&quot;false&quot; class&#x3D;&quot;icon&quot; src&#x3D;&quot;assets/images/question.png&quot;&gt;
+        {{ &#x27;HELP.EFFECTS&#x27; | translate }}&lt;/li&gt;
 
 
-  &lt;/ul&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
 
@@ -322,9 +339,9 @@ export class AppHelpComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="help-container" id="app_help">  <p>{{ \'HELP.START\' | translate }}</p>  <p>{{ \'HELP.FEATURES\' | translate }}</p>  <ul>    <li (click)="help(\'play\')" id="app_help_play">{{ \'HELP.PLAY\' | translate }}</li>    <li (click)="help(\'maindeckvolume\')" id="app_help_main_deck_volume">{{ \'HELP.MDECKVOLUME\' | translate }}</li>    <li (click)="help(\'mastervolume\')" id="app_help_master_volume">{{ \'HELP.MVOLUME\' | translate }}</li>    <li (click)="help(\'equalizer\')" id="app_help_play_equalizer">{{ \'HELP.EQUALIZER\' | translate }}</li>    <li (click)="help(\'cue\')" id="app_help_play_cue">{{ \'HELP.CUE\' | translate }}</li>    <li (click)="help(\'pitch\')" id="app_help_play_pitch">{{ \'HELP.PITCH\' | translate }}</li>    <li (click)="help(\'loop\')" id="app_help_play_loop">{{ \'HELP.LOOPS\' | translate }}</li>    <li (click)="help(\'effects\')" id="app_help_play_effects">{{ \'HELP.EFFECTS\' | translate }}</li>  </ul></div></div>'
-    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
-    var DIRECTIVES = [];
+        var COMPONENT_TEMPLATE = '<div><div class="help-container" id="app_help">  <div class="margins">    <p>{{ \'HELP.START\' | translate }}</p>    <p>{{ \'HELP.FEATURES\' | translate }}</p>    <ul>      <li (click)="help(\'play\')" id="app_help_play"> <img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.PLAY\' | translate }}</li>      <li (click)="help(\'maindeckvolume\')" id="app_help_main_deck_volume"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png"> {{ \'HELP.MDECKVOLUME\' | translate }}</li>      <li (click)="help(\'mastervolume\')" id="app_help_master_volume"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.MVOLUME\' | translate }}</li>      <li (click)="help(\'equalizer\')" id="app_help_play_equalizer"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.EQUALIZER\' | translate }}</li>      <li (click)="help(\'cue\')" id="app_help_play_cue"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.CUE\' | translate }}</li>      <li (click)="help(\'pitch\')" id="app_help_play_pitch"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.PITCH\' | translate }}</li>      <li (click)="help(\'loop\')" id="app_help_play_loop"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.LOOPS\' | translate }}</li>      <li (click)="help(\'effects\')" id="app_help_play_effects"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.EFFECTS\' | translate }}</li>    </ul>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppEffectsSelectorComponent', 'selector': 'app-effects-selector'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
+    var DIRECTIVES = [{'name': 'AngularDraggableDirective', 'selector': '[ngDraggable]'}];
     var ACTUAL_COMPONENT = {'name': 'AppHelpComponent'};
 </script>
 <script src="../js/tree.js"></script>

@@ -5,9 +5,8 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 5;
   overflow-y: auto;
-  height: 160px;
-  top: 20px;
-  left: -20px;
+  height: 140px;
+  top: -30px;
   border-radius: 4px;
 }
 

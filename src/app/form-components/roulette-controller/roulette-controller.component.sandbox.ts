@@ -9,14 +9,16 @@ export default sandboxOf(RouletteControllerComponent, {
 })
   .add('default', {
     template: `{{ input.value }}
-  <div style="height:200px"></div><roulette-controller [config]="config" #input></roulette-controller>`,
+  <div style="height:200px;"></div>
+  <div style=" margin-left:300px;"><roulette-controller [config]="config" #input></roulette-controller></div>`,
     context: {
       config: { id: 'roulette' }
     }
   })
   .add('max 50', {
     template: `{{ input.value }}
-  <div style="height:200px"></div><roulette-controller [config]="config" #input></roulette-controller>`,
+  <div style="height:200px;"></div>
+  <div style=" margin-left:300px;"><roulette-controller [config]="config" #input></roulette-controller></div>`,
     context: {
       config: { id: 'roulette', max: 50, min: -50 }
     }

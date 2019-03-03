@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PlayerService } from '../../services/player.service';
-import { EffectsService } from '../../services/effects.service';
+import { EQService } from '../../services/eq.service';
 import { MusicLoaderService } from '../../services/music-loader.service';
 import { HelpService } from 'src/app/services/help.service';
 
@@ -12,7 +12,7 @@ import { HelpService } from 'src/app/services/help.service';
 export class AppVolumeComponent implements OnInit, AfterViewInit {
   constructor(
     private musicService: MusicLoaderService,
-    private effectServ: EffectsService,
+    private eqServ: EQService,
     private playerService: PlayerService,
     helpService: HelpService
   ) {
@@ -42,11 +42,12 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
     this.playerService.setVolume(deck, (this['volume' + deck] / 100) * masterMultiplier);
   }
   ngOnInit() {
-    this.setEQ();
+    this.setEQ(0);
+    this.setEQ(1);
   }
-  setEQ() {
-    const EQ = this.effectServ.createEQ(this.bass0, this.mid0, this.trebble0, this.bass1, this.mid1, this.trebble1);
-    this.playerService.saveEQ(EQ);
+  setEQ(i) {
+    const EQ = this.eqServ.createEQ(this['bass' + i], this['mid' + i], this['trebble' + i]);
+    this.playerService.saveEQ(EQ, i);
   }
   resetEQ(deck) {
     if (deck === 0) {
@@ -59,11 +60,22 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
       this.mid1 = 0;
       this.trebble1 = 0;
     }
-    this.setEQ();
+    this.setEQ(deck);
   }
   ngAfterViewInit() {
     this.musicSubscription[0] = this.musicService.decksongs$[0].subscribe(a => {
       this.resetEQ(0);
     });
+    this.musicSubscription[1] = this.musicService.decksongs$[1].subscribe(a => {
+      this.resetEQ(1);
+    });
+  }
+  maxVol(deck) {
+    this['volume' + deck] = 100;
+    this.changeVolume(deck);
+  }
+  mute(deck) {
+    this['volume' + deck] = 0;
+    this.changeVolume(deck);
   }
 }
