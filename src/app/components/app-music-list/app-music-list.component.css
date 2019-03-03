@@ -7,7 +7,7 @@
 }
 
 .music-container-dragging {
-  overflow-y: initial;
+  overflow-y: visible;
 }
 
 .list-item {

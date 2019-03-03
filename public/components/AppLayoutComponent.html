@@ -471,7 +471,7 @@ export class AppLayoutComponent {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;layout&quot; id&#x3D;&quot;app_layout&quot; [style.width.px]&#x3D;&quot;width&quot; [style.height.px]&#x3D;&quot;height&quot;
-  *ngIf&#x3D;&quot;((width &amp;&amp; height) || actualWidth &gt; actualHeight);else warning&quot;&gt;
+  [ngClass]&#x3D;&quot;{&#x27;hidden&#x27;:!((width &amp;&amp; height) || actualWidth &gt; actualHeight)}&quot;&gt;
   &lt;div class&#x3D;&quot; top-layout&quot;&gt;
     &lt;div class&#x3D;&quot;deck&quot;&gt;
       &lt;app-deck [deckNumber]&#x3D;&quot;0&quot; id&#x3D;&quot;app_deck_0_component&quot;&gt;&lt;/app-deck&gt;
@@ -489,11 +489,9 @@ export class AppLayoutComponent {
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;ng-template #warning&gt;
-  &lt;div class&#x3D;&quot;layout&quot; id&#x3D;&quot;app_wrong_orientation_warning&quot;&gt;
-    {{ &#x27;LAYOUT.INFO&#x27; | translate }}
-  &lt;/div&gt;
-&lt;/ng-template&gt;</code></pre>
+&lt;div class&#x3D;&quot;layout&quot; id&#x3D;&quot;app_wrong_orientation_warning&quot; *ngIf&#x3D;&quot;!((width &amp;&amp; height) || actualWidth &gt; actualHeight)&quot;&gt;
+  {{ &#x27;LAYOUT.INFO&#x27; | translate }}
+&lt;/div&gt;</code></pre>
     </div>
 
 
@@ -504,9 +502,9 @@ export class AppLayoutComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="layout" id="app_layout" [style.width.px]="width" [style.height.px]="height"  *ngIf="((width && height) || actualWidth > actualHeight);else warning">  <div class=" top-layout">    <div class="deck">      <app-deck [deckNumber]="0" id="app_deck_0_component"></app-deck>    </div>    <div class="volume-control">      <app-volume id="app_volume_component"></app-volume>    </div>    <div class="deck">      <app-deck [deckNumber]="1" id="app_deck_1_component"></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="tabs">      <app-tabs></app-tabs>    </div>  </div></div><ng-template #warning>  <div class="layout" id="app_wrong_orientation_warning">    {{ \'LAYOUT.INFO\' | translate }}  </div></ng-template></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="layout" id="app_layout" [style.width.px]="width" [style.height.px]="height"  [ngClass]="{\'hidden\':!((width && height) || actualWidth > actualHeight)}">  <div class=" top-layout">    <div class="deck">      <app-deck [deckNumber]="0" id="app_deck_0_component"></app-deck>    </div>    <div class="volume-control">      <app-volume id="app_volume_component"></app-volume>    </div>    <div class="deck">      <app-deck [deckNumber]="1" id="app_deck_1_component"></app-deck>    </div>  </div>  <div class="bottom-layout">    <div class="tabs">      <app-tabs></app-tabs>    </div>  </div></div><div class="layout" id="app_wrong_orientation_warning" *ngIf="!((width && height) || actualWidth > actualHeight)">  {{ \'LAYOUT.INFO\' | translate }}</div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppEffectsSelectorComponent', 'selector': 'app-effects-selector'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
-    var DIRECTIVES = [];
+    var DIRECTIVES = [{'name': 'AngularDraggableDirective', 'selector': '[ngDraggable]'}];
     var ACTUAL_COMPONENT = {'name': 'AppLayoutComponent'};
 </script>
 <script src="../js/tree.js"></script>

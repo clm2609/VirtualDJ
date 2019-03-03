@@ -1,4 +1,4 @@
-<div class="music-container" id="app_music_list_container" [ngClass]="{'music-container-dragging':dragging}">
+<div class="music-container" id="app_music_list_container" [ngClass]="{'music-container-dragging':dragging}" #container>
   <table *ngIf="musicList.length>0" id="app_music_list">
     <tr class="header">
       <td></td>
@@ -25,7 +25,8 @@
       </td>
     </tr>
     <tr class="elements" *ngFor="let song of shownMusic;let i = index" ngDraggable [zIndexMoving]="9999"
-      (started)="dragStart()" (endOffset)="dragEnd($event,i)" (mousedown)="saveStartPos($event)" [lockAxis]="x">
+      (started)="dragStart(i)" (endOffset)="dragEnd($event,i)" (mousedown)="saveStartPos($event)" [lockAxis]="x"
+      [position]="index===i?offSet:{x:0,y:0}">
       <td class="icon-container">
         <img (dragstart)="$event.preventDefault()" class="icon" src="assets/images/music-player.svg">
       </td>

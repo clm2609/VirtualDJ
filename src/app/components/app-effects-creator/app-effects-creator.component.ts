@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EffectsService } from '../../services/effects.service';
 import { FormBuilder, FormGroup, AbstractControl, Validators, ValidatorFn } from '@angular/forms';
 import { PlayerService } from 'src/app/services/player.service';
+import { effectsCreatorArray } from 'src/app/data/effectsCreator';
 
 @Component({
   selector: 'app-effects-creator',
@@ -22,17 +23,10 @@ export class AppEffectsCreatorComponent implements OnInit {
   selectedEffects;
   removableEffects;
   constructor(private effectServ: EffectsService, private builder: FormBuilder, private playerServ: PlayerService) {
-    this.effectsCreatorArray = this.effectServ.getEffectsCreator();
+    this.effectsCreatorArray = effectsCreatorArray;
     this.effects = this.effectServ.getEffects();
   }
   updateRemovableEffects() {
-    console.log(
-      this.effects,
-      this.effects.filter(effect => {
-        console.log(effect.id);
-        return this.selectedEffects.indexOf(effect.id) === -1;
-      })
-    );
     this.removableEffects = this.effects.filter(effect => {
       return this.selectedEffects.indexOf(effect.id) === -1;
     });

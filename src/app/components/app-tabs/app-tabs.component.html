@@ -5,10 +5,6 @@
         id="app_tabs_music_list">
         {{ 'TABS.MUSIC' | translate }}
       </div>
-      <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')"
-        id="app_tabs_settings">
-        {{ 'TABS.SETTINGS' | translate }}
-      </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='effectssel'}" (click)="setActive('effectssel')"
         id="app_tabs_effectssel">
         {{ 'TABS.EFFECTSSEL' | translate }}
@@ -19,6 +15,10 @@
       </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='help'}" (click)="setActive('help')" id="app_tabs_help">
         {{ 'TABS.HELP' | translate }}
+      </div>
+      <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')"
+        id="app_tabs_settings">
+        {{ 'TABS.SETTINGS' | translate }}
       </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='about'}" (click)="setActive('about')" id="app_tabs_about">
         {{ 'TABS.ABOUT' | translate }}
