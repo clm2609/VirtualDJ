@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { EffectsService } from './effects.service';
+import { EQService } from './eq.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class PlayerService {
   deckNum = 2;
   effects = [[null, null, null, null, null, null], [null, null, null, null, null, null]];
   activeEffects = [[], []];
-  constructor(private effectServ: EffectsService) {
+  constructor(private effectServ: EffectsService, private eqServ: EQService) {
     for (let i = 0; i < this.effectsNum; i++) {
       this.saveEffects(0, i, this.effectServ.getEffects()[i]);
       this.saveEffects(1, i, this.effectServ.getEffects()[i]);
@@ -59,12 +60,12 @@ export class PlayerService {
 
   equalizer() {
     if (this.deck[0] && this.deck[1] && this.eq[0] && this.eq[1]) {
-      return this.effectServ.createEQEffect(this.deck, this.eq);
+      return this.eqServ.createEQEffect(this.deck, this.eq);
     }
   }
 
-  saveEQ(eq) {
-    this.eq = eq;
+  saveEQ(eq, deck) {
+    this.eq[deck] = eq;
     this.eqEffect = this.equalizer();
     this.applyEffects();
   }

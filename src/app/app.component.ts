@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslationService } from './services/translation.service';
 
 @Component({
@@ -11,5 +11,10 @@ export class AppComponent {
   constructor(translationService: TranslationService) {
     this.translationService = translationService;
     translationService.getActualLang();
+  }
+  @HostListener('window:drop', ['$event'])
+  onDragOver(event) {
+    event.stopPropagation();
+    event.preventDefault();
   }
 }

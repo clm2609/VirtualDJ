@@ -5,9 +5,9 @@
         id="app_tabs_music_list">
         {{ 'TABS.MUSIC' | translate }}
       </div>
-      <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')"
-        id="app_tabs_settings">
-        {{ 'TABS.SETTINGS' | translate }}
+      <div [ngClass]="{'tab':true, 'tab--active':active=='effectssel'}" (click)="setActive('effectssel')"
+        id="app_tabs_effectssel">
+        {{ 'TABS.EFFECTSSEL' | translate }}
       </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='effectscr'}" (click)="setActive('effectscr')"
         id="app_tabs_effects_creator">
@@ -16,16 +16,23 @@
       <div [ngClass]="{'tab':true, 'tab--active':active=='help'}" (click)="setActive('help')" id="app_tabs_help">
         {{ 'TABS.HELP' | translate }}
       </div>
+      <div [ngClass]="{'tab':true, 'tab--active':active=='settings'}" (click)="setActive('settings')"
+        id="app_tabs_settings">
+        {{ 'TABS.SETTINGS' | translate }}
+      </div>
       <div [ngClass]="{'tab':true, 'tab--active':active=='about'}" (click)="setActive('about')" id="app_tabs_about">
         {{ 'TABS.ABOUT' | translate }}
       </div>
       <div style="margin-left: auto;margin-right:5px; display:flex; align-items: center;" (click)="maximize()">
-        <img class="icon icon--clickable" src="assets/images/maximize.svg" *ngIf="!maximized">
-        <img class="icon icon--clickable" src="assets/images/minimize.svg" *ngIf="maximized">
+        <img (dragstart)="$event.preventDefault()" draggable="false" class="icon icon--clickable"
+          src="assets/images/maximize.png" *ngIf="!maximized">
+        <img (dragstart)="$event.preventDefault()" draggable="false" class="icon icon--clickable"
+          src="assets/images/minimize.png" *ngIf="maximized">
       </div>
     </div>
     <div class="contents">
       <app-music-list *ngIf="active=='music'"></app-music-list>
+      <app-effects-selector *ngIf="active=='effectssel'"></app-effects-selector>
       <app-settings *ngIf="active=='settings'"></app-settings>
       <app-effects-creator *ngIf="active=='effectscr'"></app-effects-creator>
       <app-help *ngIf="active=='help'"></app-help>

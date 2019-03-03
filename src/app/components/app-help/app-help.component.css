@@ -1,4 +1,13 @@
 .help-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.margins {
   margin: 5px;
 }
 
@@ -13,4 +22,9 @@ ul {
 li {
   margin: 5px;
   cursor: pointer;
+}
+
+img {
+  width: 20px;
+  height: 20px;
 }
