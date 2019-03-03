@@ -165,12 +165,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(effectServ: <a href="../injectables/EffectsService.html">EffectsService</a>, playerServ: <a href="../injectables/PlayerService.html">PlayerService</a>, sizeService: <a href="../injectables/SizeService.html">SizeService</a>, translationService: <a href="../injectables/TranslationService.html">TranslationService</a>)</code>
+<code>constructor(effectServ: <a href="../injectables/EffectsService.html">EffectsService</a>, playerServ: <a href="../injectables/PlayerService.html">PlayerService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -204,30 +204,6 @@
                                                   
                                                         <td>
                                                                     <code><a href="../injectables/PlayerService.html" target="_self" >PlayerService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>sizeService</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../injectables/SizeService.html" target="_self" >SizeService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>translationService</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../injectables/TranslationService.html" target="_self" >TranslationService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -275,7 +251,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:36</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -361,7 +337,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -394,7 +370,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -433,7 +409,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -467,7 +443,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -483,20 +459,13 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { EffectsService } from &#x27;../../services/effects.service&#x27;;
 import { PlayerService } from &#x27;../../services/player.service&#x27;;
-import { SizeService } from &#x27;../../services/size.service&#x27;;
-import { TranslationService } from &#x27;../../services/translation.service&#x27;;
 @Component({
   selector: &#x27;app-effects-selector&#x27;,
   templateUrl: &#x27;./app-effects-selector.component.html&#x27;,
   styleUrls: [&#x27;./app-effects-selector.component.css&#x27;]
 })
 export class AppEffectsSelectorComponent implements OnInit {
-  constructor(
-    private effectServ: EffectsService,
-    private playerServ: PlayerService,
-    private sizeService: SizeService,
-    private translationService: TranslationService
-  ) {
+  constructor(private effectServ: EffectsService, private playerServ: PlayerService) {
     this.effects &#x3D; JSON.parse(JSON.stringify(this.playerServ.effects));
     this.availableEffects &#x3D; this.effectServ.getEffects();
     this.selectedEffects &#x3D; this.effects.map(c &#x3D;&gt; c.map(a &#x3D;&gt; this.availableEffects.find(b &#x3D;&gt; a.id &#x3D;&#x3D;&#x3D; b.id).id));
@@ -557,7 +526,7 @@ export class AppEffectsSelectorComponent implements OnInit {
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="settings-container" id="app_effects_creator">  <div class="question-container">    <div class="effects-container" *ngFor="let deck of effects;let i=index">      <div class="question-label">{{ \'SETTINGS.EFFDECK\' | translate }} {{i+1}}</div>      <table>        <tr *ngFor="let effect of deck;let j=index">          <td>{{ \'SETTINGS.EFFECT\' | translate }} {{j+1}}</td>          <td>            <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">                {{availableEffect.name}}</option>            </select>          </td>        </tr>      </table>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppEffectsSelectorComponent', 'selector': 'app-effects-selector'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
-    var DIRECTIVES = [];
+    var DIRECTIVES = [{'name': 'AngularDraggableDirective', 'selector': '[ngDraggable]'}];
     var ACTUAL_COMPONENT = {'name': 'AppEffectsSelectorComponent'};
 </script>
 <script src="../js/tree.js"></script>

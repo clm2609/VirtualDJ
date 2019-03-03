@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewChildren } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChildren, ViewChild, ElementRef } from '@angular/core';
 import { MusicLoaderService } from '../../services/music-loader.service';
 import { Subscription, iif } from 'rxjs';
 import { AngularDraggableDirective } from 'angular2-draggable';
@@ -19,6 +19,10 @@ export class AppMusicListComponent implements OnDestroy {
   startY;
   @ViewChildren(AngularDraggableDirective)
   songs: any;
+  @ViewChild('container')
+  scrollable: ElementRef;
+  offSet;
+  index = -1;
   constructor(musicService: MusicLoaderService) {
     this.musicService = musicService;
     this.musicList = musicService.music;
@@ -68,20 +72,24 @@ export class AppMusicListComponent implements OnDestroy {
   recievedFiles(files: FileList) {
     if (files) {
       for (let i = 0; i < files.length; i++) {
-        this.musicService.addSong(files.item(i));
+        if (files.item(i).type.includes('audio')) {
+          this.musicService.addSong(files.item(i));
+        }
       }
     }
   }
   removeAllSongs() {
     this.musicService.deleteAllSongs();
   }
-  dragStart() {
+  dragStart(i) {
+    this.index = i;
+    this.offSet = { x: 0, y: -(this.scrollable.nativeElement as HTMLElement).scrollTop };
     this.dragging = true;
   }
   dragEnd(pos, i) {
+    this.offSet = { x: 0, y: 0 };
     this.dragging = false;
     // TODO: search a more elegant solution than by cursor position
-    console.log(window.outerWidth, this.startX + pos.x, window.outerHeight, this.startY + pos.y);
     if (window.outerHeight * 0.5 > this.startY + pos.y) {
       if (window.outerWidth * 0.4 > this.startX + pos.x) {
         this.loadOnDeck(0, this.shownMusic[i]);

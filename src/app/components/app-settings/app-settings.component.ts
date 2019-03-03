@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EffectsService } from '../../services/effects.service';
-import { PlayerService } from '../../services/player.service';
 import { SizeService } from '../../services/size.service';
 import { TranslationService } from '../../services/translation.service';
 @Component({
@@ -9,12 +7,7 @@ import { TranslationService } from '../../services/translation.service';
   styleUrls: ['./app-settings.component.css']
 })
 export class AppSettingsComponent implements OnInit {
-  constructor(
-    private effectServ: EffectsService,
-    private playerServ: PlayerService,
-    private sizeService: SizeService,
-    private translationService: TranslationService
-  ) {
+  constructor(private sizeService: SizeService, private translationService: TranslationService) {
     this.lang = translationService.getActualLang();
   }
   size = 'auto';

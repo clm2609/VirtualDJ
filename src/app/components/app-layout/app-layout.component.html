@@ -1,5 +1,5 @@
 <div class="layout" id="app_layout" [style.width.px]="width" [style.height.px]="height"
-  *ngIf="((width && height) || actualWidth > actualHeight);else warning">
+  [ngClass]="{'hidden':!((width && height) || actualWidth > actualHeight)}">
   <div class=" top-layout">
     <div class="deck">
       <app-deck [deckNumber]="0" id="app_deck_0_component"></app-deck>
@@ -17,8 +17,6 @@
     </div>
   </div>
 </div>
-<ng-template #warning>
-  <div class="layout" id="app_wrong_orientation_warning">
-    {{ 'LAYOUT.INFO' | translate }}
-  </div>
-</ng-template>
+<div class="layout" id="app_wrong_orientation_warning" *ngIf="!((width && height) || actualWidth > actualHeight)">
+  {{ 'LAYOUT.INFO' | translate }}
+</div>
