@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PlayerService } from '../../services/player.service';
-import { EQService } from '../../services/eq.service';
 import { MusicLoaderService } from '../../services/music-loader.service';
 import { HelpService } from 'src/app/services/help.service';
 
@@ -12,7 +11,6 @@ import { HelpService } from 'src/app/services/help.service';
 export class AppVolumeComponent implements OnInit, AfterViewInit {
   constructor(
     private musicService: MusicLoaderService,
-    private eqServ: EQService,
     private playerService: PlayerService,
     helpService: HelpService
   ) {
@@ -46,8 +44,7 @@ export class AppVolumeComponent implements OnInit, AfterViewInit {
     this.setEQ(1);
   }
   setEQ(i) {
-    const EQ = this.eqServ.createEQ(this['bass' + i], this['mid' + i], this['trebble' + i]);
-    this.playerService.saveEQ(EQ, i);
+    this.playerService.saveEQ(this['bass' + i], this['mid' + i], this['trebble' + i], i);
   }
   resetEQ(deck) {
     if (deck === 0) {

@@ -1,28 +1,8 @@
-@startuml VirtualDJ
+@startuml ClassDiagram
 skinparam linetype ortho
 hide empty members
 ' hide circle
-class "AppComponent" as app <<(C,#00b500) Component>>
-class "AppLayoutComponent" as layout <<(C,#00b500) Component>>
-class "AppDeckComponent" as deck <<(C,#00b500) Component>>
-class "AppVolumeComponent" as volume <<(C,#00b500) Component>>
-class "AppTabsComponent" as tabs <<(C,#00b500) Component>>
-class "AppMusicListComponent" as musicList <<(C,#00b500) Component>>
-class "AppSettingsComponent" as settings <<(C,#00b500) Component>>
-class "AppEffectsSelectorComponent" as effSelector <<(C,#00b500) Component>>
-class "AppAboutComponent" as about <<(C,#00b500) Component>>
-class "AppEffectsCreatorComponent" as effCreator <<(C,#00b500) Component>>
-class "AppHelpComponent" as help <<(C,#00b500) Component>>
-class "SliderControllerComponent" as slider <<(C,#00b500) Component>>
-class "RouletteControllerComponent" as roulette <<(C,#00b500) Component>>
-class "EQService" as eqServ <<(S,#FF7700) Service>>
-class "HelpService" as helpServ <<(S,#FF7700) Service>>
-class "MusicLoaderService" as musicServ <<(S,#FF7700) Service>>
-class "PlayerService" as playerServ <<(S,#FF7700) Service>>
-class "SizeService" as sizeServ <<(S,#FF7700) Service>>
-class "TranslationService" as trServ <<(S,#FF7700) Service>>
-class "EffectsService" as effServ <<(S,#FF7700) Service>>
-class "AngularDraggableDirective" as ngDragDir <<(D,#4286f4) Directive>>
+!include doc/classes.iuml
 app "1" *-- "1" layout
 layout "1" *-- "2" deck
 layout "1" *-- "1" volume
