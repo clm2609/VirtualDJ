@@ -64,7 +64,8 @@ export class PlayerService {
     }
   }
 
-  saveEQ(eq, deck) {
+  saveEQ(bass, mid, trebble, deck) {
+    const eq = this.eqServ.createEQ(bass, mid, trebble);
     this.eq[deck] = eq;
     this.eqEffect = this.equalizer();
     this.applyEffects();

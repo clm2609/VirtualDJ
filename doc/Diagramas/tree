@@ -1,0 +1,50 @@
+.
+├── e2e
+│   └── ...
+├── package.json
+├── package-lock.json
+├── public
+│   └── ...
+├── README.md
+├── src
+│   ├── app
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── app-routing.module.ts
+│   │   ├── ...
+│   │   ├── components
+│   │   │   ├── app-about
+│   │   │   │   ├── app-about.component.css
+│   │   │   │   ├── app-about.component.html
+│   │   │   │   └── app-about.component.ts
+│   │   │   └── ...
+│   │   ├── data
+│   │   │   └── ...
+│   │   ├── directives
+│   │   │   └── ...
+│   │   ├── form-components
+│   │   │   ├── roulette-controller
+│   │   │   └── ...
+│   │   ├── scripts
+│   │   │   └── beats.script.ts
+│   │   └── services
+│   │       ├── effects.service.ts
+│   │       └── ...
+│   ├── assets
+│   │   ├── cssreset.css
+│   │   ├── i18n
+│   │   │   ├── en.json
+│   │   │   └── es.json
+│   │   ├── images
+│   │   │   ├── ...
+│   │   └── testing
+│   │       ├── testSong1.mp3
+│   │       └── testSong2.m4a
+│   ├── browserslist
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── index.html
+│   ├── styles.css
+│   └── ...
+└── ...
