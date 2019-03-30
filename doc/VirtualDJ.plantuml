@@ -1,0 +1,59 @@
+@startuml VirtualDJ
+skinparam linetype ortho
+hide empty members
+' hide circle
+class "AppComponent" as app <<(C,#00b500) Component>>
+class "AppLayoutComponent" as layout <<(C,#00b500) Component>>
+class "AppDeckComponent" as deck <<(C,#00b500) Component>>
+class "AppVolumeComponent" as volume <<(C,#00b500) Component>>
+class "AppTabsComponent" as tabs <<(C,#00b500) Component>>
+class "AppMusicListComponent" as musicList <<(C,#00b500) Component>>
+class "AppSettingsComponent" as settings <<(C,#00b500) Component>>
+class "AppEffectsSelectorComponent" as effSelector <<(C,#00b500) Component>>
+class "AppAboutComponent" as about <<(C,#00b500) Component>>
+class "AppEffectsCreatorComponent" as effCreator <<(C,#00b500) Component>>
+class "AppHelpComponent" as help <<(C,#00b500) Component>>
+class "SliderControllerComponent" as slider <<(C,#00b500) Component>>
+class "RouletteControllerComponent" as roulette <<(C,#00b500) Component>>
+class "EQService" as eqServ <<(S,#FF7700) Service>>
+class "HelpService" as helpServ <<(S,#FF7700) Service>>
+class "MusicLoaderService" as musicServ <<(S,#FF7700) Service>>
+class "PlayerService" as playerServ <<(S,#FF7700) Service>>
+class "SizeService" as sizeServ <<(S,#FF7700) Service>>
+class "TranslationService" as trServ <<(S,#FF7700) Service>>
+class "EffectsService" as effServ <<(S,#FF7700) Service>>
+class "AngularDraggableDirective" as ngDragDir <<(D,#4286f4) Directive>>
+app "1" *-- "1" layout
+layout "1" *-- "2" deck
+layout "1" *-- "1" volume
+layout "1" *-- "1" tabs
+deck "1" -- "1" musicServ 
+deck "1" -- "1" playerServ 
+deck "1" -- "1" helpServ 
+deck "1" -- "1" trServ 
+tabs "1" *-- "1" musicList
+tabs "1" *-- "1" settings
+tabs "1" *-- "1" effSelector
+tabs "1" *-- "1" about
+tabs "1" *-- "1" effCreator
+tabs "1" *-- "1" help
+app "1" -- "1" trServ
+effCreator "1" -- "1" effServ
+effCreator "1" -- "1" playerServ
+effSelector "1" -- "1" effServ
+effSelector "1" -- "1" playerServ
+help "1" -- "1" helpServ
+layout "1" -- "1" sizeServ
+musicList "1" -- "1" musicServ
+settings "1" -- "1" sizeServ
+settings "1" -- "1" trServ
+tabs "1" -- "1" musicServ
+volume "1" -- "1" musicServ
+volume "1" -- "1" eqServ
+volume "1" -- "1" playerServ
+volume "1" -- "1" helpServ
+musicServ "1" -- "1" playerServ
+playerServ "1" -- "1" effServ
+playerServ "1" -- "1" eqServ
+roulette "1" -- "1" slider: contains >
+@enduml
