@@ -1,0 +1,286 @@
+@startuml AppComponent
+class "AppComponent" as app <<(C,#00b500) Component>>{
+    translationService: TranslationService;
+    onDragOver(event)
+}
+@enduml
+@startuml AppLayoutComponent
+class "AppLayoutComponent" as layout <<(C,#00b500) Component>>{
+    width: number;
+    height: number;
+    actualWidth: number;
+    actualHeight: number;
+    window = window;
+    constructor(sizeService: SizeService)
+    onResize(event)
+}
+@enduml
+@startuml AppDeckComponent 
+class "AppDeckComponent" as deck <<(C,#00b500) Component>>{
+    deckNumber:number
+    activeLoop:any
+    activeLoopRegion:any
+    actualLoop:number
+    beats:any
+    bpm:any
+    cues:Array<any>
+    effects:Array<any>
+    help:any
+    incomingLoop:any
+    lastLoopEnd:any
+    lastLoopStart:any
+    locale:string
+    loopChanger:any
+    loops:Array<number>
+    pitch:number
+    playerService:PlayerService
+    rotation:number
+    showedLoops:number
+    song:any
+    waveform:ElementRef
+    addCUE()
+    applyEffect(i:number)
+    changePitch()
+    createLoop(loop:number)
+    moveLoop(step:number)
+    playPause()
+    resetCUE()
+    resetDisc()
+    resetLoop()
+    resetPitch()
+    rotate()
+    startCUE(cue:number)
+}
+@enduml
+@startuml AppVolumeComponent 
+class "AppVolumeComponent" as volume <<(C,#00b500) Component>>{
+    bass0:number
+    bass1:number
+    help:any
+    mid0:number
+    mid1:number
+    musicSubscription:Array<any>
+    trebble0:number
+    trebble1:number
+    volume0:number
+    volume1:number
+    volumeMaster:number  
+    changeVolume(deck:number)
+    maxVol(deck:number)
+    mute(deck:number)
+    resetEQ(deck:number)
+    setEQ(i:number)
+}
+@enduml
+@startuml AppTabsComponent 
+class "AppTabsComponent" as tabs <<(C,#00b500) Component>>{
+    active:string
+    dragging:boolean
+    dragLeaveList:any
+    dropList:any
+    maximized:boolean
+    droped(event:any)
+    maximize()
+    recievedFiles(files:FileList)
+    setActive(active:string)
+    stopDrag()
+    onDragOver(event:any)
+}
+@enduml
+@startuml AppMusicListComponent 
+class "AppMusicListComponent" as musicList <<(C,#00b500) Component>>{
+    dragging: true
+    index:number
+    musicList:Array<File>
+    musicService:MusicLoaderService
+    musicSubscription: Subscription
+    offSet:any
+    query:string
+    scrollable:ElementRef
+    shownMusic:Array<File>
+    songs:any
+    startX:number
+    startY:number
+    dragEnd(pos:any,i:number)
+    dragStart(i:number)
+    fileChangeEvent(fileInput: any)
+    loadOnDeck(deck:number,song:any)
+    recievedFiles(files: FileList)
+    removeAllSongs()
+    removeSong(song:any)
+    saveStartPos(event:any)
+    updateMusic()
+}
+@enduml
+@startuml AppSettingsComponent 
+class "AppSettingsComponent" as settings <<(C,#00b500) Component>>{
+    lang:string
+    size:string
+    changeLang()
+    changeSize()
+}
+@enduml
+@startuml AppEffectsSelectorComponent 
+class "AppEffectsSelectorComponent" as effSelector <<(C,#00b500) Component>>{
+
+    availableEffects:any;
+    effects:Array<any>
+    effectsNum:number
+    selectedEffects:any;
+    change(i:number,j:number)
+}
+@enduml
+@startuml AppAboutComponent
+class "AppAboutComponent" as about <<(C,#00b500) Component>>
+@enduml
+@startuml AppEffectsCreatorComponent 
+class "AppEffectsCreatorComponent" as effCreator <<(C,#00b500) Component>>{
+    config: FormGroup
+    defaultStep:number
+    effects:any
+    effectsCreatorArray:any
+    effectStruct:any
+    JSON:any
+    name:string
+    removableEffects:any
+    selectedEffect:any
+    selectedEffectRemove:string
+    selectedEffects:string
+    validName:boolean
+    checkName()
+    createEffect()
+    isDefined(something:any)
+    removeEffect()
+    reset()
+    resetRemove()
+    updateEffect(effect:any)
+    updateRemovableEffects()
+}
+@enduml
+@startuml AppHelpComponent 
+class "AppHelpComponent" as help <<(C,#00b500) Component>>{
+    help(helpquery:any)
+}
+@enduml
+@startuml SliderControllerComponent 
+class "SliderControllerComponent" as slider <<(C,#00b500) Component>>{
+    config:any
+    contentInit:any
+    fillsize:any
+    shell:HTMLElement
+    shellView:ElementRef
+    slider:any
+    zindex:number
+    registerOnChange(fn:any)
+    registerOnTouched(fn:any)
+    setValue()
+    writeValue(value:any)
+}
+@enduml
+@startuml RouletteControllerComponent 
+class "RouletteControllerComponent" as roulette <<(C,#00b500) Component>>{
+    configSlider:any
+    folded:boolean
+    left:number
+    rotation:number
+    value:number
+    config:any
+    registerOnChange(fn:any)
+    registerOnTouched(fn:any)
+    rotate()
+    unfold()
+    writeValue(value:any)
+}
+@enduml
+@startuml EQService 
+class "EQService" as eqServ <<(S,#FF7700) Service>>{
+    createEQ(bass:number,mid:number,trebble:number)
+    createEQEffect(deck:number,eq:any)
+}
+@enduml
+@startuml HelpService 
+class "HelpService" as helpServ <<(S,#FF7700) Service>>{
+    help:Subject
+    help$:Observable
+    save(helpquery:string)
+}
+@enduml
+@startuml MusicLoaderService 
+class "MusicLoaderService" as musicServ <<(S,#FF7700) Service>>{
+    deckLoader:Array<Subject>
+    decksongs:Array<any>
+    decksongs$:Array<Subject>
+    music:Array<File>
+    music$:Observable
+    musicLoader:Subject
+    addSong(song:File)
+    deleteAllSongs()
+    deleteSong(song:any)
+    load(deck:number,song:any)
+}
+@enduml
+@startuml PlayerService 
+class "PlayerService" as playerServ <<(S,#FF7700) Service>>{
+    activeEffects:Array<any>
+    deck:Array<any>
+    deck$:Array<Observable>
+    deckLoader:Array<Subject>
+    deckNum:number;
+    effectLoader:Array<Subject>
+    effects:Array<Any>
+    effects$:Array<Observable>
+    effectsNum:number
+    eq:Array<any>
+    eqEffect:any;
+    activateEffect(deck:number, i:number)
+    adjustHeight(deck:number, height:number)
+    applyEffects()
+    createLoop(deck:number, start:number,end:number)
+    equalizer()
+    getCurrentTime(deck:number)
+    getDuration(deck:number)
+    getInstance(deck:number)
+    isPlaying(deck:number)
+    load(deck:number, song:any)
+    on(deck:number, event:any,callback:function)
+    playFromPosition(deck:number, start:number)
+    playPause(deck:number)
+    save(deck:number,wavesurfer:any)
+    saveEffects(deck:number, i:number,effect:any)
+    saveEQ(bass:number,mid:number,trebble:number,deck:number)
+    setPitch(deck:number, playback:number)
+    setVolume(deck:number, volume:any)
+}
+@enduml
+@startuml SizeService 
+class "SizeService" as sizeServ <<(S,#FF7700) Service>>{
+    actualHeight:number
+    actualWidth:number
+    height:Subject
+    height$:Observable
+    width:Subject
+    width$:Observable
+    changeSize(width:number,height:number)
+    getHeight()
+    getWidth()
+}
+@enduml
+@startuml TranslationService 
+class "TranslationService" as trServ <<(S,#FF7700) Service>>{
+    lang:string
+    translate:TranslateService
+    changeLanguage(newLang:string)
+    getActualLang()
+    getTranslation()
+}
+@enduml
+@startuml EffectsService 
+class "EffectsService" as effServ <<(S,#FF7700) Service>>{
+    effects:any;
+    addEffect(effect:any)
+    createEffects(ac:AudioContext,effects:any)
+    getEffects()
+    removeEffect(id:number)    
+}
+@enduml
+class "AngularDraggableDirective" as ngDragDir <<(D,#4286f4) Directive>>
