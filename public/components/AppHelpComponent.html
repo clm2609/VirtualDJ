@@ -147,7 +147,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/components/app-help/app-help.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/app-help/app-help.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -216,7 +216,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/app-help/app-help.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/app-help/app-help.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -289,7 +289,23 @@ export class AppHelpComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;help-container&quot; id&#x3D;&quot;app_help&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- 
+    This file is part of Web Virtual DJ.
+
+    Web Virtual DJ is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Web Virtual DJ is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Web Virtual DJ.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+--&gt;
+&lt;div class&#x3D;&quot;help-container&quot; id&#x3D;&quot;app_help&quot;&gt;
   &lt;div class&#x3D;&quot;margins&quot;&gt;
     &lt;p&gt;{{ &#x27;HELP.START&#x27; | translate }}&lt;/p&gt;
     &lt;p&gt;{{ &#x27;HELP.FEATURES&#x27; | translate }}&lt;/p&gt;
@@ -339,7 +355,7 @@ export class AppHelpComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="help-container" id="app_help">  <div class="margins">    <p>{{ \'HELP.START\' | translate }}</p>    <p>{{ \'HELP.FEATURES\' | translate }}</p>    <ul>      <li (click)="help(\'play\')" id="app_help_play"> <img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.PLAY\' | translate }}</li>      <li (click)="help(\'maindeckvolume\')" id="app_help_main_deck_volume"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png"> {{ \'HELP.MDECKVOLUME\' | translate }}</li>      <li (click)="help(\'mastervolume\')" id="app_help_master_volume"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.MVOLUME\' | translate }}</li>      <li (click)="help(\'equalizer\')" id="app_help_play_equalizer"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.EQUALIZER\' | translate }}</li>      <li (click)="help(\'cue\')" id="app_help_play_cue"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.CUE\' | translate }}</li>      <li (click)="help(\'pitch\')" id="app_help_play_pitch"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.PITCH\' | translate }}</li>      <li (click)="help(\'loop\')" id="app_help_play_loop"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.LOOPS\' | translate }}</li>      <li (click)="help(\'effects\')" id="app_help_play_effects"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.EFFECTS\' | translate }}</li>    </ul>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><!--     This file is part of Web Virtual DJ.    Web Virtual DJ is free software: you can redistribute it and/or modify    it under the terms of the GNU General Public License as published by    the Free Software Foundation, either version 3 of the License, or    (at your option) any later version.    Web Virtual DJ is distributed in the hope that it will be useful,    but WITHOUT ANY WARRANTY; without even the implied warranty of    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the    GNU General Public License for more details.    You should have received a copy of the GNU General Public License    along with Web Virtual DJ.  If not, see <https://www.gnu.org/licenses/>.--><div class="help-container" id="app_help">  <div class="margins">    <p>{{ \'HELP.START\' | translate }}</p>    <p>{{ \'HELP.FEATURES\' | translate }}</p>    <ul>      <li (click)="help(\'play\')" id="app_help_play"> <img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.PLAY\' | translate }}</li>      <li (click)="help(\'maindeckvolume\')" id="app_help_main_deck_volume"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png"> {{ \'HELP.MDECKVOLUME\' | translate }}</li>      <li (click)="help(\'mastervolume\')" id="app_help_master_volume"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.MVOLUME\' | translate }}</li>      <li (click)="help(\'equalizer\')" id="app_help_play_equalizer"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.EQUALIZER\' | translate }}</li>      <li (click)="help(\'cue\')" id="app_help_play_cue"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.CUE\' | translate }}</li>      <li (click)="help(\'pitch\')" id="app_help_play_pitch"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.PITCH\' | translate }}</li>      <li (click)="help(\'loop\')" id="app_help_play_loop"><img (dragstart)="$event.preventDefault()" draggable="false"          class="icon" src="assets/images/question.png">        {{ \'HELP.LOOPS\' | translate }}</li>      <li (click)="help(\'effects\')" id="app_help_play_effects"><img (dragstart)="$event.preventDefault()"          draggable="false" class="icon" src="assets/images/question.png">        {{ \'HELP.EFFECTS\' | translate }}</li>    </ul>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppEffectsSelectorComponent', 'selector': 'app-effects-selector'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [{'name': 'AngularDraggableDirective', 'selector': '[ngDraggable]'}];
     var ACTUAL_COMPONENT = {'name': 'AppHelpComponent'};
