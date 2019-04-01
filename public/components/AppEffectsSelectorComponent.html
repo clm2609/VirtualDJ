@@ -170,7 +170,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -251,7 +251,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:45</a></div>
                             </td>
                         </tr>
 
@@ -337,7 +337,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -370,7 +370,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -409,7 +409,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:31</a></div>
                             </td>
                         </tr>
 
@@ -443,7 +443,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/app-effects-selector/app-effects-selector.component.ts:34</a></div>
                             </td>
                         </tr>
 
@@ -496,7 +496,23 @@ export class AppEffectsSelectorComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;settings-container&quot; id&#x3D;&quot;app_effects_creator&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- 
+    This file is part of Web Virtual DJ.
+
+    Web Virtual DJ is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Web Virtual DJ is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Web Virtual DJ.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+--&gt;
+&lt;div class&#x3D;&quot;settings-container&quot; id&#x3D;&quot;app_effects_creator&quot;&gt;
   &lt;div class&#x3D;&quot;question-container&quot;&gt;
     &lt;div class&#x3D;&quot;effects-container&quot; *ngFor&#x3D;&quot;let deck of effects;let i&#x3D;index&quot;&gt;
       &lt;div class&#x3D;&quot;question-label&quot;&gt;{{ &#x27;SETTINGS.EFFDECK&#x27; | translate }} {{i+1}}&lt;/div&gt;
@@ -524,7 +540,7 @@ export class AppEffectsSelectorComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="settings-container" id="app_effects_creator">  <div class="question-container">    <div class="effects-container" *ngFor="let deck of effects;let i=index">      <div class="question-label">{{ \'SETTINGS.EFFDECK\' | translate }} {{i+1}}</div>      <table>        <tr *ngFor="let effect of deck;let j=index">          <td>{{ \'SETTINGS.EFFECT\' | translate }} {{j+1}}</td>          <td>            <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">                {{availableEffect.name}}</option>            </select>          </td>        </tr>      </table>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><!--     This file is part of Web Virtual DJ.    Web Virtual DJ is free software: you can redistribute it and/or modify    it under the terms of the GNU General Public License as published by    the Free Software Foundation, either version 3 of the License, or    (at your option) any later version.    Web Virtual DJ is distributed in the hope that it will be useful,    but WITHOUT ANY WARRANTY; without even the implied warranty of    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the    GNU General Public License for more details.    You should have received a copy of the GNU General Public License    along with Web Virtual DJ.  If not, see <https://www.gnu.org/licenses/>.--><div class="settings-container" id="app_effects_creator">  <div class="question-container">    <div class="effects-container" *ngFor="let deck of effects;let i=index">      <div class="question-label">{{ \'SETTINGS.EFFDECK\' | translate }} {{i+1}}</div>      <table>        <tr *ngFor="let effect of deck;let j=index">          <td>{{ \'SETTINGS.EFFECT\' | translate }} {{j+1}}</td>          <td>            <select [(ngModel)]="selectedEffects[i][j]" (ngModelChange)="change(i,j)">              <option *ngFor="let availableEffect of availableEffects" [value]="availableEffect.id">                {{availableEffect.name}}</option>            </select>          </td>        </tr>      </table>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppAboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppDeckComponent', 'selector': 'app-deck'},{'name': 'AppEffectsCreatorComponent', 'selector': 'app-effects-creator'},{'name': 'AppEffectsSelectorComponent', 'selector': 'app-effects-selector'},{'name': 'AppHelpComponent', 'selector': 'app-help'},{'name': 'AppLayoutComponent', 'selector': 'app-layout'},{'name': 'AppMusicListComponent', 'selector': 'app-music-list'},{'name': 'AppSettingsComponent', 'selector': 'app-settings'},{'name': 'AppTabsComponent', 'selector': 'app-tabs'},{'name': 'AppVolumeComponent', 'selector': 'app-volume'},{'name': 'RouletteControllerComponent', 'selector': 'roulette-controller'},{'name': 'SliderControllerComponent', 'selector': 'slider-controller'}];
     var DIRECTIVES = [{'name': 'AngularDraggableDirective', 'selector': '[ngDraggable]'}];
     var ACTUAL_COMPONENT = {'name': 'AppEffectsSelectorComponent'};
