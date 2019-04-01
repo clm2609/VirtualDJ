@@ -1,9 +1,21 @@
+/**
+  This file is part of Web Virtual DJ.
+
+Web Virtual DJ is free software: you can redistribute it and / or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+Web Virtual DJ is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
+GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+along with Web Virtual DJ.If not, see < https://www.gnu.org/licenses/>.
+*/
+
 @charset "UTF-8";
-/* CSS by Steven Estrella. http://www.stevenestrella.com */
-
-/* The .slider and .slidervertical classes are for the range inputs. 
-	Set the z-index high so its on top. */
-
 .slider,
 .slidervertical {
   position: absolute;
@@ -12,9 +24,6 @@
   overflow: visible;
   z-index: 2;
 }
-
-/* slidershell exists only
-to provide a positioning context for the range input and other elements.*/
 
 .slidershell {
   border: 0 none;
@@ -121,9 +130,7 @@ input[type='range'] {
 input[type='range'].slidervertical {
   -webkit-appearance: slider-vertical;
   writing-mode: bt-lr;
-  /* IE */
   opacity: 0.01;
-  /* needed to hide the default slider-vertical appearance */
 }
 
 input[type='range']:focus::-webkit-slider-runnable-track {
@@ -134,9 +141,6 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 input[type='range']:focus {
   outline: none;
 }
-
-/* Make the thumbs the same size as your custom sliderthumb. 
-	they will not be visible but they will be draggable. 	*/
 
 input[type='range']::-ms-thumb {
   width: 40px;
@@ -166,8 +170,6 @@ input[type='range']::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-/* microsoft IE10+ and Edge - eliminates default fills before and after thumb */
-
 input[type='range']::-ms-fill-lower {
   background: transparent;
   border: 0 none;
@@ -181,8 +183,6 @@ input[type='range']::-ms-fill-upper {
 input[type='range']::-ms-tooltip {
   display: none;
 }
-
-/* other rules you may need for page styling */
 
 body {
   font-family: sans-serif;
