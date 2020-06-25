@@ -1,6 +1,6 @@
 # Free Web Virtual DJ 
 
-A free (as in freedom) music mixer similar to virtual DJ. YOu can try the latest version [here](http://virtualdj.surge.sh/)
+A free (as in freedom) music mixer similar to virtual DJ. You can try the latest version [here](http://virtualdj.surge.sh/)
 
 ## Development server
 
