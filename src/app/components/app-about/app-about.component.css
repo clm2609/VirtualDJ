@@ -30,3 +30,7 @@ along with Web Virtual DJ.If not, see < https://www.gnu.org/licenses/>.
 .about-container {
   margin: 5px;
 }
+
+p {
+  margin-bottom: 10px;
+}
